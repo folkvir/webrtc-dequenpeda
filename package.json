@@ -1,0 +1,40 @@
+{
+  "name": "webrtc-dequenpeda",
+  "version": "0.0.0",
+  "description": "Decentralized Query Engine for Personal Data",
+  "main": "webrtc-dequenpeda.js",
+  "scripts": {
+    "signaling": "foglet-scripts start",
+    "build": "foglet-scripts build",
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/folkvir/webrtc-dequenpeda.git"
+  },
+  "keywords": [
+    "decentralized",
+    "query",
+    "engine",
+    "personal",
+    "data",
+    "webrtc",
+    "foglet-core",
+    "rdf"
+  ],
+  "author": "Grall Arnaud",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/folkvir/webrtc-dequenpeda/issues"
+  },
+  "homepage": "https://github.com/folkvir/webrtc-dequenpeda#readme",
+  "dependencies": {
+    "foglet-core": "^4.0.0",
+    "foglet-signaling-server": "^0.3.1",
+    "lodash.merge": "^4.6.1",
+    "wrtc": "0.0.66"
+  },
+  "devDependencies": {
+    "foglet-scripts": "^0.3.0"
+  }
+}
