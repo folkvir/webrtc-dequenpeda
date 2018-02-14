@@ -1,0 +1,65 @@
+How to query FOAF database
+
+An important query to FOAF database is to find if two isntances of {\em foaf:Person} are linked by {\em foaf:knows} relation.
+This work can be done by the following queries:
+
+\subsection{Query Pattern 1}
+\begin{verbatim}
+PREFIX foaf:   <http://xmlns.com/foaf/0.1/> 
+PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+SELECT ?person1Name, ?mbox1, ?person2Name, ?mbox2
+WHERE
+  ( ?person1 foaf:mbox ?mbox1 )
+  ( ?person1 rdf:type foaf:Person )
+  ( ?person1 foaf:knows ?person2 )
+  ( ?person2 foaf:mbox ?mbox2 )
+  ( ?person2 rdf:type foaf:Person )
+  ( ?person1 foaf:name ?person1Name )
+  ( ?person2 foaf:name ?person2Name )
+\end{verbatim}
+
+
+\subsection{Query Pattern 2}
+Option 2, instead of using the static foaf:mbox for correlation of two individuals we can use any other property which is
+an owl:inverseFunctionalProperty.(``If a property is declared to be inverse-functional, then the object of a property statement uniquely determines the subject (some individual)"
+- From OWL Spec). FOAF-ontology has some properties defined as inverse functional.
+\begin{verbatim}
+PREFIX foaf:   <http://xmlns.com/foaf/0.1/> 
+PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX owl:   <http://www.w3.org/2002/07/owl#> 
+SELECT ?person1Name, ?mbox1, ?person2Name, ?mbox2
+WHERE
+  ( ?person1 foaf:mbox ?mbox1)
+  ( ?person1 rdf:type foaf:Person )
+  ( ?person1 foaf:knows ?person2 )
+  ( ?person2  ?prop1 ?prop1Val)  <!-- mbox2 is replaced by a variable ?Prop1 -->
+  ( ?person2 rdf:type foaf:Person )
+  ( ?person1 foaf:name ?person1Name )
+  ( ?person2 foaf:name ?person2Name )
+  (	?prop1 rdf:type owl:InverseFunctionalProperty)
+  ( ?person2 foaf:mbox ?mbox2)
+
+\end{verbatim}
+
+
+
+
+\subsection{Query Pattern 3}
+In addition to the above query patterns, the OPTIONAL tag of SPARQL can be used during match to make some parts of the graph match optional. This
+could be very useful for RDF graphs which have missing values.
+\begin{verbatim}
+PREFIX foaf:   <http://xmlns.com/foaf/0.1/> 
+PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX owl:   <http://www.w3.org/2002/07/owl#> 
+SELECT ?person1Name, ?mbox1, ?person2Name, ?mbox2
+WHERE
+  ( ?person1 foaf:mbox ?mbox1)
+  ( ?person1 rdf:type foaf:Person )
+  ( ?person1 foaf:knows ?person2 )
+  ( ?person2  ?prop1 ?prop1Val)  <!-- mbox2 is replaced by a variable ?Prop1 -->
+  ( ?person2 rdf:type foaf:Person )
+  ( ?person1 foaf:name ?person1Name )
+  ( ?person2 foaf:name ?person2Name )
+  (	?prop1 rdf:type owl:InverseFunctionalProperty)
+OPTIONAL  ( ?person2 foaf:mbox ?mbox2)
+\end{verbatim}

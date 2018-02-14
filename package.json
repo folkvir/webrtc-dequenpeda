@@ -6,7 +6,8 @@
   "scripts": {
     "signaling": "foglet-scripts start",
     "build": "foglet-scripts build",
-    "test": "npm test"
+    "test": "npm test",
+    "generateData": "node data/sql2rdf.js"
   },
   "repository": {
     "type": "git",
@@ -29,12 +30,18 @@
   },
   "homepage": "https://github.com/folkvir/webrtc-dequenpeda#readme",
   "dependencies": {
+    "debug": "^3.1.0",
     "foglet-core": "^4.0.0",
     "foglet-signaling-server": "^0.3.1",
     "lodash.merge": "^4.6.1",
+    "rdfstore": "^0.9.17",
+    "shelljs": "^0.8.1",
+    "sparqljs": "^2.0.3",
+    "uniqid": "^4.1.1",
     "wrtc": "0.0.66"
   },
   "devDependencies": {
-    "foglet-scripts": "^0.3.0"
+    "foglet-scripts": "^0.3.0",
+    "sql.js": "^0.5.0"
   }
 }
