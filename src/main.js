@@ -6,7 +6,7 @@ const N3Util = N3.Util
 const Store = require('./store')
 const Query = require('./query')
 let DEFAULT_OPTIONS = {
-  defaultGraph: '<http://mypersonaldata.com/>',
+  defaultGraph: 'http://mypersonaldata.com/',
   timeout: 5000,
   foglet: {
     rps: {
@@ -57,19 +57,20 @@ module.exports = class Dequenpeda {
    * Connect a peer on the network
    * @return {[type]} [description]
    */
-  connection () {
-    return this._foglet.connection()
+  connection (app) {
+    return this._foglet.connection(app._foglet)
   }
 
   /**
    * Query the whole network with the specified query on each suffle
-   * The query is executed on those events: 'loaded', 'updated' and 'end'
+   * The query is executed on those events: 'updated' and 'end'
    * @param  {[type]} queryString your query
    * @return {Object}             return an Object qith id, queryString and an event object with the specified event emitted: 'loaded', 'updated', 'end'
    */
   query (queryString) {
     try {
       const query = new Query(queryString, this)
+      this._queries.set(query._id, query)
       query.execute().then(() => {
         // noop
       }).catch(e => {
@@ -123,7 +124,7 @@ module.exports = class Dequenpeda {
           debug(`[client:${this._foglet._id}]`, 'Triples red', prefixes)
           debug(`[client:${this._foglet._id}]`, `Number of triple red: `, i)
           triples.reduce((acc, cur) => acc.then((res) => {
-            return this._store.loadData(this._options.defaultGraph, [], cur)
+            return this._store.loadData(this._encapsGraphId(this._options.defaultGraph, '<', '>'), [], cur)
           }), Promise.resolve()).then(() => {
             resolve()
           }).catch(e => {
@@ -143,7 +144,7 @@ module.exports = class Dequenpeda {
    */
   getTriples (graph = this._options.defaultGraph, prefixes = [], pattern) {
     if (graph === null) graph = undefined
-    return this._store.getTriples(graph, [], pattern)
+    return this._store.getTriples(this._encapsGraphId(graph, '<', '>'), [], pattern)
   }
 
   /**
@@ -162,7 +163,8 @@ module.exports = class Dequenpeda {
 
       message.triples.reduce((acc, triple) => acc.then(result => {
         return new Promise((resolve, reject) => {
-          this._store.getTriples(this._options.defaultGraph, message.prefixes, triple).then((res) => {
+          const defaultGraph = this._encapsGraphId(this._options.defaultGraph, '<', '>')
+          this._store.getTriples(defaultGraph, message.prefixes, triple).then((res) => {
             resolve([...result, {
               triple,
               data: res
@@ -175,14 +177,22 @@ module.exports = class Dequenpeda {
           })
         })
       }), Promise.resolve([])).then(res => {
-        this._foglet.sendUnicast(message.requester.inview, {
+        this._foglet.sendUnicast(message.requester.outview, {
+          owner: {
+            fogletId: this._foglet.id,
+            inview: this._foglet.inViewID,
+            outview: this._foglet.outViewID
+          },
           type: 'answer-triples',
           query: message.query,
-          triples: res
+          triples: res,
+          jobId: message.jobId
         })
       })
     } else if (message.type === 'answer-triples') {
       debug(`[client:${this._foglet._id}]`, ` Someone send me data: ${message}`)
+      // redirect the message to the corresponding query
+      this._queries.get(message.query).emit('receive', message)
     }
   }
 
@@ -192,16 +202,21 @@ module.exports = class Dequenpeda {
 
   _periodicExecution () {
     debug(`[client:${this._foglet._id}] a shuffle occured`)
-    if (this._queries.size > 0) {
-      this._queries.forEach(q => {
-        q.execute().then(() => {
-          // noop
-        }).catch(e => {
-          console.error(e)
-        })
-      })
-    } else {
+    debug(`[client:${this._foglet._id}] ${this._queries.size} pending queries...`)
+    // if (this._queries.size > 0) {
+    //   this._queries.forEach(q => {
+    //     q.execute().then(() => {
+    //       // noop
+    //     }).catch(e => {
+    //       console.error(e)
+    //     })
+    //   })
+    // } else {
+    //
+    // }
+  }
 
-    }
+  _encapsGraphId (graph, symbolStart, symbolEnd) {
+    return `${symbolStart}${graph}${symbolEnd}`
   }
 }

@@ -20,6 +20,19 @@ module.exports = class Store {
     throw new Error('store is not ready yet.')
   }
 
+  query (query) {
+    return new Promise((resolve, reject) => {
+      try {
+        this.rdfstore.execute(query, (err, res) => {
+          if (err) reject(err)
+          resolve(res)
+        })
+      } catch (e) {
+        reject(e)
+      }
+    })
+  }
+
   loadPrefixes (prefixes = []) {
     return new Promise((resolve, reject) => {
       try {
