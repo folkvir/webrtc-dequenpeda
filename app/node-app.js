@@ -36,8 +36,16 @@ client1.connection(client2).then(() => {
 
       // query all data of client2
       const query = client1.query(query3)
+      query.on('loaded', (result) => {
+        console.log('loaded', result)
+      })
       query.on('updated', (result) => {
-        console.log(result)
+        console.log('updated', result)
+        client1.stop(query._id)
+      })
+      query.on('end', (result) => {
+        console.log('end', result)
+        process.exit(0)
       })
     }).catch(e => {
       console.error(e)

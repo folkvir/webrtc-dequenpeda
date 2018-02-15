@@ -29,21 +29,25 @@ module.exports = class Query extends EventEmitter {
     })
   }
 
-  async execute () {
+  stop () {
+    return this.execute('end')
+  }
+
+  async execute (eventName) {
     debug(`[client:${this._parent._foglet_id}] 1-Executing the query ${this._id}...`)
     const neighbors = this._parent._foglet.getNeighbours()
     if (neighbors.length > 0) {
       // execute after receiving triples from neighbors
       return this._askTriples().then(() => {
-        return this._execute()
+        return this._execute(eventName)
       })
     } else {
       // execute only on my data
-      return this._execute()
+      return this._execute(eventName)
     }
   }
 
-  async _execute () {
+  async _execute (eventName) {
     debug(`[client:${this._parent._foglet.id}] 2-Executing the query ${this._id}...`)
     const pattern = {
       subject: '?s',
@@ -71,7 +75,7 @@ module.exports = class Query extends EventEmitter {
     const rewritedQuery = generator.stringify(plan)
     debug(`[client:${this._parent._foglet.id}]`, rewritedQuery)
     const res = await this._parent._store.query(rewritedQuery)
-    this.emit('updated', res)
+    this.emit(eventName, res)
     return Promise.resolve()
   }
 

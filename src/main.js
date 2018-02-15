@@ -18,7 +18,7 @@ let DEFAULT_OPTIONS = {
           iceServers: [] // define iceServers in non local instance
         },
         timeout: 2 * 60 * 1000, // spray-wrtc timeout before definitively close a WebRTC connection.
-        delta: 15 * 1000,   // spray-wrtc shuffle interval
+        delta: 5 * 1000,   // spray-wrtc shuffle interval
         signaling: {
           address: 'http://localhost:3000/',
           // signalingAdress: 'https://signaling.herokuapp.com/', // address of the signaling server
@@ -63,7 +63,7 @@ module.exports = class Dequenpeda {
 
   /**
    * Query the whole network with the specified query on each suffle
-   * The query is executed on those events: 'updated' and 'end'
+   * The query is executed on those events: 'loaded' 'updated' and 'end'
    * @param  {[type]} queryString your query
    * @return {Object}             return an Object qith id, queryString and an event object with the specified event emitted: 'loaded', 'updated', 'end'
    */
@@ -71,7 +71,7 @@ module.exports = class Dequenpeda {
     try {
       const query = new Query(queryString, this)
       this._queries.set(query._id, query)
-      query.execute().then(() => {
+      query.execute('loaded').then(() => {
         // noop
       }).catch(e => {
         console.error(e)
@@ -88,11 +88,23 @@ module.exports = class Dequenpeda {
    * @return {void}
    */
   stop (queryId) {
-
+    if (this._queries.has(queryId)) {
+      this._queries.get(queryId).stop().then(() => {
+        this._queries.delete(queryId)
+      })
+    }
   }
 
+  /**
+   * Stop all queries
+   * @return {[type]} [description]
+   */
   stopAll () {
-
+    this._queries.forEach(q => {
+      q.stop().then(() => {
+        this._queries.delete(q._id)
+      })
+    })
   }
 
   /**
@@ -203,17 +215,17 @@ module.exports = class Dequenpeda {
   _periodicExecution () {
     debug(`[client:${this._foglet._id}] a shuffle occured`)
     debug(`[client:${this._foglet._id}] ${this._queries.size} pending queries...`)
-    // if (this._queries.size > 0) {
-    //   this._queries.forEach(q => {
-    //     q.execute().then(() => {
-    //       // noop
-    //     }).catch(e => {
-    //       console.error(e)
-    //     })
-    //   })
-    // } else {
-    //
-    // }
+    if (this._queries.size > 0) {
+      this._queries.forEach(q => {
+        q.execute('updated').then(() => {
+          // noop
+        }).catch(e => {
+          console.error(e)
+        })
+      })
+    } else {
+
+    }
   }
 
   _encapsGraphId (graph, symbolStart, symbolEnd) {
