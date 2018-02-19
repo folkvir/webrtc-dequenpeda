@@ -1,4 +1,4 @@
-# Dataset
+# Dataset for testing purposes only
 
 1) Extract the dataset
 2) [optionnal] If you want a fresh dump simply run the script sql2rdf.js

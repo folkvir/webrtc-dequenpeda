@@ -6,7 +6,7 @@
   "scripts": {
     "signaling": "foglet-scripts start",
     "build": "foglet-scripts build",
-    "test": "npm test",
+    "test": "node app/node-app-test.js -c 5",
     "generateData": "node data/sql2rdf.js"
   },
   "repository": {
