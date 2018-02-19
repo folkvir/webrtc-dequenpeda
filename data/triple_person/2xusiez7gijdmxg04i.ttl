@@ -1,6 +1,0 @@
-<1bfbfb8:ff2d706919:-7fb0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<1bfbfb8:ff2d706919:-7fb0> <http://xmlns.com/foaf/0.1/workplaceHomepage> <http://www.mediagonal.ch/> .
-<1bfbfb8:ff2d706919:-7fb0> <http://xmlns.com/foaf/0.1/name> "Hannes Gassert" .
-<1bfbfb8:ff2d706919:-7fb0> <http://xmlns.com/foaf/0.1/nick> "hg" .
-<1bfbfb8:ff2d706919:-7fb0> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://gassert.ch/hannesfoaf.xml> .
-<1bfbfb8:ff2d706919:-7fb0> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "bbdf0622f137cd2fc9ef768def9339091e4be779" .

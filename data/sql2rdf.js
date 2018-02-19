@@ -9,7 +9,7 @@ writeStringToMemory is deprecated and should not be called! Use stringToUTF8() i
 Number of errored triples:  989
 Number of triples transformed:  202271
  */
-const outputDir = require('path').join(__dirname, './triple_person/')
+const outputDir = require('path').join(__dirname, './dataset/triple_person/')
 if (!fs.existsSync(outputDir)) shell.mkdir('-p', outputDir)
 
 const output = require('path').join(__dirname, './triple_person_all.ttl')
@@ -31,7 +31,7 @@ const createTable2 = `
 
 db.run(createTable2)
 
-const stream = fs.createReadStream(require('path').join(__dirname, './triple_person.sql'), { encoding: 'utf8' })
+const stream = fs.createReadStream(require('path').join(__dirname, './dataset/triple_person.sql'), { encoding: 'utf8' })
 stream.setEncoding('utf8')
 const rl = readline.createInterface({
   input: stream,

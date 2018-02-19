@@ -1,5 +1,0 @@
-<1bfbfb8:ff2d706919:-7fb2> <http://xmlns.com/foaf/0.1/homepage> <http://www.bernhardseefeld.ch/> .
-<1bfbfb8:ff2d706919:-7fb2> <http://xmlns.com/foaf/0.1/name> "Bernhard A. M. Seefeld" .
-<1bfbfb8:ff2d706919:-7fb2> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.bernhardseefeld.ch/foaf.rdf> .
-<1bfbfb8:ff2d706919:-7fb2> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "77c67c0ba44a42a41da3674a6802892827d0d149" .
-<1bfbfb8:ff2d706919:-7fb2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .

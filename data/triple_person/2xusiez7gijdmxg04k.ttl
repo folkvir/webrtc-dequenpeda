@@ -1,6 +1,0 @@
-<1bfbfb8:ff2d706919:-7faf> <http://xmlns.com/foaf/0.1/name> "Christian Stocker" .
-<1bfbfb8:ff2d706919:-7faf> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "b0916f81ec0e318b7ea2c76c7ab3e095e354c77e" .
-<1bfbfb8:ff2d706919:-7faf> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://blog.bitflux.ch/foaf/chregu.rdf> .
-<1bfbfb8:ff2d706919:-7faf> <http://xmlns.com/foaf/0.1/nick> "chregu" .
-<1bfbfb8:ff2d706919:-7faf> <http://xmlns.com/foaf/0.1/workplaceHomepage> <http://bitflux.ch/> .
-<1bfbfb8:ff2d706919:-7faf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
