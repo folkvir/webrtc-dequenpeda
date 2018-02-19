@@ -1,0 +1,3 @@
+<1bfbfb8:ff2d706919:-7fa8> <http://xmlns.com/foaf/0.1/name> "Nick Aster" .
+<1bfbfb8:ff2d706919:-7fa8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<1bfbfb8:ff2d706919:-7fa8> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "e4a5c07bbd2cf1f1e2a118170337cba2b8bb29d1" .

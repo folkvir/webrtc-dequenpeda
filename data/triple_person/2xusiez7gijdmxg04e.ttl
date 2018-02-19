@@ -1,0 +1,13 @@
+<1bfbfb8:ff2d706919:-7fb5> <http://xmlns.com/foaf/0.1/knows> <1bfbfb8:ff2d706919:-7fb4> .
+<1bfbfb8:ff2d706919:-7fb5> <http://xmlns.com/foaf/0.1/title> "Ms" .
+<1bfbfb8:ff2d706919:-7fb5> <http://xmlns.com/foaf/0.1/surname> "Danielsen" .
+<1bfbfb8:ff2d706919:-7fb5> <http://xmlns.com/foaf/0.1/homepage> <http://andedam.org> .
+<1bfbfb8:ff2d706919:-7fb5> <http://xmlns.com/foaf/0.1/name> "Jorunn Danielsen" .
+<1bfbfb8:ff2d706919:-7fb5> <http://xmlns.com/foaf/0.1/firstName> "Jorunn" .
+<1bfbfb8:ff2d706919:-7fb5> <http://xmlns.com/foaf/0.1/depiction> <http://andedam.org/images/jorunn.jpg> .
+<1bfbfb8:ff2d706919:-7fb5> <http://xmlns.com/foaf/0.1/schoolHomepage> <http://www.media.uio.no> .
+<1bfbfb8:ff2d706919:-7fb5> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "ac350b6bf6752f902166e7fc795d1bdc922b6f20" .
+<1bfbfb8:ff2d706919:-7fb5> <http://xmlns.com/foaf/0.1/phone> <tel:22198709> .
+<1bfbfb8:ff2d706919:-7fb5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<1bfbfb8:ff2d706919:-7fb5> <http://xmlns.com/foaf/0.1/knows> <1bfbfb8:ff2d706919:-7fb3> .
+<1bfbfb8:ff2d706919:-7fb5> <http://xmlns.com/foaf/0.1/workplaceHomepage> <http://kulturnett.no> .

@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/folkvir/webrtc-dequenpeda#readme",
   "dependencies": {
+    "commander": "^2.14.1",
     "debug": "^3.1.0",
     "foglet-core": "^4.0.0",
     "foglet-signaling-server": "^0.3.1",

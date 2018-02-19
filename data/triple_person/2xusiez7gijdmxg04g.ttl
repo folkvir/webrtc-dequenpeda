@@ -1,0 +1,3 @@
+<1bfbfb8:ff2d706919:-7fb3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<1bfbfb8:ff2d706919:-7fb3> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "d824f562a598ec8a197882fea68cb88c6b6b6c82" .
+<1bfbfb8:ff2d706919:-7fb3> <http://xmlns.com/foaf/0.1/name> "Gunnar Danielsen" .

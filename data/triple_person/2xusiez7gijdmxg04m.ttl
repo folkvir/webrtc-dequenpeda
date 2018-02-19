@@ -1,0 +1,15 @@
+<1bfbfb8:ff2d706919:-7fa9> <http://xmlns.com/foaf/0.1/phone> <tel:2666178708> .
+<1bfbfb8:ff2d706919:-7fa9> <http://xmlns.com/foaf/0.1/workInfoHomepage> <http://www.bu.edu/law/currentstudents/index.html> .
+<1bfbfb8:ff2d706919:-7fa9> <http://xmlns.com/foaf/0.1/name> "Andrew Sinclair" .
+<1bfbfb8:ff2d706919:-7fa9> <http://xmlns.com/foaf/0.1/surname> "Sinclair" .
+<1bfbfb8:ff2d706919:-7fa9> <http://xmlns.com/foaf/0.1/knows> <1bfbfb8:ff2d706919:-7fa7> .
+<1bfbfb8:ff2d706919:-7fa9> <http://xmlns.com/foaf/0.1/workplaceHomepage> <http://www.bu.edu/law/> .
+<1bfbfb8:ff2d706919:-7fa9> <http://xmlns.com/foaf/0.1/depiction> <http://andrewsinclair.org/images/Andrew%2520Sinclair%25202.jpg> .
+<1bfbfb8:ff2d706919:-7fa9> <http://xmlns.com/foaf/0.1/firstName> "Andrew" .
+<1bfbfb8:ff2d706919:-7fa9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<1bfbfb8:ff2d706919:-7fa9> <http://xmlns.com/foaf/0.1/schoolHomepage> <http://www.ucsb.edu/> .
+<1bfbfb8:ff2d706919:-7fa9> <http://xmlns.com/foaf/0.1/nick> "Andrew" .
+<1bfbfb8:ff2d706919:-7fa9> <http://xmlns.com/foaf/0.1/homepage> <http://andrewsinclair.org/> .
+<1bfbfb8:ff2d706919:-7fa9> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "f1386bedfad717a8ad02bb220647573601ce47d2" .
+<1bfbfb8:ff2d706919:-7fa9> <http://xmlns.com/foaf/0.1/title> "Mr." .
+<1bfbfb8:ff2d706919:-7fa9> <http://xmlns.com/foaf/0.1/knows> <1bfbfb8:ff2d706919:-7fa8> .

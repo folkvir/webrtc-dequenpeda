@@ -1,0 +1,5 @@
+<1bfbfb8:ff2d706919:-7fb1> <http://xmlns.com/foaf/0.1/homepage> <http://circle.ch> .
+<1bfbfb8:ff2d706919:-7fb1> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "189711e7445599a6db8b84ce37e0b791a7a85ed5" .
+<1bfbfb8:ff2d706919:-7fb1> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://circle.ch/blog/foaf.rdf> .
+<1bfbfb8:ff2d706919:-7fb1> <http://xmlns.com/foaf/0.1/name> "Urs Gehrig" .
+<1bfbfb8:ff2d706919:-7fb1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
