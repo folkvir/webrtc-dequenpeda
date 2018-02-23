@@ -3,7 +3,7 @@ const shell = require('shelljs')
 const commander = require('commander')
 
 commander
-  .usage('node app/node-app.js --clients 10')
+  .usage('node app/node-app-normal-test.js --clients 10')
   .option('-c, --clients <clients>', 'Number of clients', (e) => parseInt(e), 1)
   .parse(process.argv)
 

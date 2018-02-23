@@ -4,10 +4,13 @@ const lmerge = require('lodash.merge')
 const N3 = require('n3')
 const N3Util = N3.Util
 const Store = require('./store')
-const Query = require('./query')
+const Query = require('./queries/query')
+const QueryShared = require('./queries/query-shared')
+
 let DEFAULT_OPTIONS = {
   defaultGraph: 'http://mypersonaldata.com/',
   timeout: 5000,
+  queryType: 'normal',
   foglet: {
     rps: {
       type: 'spray-wrtc',
@@ -67,9 +70,11 @@ module.exports = class Dequenpeda {
    * @param  {[type]} queryString your query
    * @return {Object}             return an Object qith id, queryString and an event object with the specified event emitted: 'loaded', 'updated', 'end'
    */
-  query (queryString) {
+  query (queryString, type = this._options.queryType) {
     try {
-      const query = new Query(queryString, this)
+      // choose the type of query to execute
+      let QueryClass = this._chooseQueryClass(type)
+      const query = new QueryClass(queryString, this)
       this._queries.set(query._id, query)
       query.execute('loaded').then(() => {
         // noop
@@ -79,6 +84,17 @@ module.exports = class Dequenpeda {
       return query
     } catch (e) {
       throw new Error(e)
+    }
+  }
+
+  /**
+   * @private Choose the adequat class for running a query
+   * @param  {[type]} type [description]
+   * @return {Object}      Return a Query Class
+   */
+  _chooseQueryClass (type) {
+    if (type === 'normal') { return Query } else if (type === 'shared') {
+      return QueryShared
     }
   }
 
@@ -205,6 +221,23 @@ module.exports = class Dequenpeda {
       debug(`[client:${this._foglet._id}]`, ` Someone send me data: ${message}`)
       // redirect the message to the corresponding query
       this._queries.get(message.query).emit('receive', message)
+    } else if (message.type === 'new-shared-query') {
+      debug(`[client:${this._foglet._id}]`, ` Received a shared query: ${message}`)
+      if (this._queries.has(message.id)) {
+        throw new Error('This query is already instanciated, Please report.')
+      } else {
+        const query = new QueryShared(message.query, this)
+        query._id = message.id
+        this._queries.set(message.id, query)
+        query.execute('initiated').then(() => {
+          // noop
+        }).catch(e => {
+          console.error(e)
+        })
+      }
+    } else {
+      // send all other messages to the appropriate query
+      throw new Error('This message is not handled by the application. Please report.')
     }
   }
 
