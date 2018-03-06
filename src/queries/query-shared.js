@@ -24,6 +24,7 @@ module.exports = class Query extends EventEmitter {
       debug(`[client:${this._parent._foglet.id}][Query:${this._id}] Receive: data from: ${message.owner.fogletId}`)
     })
 
+    
     // broadcast the query
     const message = {
       type: 'new-shared-query',
@@ -92,6 +93,9 @@ module.exports = class Query extends EventEmitter {
     return `http://${tripleId}/${sourceId}/`
   }
 
+  /**
+   * @private
+   */
   _encapsGraphId (graph, symbolStart, symbolEnd) {
     return `${symbolStart}${graph}${symbolEnd}`
   }
@@ -103,6 +107,9 @@ module.exports = class Query extends EventEmitter {
     return `${triple.subject}:${triple.predicate}:${triple.object}`
   }
 
+  /**
+   * @private
+   */
   _tripleParsed2Triple (triple) {
     if (!triple.subject.startsWith('?') && !triple.subject.startsWith('<')) {
       triple.subject = `<${triple.subject}>`

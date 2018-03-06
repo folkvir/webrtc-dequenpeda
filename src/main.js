@@ -1,11 +1,14 @@
 const debug = require('debug')('main')
 const FogletCore = require('foglet-core').Foglet
 const lmerge = require('lodash.merge')
+const EventEmitter = require('events')
 const N3 = require('n3')
 const N3Util = N3.Util
 const Store = require('./store')
 const Query = require('./queries/query')
 const QueryShared = require('./queries/query-shared')
+
+const clone = (obj) => JSON.parse(JSON.stringify(obj))
 
 let DEFAULT_OPTIONS = {
   defaultGraph: 'http://mypersonaldata.com/',
@@ -35,18 +38,21 @@ if (process) {
   DEFAULT_OPTIONS.foglet.rps.options.webrtc.wrtc = require('wrtc')
 }
 
-module.exports = class Dequenpeda {
+module.exports = class Dequenpeda extends EventEmitter {
   constructor (options) {
+    super()
     this._options = lmerge(DEFAULT_OPTIONS, options)
     this._foglet = new FogletCore(this._options.foglet)
     this._foglet.share()
     this._foglet.onUnicast((id, message) => {
       debug(`[${this._foglet._id}] ReceiveUnicast: ${JSON.stringify(message)}`)
       this._handleUnicast(id, message)
+      this.emit('receive-unicast', {id, message: clone(message)})
     })
     this._foglet.onBroadcast((id, message) => {
       debug(`[${this._foglet._id}] ReceiveBroadcast: ${JSON.stringify(message)}`)
       this._handleBroadcast(id, message)
+      this.emit('receive-broadcast', {id, message: clone(message)})
     })
     this._parser = new Map()
     this._store = new Store()
@@ -58,10 +64,14 @@ module.exports = class Dequenpeda {
 
   /**
    * Connect a peer on the network
+   * If the argument is undefined try to use signaling options in the RPS config options
+   * Usefull in production mode, in test mode connect them manually using wrtc package (see npm or github, node-wrtc)
    * @return {[type]} [description]
    */
   connection (app) {
-    return this._foglet.connection(app._foglet)
+    return this._foglet.connection(app._foglet).then(() => {
+      this
+    })
   }
 
   /**
@@ -185,56 +195,17 @@ module.exports = class Dequenpeda {
     this._foglet.sendBroadcast(message)
   }
 
+
+
   _handleUnicast (id, message) {
     if (message.type === 'ask-triples') {
-      debug(`[client:${this._foglet._id}]`, ` Someone is asking for data: ${message}`)
-
-      message.triples.reduce((acc, triple) => acc.then(result => {
-        return new Promise((resolve, reject) => {
-          const defaultGraph = this._encapsGraphId(this._options.defaultGraph, '<', '>')
-          this._store.getTriples(defaultGraph, message.prefixes, triple).then((res) => {
-            resolve([...result, {
-              triple,
-              data: res
-            }])
-          }).catch(e => {
-            resolve([...result, {
-              triple,
-              data: []
-            }])
-          })
-        })
-      }), Promise.resolve([])).then(res => {
-        this._foglet.sendUnicast(message.requester.outview, {
-          owner: {
-            fogletId: this._foglet.id,
-            inview: this._foglet.inViewID,
-            outview: this._foglet.outViewID
-          },
-          type: 'answer-triples',
-          query: message.query,
-          triples: res,
-          jobId: message.jobId
-        })
-      })
+      this._handleAskTriples(id, message)
     } else if (message.type === 'answer-triples') {
       debug(`[client:${this._foglet._id}]`, ` Someone send me data: ${message}`)
       // redirect the message to the corresponding query
       this._queries.get(message.query).emit('receive', message)
     } else if (message.type === 'new-shared-query') {
-      debug(`[client:${this._foglet._id}]`, ` Received a shared query: ${message}`)
-      if (this._queries.has(message.id)) {
-        throw new Error('This query is already instanciated, Please report.')
-      } else {
-        const query = new QueryShared(message.query, this)
-        query._id = message.id
-        this._queries.set(message.id, query)
-        query.execute('initiated').then(() => {
-          // noop
-        }).catch(e => {
-          console.error(e)
-        })
-      }
+      this._handleNewSharedQuery(id, message)
     } else {
       // send all other messages to the appropriate query
       throw new Error('This message is not handled by the application. Please report.')
@@ -242,22 +213,81 @@ module.exports = class Dequenpeda {
   }
 
   _handleBroadcast (id, message) {
+    if (message.type === 'new-shared-query') {
+      this._handleNewSharedQuery(id, message)
+    } else {
+      // send all other messages to the appropriate query
+      throw new Error('This message is not handled by the application. Please report.')
+    }
+  }
 
+  _handleAskTriples(id, message) {
+    debug(`[client:${this._foglet._id}]`, ` Someone is asking for data: ${message}`)
+    message.triples.reduce((acc, triple) => acc.then(result => {
+      return new Promise((resolve, reject) => {
+        const defaultGraph = this._encapsGraphId(this._options.defaultGraph, '<', '>')
+        this._store.getTriples(defaultGraph, message.prefixes, triple).then((res) => {
+          resolve([...result, {
+            triple,
+            data: res
+          }])
+        }).catch(e => {
+          resolve([...result, {
+            triple,
+            data: []
+          }])
+        })
+      })
+    }), Promise.resolve([])).then(res => {
+      this._foglet.sendUnicast(message.requester.outview, {
+        owner: {
+          fogletId: this._foglet.id,
+          inview: this._foglet.inViewID,
+          outview: this._foglet.outViewID
+        },
+        type: 'answer-triples',
+        query: message.query,
+        triples: res,
+        jobId: message.jobId
+      })
+    })
+  }
+
+  
+
+  _handleNewSharedQuery(id, message) {
+    debug(`[client:${this._foglet._id}]`, ` Received a shared query: ${message}`)
+    if (this._queries.has(message.id)) {
+      throw new Error('This query is already instanciated, Please report.')
+    } else {
+      const query = new QueryShared(message.query, this)
+      query._id = message.id
+      this._queries.set(message.id, query)
+      query.execute('initiated').then(() => {
+        // noop
+      }).catch(e => {
+        console.error(e)
+      })
+    }
   }
 
   _periodicExecution () {
     debug(`[client:${this._foglet._id}] a shuffle occured`)
     debug(`[client:${this._foglet._id}] ${this._queries.size} pending queries...`)
     if (this._queries.size > 0) {
+      let pendingQueries = []
       this._queries.forEach(q => {
-        q.execute('updated').then(() => {
+        const qpending = q.execute('updated')
+        pendingQueries.push(qpending)
+        qpending.then(() => {
           // noop
         }).catch(e => {
           console.error(e)
         })
       })
+      this.emit('periodic-execution', pendingQueries)
     } else {
-
+      this.emit('periodic-execution', 'no-queries-yet')
     }
   }
 

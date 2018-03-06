@@ -14,6 +14,6 @@ npm install
 # Build the bundle for the browser app
 ```
 npm run build
-npm run signaling
+npm start
 ```
-open: ./app/index.html
+open: http://localhost:8000/

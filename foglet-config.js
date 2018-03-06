@@ -6,11 +6,12 @@ module.exports = {
   lint: true,
   build: {
     entry: {
+      "./web-app/js": './webrtc-dequenpeda.js',
       dist: './webrtc-dequenpeda.js'
     },
     output: {
       'path': path.resolve(process.cwd(), '.'),
-      'filename': 'dist/webrtc-dequenpeda.bundle.js',
+      'filename': '[name]/webrtc-dequenpeda.bundle.js',
       'library': 'dequenpeda',
       'libraryTarget': 'umd',
       'umdNamedDefine': true
