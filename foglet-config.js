@@ -6,7 +6,7 @@ module.exports = {
   lint: true,
   build: {
     entry: {
-      "./web-app/js": './webrtc-dequenpeda.js',
+      "./web-app/js/dist": './webrtc-dequenpeda.js',
       dist: './webrtc-dequenpeda.js'
     },
     output: {
