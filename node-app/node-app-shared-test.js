@@ -55,6 +55,7 @@ extractFilename(pathData, commander.clients).then((res) => {
         })
         query.on('end', (result) => {
           console.log('[REFERENCE] Number of results when terminated: ', result.length)
+          console.log(result)
           resolve(result)
         })
       })
@@ -80,9 +81,12 @@ extractFilename(pathData, commander.clients).then((res) => {
               })
             })
           }), Promise.resolve()).then(() => {
+            clients[0].on('periodic-execution-begins', () => {
+              console.log(`[client0-${shuffle.length}] A shuffle occured...`)
+            })
             let shuffle = []
             // query all data of clients[1]
-            const query = clients[0].query(query3, 'shared')
+            const query = clients[0].query(query3, 'shared', {log: true})
             query.on('loaded', (result) => {
               console.log(`[client0-${shuffle.length}] Number of results when initiated: `, result.length)
               shuffle.push(result)
@@ -99,6 +103,10 @@ extractFilename(pathData, commander.clients).then((res) => {
               console.log(`[client0-${shuffle.length}] Number of results when terminated: `, result.length)
               console.log(`[client0-${shuffle.length}] Number of shuffle for the query: `, shuffle.length)
               process.exit(0)
+            })
+            query.on('error', (err) => {
+              console.error(err)
+              process.exit(1)
             })
           }).catch(e => {
             console.error('[client-reduce] loadtriples: ', e)
@@ -125,7 +133,19 @@ extractFilename(pathData, commander.clients).then((res) => {
 // ]
 
 function createClient () {
-  return new Dequenpeda()
+  return new Dequenpeda({
+    defaultGraph: 'http://mypersonaldata.com/',
+    timeout: 5000,
+    queryType: 'normal',
+    shuffleCountBeforeStart: 2,
+    foglet: {
+      rps: {
+        options: {
+          delta: 10 * 1000,   // spray-wrtc shuffle interval
+        }
+      }
+    }
+  })
 }
 
 function readTurtleFile (location) {

@@ -3,13 +3,14 @@ const EventEmitter = require('events')
 const SparqlParser = require('sparqljs').Parser
 const SparqlGenerator = require('sparqljs').Generator
 const debug = require('debug')('query')
+const Base64 = require('js-base64').Base64
 
 module.exports = class Query extends EventEmitter {
   constructor (queryString, parent) {
     super()
     this._parent = parent
-    this._id = uniqid()
     this._query = queryString
+    this._id = Base64.encode(this._query)
     try {
       const parser = new SparqlParser()
       this._parsedQuery = parser.parse(this._query)

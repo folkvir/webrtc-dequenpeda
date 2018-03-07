@@ -7,6 +7,8 @@ const N3Util = N3.Util
 const Store = require('./store')
 const Query = require('./queries/query')
 const QueryShared = require('./queries/query-shared')
+const UnicastHandlers = require('./handlers/unicast-handlers')
+const BroadcastHandlers = require('./handlers/broadcast-handlers')
 
 const clone = (obj) => JSON.parse(JSON.stringify(obj))
 
@@ -14,6 +16,7 @@ let DEFAULT_OPTIONS = {
   defaultGraph: 'http://mypersonaldata.com/',
   timeout: 5000,
   queryType: 'normal',
+  shuffleCountBeforeStart: 0,
   foglet: {
     rps: {
       type: 'spray-wrtc',
@@ -45,18 +48,18 @@ module.exports = class Dequenpeda extends EventEmitter {
     this._foglet = new FogletCore(this._options.foglet)
     this._foglet.share()
     this._foglet.onUnicast((id, message) => {
-      debug(`[${this._foglet._id}] ReceiveUnicast: ${JSON.stringify(message)}`)
+      // debug(`[${this._foglet._id}] ReceiveUnicast: ${JSON.stringify(message)}`)
       this._handleUnicast(id, message)
       this.emit('receive-unicast', {id, message: clone(message)})
     })
     this._foglet.onBroadcast((id, message) => {
-      debug(`[${this._foglet._id}] ReceiveBroadcast: ${JSON.stringify(message)}`)
       this._handleBroadcast(id, message)
       this.emit('receive-broadcast', {id, message: clone(message)})
     })
     this._parser = new Map()
     this._store = new Store()
     this._queries = new Map()
+    this._shuffleCount = 0
     this._periodicExecutionInterval = setInterval(() => {
       this._periodicExecution()
     }, this._options.foglet.rps.options.delta + 1000)
@@ -70,7 +73,11 @@ module.exports = class Dequenpeda extends EventEmitter {
    */
   connection (app) {
     return this._foglet.connection(app._foglet).then(() => {
-      this
+      this.emit('connected')
+      return Promise.resolve()
+    }).catch(e => {
+      this.emit('error', e)
+      return Promise.reject(e)
     })
   }
 
@@ -80,11 +87,11 @@ module.exports = class Dequenpeda extends EventEmitter {
    * @param  {[type]} queryString your query
    * @return {Object}             return an Object qith id, queryString and an event object with the specified event emitted: 'loaded', 'updated', 'end'
    */
-  query (queryString, type = this._options.queryType) {
+  query (queryString, type = this._options.queryType, options = undefined) {
     try {
       // choose the type of query to execute
       let QueryClass = this._chooseQueryClass(type)
-      const query = new QueryClass(queryString, this)
+      const query = new QueryClass(queryString, this, options)
       this._queries.set(query._id, query)
       query.execute('loaded').then(() => {
         // noop
@@ -195,17 +202,17 @@ module.exports = class Dequenpeda extends EventEmitter {
     this._foglet.sendBroadcast(message)
   }
 
-
-
   _handleUnicast (id, message) {
     if (message.type === 'ask-triples') {
-      this._handleAskTriples(id, message)
+      UnicastHandlers._handleAskTriples.call(this, id, message)
     } else if (message.type === 'answer-triples') {
       debug(`[client:${this._foglet._id}]`, ` Someone send me data: ${message}`)
       // redirect the message to the corresponding query
       this._queries.get(message.query).emit('receive', message)
-    } else if (message.type === 'new-shared-query') {
-      this._handleNewSharedQuery(id, message)
+    } else if (message.type === 'ask-results') {
+      UnicastHandlers._handleAskResults.call(this, id, message)
+    } else if(message.type === 'answer-ask-results') {
+      this._queries.get(message.queryId).emit('receive', message)
     } else {
       // send all other messages to the appropriate query
       throw new Error('This message is not handled by the application. Please report.')
@@ -214,81 +221,37 @@ module.exports = class Dequenpeda extends EventEmitter {
 
   _handleBroadcast (id, message) {
     if (message.type === 'new-shared-query') {
-      this._handleNewSharedQuery(id, message)
+      BroadcastHandlers._handleNewSharedQuery.call(this, id, message)
+    } else if (message.type === 'delete-shared-query') {
+      BroadcastHandlers._handleDeleteSharedQuery.call(this, id, message)
     } else {
       // send all other messages to the appropriate query
       throw new Error('This message is not handled by the application. Please report.')
     }
-  }
-
-  _handleAskTriples(id, message) {
-    debug(`[client:${this._foglet._id}]`, ` Someone is asking for data: ${message}`)
-    message.triples.reduce((acc, triple) => acc.then(result => {
-      return new Promise((resolve, reject) => {
-        const defaultGraph = this._encapsGraphId(this._options.defaultGraph, '<', '>')
-        this._store.getTriples(defaultGraph, message.prefixes, triple).then((res) => {
-          resolve([...result, {
-            triple,
-            data: res
-          }])
-        }).catch(e => {
-          resolve([...result, {
-            triple,
-            data: []
-          }])
-        })
-      })
-    }), Promise.resolve([])).then(res => {
-      this._foglet.sendUnicast(message.requester.outview, {
-        owner: {
-          fogletId: this._foglet.id,
-          inview: this._foglet.inViewID,
-          outview: this._foglet.outViewID
-        },
-        type: 'answer-triples',
-        query: message.query,
-        triples: res,
-        jobId: message.jobId
-      })
-    })
-  }
-
-  
-
-  _handleNewSharedQuery(id, message) {
-    debug(`[client:${this._foglet._id}]`, ` Received a shared query: ${message}`)
-    if (this._queries.has(message.id)) {
-      throw new Error('This query is already instanciated, Please report.')
-    } else {
-      const query = new QueryShared(message.query, this)
-      query._id = message.id
-      this._queries.set(message.id, query)
-      query.execute('initiated').then(() => {
-        // noop
-      }).catch(e => {
-        console.error(e)
-      })
-    }
-  }
+  }  
 
   _periodicExecution () {
-    debug(`[client:${this._foglet._id}] a shuffle occured`)
-    debug(`[client:${this._foglet._id}] ${this._queries.size} pending queries...`)
-    if (this._queries.size > 0) {
-      let pendingQueries = []
-      this._queries.forEach(q => {
-        const qpending = q.execute('updated')
-        pendingQueries.push(qpending)
-        qpending.then(() => {
-          // noop
-        }).catch(e => {
-          console.error(e)
+    this.emit('periodic-execution-begins')
+    if(this._shuffleCount >= this._options.shuffleCountBeforeStart) {
+      debug(`[client:${this._foglet._id}] a shuffle occured`)
+      debug(`[client:${this._foglet._id}] ${this._queries.size} pending queries...`)
+      if (this._queries.size > 0) {
+        let pendingQueries = []
+        this._queries.forEach(q => {
+          const qpending = q.execute('updated')
+          pendingQueries.push(qpending)
+          qpending.then(() => {
+            // noop
+          }).catch(e => {
+            console.error(e)
+          })
         })
-      })
-      this.emit('periodic-execution', pendingQueries)
-    } else {
-      this.emit('periodic-execution', 'no-queries-yet')
+        this.emit('periodic-execution', pendingQueries)
+      } else {
+        this.emit('periodic-execution', 'no-queries-yet')
+      }
     }
+    this._shuffleCount++
   }
 
   _encapsGraphId (graph, symbolStart, symbolEnd) {
