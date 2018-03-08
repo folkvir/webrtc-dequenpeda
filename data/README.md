@@ -1,7 +1,7 @@
 # Dataset for testing purposes only
 
-1) Extract the dataset
-2) [optionnal] If you want a fresh dump simply run the script sql2rdf.js
+1) Extract the dataset (always choose the option 'extract to dataset.tar', etc...')
+2) [optionnal] If you want a fresh dump simply run the script sql2rdf.js after extracting the archive
 ```
 node sql2rdf.js
 ```
