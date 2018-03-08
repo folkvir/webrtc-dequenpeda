@@ -13,7 +13,8 @@ module.exports = class Query extends EventEmitter {
     super()
     this._options = lmerge({
       shared: true,
-      log: false
+      log: false,
+      stream: false
     }, options)
     this._parent = parent
     this._query = queryString

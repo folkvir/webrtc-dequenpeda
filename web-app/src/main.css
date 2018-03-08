@@ -5,3 +5,7 @@ body {
   padding: 3rem 1.5rem;
   text-align: center;
 }
+
+.row {
+  border: 1px solid grey
+}

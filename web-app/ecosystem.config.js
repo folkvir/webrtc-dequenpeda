@@ -16,8 +16,8 @@ module.exports = {
       },
       instances: 4,
       exec_mode: 'cluster',
-      error_file: __dirname + '/http-server-error.log',
-      out_file: __dirname + '/http-server-output.log'
+      error_file: __dirname + '/logs/http-server-error.log',
+      out_file: __dirname + '/logs/http-server-output.log'
     }
   ]//,
   /**

@@ -93,6 +93,7 @@ module.exports = class Dequenpeda extends EventEmitter {
       let QueryClass = this._chooseQueryClass(type)
       const query = new QueryClass(queryString, this, options)
       this._queries.set(query._id, query)
+      this.emit('new-query', query._id)
       query.execute('loaded').then(() => {
         // noop
       }).catch(e => {

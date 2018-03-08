@@ -8,7 +8,8 @@ function _handleNewSharedQuery(id, message) {
   } else {
     const query = new QueryShared(message.query, this, {shared: false})
     this._queries.set(query._id, query)
-    query.execute('initiated').then(() => {
+    this.emit('new-external-query', query._id)
+    query.execute('loaded').then(() => {
       // noop
     }).catch(e => {
       console.error(e)

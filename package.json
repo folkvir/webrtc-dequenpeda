@@ -4,11 +4,7 @@
   "description": "Decentralized Query Engine for Personal Data",
   "main": "webrtc-dequenpeda.js",
   "scripts": {
-    "start": "npm run http",
-    "http": "pm2 start ./web-app/ecosystem.config.js",
-    "signaling": "foglet-scripts start",
-    "build": "foglet-scripts build",
-    "test": "node node-app/node-app-normal-test.js -c 5"
+    "build": "foglet-scripts build"
   },
   "repository": {
     "type": "git",
@@ -32,26 +28,17 @@
   },
   "homepage": "https://github.com/folkvir/webrtc-dequenpeda#readme",
   "dependencies": {
-    "bootstrap": "^4.0.0",
     "commander": "^2.14.1",
-    "cors": "^2.8.4",
     "debug": "^3.1.0",
     "express": "^4.16.2",
     "foglet-core": "^4.0.0",
     "foglet-signaling-server": "^0.3.1",
     "jquery": "^3.3.1",
     "js-base64": "^2.4.3",
-    "lodash": "^4.17.5",
     "lodash.merge": "^4.6.1",
-    "lru-cache": "^4.1.1",
-    "popper.js": "^1.12.9",
     "rdfstore": "^0.9.17",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
     "shelljs": "^0.8.1",
-    "socket.io": "^2.0.4",
     "sparqljs": "^2.0.3",
-    "twilio": "^3.13.0",
     "uniqid": "^4.1.1",
     "wrtc": "0.0.66"
   },
