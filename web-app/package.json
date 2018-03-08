@@ -16,6 +16,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-3": "^6.24.1",
     "cors": "^2.8.4",
+    "css-loader": "^0.28.10",
     "debug": "^3.1.0",
     "express": "^4.16.2",
     "file-loader": "^1.1.11",
@@ -26,12 +27,14 @@
     "socket.io": "^2.0.4",
     "twilio": "^3.13.0",
     "vue-loader": "^14.2.1",
+    "vue-style-loader": "^4.0.2",
     "vue-template-compiler": "^2.5.13",
     "webpack": "^4.1.1",
     "webpack-cli": "^2.0.10"
   },
   "dependencies": {
     "bootstrap-vue": "^2.0.0-rc.2",
-    "vue": "^2.5.13"
+    "vue": "^2.5.13",
+    "vue-router": "^3.0.1"
   }
 }
