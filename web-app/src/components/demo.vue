@@ -4,6 +4,7 @@
         <b-col cols="3" offset="1" class="leftPanel">Queries</b-col>
         <b-col cols="7"  class="rightPanel">
           Informations
+          <button id="justDoIt" v-on:click="doIt">doIt</button>
         </b-col>
     </b-row>
   </layout>
@@ -18,7 +19,12 @@ export default {
   data: function () { return { global: this.$props } },
   components: {
     Layout
-  }
+  },
+  methods: {
+    doIt: () => {
+      console.log(a, foglet, 'Global vars are working.. good news !')
+    }
+  } 
 }
 </script>
 

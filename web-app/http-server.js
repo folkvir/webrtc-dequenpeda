@@ -22,6 +22,7 @@ const Cache = require('./signaling-http-cache.js')
 app.use(cors())
 
 app.use('/', express.static(path.join(__dirname, '/dist')))
+app.use('/jquery', express.static(path.join(__dirname, '/node_modules/jquery/dist')))
 
 app.get('/ice', function (req, res) {
   console.log('A user want ice from client:')
