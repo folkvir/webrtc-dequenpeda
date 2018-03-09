@@ -15,7 +15,6 @@ import Layout from './layout.vue'
 export default {
   name: 'home',
   props: ['global'],
-  data: function () { return { global: this.$props } },
   components: {
     Layout
   }

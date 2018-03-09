@@ -57,9 +57,15 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/
+        exclude: () => true,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [ 'env' ]
+          }
+        }
       },
+      { test: /\.json$/, loader: 'json-loader' },
       {
         test: /\.(png|jpg|gif|svg)$/,
         loader: 'file-loader',
@@ -69,7 +75,17 @@ module.exports = {
       }
     ]
   },
+  resolveLoader: {
+    modules: [
+      "node_modules",
+      "../node_modules"
+    ],
+  },
   resolve: {
+    modules: [
+      "node_modules",
+      "../node_modules"
+    ],
     alias: {
       'vue$': 'vue/dist/vue.esm.js'
     },

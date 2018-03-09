@@ -29,7 +29,7 @@ let DEFAULT_OPTIONS = {
         timeout: 2 * 60 * 1000, // spray-wrtc timeout before definitively close a WebRTC connection.
         delta: 5 * 1000,   // spray-wrtc shuffle interval
         signaling: {
-          address: 'http://localhost:3000/',
+          address: 'http://localhost:8000/',
           // signalingAdress: 'https://signaling.herokuapp.com/', // address of the signaling server
           room: 'dequenpeda-room' // room to join
         }
@@ -71,14 +71,24 @@ module.exports = class Dequenpeda extends EventEmitter {
    * Usefull in production mode, in test mode connect them manually using wrtc package (see npm or github, node-wrtc)
    * @return {[type]} [description]
    */
-  connection (app) {
-    return this._foglet.connection(app._foglet).then(() => {
-      this.emit('connected')
-      return Promise.resolve()
-    }).catch(e => {
-      this.emit('error', e)
-      return Promise.reject(e)
-    })
+  connection (app = undefined) {
+    if(app) {
+      return this._foglet.connection(app._foglet).then(() => {
+        this.emit('connected')
+        return Promise.resolve()
+      }).catch(e => {
+        this.emit('error', e)
+        return Promise.reject(e)
+      })
+    } else {
+      return this._foglet.connection().then(() => {
+        this.emit('connected')
+        return Promise.resolve()
+      }).catch(e => {
+        this.emit('error', e)
+        return Promise.reject(e)
+      })
+    }
   }
 
   /**

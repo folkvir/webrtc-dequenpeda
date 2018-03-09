@@ -4,6 +4,7 @@
   "description": "Decentralized Query Engine for Personal Data",
   "main": "webrtc-dequenpeda.js",
   "scripts": {
+    "postinstall": "(cd ./web-app && npm install)",
     "build": "foglet-scripts build"
   },
   "repository": {

@@ -4,9 +4,9 @@
   "description": "",
   "main": "ecosystem.config.js",
   "scripts": {
-    "http": "pm2 start ./ecosystem.config.js",
-    "dev": "webpack -w",
-    "build": "webpack"
+    "start": "pm2 start ./ecosystem.config.js",
+    "dev": "webpack -w --mode development ",
+    "build": "webpack --mode production"
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +20,7 @@
     "debug": "^3.1.0",
     "express": "^4.16.2",
     "file-loader": "^1.1.11",
+    "json-loader": "^0.5.7",
     "lodash": "^4.17.5",
     "node-sass": "^4.7.2",
     "pm2": "^2.10.1",

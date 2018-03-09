@@ -14,7 +14,8 @@ module.exports = {
       env_production : {
         NODE_ENV: 'production'
       },
-      instances: 4,
+      // dont change this arg, see clustering issue with socket.io
+      instances: 1, 
       exec_mode: 'cluster',
       error_file: __dirname + '/logs/http-server-error.log',
       out_file: __dirname + '/logs/http-server-output.log'

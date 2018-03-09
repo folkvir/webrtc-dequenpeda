@@ -1,4 +1,5 @@
-data/dataset/*
+data/dataset/
+data/dataset.tar
 dist/
 data/triple_person/*
 

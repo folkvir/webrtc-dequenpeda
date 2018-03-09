@@ -10,6 +10,9 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import { Navbar } from 'bootstrap-vue/es/components';
 Vue.use(Navbar);
 
+//just activate the foglet Bus
+require('./foglet-bus')
+
 import globalValues from './global-values'
 
 import Home  from './components/home.vue'

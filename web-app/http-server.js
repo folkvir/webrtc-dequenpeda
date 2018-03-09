@@ -7,11 +7,12 @@ commander
   .option('-p, --port <port>', 'Port used for the web server', (e) => parseInt(e), 8000)
   .parse(process.argv)
 
+let port = parseInt(commander.port)
+
 const express = require('express')
 const app = express()
 const http = require('http')
 const cors = require('cors')
-const port = commander.port
 const fs = require('fs')
 const path = require('path')
 const io = require('socket.io')
@@ -61,6 +62,7 @@ const logger = (...args) => {
 
 let httpServer = http.Server(app)
 let ioServer = io(httpServer)
+
 ioServer.origins('*:*') // for latest version
 let number = 0
 const time2wait = 5 * 60 * 1000

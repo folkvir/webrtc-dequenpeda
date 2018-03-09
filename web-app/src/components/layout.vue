@@ -12,9 +12,6 @@ import navbar from './navbar.vue'
 
 export default {
   props: ['global'],
-  data: function () { 
-    return { global: this.global }
-  },
   components: {
     navbar
   }
