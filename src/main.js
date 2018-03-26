@@ -1,4 +1,4 @@
-const debug = require('debug')('main')
+const debug = require('debug')('dequenpeda:main')
 const FogletCore = require('foglet-core').Foglet
 const lmerge = require('lodash.merge')
 const EventEmitter = require('events')
@@ -239,7 +239,7 @@ module.exports = class Dequenpeda extends EventEmitter {
       // send all other messages to the appropriate query
       throw new Error('This message is not handled by the application. Please report.')
     }
-  }  
+  }
 
   _periodicExecution () {
     this.emit('periodic-execution-begins')

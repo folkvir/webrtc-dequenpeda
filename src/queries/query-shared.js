@@ -2,7 +2,7 @@ const uniqid = require('uniqid')
 const EventEmitter = require('events')
 const SparqlParser = require('sparqljs').Parser
 const SparqlGenerator = require('sparqljs').Generator
-const debug = require('debug')('query-shared')
+const debug = require('debug')('dequenpeda:query-shared')
 const Base64 = require('js-base64').Base64
 const lmerge = require('lodash.merge')
 
@@ -47,7 +47,7 @@ module.exports = class Query extends EventEmitter {
       this._log(`[client:${this._parent._foglet.id}][Query:${this._id}] Receive: data from: ${message.requester.fogletId}`)
       this.emit(message.jobId, message)
     })
-    
+
     // broadcast the query
     if(this._options.shared) {
       this._parent._foglet.sendBroadcast({
@@ -95,7 +95,7 @@ module.exports = class Query extends EventEmitter {
     } else {
       // execute only on my data
       return this._execute(eventName)
-    }    
+    }
   }
 
   async _execute (eventName) {
@@ -122,7 +122,7 @@ module.exports = class Query extends EventEmitter {
     // console.log('Local result', res)
     await this._mergeResults(res)
     // console.log('Merged results:', this.results)
-    // add property to an array to get them as we want    
+    // add property to an array to get them as we want
     this.emit(eventName, this.results)
     return Promise.resolve()
   }
@@ -278,7 +278,7 @@ module.exports = class Query extends EventEmitter {
       return results.reduce((acc, message) => acc.then(() => {
         return new Promise((resolve, reject) => {
           if(!this._mappings.has(message.requester.fogletId)){
-            // create the new result mapping 
+            // create the new result mapping
             const newMapping = {
               results: message.results,
               source: message.requester

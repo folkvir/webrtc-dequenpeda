@@ -1,4 +1,4 @@
-const debug = require('debug')('main:unicast-handlers')
+const debug = require('debug')('dequenpeda:unicast-handlers')
 const QueryShared = require('../queries/query-shared')
 
 function _handleAskTriples(id, message) {

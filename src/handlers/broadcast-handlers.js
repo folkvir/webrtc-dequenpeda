@@ -1,4 +1,4 @@
-const debug = require('debug')('main:broadcast-handlers')
+const debug = require('debug')('dequenpeda:broadcast-handlers')
 const QueryShared = require('../queries/query-shared')
 
 function _handleNewSharedQuery(id, message) {

@@ -2,7 +2,7 @@ const uniqid = require('uniqid')
 const EventEmitter = require('events')
 const SparqlParser = require('sparqljs').Parser
 const SparqlGenerator = require('sparqljs').Generator
-const debug = require('debug')('query')
+const debug = require('debug')('dequenpeda:query')
 const Base64 = require('js-base64').Base64
 
 module.exports = class Query extends EventEmitter {
