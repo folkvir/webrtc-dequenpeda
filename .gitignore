@@ -4,6 +4,7 @@ dist/
 data/triple_person/*
 
 # Logs
+.DS_Store
 logs
 *.log
 npm-debug.log*

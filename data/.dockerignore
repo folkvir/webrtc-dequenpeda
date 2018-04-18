@@ -1,0 +1,5 @@
+dataset/
+dataset.tar.gz
+README.md
+sql2rdf.js
+triple_person_all.ttl
