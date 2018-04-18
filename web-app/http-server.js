@@ -62,8 +62,9 @@ const logger = (...args) => {
 
 let httpServer = http.Server(app)
 let ioServer = io(httpServer)
-
-ioServer.origins('*:*') // for latest version
+ioServer.origins((origin, callback) => {
+  callback(null, true)
+})
 let number = 0
 const time2wait = 5 * 60 * 1000
 

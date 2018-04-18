@@ -1,0 +1,4 @@
+CONSTRUCT 
+  { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x8 .}
+WHERE
+  { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x8 }

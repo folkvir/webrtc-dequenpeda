@@ -1,0 +1,4 @@
+CONSTRUCT 
+  { <http://data.linkedmdb.org/film/27700> <http://www.w3.org/2002/07/owl#sameAs> ?x5 .}
+WHERE
+  { <http://data.linkedmdb.org/film/27700> <http://www.w3.org/2002/07/owl#sameAs> ?x5 }

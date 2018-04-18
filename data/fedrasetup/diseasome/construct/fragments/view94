@@ -1,0 +1,4 @@
+CONSTRUCT 
+  { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CSRP3> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/hgncIdPage> ?x3 .}
+WHERE
+  { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CSRP3> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/hgncIdPage> ?x3 }

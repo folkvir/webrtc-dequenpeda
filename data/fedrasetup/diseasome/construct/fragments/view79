@@ -1,0 +1,4 @@
+CONSTRUCT 
+  { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> <http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=136435> .}
+WHERE
+  { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> <http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=136435> }

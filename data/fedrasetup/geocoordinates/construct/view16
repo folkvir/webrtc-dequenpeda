@@ -1,0 +1,4 @@
+CONSTRUCT 
+  { <http://dbpedia.org/resource/Hunstrete_Lake> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x4 .}
+WHERE
+  { <http://dbpedia.org/resource/Hunstrete_Lake> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x4 }

@@ -1,0 +1,4 @@
+CONSTRUCT 
+  { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3407> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x8 .}
+WHERE
+  { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3407> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x8 }

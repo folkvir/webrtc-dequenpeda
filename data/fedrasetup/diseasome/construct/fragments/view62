@@ -1,0 +1,4 @@
+CONSTRUCT 
+  { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3407> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x2 .}
+WHERE
+  { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3407> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x2 }

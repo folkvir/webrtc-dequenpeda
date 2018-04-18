@@ -1,0 +1,4 @@
+CONSTRUCT 
+  { <http://data.linkedmdb.org/film/2994> <http://www.w3.org/2004/02/skos/core#subject> ?x3 .}
+WHERE
+  { <http://data.linkedmdb.org/film/2994> <http://www.w3.org/2004/02/skos/core#subject> ?x3 }

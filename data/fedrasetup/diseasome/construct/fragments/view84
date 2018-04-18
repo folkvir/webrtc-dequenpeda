@@ -1,0 +1,4 @@
+CONSTRUCT 
+  { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/NPHP1> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/bio2rdfSymbol> ?x2 .}
+WHERE
+  { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/NPHP1> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/bio2rdfSymbol> ?x2 }

@@ -1,0 +1,4 @@
+CONSTRUCT 
+  { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/hgncId> <http://bio2rdf.org/hgnc:1393> .}
+WHERE
+  { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/hgncId> <http://bio2rdf.org/hgnc:1393> }

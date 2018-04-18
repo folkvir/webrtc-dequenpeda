@@ -1,0 +1,4 @@
+CONSTRUCT 
+  { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ACHE> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/hgncIdPage> ?x4 .}
+WHERE
+  { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ACHE> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/hgncIdPage> ?x4 }

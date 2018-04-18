@@ -1,0 +1,4 @@
+CONSTRUCT 
+  { ?x1 <http://dbpedia.org/property/hasPhotoCollection> ?x2 .}
+WHERE
+  { ?x1 <http://dbpedia.org/property/hasPhotoCollection> ?x2 }

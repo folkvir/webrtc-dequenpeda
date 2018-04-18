@@ -1,0 +1,4 @@
+CONSTRUCT 
+  { ?x1 <http://www.w3.org/2002/07/owl#sameAs> <http://mpii.de/yago/resource/Nickel_Mountain> .}
+WHERE
+  { ?x1 <http://www.w3.org/2002/07/owl#sameAs> <http://mpii.de/yago/resource/Nickel_Mountain> }

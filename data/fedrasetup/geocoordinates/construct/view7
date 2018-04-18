@@ -1,0 +1,4 @@
+CONSTRUCT 
+  { <http://dbpedia.org/resource/Bowman_Lake_State_Park> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .}
+WHERE
+  { <http://dbpedia.org/resource/Bowman_Lake_State_Park> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 }

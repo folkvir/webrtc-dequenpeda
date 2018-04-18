@@ -1,0 +1,4 @@
+CONSTRUCT 
+  { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/886> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x5 .}
+WHERE
+  { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/886> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x5 }

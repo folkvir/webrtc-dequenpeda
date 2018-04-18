@@ -1,0 +1,4 @@
+CONSTRUCT 
+  { ?x1 <http://www.w3.org/2002/07/owl#sameAs> <http://mpii.de/yago/resource/I_/u00E2/u0099/u00A5_Huckabees> .}
+WHERE
+  { ?x1 <http://www.w3.org/2002/07/owl#sameAs> <http://mpii.de/yago/resource/I_/u00E2/u0099/u00A5_Huckabees> }

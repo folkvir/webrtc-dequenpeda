@@ -55,7 +55,7 @@ module.exports = class Store {
             // console.log('loadData finished')
             resolve(res)
           }).catch(e => {
-            console.log(e)
+            console.error(e)
             resolve()
           })
         }).catch(e => {
@@ -66,7 +66,7 @@ module.exports = class Store {
           // console.log('loadData finished')
           resolve(res)
         }).catch(e => {
-          console.log(e)
+          console.error(e)
           resolve()
         })
       }

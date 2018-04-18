@@ -1,0 +1,4 @@
+CONSTRUCT 
+  { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2774> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x2 .}
+WHERE
+  { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2774> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x2 }

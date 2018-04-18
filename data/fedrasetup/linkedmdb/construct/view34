@@ -1,0 +1,4 @@
+CONSTRUCT 
+  { <http://data.linkedmdb.org/film/11937> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3 .}
+WHERE
+  { <http://data.linkedmdb.org/film/11937> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3 }

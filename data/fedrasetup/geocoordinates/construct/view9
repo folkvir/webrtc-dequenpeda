@@ -1,0 +1,4 @@
+CONSTRUCT 
+  { <http://dbpedia.org/resource/Triyuga> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .}
+WHERE
+  { <http://dbpedia.org/resource/Triyuga> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 }

@@ -1,0 +1,4 @@
+CONSTRUCT 
+  { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?x4 .}
+WHERE
+  { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?x4 }

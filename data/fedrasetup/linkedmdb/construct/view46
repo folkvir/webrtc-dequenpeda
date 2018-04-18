@@ -1,0 +1,4 @@
+CONSTRUCT 
+  { <http://data.linkedmdb.org/film/31792> <http://xmlns.com/foaf/0.1/based_near> ?x3 .}
+WHERE
+  { <http://data.linkedmdb.org/film/31792> <http://xmlns.com/foaf/0.1/based_near> ?x3 }

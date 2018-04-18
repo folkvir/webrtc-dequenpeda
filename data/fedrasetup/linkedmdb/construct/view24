@@ -1,0 +1,4 @@
+CONSTRUCT 
+  { <http://data.linkedmdb.org/film/543> <http://purl.org/dc/terms/title> ?x4 .}
+WHERE
+  { <http://data.linkedmdb.org/film/543> <http://purl.org/dc/terms/title> ?x4 }

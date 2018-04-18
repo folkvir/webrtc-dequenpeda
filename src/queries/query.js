@@ -1,13 +1,20 @@
 const uniqid = require('uniqid')
+const lmerge = require('lodash.merge')
 const EventEmitter = require('events')
 const SparqlParser = require('sparqljs').Parser
 const SparqlGenerator = require('sparqljs').Generator
 const debug = require('debug')('dequenpeda:query')
 const Base64 = require('js-base64').Base64
 
+const DEFAULT_QUERY_OPTIONS = {
+  timeout: 5 * 60 * 1000
+}
+
 module.exports = class Query extends EventEmitter {
-  constructor (queryString, parent) {
+  constructor (queryString, parent, options) {
     super()
+    if(!queryString || queryString === null || queryString === '') throw new Error('The query has to be different of undefined, null or empty string')
+    this._options = lmerge(DEFAULT_QUERY_OPTIONS, options)
     this._parent = parent
     this._query = queryString
     this._id = Base64.encode(this._query)
@@ -25,9 +32,10 @@ module.exports = class Query extends EventEmitter {
       this._mappings.set(this._triple2String(t), {id: uniqid(), triple: t, sources: new Map()})
     })
     this.on('receive', (message) => {
-      debug(`[client:${this._parent._foglet.id}][Query:${this._id}] Receive: data from: ${message.owner.fogletId}`)
+      debug(`[client:${this._parent._foglet._id}] Receive: data from: ${message.owner.fogletId}`)
       this.emit(message.jobId, message)
     })
+    this._timeout = undefined
   }
 
   stop () {
@@ -35,16 +43,32 @@ module.exports = class Query extends EventEmitter {
   }
 
   async execute (eventName) {
-    debug(`[client:${this._parent._foglet_id}] 1-Executing the query ${this._id}...`)
+    (eventName !== 'end') && this._createTimeout()
+    debug(`[client:${this._parent._foglet.id}] 1-Executing the query ${this._id}...`)
     const neighbors = this._parent._foglet.getNeighbours()
     if (neighbors.length > 0) {
       // execute after receiving triples from neighbors
       return this._askTriples().then(() => {
-        return this._execute(eventName)
+        return this._execute(eventName).then(() => {
+          debug('Query executed')
+          return Promise.resolve()
+        }).catch(e => {
+          console.error(e)
+          return Promise.reject(e)
+        })
+      }).catch(e => {
+        console.error('error when asking triples: ', e)
+        return Promise.reject(e)
       })
     } else {
       // execute only on my data
-      return this._execute(eventName)
+      return this._execute(eventName).then(() => {
+        debug('Query executed')
+        return Promise.resolve()
+      }).catch(e => {
+        console.error(e)
+        return Promise.reject(e)
+      })
     }
   }
 
@@ -64,8 +88,6 @@ module.exports = class Query extends EventEmitter {
         namedId.push(`${this._getGraphId(value.id, source.fogletId)}`)
       })
     }
-    debug(defaultGraphId)
-    debug(namedId)
     const plan = this._parsedQuery
     // plan.from = { default: [ defaultGraphId ], named: namedId }
 
@@ -85,28 +107,28 @@ module.exports = class Query extends EventEmitter {
       const neighbors = this._parent._foglet.getNeighbours()
       let receivedMessage = 0
       let timeoutReceived = 0
-      let finalResult = []
-      function done () {
-        if ((receivedMessage + timeoutReceived) === neighbors.length) {
-          resolve(finalResult)
-        }
-      }
+      let responses = []
+
       try {
         neighbors.forEach(id => {
           const jobId = uniqid()
           debug(id, this._parent._foglet.inViewID)
-          this._parent._foglet.sendUnicast(id, {
-            requester: {
-              fogletId: this._parent._foglet.id,
-              inview: this._parent._foglet.inViewID,
-              outview: this._parent._foglet.outViewID
-            },
-            type: 'ask-triples',
-            query: this._id,
-            prefixes: [],
-            triples: this._triples,
-            jobId
-          })
+          try {
+            this._parent._foglet.sendUnicast(id, {
+              requester: {
+                fogletId: this._parent._foglet.id,
+                inview: this._parent._foglet.inViewID,
+                outview: this._parent._foglet.outViewID
+              },
+              type: 'ask-triples',
+              query: this._id,
+              prefixes: [],
+              triples: this._triples,
+              jobId
+            })
+          } catch (e) {
+            console.error(e)
+          }
 
           // set the timeout for unexpected network error
           let timeout = null
@@ -117,7 +139,15 @@ module.exports = class Query extends EventEmitter {
             this.once('timeout-' + jobId, () => {
               this.removeAllListeners(jobId)
               timeoutReceived++
-              done()
+              if ((receivedMessage + timeoutReceived) === neighbors.length) {
+                this._processResponses(responses).then(() => {
+                  resolve()
+                }).catch(e => {
+                  console.error(e)
+                  debug('Error during processing responses.:', e)
+                  resolve()
+                })
+              }
             })
           }
 
@@ -127,43 +157,62 @@ module.exports = class Query extends EventEmitter {
               this.removeAllListeners('timeout-' + jobId)
               clearTimeout(timeout)
             }
-            let owner = message.owner
-            let data = message.triples
-            data.reduce((accData, elem) => accData.then(() => {
-              return new Promise((resolveData) => {
-                if (elem.data.length > 0) {
-                  // save the mapping between the triple and the owner
-                  const originalTriple = this._mappings.get(this._triple2String(elem.triple))
-                  originalTriple.sources.set(owner.fogletId, owner)
-                  // store data corresponding to the triple and owner in the rdfstore
-                  const graphId = this._encapsGraphId(this._getGraphId(originalTriple.id, owner.fogletId), '<', '>')
-                  debug('New graphId generated', graphId)
-                  elem.data.reduce((acc, triple) => acc.then(res => {
-                    return this._parent._store.loadData(graphId, [], triple)
-                  }), Promise.resolve()).then(() => {
-                    resolveData()
-                  }).catch(e => {
-                    console.error(e)
-                    // resolve on error ...
-                    resolveData()
-                  })
-                } else {
-                  resolveData()
-                }
+            responses.push(message)
+            debug(`[jobId: ${jobId}] receive a responses for this jobId`)
+            receivedMessage++
+            if ((receivedMessage + timeoutReceived) === neighbors.length) {
+              this._processResponses(responses).then(() => {
+                resolve()
+              }).catch(e => {
+                console.error(e)
+                debug('Error during processing responses.:', e)
+                resolve()
               })
-            }), Promise.resolve()).then(() => {
-              receivedMessage++
-              done()
-            }).catch(e => {
-              console.error(e)
-              receivedMessage++
-              done()
-            })
+            }
           })
         })
       } catch (e) {
         reject(new Error('Please report, unexpected bug', e))
       }
+    })
+  }
+
+  _processResponses (responses) {
+    debug('Sequential processing of received triples: beginning')
+    return new Promise((resolve, reject) => {
+      responses.reduce((respAcc, resp) => respAcc.then(() => {
+        let owner = resp.owner
+        let data = resp.triples
+        return data.reduce((accData, elem) => accData.then(() => {
+          return new Promise((resolveData) => {
+            if (elem.data.length > 0) {
+              // save the mapping between the triple and the owner
+              const key = this._triple2String(elem.triple)
+              const originalTriple = this._mappings.get(key)
+              originalTriple.sources.set(owner.fogletId, owner)
+              // store data corresponding to the triple and owner in the rdfstore
+              const graphId = this._encapsGraphId(this._getGraphId(originalTriple.id, owner.fogletId), '<', '>')
+              debug('New graphId generated', graphId)
+              elem.data.reduce((acc, triple) => acc.then(res => {
+                return this._parent._store.loadData(graphId, [], triple)
+              }), Promise.resolve()).then(() => {
+                resolveData()
+              }).catch(e => {
+                console.error(e)
+                // resolve on error ...
+                resolveData()
+              })
+            } else {
+              resolveData()
+            }
+          })
+        }), Promise.resolve())
+      }), Promise.resolve()).then(() => {
+        debug('Sequential processing of received triples: finished')
+        resolve()
+      }).catch(e => {
+        reject(e)
+      })
     })
   }
 
@@ -246,5 +295,15 @@ module.exports = class Query extends EventEmitter {
       triple.object = `"${triple.object}"`
     }
     return triple
+  }
+
+  _createTimeout() {
+    if(!this._timeout) {
+      debug(`[client:${this._parent._foglet.id}][Query:${this._id}] Timeout creation: ${this._options.timeout}`)
+      this._timeout = setTimeout(() => {
+        debug(`[client:${this._parent._foglet.id}][Query:${this._id}] Query has TIMEDOUT: ${this._options.timeout}`)
+        this.stop()
+      }, this._options.timeout)
+    }
   }
 }

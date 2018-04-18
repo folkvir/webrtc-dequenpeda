@@ -1,0 +1,63 @@
+<html>
+  <head> <meta charset="utf-8"> <title>Dequenpeda-test</title> </head>
+  <body>
+    Please, switch to console.
+    <script src="../dist/webrtc-dequenpeda.bundle.js"></script>
+    <script>
+      localStorage.debug = ""
+      let foglets = []
+      const number = 50
+      for(let i = 0; i< number; i++) {
+        foglets.push(new dequenpeda.Client({
+          foglet: {
+            rps: {
+              options: {
+                delta: 10000,
+                timeout: 10000,
+                timeoutPending: 10000,
+                socketClass: dequenpeda.AbstractSimplePeer
+              }
+            }
+          }
+        }))
+        foglets[i].on('receive-broadcast',(message) => {
+          console.log(message)
+        })
+      }
+
+      for(let i = 0; i< number; i++) {
+        if(i!==0) {
+          foglets[i].connection(foglets[0]).then(() => {
+            console.log('connected')
+          }).catch(e => {
+            console.error(e)
+          })
+        }
+      }
+
+      // let a = new dequenpeda.AbstractSimplePeer({initiator: true}), b = new dequenpeda.AbstractSimplePeer()
+      // a.on('signal', (offer) => {
+      //   console.log('a receive the offer', offer)
+      //   b.signal(offer)
+      // })
+      // b.on('signal', (offer) => {
+      //   console.log('b receive the offer', offer)
+      //   a.signal(offer)
+      // })
+      // a.on('connect', () => {
+      //   console.log('a connected')
+      //   a.send('****this is a message****')
+      // })
+      // b.on('connect', () => {
+      //   console.log('b connected')
+      // })
+      // b.on('data', (data) => {
+      //   console.log('b receives data: ', data)
+      //   b.send('****this is a reply****')
+      // })
+      // a.on('data', data => {
+      //   console.log('a receives data: ', data)
+      // })
+    </script>
+  </body>
+</html>

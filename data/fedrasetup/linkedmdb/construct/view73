@@ -1,0 +1,4 @@
+CONSTRUCT 
+  { <http://data.linkedmdb.org/director/1335> <http://xmlns.com/foaf/0.1/made> ?x2 .}
+WHERE
+  { <http://data.linkedmdb.org/director/1335> <http://xmlns.com/foaf/0.1/made> ?x2 }

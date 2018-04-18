@@ -1,0 +1,4 @@
+CONSTRUCT 
+  { ?x1 <http://xmlns.com/foaf/0.1/made> <http://data.linkedmdb.org/film/1058> .}
+WHERE
+  { ?x1 <http://xmlns.com/foaf/0.1/made> <http://data.linkedmdb.org/film/1058> }

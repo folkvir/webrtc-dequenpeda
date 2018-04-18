@@ -1,0 +1,4 @@
+CONSTRUCT 
+  { ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x4 .}
+WHERE
+  { ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x4 }

@@ -1,0 +1,4 @@
+CONSTRUCT 
+  { ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x2 .}
+WHERE
+  { ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x2 }

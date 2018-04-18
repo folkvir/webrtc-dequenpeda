@@ -4,11 +4,13 @@ const lmerge = require('lodash.merge')
 const EventEmitter = require('events')
 const N3 = require('n3')
 const N3Util = N3.Util
+const uniqid = require('uniqid')
 const Store = require('./store')
 const Query = require('./queries/query')
 const QueryShared = require('./queries/query-shared')
 const UnicastHandlers = require('./handlers/unicast-handlers')
 const BroadcastHandlers = require('./handlers/broadcast-handlers')
+const debugError = require('debug')('error')
 
 const clone = (obj) => JSON.parse(JSON.stringify(obj))
 
@@ -41,12 +43,20 @@ if (process) {
   DEFAULT_OPTIONS.foglet.rps.options.webrtc.wrtc = require('wrtc')
 }
 
+
+process.on('unhandledRejection', function(reason, p){
+    debugError("Possibly Unhandled Rejection at: Promise ", p, " reason: ", reason);
+});
+
 module.exports = class Dequenpeda extends EventEmitter {
   constructor (options) {
     super()
+    this.on('error', debugError)
     this._options = lmerge(DEFAULT_OPTIONS, options)
+    this._id = uniqid()
+    this._options.foglet.id = this._id
     this._foglet = new FogletCore(this._options.foglet)
-    this._foglet.share()
+    // this._foglet.share()
     this._foglet.onUnicast((id, message) => {
       // debug(`[${this._foglet._id}] ReceiveUnicast: ${JSON.stringify(message)}`)
       this._handleUnicast(id, message)
@@ -81,6 +91,7 @@ module.exports = class Dequenpeda extends EventEmitter {
         return Promise.reject(e)
       })
     } else {
+      this._foglet.share()
       return this._foglet.connection().then(() => {
         this.emit('connected')
         return Promise.resolve()
@@ -111,7 +122,7 @@ module.exports = class Dequenpeda extends EventEmitter {
       })
       return query
     } catch (e) {
-      throw new Error(e)
+      console.error(e)
     }
   }
 
@@ -225,8 +236,9 @@ module.exports = class Dequenpeda extends EventEmitter {
     } else if(message.type === 'answer-ask-results') {
       this._queries.get(message.queryId).emit('receive', message)
     } else {
+      debug(id, message)
       // send all other messages to the appropriate query
-      throw new Error('This message is not handled by the application. Please report.')
+      // this.emit('error', new Error('This message is not handled by the application. Please report.'))
     }
   }
 
@@ -236,8 +248,9 @@ module.exports = class Dequenpeda extends EventEmitter {
     } else if (message.type === 'delete-shared-query') {
       BroadcastHandlers._handleDeleteSharedQuery.call(this, id, message)
     } else {
+      debug(id, message)
       // send all other messages to the appropriate query
-      throw new Error('This message is not handled by the application. Please report.')
+      // this.emit('error', new Error('This message is not handled by the application. Please report.'))
     }
   }
 

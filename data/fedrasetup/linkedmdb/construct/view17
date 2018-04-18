@@ -1,0 +1,4 @@
+CONSTRUCT 
+  { <http://data.linkedmdb.org/writer/9731> <http://www.w3.org/2000/01/rdf-schema#label> ?x3 .}
+WHERE
+  { <http://data.linkedmdb.org/writer/9731> <http://www.w3.org/2000/01/rdf-schema#label> ?x3 }

@@ -1,0 +1,4 @@
+CONSTRUCT 
+  { ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x3 .}
+WHERE
+  { ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x3 }

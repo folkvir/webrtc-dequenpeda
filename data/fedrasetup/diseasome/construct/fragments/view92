@@ -1,0 +1,4 @@
+CONSTRUCT 
+  { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/bio2rdfSymbol> <http://symbol.bio2rdf.org/symbol:ETFA> .}
+WHERE
+  { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/bio2rdfSymbol> <http://symbol.bio2rdf.org/symbol:ETFA> }
