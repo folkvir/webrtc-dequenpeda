@@ -111,18 +111,21 @@ extractFilename(pathData, commander.clients).then((res) => {
             timeout: commander.timeout
           })
           query.on('loaded', (result) => {
+            console.log(result)
             console.log(`[client0-${shuffle.length}] Number of results when initiated: `, result.length)
             shuffle.push(result)
             // stop when query results are equal to ref results
             if (result.length === resultRef.length) clients[0].stop(query._id)
           })
           query.on('updated', (result) => {
+            console.log(result)
             console.log(`[client0-${shuffle.length}] Number of results when updated: `, result.length)
             shuffle.push(result)
             // stop when query results are equal to ref results
             if (result.length === resultRef.length) clients[0].stop(query._id)
           })
           query.on('end', (result) => {
+            console.log(result)
             console.log(`[client0-${shuffle.length}] Number of results when terminated: `, result.length)
             console.log(`[client0-${shuffle.length}] Number of shuffle for the query: `, shuffle.length)
             process.exit(0)

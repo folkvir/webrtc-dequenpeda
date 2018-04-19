@@ -7,6 +7,7 @@ const debug = require('debug')('dequenpeda:query')
 const Base64 = require('js-base64').Base64
 const ArrayIterator = require('asynciterator').ArrayIterator
 const ConstructOperator = require('./construct-operator')
+const N3 = require('n3')
 
 const DEFAULT_QUERY_OPTIONS = {
   timeout: 5 * 60 * 1000
@@ -31,6 +32,7 @@ module.exports = class Query extends EventEmitter {
     this._mappings = new Map()
     this._sources = new Map()
     this._properTriples = this._extractTriplePattern(this._parsedQuery).map(triple => Object.assign({}, triple))
+    console.log('Proper triples: ', this._properTriples)
     this._triples = this._properTriples.map(triple => this._tripleParsed2Triple(Object.assign({}, triple)))
     console.log('Triples:', this._triples)
     this._triples.forEach(t => {
@@ -50,7 +52,7 @@ module.exports = class Query extends EventEmitter {
   async execute (eventName) {
     (eventName !== 'end') && this._createTimeout()
     debug(`[client:${this._parent._foglet.id}] 1-Executing the query ${this._id}...`)
-    const neighbors = this._parent._foglet.getNeighbours()
+    const neighbors = this._parent._foglet.getNeighbours(Infinity)
     debug(`[client:${this._parent._foglet.id}] Neighbours: `, neighbors)
     if (neighbors.length > 0) {
       // execute after receiving triples from neighbors
@@ -79,7 +81,7 @@ module.exports = class Query extends EventEmitter {
   }
 
   async _execute (eventName) {
-    debug(`[client:${this._parent._foglet.id}] 2-Executing the query ${this._id}...`)
+
     const pattern = {
       subject: '?s',
       predicate: '?p',
@@ -99,7 +101,7 @@ module.exports = class Query extends EventEmitter {
     // debug(`[client:${this._parent._foglet.id}] 2-Rewriting the query ${this._id}...`)
     const generator = new SparqlGenerator()
     const rewritedQuery = generator.stringify(plan)
-    debug(`[client:${this._parent._foglet.id}]`, rewritedQuery)
+    debug(`[client:${this._parent._foglet.id}] Executing the query: ${rewritedQuery}`)
     const res = await this._parent._store.query(rewritedQuery)
     debug(`[client:${this._parent._foglet.id}] Number remote peers seen:`, this._sources.size)
     this.emit(eventName, res)
@@ -127,7 +129,7 @@ module.exports = class Query extends EventEmitter {
 
   _askTriples () {
     return new Promise((resolve, reject) => {
-      const neighbors = this._parent._foglet.getNeighbours()
+      const neighbors = this._parent._foglet.getNeighbours(Infinity)
       let receivedMessage = 0
       let timeoutReceived = 0
       let responses = []
@@ -206,6 +208,10 @@ module.exports = class Query extends EventEmitter {
     return new Promise((resolve, reject) => {
       responses.reduce((respAcc, resp) => respAcc.then(() => {
         let owner = resp.owner
+        if(!this._sources.has(owner.fogletId)) {
+          this._sources.set(owner.fogletId, owner)
+          debug(`Adding a new source: `, owner.fogletId)
+        }
         let data = resp.triples
         console.log(data)
         return data.reduce((accData, elem) => accData.then(() => {
@@ -214,10 +220,6 @@ module.exports = class Query extends EventEmitter {
               // save the mapping between the triple and the owner
               const key = this._triple2String(elem.triple)
               const originalTriple = this._mappings.get(key)
-              if(!this._sources.has(owner.fogletId)) {
-                this._sources.set(owner.fogletId, owner.fogletId)
-                debug(`Adding a new source: `, owner.fogletId)
-              }
               originalTriple.sources.set(owner.fogletId, owner)
               let graphId = this._encapsGraphId(this._parent._options.defaultGraph, '<', '>')
               elem.data.reduce((acc, triple) => acc.then(res => {
@@ -255,7 +257,6 @@ module.exports = class Query extends EventEmitter {
       const extractBis = (object) => {
         if (object.type === 'union' || object.type === 'group' || object.type === 'optional' || object.type === 'graph') {
           //console.log('Recursive call: ', object.patterns);
-
           return object.patterns.map(p => extractBis(p)).reduce((acc, cur) => {
             //console.log('reduce: cur', cur, 'reduce acc:', acc)
             acc.push(...cur)
@@ -319,14 +320,17 @@ module.exports = class Query extends EventEmitter {
   }
 
   _tripleParsed2Triple (triple) {
-    if (!triple.subject.startsWith('?') && !triple.subject.startsWith('<')) {
-      triple.subject = `<${triple.subject}>`
+    if (!triple.subject.startsWith('?')) {
+      if(N3.Util.isIRI(triple.subject)) triple.subject = `<${triple.subject}>`
+      if(N3.Util.isLiteral(triple.subject)) triple.subject = `"${triple.subject}"`
     }
-    if (!triple.predicate.startsWith('?') && !triple.predicate.startsWith('<')) {
-      triple.predicate = `<${triple.predicate}>`
+    if (!triple.predicate.startsWith('?') ) {
+      if(N3.Util.isIRI(triple.predicate)) triple.predicate = `<${triple.predicate}>`
+      if(N3.Util.isLiteral(triple.predicate)) triple.predicate = `"${triple.predicate}"`
     }
-    if (!triple.object.startsWith('?') && !triple.object.startsWith('"')) {
-      triple.object = `"${triple.object}"`
+    if (!triple.object.startsWith('?')) {
+      if(N3.Util.isIRI(triple.object)) triple.object = `<${triple.object}>`
+      if(N3.Util.isLiteral(triple.object)) triple.object = `"${triple.object}"`
     }
     return triple
   }

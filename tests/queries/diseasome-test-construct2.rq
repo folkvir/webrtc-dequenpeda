@@ -1,0 +1,7 @@
+CONSTRUCT {
+  <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1130> <http://www.w3.org/2002/07/owl#sameAs> ?x3
+}
+WHERE
+{
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1130> <http://www.w3.org/2002/07/owl#sameAs> ?x3
+}
