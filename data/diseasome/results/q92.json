@@ -1,0 +1,9 @@
+[
+	{
+		"?x3": "\"3\"^^http://www.w3.org/2001/XMLSchema#int",
+		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Metabolic",
+		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/614",
+		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+		"?x8": "\"4\"^^http://www.w3.org/2001/XMLSchema#int"
+	}
+]

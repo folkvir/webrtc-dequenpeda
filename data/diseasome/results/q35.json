@@ -1,0 +1,14 @@
+[
+	{
+		"?x3": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=609188",
+		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ABHS"
+	},
+	{
+		"?x3": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=609188",
+		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/C7orf11"
+	},
+	{
+		"?x3": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=609188",
+		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/TTDN1"
+	}
+]

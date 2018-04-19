@@ -1,0 +1,12 @@
+[
+	{
+		"?x3": "http://sws.geonames.org/2510769/",
+		"?x1": "http://data.linkedmdb.org/film/4040",
+		"?x2": "http://dbpedia.org/resource/Belle_/u00C3/u0089poque_28film29"
+	},
+	{
+		"?x3": "http://sws.geonames.org/2510769/",
+		"?x1": "http://data.linkedmdb.org/film/4040",
+		"?x2": "http://mpii.de/yago/resource/Belle_/u00C3/u0089poque_28film29"
+	}
+]

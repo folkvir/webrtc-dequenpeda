@@ -1,0 +1,8 @@
+[
+	{
+		"?x3": "\"38.8693\"^^http://www.w3.org/2001/XMLSchema#float",
+		"?x4": "\"-77.22736388888889\"^^http://www.w3.org/2001/XMLSchema#float",
+		"?x2": "http://www.opengis.net/gml/_Feature",
+		"?x5": "\"38.8693 -77.22736388888889\"@en"
+	}
+]

@@ -1,0 +1,8 @@
+[
+	{
+		"?x3": "\"1\"^^http://www.w3.org/2001/XMLSchema#int",
+		"?x7": "\"2\"^^http://www.w3.org/2001/XMLSchema#int",
+		"?x8": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Cancer",
+		"?x9": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases"
+	}
+]

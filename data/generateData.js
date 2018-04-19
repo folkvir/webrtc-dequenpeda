@@ -10,7 +10,7 @@ ldfclient.Logger.setLevel('warning')
 
 const config = {
   fragmentationFactor: 0.5,
-  server: 'http://localhost:5678',
+  server: 'http://172.16.9.3:5678',
   datasets: [
     { dir: "./diseasome", uri: "/diseasome" },
     { dir: "./geocoordinates", uri: "/geocoordinates" },
@@ -69,7 +69,7 @@ function fragment(name, result, destination) {
         chunkified[i].forEach(triple => {
           writer.addTriple(triple)
         })
-        writer.end(function (error, result) { writeFragments(result, destination+'/'+path.parse(name+'_fragment_f'+i).base) });
+        writer.end(function (error, result) { writeFragments(result, destination+'/'+path.parse(name+'_fragment_f'+i+'.ttl').base) });
     }
     resolve()
   })

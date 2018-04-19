@@ -1,0 +1,14 @@
+[
+	{
+		"?x3": "http://sws.geonames.org/6252001/",
+		"?x4": "http://dbpedia.org/resource/Scrooged",
+		"?x1": "http://data.linkedmdb.org/film/33177",
+		"?x2": "http://data.linkedmdb.org/movie/film"
+	},
+	{
+		"?x3": "http://sws.geonames.org/6252001/",
+		"?x4": "http://mpii.de/yago/resource/Scrooged",
+		"?x1": "http://data.linkedmdb.org/film/33177",
+		"?x2": "http://data.linkedmdb.org/movie/film"
+	}
+]

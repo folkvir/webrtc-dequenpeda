@@ -1,0 +1,32 @@
+[
+	{
+		"?x3": "http://bio2rdf.org/omim:179605",
+		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1237",
+		"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AOFMD"
+	},
+	{
+		"?x3": "http://bio2rdf.org/omim:179605",
+		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1237",
+		"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AVMD"
+	},
+	{
+		"?x3": "http://bio2rdf.org/omim:179605",
+		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1237",
+		"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/PRPH"
+	},
+	{
+		"?x3": "http://bio2rdf.org/omim:179605",
+		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1237",
+		"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/PRPH2"
+	},
+	{
+		"?x3": "http://bio2rdf.org/omim:179605",
+		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1237",
+		"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/RDS"
+	},
+	{
+		"?x3": "http://bio2rdf.org/omim:179605",
+		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1237",
+		"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/RP7"
+	}
+]

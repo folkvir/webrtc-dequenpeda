@@ -1,0 +1,30 @@
+[
+	{
+		"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/17q21.1",
+		"?x4": "\"Glioblastoma, somatic, 137800\"",
+		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+		"?x7": "\"Glioblastoma, somatic, 137800\"",
+		"?x8": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ERBB2"
+	},
+	{
+		"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/17q21.1",
+		"?x4": "\"Glioblastoma, somatic, 137800\"",
+		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+		"?x7": "\"Glioblastoma, somatic, 137800\"",
+		"?x8": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/HER2"
+	},
+	{
+		"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/17q21.1",
+		"?x4": "\"Glioblastoma, somatic, 137800\"",
+		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+		"?x7": "\"Glioblastoma, somatic, 137800\"",
+		"?x8": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/NEU"
+	},
+	{
+		"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/17q21.1",
+		"?x4": "\"Glioblastoma, somatic, 137800\"",
+		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+		"?x7": "\"Glioblastoma, somatic, 137800\"",
+		"?x8": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/NGL"
+	}
+]

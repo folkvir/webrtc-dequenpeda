@@ -1,0 +1,10 @@
+[
+	{
+		"?x3": "http://data.linkedmdb.org/film_subject/24",
+		"?x5": "http://dbpedia.org/resource/Road_Trip"
+	},
+	{
+		"?x3": "http://data.linkedmdb.org/film_subject/24",
+		"?x5": "http://mpii.de/yago/resource/Road_Trip"
+	}
+]

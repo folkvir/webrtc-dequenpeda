@@ -1,0 +1,38 @@
+[
+	{
+		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/99",
+		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1468",
+		"?x5": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=134797",
+		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/15q21.1"
+	},
+	{
+		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/351",
+		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2232",
+		"?x5": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=134797",
+		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/15q21.1"
+	},
+	{
+		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/717",
+		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3059",
+		"?x5": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=134797",
+		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/15q21.1"
+	},
+	{
+		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/722",
+		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3065",
+		"?x5": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=134797",
+		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/15q21.1"
+	},
+	{
+		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1051",
+		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3886",
+		"?x5": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=134797",
+		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/15q21.1"
+	},
+	{
+		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1189",
+		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4167",
+		"?x5": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=134797",
+		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/15q21.1"
+	}
+]

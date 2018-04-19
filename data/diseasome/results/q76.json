@@ -1,0 +1,74 @@
+[
+	{
+		"?x3": "\"Myasthenic syndrome\"",
+		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/HYPP",
+		"?x7": "http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/1254",
+		"?x5": "\"Myasthenic syndrome\""
+	},
+	{
+		"?x3": "\"Myasthenic syndrome\"",
+		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/NAC1A",
+		"?x7": "http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/1254",
+		"?x5": "\"Myasthenic syndrome\""
+	},
+	{
+		"?x3": "\"Myasthenic syndrome\"",
+		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SCN4A",
+		"?x7": "http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/1254",
+		"?x5": "\"Myasthenic syndrome\""
+	},
+	{
+		"?x3": "\"Myasthenic syndrome\"",
+		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/HYPP",
+		"?x7": "http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/298",
+		"?x5": "\"Myasthenic syndrome\""
+	},
+	{
+		"?x3": "\"Myasthenic syndrome\"",
+		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/NAC1A",
+		"?x7": "http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/298",
+		"?x5": "\"Myasthenic syndrome\""
+	},
+	{
+		"?x3": "\"Myasthenic syndrome\"",
+		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SCN4A",
+		"?x7": "http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/298",
+		"?x5": "\"Myasthenic syndrome\""
+	},
+	{
+		"?x3": "\"Myasthenic syndrome\"",
+		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/HYPP",
+		"?x7": "http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/3684",
+		"?x5": "\"Myasthenic syndrome\""
+	},
+	{
+		"?x3": "\"Myasthenic syndrome\"",
+		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/NAC1A",
+		"?x7": "http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/3684",
+		"?x5": "\"Myasthenic syndrome\""
+	},
+	{
+		"?x3": "\"Myasthenic syndrome\"",
+		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SCN4A",
+		"?x7": "http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/3684",
+		"?x5": "\"Myasthenic syndrome\""
+	},
+	{
+		"?x3": "\"Myasthenic syndrome\"",
+		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/HYPP",
+		"?x7": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00555",
+		"?x5": "\"Myasthenic syndrome\""
+	},
+	{
+		"?x3": "\"Myasthenic syndrome\"",
+		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/NAC1A",
+		"?x7": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00555",
+		"?x5": "\"Myasthenic syndrome\""
+	},
+	{
+		"?x3": "\"Myasthenic syndrome\"",
+		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SCN4A",
+		"?x7": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00555",
+		"?x5": "\"Myasthenic syndrome\""
+	}
+]

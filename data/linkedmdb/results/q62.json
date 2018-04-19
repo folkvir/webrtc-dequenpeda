@@ -1,0 +1,32 @@
+[
+	{
+		"?x3": "http://dbpedia.org/resource/Anatomy_of_t.A.T.u.",
+		"?x1": "http://data.linkedmdb.org/film/8226",
+		"?x5": "http://www.freebase.com/view/guid/9202a8c04000641f8000000000d7481d"
+	},
+	{
+		"?x3": "http://mpii.de/yago/resource/Anatomy_of_t.A.T.u.",
+		"?x1": "http://data.linkedmdb.org/film/8226",
+		"?x5": "http://www.freebase.com/view/guid/9202a8c04000641f8000000000d7481d"
+	},
+	{
+		"?x3": "http://dbpedia.org/resource/Anatomy_of_t.A.T.u.",
+		"?x1": "http://data.linkedmdb.org/film/8226",
+		"?x5": "http://www.imdb.com/title/tt0796202"
+	},
+	{
+		"?x3": "http://mpii.de/yago/resource/Anatomy_of_t.A.T.u.",
+		"?x1": "http://data.linkedmdb.org/film/8226",
+		"?x5": "http://www.imdb.com/title/tt0796202"
+	},
+	{
+		"?x3": "http://dbpedia.org/resource/Anatomy_of_t.A.T.u.",
+		"?x1": "http://data.linkedmdb.org/film/8226",
+		"?x5": "http://www.rottentomatoes.com/alias?type=imdbid&s=0796202"
+	},
+	{
+		"?x3": "http://mpii.de/yago/resource/Anatomy_of_t.A.T.u.",
+		"?x1": "http://data.linkedmdb.org/film/8226",
+		"?x5": "http://www.rottentomatoes.com/alias?type=imdbid&s=0796202"
+	}
+]

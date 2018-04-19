@@ -1,0 +1,20 @@
+[
+	{
+		"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CCFDN",
+		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/18q23",
+		"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1263"
+	},
+	{
+		"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CTDP1",
+		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/18q23",
+		"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1263"
+	},
+	{
+		"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/FCP1",
+		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/18q23",
+		"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1263"
+	}
+]

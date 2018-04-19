@@ -18,7 +18,7 @@ let DEFAULT_OPTIONS = {
   defaultGraph: 'http://mypersonaldata.com/',
   timeout: 5000,
   queryType: 'normal',
-  shuffleCountBeforeStart: 0,
+  shuffleCountBeforeStart: 1,
   foglet: {
     rps: {
       type: 'spray-wrtc',
@@ -256,6 +256,7 @@ module.exports = class Dequenpeda extends EventEmitter {
 
   _periodicExecution () {
     this.emit('periodic-execution-begins')
+    debug(`[client:${this._foglet._id}]`, 'Number of neighbours: ', this._foglet.getNeighbours().length)
     if(this._shuffleCount >= this._options.shuffleCountBeforeStart) {
       debug(`[client:${this._foglet._id}] a shuffle occured`)
       debug(`[client:${this._foglet._id}] ${this._queries.size} pending queries...`)

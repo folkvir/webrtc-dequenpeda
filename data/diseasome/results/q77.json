@@ -1,0 +1,12 @@
+[
+	{
+		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/10p15-p14",
+		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3400",
+		"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/851"
+	},
+	{
+		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/9q22.1",
+		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3401",
+		"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/851"
+	}
+]

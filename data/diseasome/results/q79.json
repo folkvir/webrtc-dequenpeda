@@ -1,0 +1,32 @@
+[
+	{
+		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/488",
+		"?x2": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=600163",
+		"?x7": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/HB1"
+	},
+	{
+		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/488",
+		"?x2": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=600163",
+		"?x7": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/IVF"
+	},
+	{
+		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/488",
+		"?x2": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=600163",
+		"?x7": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/LQT3"
+	},
+	{
+		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/488",
+		"?x2": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=600163",
+		"?x7": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SCN5A"
+	},
+	{
+		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/488",
+		"?x2": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=600163",
+		"?x7": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SSS1"
+	}
+]

@@ -1,0 +1,26 @@
+[
+	{
+		"?x1": "http://data.linkedmdb.org/film/1939",
+		"?x2": "http://sws.geonames.org/3017382/"
+	},
+	{
+		"?x1": "http://data.linkedmdb.org/film/2260",
+		"?x2": "http://sws.geonames.org/6252001/"
+	},
+	{
+		"?x1": "http://data.linkedmdb.org/film/36060",
+		"?x2": "http://sws.geonames.org/2623032/"
+	},
+	{
+		"?x1": "http://data.linkedmdb.org/film/36060",
+		"?x2": "http://sws.geonames.org/3017382/"
+	},
+	{
+		"?x1": "http://data.linkedmdb.org/film/8099",
+		"?x2": "http://sws.geonames.org/6251999/"
+	},
+	{
+		"?x1": "http://data.linkedmdb.org/film/8099",
+		"?x2": "http://sws.geonames.org/6252001/"
+	}
+]

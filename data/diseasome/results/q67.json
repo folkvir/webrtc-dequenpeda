@@ -1,0 +1,16 @@
+[
+	{
+		"?x3": "http://www.dbpedia.org/resource/Gonadal_dysgenesis",
+		"?x4": "\"3\"^^http://www.w3.org/2001/XMLSchema#int",
+		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1243",
+		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+		"?x5": "\"2\"^^http://www.w3.org/2001/XMLSchema#int"
+	},
+	{
+		"?x3": "http://www.dbpedia.org/resource/Ovarian_hyperstimulation_syndrome",
+		"?x4": "\"3\"^^http://www.w3.org/2001/XMLSchema#int",
+		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1268",
+		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+		"?x5": "\"1\"^^http://www.w3.org/2001/XMLSchema#int"
+	}
+]

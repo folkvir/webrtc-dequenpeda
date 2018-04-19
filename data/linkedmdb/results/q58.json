@@ -1,0 +1,20 @@
+[
+	{
+		"?x3": "http://sws.geonames.org/3175395/",
+		"?x4": "\"The Stranger\"",
+		"?x1": "http://data.linkedmdb.org/film/1097",
+		"?x5": "\"The Stranger\""
+	},
+	{
+		"?x3": "http://sws.geonames.org/6252001/",
+		"?x4": "\"I /u00E2/u0099/u00A5 Huckabees\"",
+		"?x1": "http://data.linkedmdb.org/film/1805",
+		"?x5": "\"I /u00E2/u0099/u00A5 Huckabees\""
+	},
+	{
+		"?x3": "http://sws.geonames.org/3017382/",
+		"?x4": "\"Le Samoura/u00C3/u00AF\"",
+		"?x1": "http://data.linkedmdb.org/film/30680",
+		"?x5": "\"Le Samoura/u00C3/u00AF\""
+	}
+]

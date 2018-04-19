@@ -1,0 +1,14 @@
+[
+	{
+		"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+		"?x4": "\"Infundibular hypoplasia and hypopituitarism\"",
+		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/MRGH",
+		"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Endocrine"
+	},
+	{
+		"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+		"?x4": "\"Infundibular hypoplasia and hypopituitarism\"",
+		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SOX3",
+		"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Endocrine"
+	}
+]

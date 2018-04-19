@@ -1,0 +1,34 @@
+[
+	{
+		"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/NACP",
+		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/4q21",
+		"?x7": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01065",
+		"?x8": "\"Dementia, Lewy body, 127750\"",
+		"?x6": "\"Dementia, Lewy body, 127750\"",
+		"?x9": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Neurological"
+	},
+	{
+		"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/PARK1",
+		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/4q21",
+		"?x7": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01065",
+		"?x8": "\"Dementia, Lewy body, 127750\"",
+		"?x6": "\"Dementia, Lewy body, 127750\"",
+		"?x9": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Neurological"
+	},
+	{
+		"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/PARK4",
+		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/4q21",
+		"?x7": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01065",
+		"?x8": "\"Dementia, Lewy body, 127750\"",
+		"?x6": "\"Dementia, Lewy body, 127750\"",
+		"?x9": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Neurological"
+	},
+	{
+		"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SNCA",
+		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/4q21",
+		"?x7": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01065",
+		"?x8": "\"Dementia, Lewy body, 127750\"",
+		"?x6": "\"Dementia, Lewy body, 127750\"",
+		"?x9": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Neurological"
+	}
+]

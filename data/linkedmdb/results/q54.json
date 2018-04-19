@@ -1,0 +1,17 @@
+[
+	{
+		"?x3": "\"Awaara\"",
+		"?x2": "http://data.linkedmdb.org/movie/film",
+		"?x5": "http://www.freebase.com/view/topic/en/awaara"
+	},
+	{
+		"?x3": "\"Awaara\"",
+		"?x2": "http://data.linkedmdb.org/movie/film",
+		"?x5": "http://www.imdb.com/title/tt0043306"
+	},
+	{
+		"?x3": "\"Awaara\"",
+		"?x2": "http://data.linkedmdb.org/movie/film",
+		"?x5": "http://www.rottentomatoes.com/alias?type=imdbid&s=0043306"
+	}
+]

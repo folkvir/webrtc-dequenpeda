@@ -1,0 +1,62 @@
+[
+	{
+		"?x1": "http://data.linkedmdb.org/film/1020",
+		"?x5": "http://www.freebase.com/view/guid/9202a8c04000641f8000000000288c45"
+	},
+	{
+		"?x1": "http://data.linkedmdb.org/film/1020",
+		"?x5": "http://www.imdb.com/title/tt0085995"
+	},
+	{
+		"?x1": "http://data.linkedmdb.org/film/1020",
+		"?x5": "http://www.rottentomatoes.com/alias?type=imdbid&s=0085995"
+	},
+	{
+		"?x1": "http://data.linkedmdb.org/film/1988",
+		"?x5": "http://www.freebase.com/view/guid/9202a8c04000641f800000000045d6b0"
+	},
+	{
+		"?x1": "http://data.linkedmdb.org/film/1988",
+		"?x5": "http://www.imdb.com/title/tt0215129"
+	},
+	{
+		"?x1": "http://data.linkedmdb.org/film/1988",
+		"?x5": "http://www.rottentomatoes.com/alias?type=imdbid&s=0215129"
+	},
+	{
+		"?x1": "http://data.linkedmdb.org/film/30761",
+		"?x5": "http://www.freebase.com/view/topic/en/little_miss_sunshine"
+	},
+	{
+		"?x1": "http://data.linkedmdb.org/film/30761",
+		"?x5": "http://www.imdb.com/title/tt0449059"
+	},
+	{
+		"?x1": "http://data.linkedmdb.org/film/30761",
+		"?x5": "http://www.rottentomatoes.com/alias?type=imdbid&s=0449059"
+	},
+	{
+		"?x1": "http://data.linkedmdb.org/film/34805",
+		"?x5": "http://www.freebase.com/view/topic/en/the_daytrippers"
+	},
+	{
+		"?x1": "http://data.linkedmdb.org/film/34805",
+		"?x5": "http://www.imdb.com/title/tt0116041"
+	},
+	{
+		"?x1": "http://data.linkedmdb.org/film/34805",
+		"?x5": "http://www.rottentomatoes.com/alias?type=imdbid&s=0116041"
+	},
+	{
+		"?x1": "http://data.linkedmdb.org/film/7705",
+		"?x5": "http://www.freebase.com/view/guid/9202a8c04000641f8000000000cca396"
+	},
+	{
+		"?x1": "http://data.linkedmdb.org/film/7705",
+		"?x5": "http://www.imdb.com/title/tt0443453"
+	},
+	{
+		"?x1": "http://data.linkedmdb.org/film/7705",
+		"?x5": "http://www.rottentomatoes.com/alias?type=imdbid&s=0443453"
+	}
+]

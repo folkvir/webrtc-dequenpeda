@@ -1,0 +1,14 @@
+[
+	{
+		"?x4": "http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0042769",
+		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1173",
+		"?x7": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/FCGR3A",
+		"?x5": "\"1\"^^http://www.w3.org/2001/XMLSchema#int"
+	},
+	{
+		"?x4": "http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0042769",
+		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1173",
+		"?x7": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/OAS1",
+		"?x5": "\"1\"^^http://www.w3.org/2001/XMLSchema#int"
+	}
+]

@@ -1,0 +1,32 @@
+[
+	{
+		"?x3": "\"1966-12-12\"",
+		"?x4": "http://data.linkedmdb.org/film_subject/102",
+		"?x5": "http://www.freebase.com/view/guid/9202a8c04000641f8000000000bb2006"
+	},
+	{
+		"?x3": "\"1966-12-12\"",
+		"?x4": "http://data.linkedmdb.org/film_subject/168",
+		"?x5": "http://www.freebase.com/view/guid/9202a8c04000641f8000000000bb2006"
+	},
+	{
+		"?x3": "\"1966-12-12\"",
+		"?x4": "http://data.linkedmdb.org/film_subject/102",
+		"?x5": "http://www.imdb.com/title/tt0060665"
+	},
+	{
+		"?x3": "\"1966-12-12\"",
+		"?x4": "http://data.linkedmdb.org/film_subject/168",
+		"?x5": "http://www.imdb.com/title/tt0060665"
+	},
+	{
+		"?x3": "\"1966-12-12\"",
+		"?x4": "http://data.linkedmdb.org/film_subject/102",
+		"?x5": "http://www.rottentomatoes.com/alias?type=imdbid&s=0060665"
+	},
+	{
+		"?x3": "\"1966-12-12\"",
+		"?x4": "http://data.linkedmdb.org/film_subject/168",
+		"?x5": "http://www.rottentomatoes.com/alias?type=imdbid&s=0060665"
+	}
+]

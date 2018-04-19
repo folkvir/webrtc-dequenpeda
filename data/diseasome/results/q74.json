@@ -1,0 +1,16 @@
+[
+	{
+		"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Cardiovascular",
+		"?x4": "\"1\"^^http://www.w3.org/2001/XMLSchema#int",
+		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/261",
+		"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ADRA2C",
+		"?x6": "\"Congestive heart failure\""
+	},
+	{
+		"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Cardiovascular",
+		"?x4": "\"1\"^^http://www.w3.org/2001/XMLSchema#int",
+		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/261",
+		"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ADRB1",
+		"?x6": "\"Congestive heart failure\""
+	}
+]

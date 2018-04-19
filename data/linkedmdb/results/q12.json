@@ -1,0 +1,18 @@
+[
+	{
+		"?x3": "http://data.linkedmdb.org/movie/actor",
+		"?x2": "http://dbpedia.org/resource/Christian_Meier"
+	},
+	{
+		"?x3": "http://data.linkedmdb.org/movie/actor",
+		"?x2": "http://mpii.de/yago/resource/Christian_Meier"
+	},
+	{
+		"?x3": "http://xmlns.com/foaf/0.1/Person",
+		"?x2": "http://dbpedia.org/resource/Christian_Meier"
+	},
+	{
+		"?x3": "http://xmlns.com/foaf/0.1/Person",
+		"?x2": "http://mpii.de/yago/resource/Christian_Meier"
+	}
+]

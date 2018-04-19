@@ -5,6 +5,8 @@ const SparqlParser = require('sparqljs').Parser
 const SparqlGenerator = require('sparqljs').Generator
 const debug = require('debug')('dequenpeda:query')
 const Base64 = require('js-base64').Base64
+const ArrayIterator = require('asynciterator').ArrayIterator
+const ConstructOperator = require('./construct-operator')
 
 const DEFAULT_QUERY_OPTIONS = {
   timeout: 5 * 60 * 1000
@@ -27,7 +29,10 @@ module.exports = class Query extends EventEmitter {
     }
     // store any client id for any triple pattern received
     this._mappings = new Map()
-    this._triples = this._extractTriplePattern(this._parsedQuery).map(triple => this._tripleParsed2Triple(Object.assign({}, triple)))
+    this._sources = new Map()
+    this._properTriples = this._extractTriplePattern(this._parsedQuery).map(triple => Object.assign({}, triple))
+    this._triples = this._properTriples.map(triple => this._tripleParsed2Triple(Object.assign({}, triple)))
+    console.log('Triples:', this._triples)
     this._triples.forEach(t => {
       this._mappings.set(this._triple2String(t), {id: uniqid(), triple: t, sources: new Map()})
     })
@@ -46,6 +51,7 @@ module.exports = class Query extends EventEmitter {
     (eventName !== 'end') && this._createTimeout()
     debug(`[client:${this._parent._foglet.id}] 1-Executing the query ${this._id}...`)
     const neighbors = this._parent._foglet.getNeighbours()
+    debug(`[client:${this._parent._foglet.id}] Neighbours: `, neighbors)
     if (neighbors.length > 0) {
       // execute after receiving triples from neighbors
       return this._askTriples().then(() => {
@@ -81,25 +87,42 @@ module.exports = class Query extends EventEmitter {
     }
     // retreive all graph before rewriting the query
     const defaultGraphId = this._parent._options.defaultGraph
-    const namedId = []
-    for (let triple of this._mappings) {
-      const value = triple[1]
-      value.sources.forEach(source => {
-        namedId.push(`${this._getGraphId(value.id, source.fogletId)}`)
-      })
-    }
+    // const namedId = []
+    // for (let triple of this._mappings) {
+    //   const value = triple[1]
+    //   value.sources.forEach(source => {
+    //     namedId.push(`${this._getGraphId(value.id, source.fogletId)}`)
+    //   })
+    // }
     const plan = this._parsedQuery
-    // plan.from = { default: [ defaultGraphId ], named: namedId }
-
-    // VERY WEIRD !!!
-    plan.from = { default: [ defaultGraphId, ...namedId ], named: [] }
-    debug(`[client:${this._parent._foglet.id}] 2-Rewriting the query ${this._id}...`)
+    plan.from = { default: [ defaultGraphId ], named: [] }
+    // debug(`[client:${this._parent._foglet.id}] 2-Rewriting the query ${this._id}...`)
     const generator = new SparqlGenerator()
     const rewritedQuery = generator.stringify(plan)
     debug(`[client:${this._parent._foglet.id}]`, rewritedQuery)
     const res = await this._parent._store.query(rewritedQuery)
+    debug(`[client:${this._parent._foglet.id}] Number remote peers seen:`, this._sources.size)
     this.emit(eventName, res)
     return Promise.resolve()
+  }
+
+  _injectResult (result) {
+    return new Promise((resolve, reject) => {
+      const buff = new ArrayIterator(result)
+      const construct = new ConstructOperator(buff, this._properTriples)
+      let toInject = ""
+      construct.on('data', (data) => {
+        toInject += data
+      })
+      construct.on('end', () => {
+        this._parent.loadTriples(toInject).then(() => {
+          console.log('Data reinjected to my personnal data store.', toInject)
+          resolve()
+        }).catch(e => {
+          reject(e)
+        })
+      })
+    })
   }
 
   _askTriples () {
@@ -114,7 +137,7 @@ module.exports = class Query extends EventEmitter {
           const jobId = uniqid()
           debug(id, this._parent._foglet.inViewID)
           try {
-            this._parent._foglet.sendUnicast(id, {
+            const msg = {
               requester: {
                 fogletId: this._parent._foglet.id,
                 inview: this._parent._foglet.inViewID,
@@ -125,7 +148,8 @@ module.exports = class Query extends EventEmitter {
               prefixes: [],
               triples: this._triples,
               jobId
-            })
+            }
+            this._parent._foglet.sendUnicast(id, msg)
           } catch (e) {
             console.error(e)
           }
@@ -183,23 +207,26 @@ module.exports = class Query extends EventEmitter {
       responses.reduce((respAcc, resp) => respAcc.then(() => {
         let owner = resp.owner
         let data = resp.triples
+        console.log(data)
         return data.reduce((accData, elem) => accData.then(() => {
           return new Promise((resolveData) => {
             if (elem.data.length > 0) {
               // save the mapping between the triple and the owner
               const key = this._triple2String(elem.triple)
               const originalTriple = this._mappings.get(key)
+              if(!this._sources.has(owner.fogletId)) {
+                this._sources.set(owner.fogletId, owner.fogletId)
+                debug(`Adding a new source: `, owner.fogletId)
+              }
               originalTriple.sources.set(owner.fogletId, owner)
-              // store data corresponding to the triple and owner in the rdfstore
-              const graphId = this._encapsGraphId(this._getGraphId(originalTriple.id, owner.fogletId), '<', '>')
-              debug('New graphId generated', graphId)
+              let graphId = this._encapsGraphId(this._parent._options.defaultGraph, '<', '>')
               elem.data.reduce((acc, triple) => acc.then(res => {
                 return this._parent._store.loadData(graphId, [], triple)
               }), Promise.resolve()).then(() => {
+                // console.log('insert into my datastore: ', graphId, triple)
                 resolveData()
               }).catch(e => {
                 console.error(e)
-                // resolve on error ...
                 resolveData()
               })
             } else {
@@ -223,13 +250,19 @@ module.exports = class Query extends EventEmitter {
    * @return {Array}             Array of all triple patterns
    */
   _extractTriplePattern (parsedQuery) {
+    //console.log(parsedQuery)
     const extract = (whereClause) => {
       const extractBis = (object) => {
-        if (object.type === 'union' || object.type === 'group' || object.type === 'optional') {
-          // console.log('Recursive call: ', object.type);
-          return object.patterns.map(p => extractBis(p)).reduce((acc, cur) => { acc += cur }, 0)
+        if (object.type === 'union' || object.type === 'group' || object.type === 'optional' || object.type === 'graph') {
+          //console.log('Recursive call: ', object.patterns);
+
+          return object.patterns.map(p => extractBis(p)).reduce((acc, cur) => {
+            //console.log('reduce: cur', cur, 'reduce acc:', acc)
+            acc.push(...cur)
+            return [...acc]
+          }, [])
         } else if (object.type === 'bgp') {
-          // console.log('Found a bgp: ', object.type);
+          //console.log('Found a bgp: ', object.type);
           return object.triples
         } else if (object.type === 'filter') {
           // console.log('Found a filter: ', object.type);
@@ -239,8 +272,9 @@ module.exports = class Query extends EventEmitter {
         }
       }
       const mappedClauses = whereClause.map(obj => extractBis(obj))
+      //console.log(mappedClauses)
       if (mappedClauses.length > 0) {
-        const res = mappedClauses.reduce((acc, cur) => { acc.push(...cur); return acc }, [])
+        const res = mappedClauses.reduce((acc, cur) => { console.log(cur); acc.push(...cur); return acc }, [])
         return res
       } else {
         return []
