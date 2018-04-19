@@ -20,4 +20,8 @@
       "settings": { "file": "./linkedmdb/federationData.hdt" }
     }
   }
+  "logging": {
+    "enabled": true,
+    "file": "access.log"
+  }
 }
