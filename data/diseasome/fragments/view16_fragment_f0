@@ -1,0 +1,1037 @@
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/100> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Apert_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1000> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Rhizomelic_chondrodysplasia_punctata>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1004> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/11635>, <http://www.dbpedia.org/resource/Rickets>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0035579>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1008> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Parry-Romberg_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1011> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Rothmund-Thomson_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1013> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Rubinstein-Taybi_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1014> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Saethre-Chotzen_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1016> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Salla_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1019> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/11742>, <http://www.dbpedia.org/resource/Sarcoidosis>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0036202>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/102> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/1135>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0002874>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1020> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/11754>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1023> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Schilder%27s_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1025> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/11790>, <http://www.dbpedia.org/resource/Schizophrenia>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0036341>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1026> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Schwannomatosis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1032> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Seasonal_affective_disorder>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0085159>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1034> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Seckel_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1036> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/11907>, <http://data.linkedct.org/resource/condition/11913>, <http://www.dbpedia.org/resource/Seizure>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0036572>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1040> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Senior-L%C3%B8ken_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1043> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/11940>, <http://www.dbpedia.org/resource/Sepsis>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0243026>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1044> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Septo-optic_dysplasia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1045> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Sertoli_cell-only_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1046> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/11982>, <http://www.dbpedia.org/resource/Severe_combined_immunodeficiency>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1048> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/12049>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1050> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Short_stature>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1052> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/12087>, <http://www.dbpedia.org/resource/Shwachman-Diamond_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1053> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Sialidosis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1056> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Sick_sinus_syndrome>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0037052>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1058> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Simpson-Golabi-Behmel_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1059> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/12122>, <http://www.dbpedia.org/resource/Sitosterolemia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1061> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Sj%C3%B6gren-Larsson_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1068> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/12221>, <http://www.dbpedia.org/resource/Smith-Lemli-Opitz_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1069> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Smith-Magenis_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1074> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Sotos_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1078> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Spherocytosis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1079> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Spina_bifida>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/108> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Argininemia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1080> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Spinal_muscular_atrophy>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1089> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Stargardt_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1092> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Starvation>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1093> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Steatocystoma_multiplex>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1096> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Stickler_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1097> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Stomach_cancer>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1098> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/12595>, <http://www.dbpedia.org/resource/Stroke>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0038454>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1101> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/12669>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1106> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Progressive_supranuclear_palsy>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/111> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/1162>, <http://www.dbpedia.org/resource/Arrhythmogenic_right_ventricular_dysplasia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1112> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Syndactyly>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1115> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/12793>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0024141>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1117> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/12850>, <http://www.dbpedia.org/resource/Tangier_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/112> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Arthrogryposis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1120> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/12862>, <http://www.dbpedia.org/resource/Tay-Sachs_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1124> <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0039685>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1125> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/12931>, <http://www.dbpedia.org/resource/Thalassemia>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0039730>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1128> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/12977>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0836924>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1129> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/12981>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Thrombocytopenia>, <http://www.dbpedia.org/resource/Thrombocytopenia>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0040034>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/113> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/1203>, <http://www.dbpedia.org/resource/Arthropathy>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0022408>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1130> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/12990>, <http://www.dbpedia.org/resource/Thrombophilia>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0398623>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1132> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/13014>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0549473>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1136> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Tietz_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1137> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Timothy_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/114> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/1228>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1141> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Transaldolase_deficiency>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1148> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Langer-Giedion_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/115> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/1230>, <http://www.dbpedia.org/resource/Asperger_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1150> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Mitochondrial_trifunctional_protein_deficiency>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1154> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/13289>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Tuberculosis>, <http://www.dbpedia.org/resource/Tuberculosis>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0041296>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1155> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Tuberous_sclerosis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1156> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Turcot_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1158> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Tyrosinemia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/116> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/1253>, <http://data.linkedct.org/resource/condition/1259>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Asthma>, <http://www.dbpedia.org/resource/Asthma>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0004096>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1161> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Major_depressive_disorder>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1163> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Urolithiasis>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0451641>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1164> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/13567>, <http://www.dbpedia.org/resource/Usher_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1165> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/13584>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0042133>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1169> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/22q11.2_deletion_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/117> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/1280>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0004134>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1170> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Venous_Thrombosis>, <http://www.dbpedia.org/resource/Venous_thrombosis>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0042487>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1171> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Ventricular_tachycardia>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0042514>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1173> <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0042769>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1176> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Vitelliform_macular_dystrophy>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1179> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Von_Hippel-Lindau_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/118> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/1283>, <http://www.dbpedia.org/resource/Ataxia_telangiectasia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1180> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Waardenburg_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1183> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/WAGR_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1184> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Walker-Warburg_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1187> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Weaver_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1189> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Weill-Marchesani_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/119> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Atelosteogenesis%2C_type_II>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1190> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Weissenbacher-Zweym%C3%BCller_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1191> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Werner_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1192> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Wernicke-Korsakoff_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1194> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/WHIM_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1195> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/White_sponge_nevus>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1196> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Williams_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1197> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Wilms%27_tumor>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1198> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Wilson%27s_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1199> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Wiskott-Aldrich_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/12> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ABCD_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1202> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Wolff-Parkinson-White_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1203> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Wolfram_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1204> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/13982>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1206> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/14017>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/121> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/1288>, <http://data.linkedct.org/resource/condition/1298>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Atherosclerosis>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0004153>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1211> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/14025>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1212> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Rosselli-Gulienetti_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1213> <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0262371>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1215> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Adrenal_insufficiency>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1219> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Nevoid_basal_cell_carcinoma_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/122> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/1305>, <http://www.dbpedia.org/resource/Atopy>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1221> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Central_core_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/123> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Atransferrinemia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1230> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/3797>, <http://www.dbpedia.org/resource/Diabetes_insipidus>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0011848>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1232> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Temporal_arteritis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1235> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Hypoplastic_left_heart_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1236> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Lipoid_proteinosis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/124> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/1306>, <http://www.dbpedia.org/resource/Atrial_fibrillation>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0004238>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1243> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Gonadal_dysgenesis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1245> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/9710>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1249> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Polycystic_liver_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1251> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Renal_glycosuria>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1254> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Thyroid_hormone_resistance>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1257> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Ventricular_fibrillation>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/126> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/1314>, <http://data.linkedct.org/resource/condition/1315>, <http://www.dbpedia.org/resource/Atrioventricular_block>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1261> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Cavernous_angioma>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1262> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Combined_immunodeficiencies>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1268> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Ovarian_hyperstimulation_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/127> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/1339>, <http://data.linkedct.org/resource/condition/1340>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1278> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Renal_tubular_acidosis>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0001126>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/128> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/1362>, <http://www.dbpedia.org/resource/Autism>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1280> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/8345>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1281> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/8356>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Multiple_Sclerosis>, <http://www.dbpedia.org/resource/Multiple_sclerosis>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0026769>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1282> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Multiple_sulfatase_deficiency>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/129> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/1371>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/13> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/125>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/132> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/1415>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Azoospermia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/134> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Bannayan-Zonana_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/135> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/1485>, <http://www.dbpedia.org/resource/Bardet-Biedl_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/136> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Bare_lymphocyte_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/139> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Bartter_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/140> <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0007117>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/144> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Becker%27s_muscular_dystrophy>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/145> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Beckwith-Wiedemann_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/147> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Bernard-Soulier_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/148> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Berylliosis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/151> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Bethlem_myopathy>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/154> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Biotinidase_deficiency>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/155> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/1630>, <http://www.dbpedia.org/resource/Bipolar_disorder>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0005586>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/156> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Birt-Hogg-Dub%C3%A9_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/157> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/1667>, <http://www.dbpedia.org/resource/Bladder_cancer>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0699885>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/159> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Coagulopathy>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C1458140>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/161> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/1699>, <http://www.dbpedia.org/resource/Blepharospasm>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0005747>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/163> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/1735>, <http://www.dbpedia.org/resource/Bloom_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/170> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Brachydactyly>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/173> <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0678222>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/176> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/1957>, <http://www.dbpedia.org/resource/Brugada_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/178> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/1973>, <http://www.dbpedia.org/resource/Burkitt%27s_lymphoma>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/179> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Buschke-Ollendorff_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/18> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Acheiropodia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/182> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Caf%C3%A9_au_lait_spot>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/183> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Infantile_cortical_hyperostosis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/185> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Campomelic_dysplasia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/187> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Camurati-Engelmann_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/188> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/2079>, <http://www.dbpedia.org/resource/Canavan_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/191> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Carbamoyl_phosphate_synthetase_I_deficiency>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/192> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Congenital_disorder_of_glycosylation>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/196> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/2287>, <http://data.linkedct.org/resource/condition/2335>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Cardiomyopathy>, <http://www.dbpedia.org/resource/Cardiomyopathy>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0878544>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/197> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Carney_complex>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/199> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Primary_carnitine_deficiency>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/20> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Achondrogenesis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/201> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Cartilage-hair_hypoplasia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/202> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/2367>, <http://data.linkedct.org/resource/condition/2373>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Cataract>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0086543>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/207> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/2437>, <http://www.dbpedia.org/resource/Cerebellar_ataxia>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0007758>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/208> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Cerebral_amyloid_angiopathy>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/21> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/181>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/210> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/2468>, <http://www.dbpedia.org/resource/Cerebrotendineous_xanthomatosis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/211> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Cerebrovascular_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/214> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/2483>, <http://www.dbpedia.org/resource/Cervical_cancer>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0302592>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/217> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Charcot-Marie-Tooth_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/218> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CHARGE_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/22> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Achromatopsia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/220> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/2537>, <http://www.dbpedia.org/resource/Chediak-Higashi_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/225> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/2647>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0008350>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/226> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/2649>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Cholestasis>, <http://www.dbpedia.org/resource/Cholestasis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/227> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Cholesteryl_ester_storage_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/228> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/2657>, <http://www.dbpedia.org/resource/Chondrocalcinosis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/229> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Chondrodysplasia_punctata>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/230> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/2658>, <http://www.dbpedia.org/resource/Chondrosarcoma>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/235> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Smith-Magenis_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/236> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Chronic_granulomatous_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/239> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Chylomicron_retention_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/240> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Biliary_dyskinesia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/242> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/2908>, <http://www.dbpedia.org/resource/Cirrhosis>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0023890>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/243> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/2913>, <http://www.dbpedia.org/resource/Citrullinemia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/244> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Cleft_lip_and_palate>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0008925>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/245> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Cleidocranial_dysostosis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/246> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Coats%27_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/247> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Cockayne_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/249> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Coffin-Lowry_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/247> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Cockayne_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/249> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Coffin-Lowry_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/250> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Cohen_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/254> <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0699790>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/256> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Color_blindness>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0242225>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/261> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Heart_failure>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0018802>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/265> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/3325>, <http://www.dbpedia.org/resource/Bruise>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0009951>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/267> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Hereditary_coproporphyria>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/269> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Cornelia_de_Lange_Syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/27> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Acrodermatitis_enteropathica>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/270> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Coronary_artery_disease>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0010054>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/274> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Costello_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/276> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Cowden_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/284> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/3435>, <http://www.dbpedia.org/resource/Craniosynostosis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/285> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Crush_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/287> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/3439>, <http://www.dbpedia.org/resource/Creutzfeldt-Jakob_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/288> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/3440>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/289> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Crohn_Disease>, <http://www.dbpedia.org/resource/Crohn%27s_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/29> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/214>, <http://www.dbpedia.org/resource/Acromegaly>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0001206>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/290> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Crouzon_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/291> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/3476>, <http://www.dbpedia.org/resource/Cryptorchidism>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0010417>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/292> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Currarino_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/293> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Cutis_laxa>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/296> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Cystathioninuria>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/297> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/3524>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Cystic_Fibrosis>, <http://www.dbpedia.org/resource/Cystic_fibrosis>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0010674>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/298> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/3530>, <http://www.dbpedia.org/resource/Cystinosis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/299> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/3531>, <http://www.dbpedia.org/resource/Cystinuria>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0010691>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/300> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/2-Hydroxyglutaric_aciduria>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/303> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/3589>, <http://www.dbpedia.org/resource/Hearing_impairment>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0011053>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/305> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Dejerine_Sottas_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/306> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Delayed_sleep_phase_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/307> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/3667>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Dementia>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0497327>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/310> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Dentatorubral-pallidoluysian_atrophy>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/311> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Dent%27s_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/314> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Denys-Drash_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/315> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/3753>, <http://www.dbpedia.org/resource/Dermatofibrosarcoma_protuberans>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/316> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Xeroderma_pigmentosum>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/3802>, <http://www.dbpedia.org/resource/Diabetes_mellitus>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0011849>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/32> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/398>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Adenocarcinoma>, <http://www.dbpedia.org/resource/Lung_cancer>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0001418>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/320> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Diastrophic_dysplasia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/321> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/22q11.2_deletion_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/330> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Double_outlet_right_ventricle>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/334> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Duane_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/335> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Dubin-Johnson_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/336> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/4094>, <http://www.dbpedia.org/resource/Duchenne_muscular_dystrophy>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/339> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/4129>, <http://www.dbpedia.org/resource/Dysautonomia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/34> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/425>, <http://data.linkedct.org/resource/condition/427>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Adenoma>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0001430>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/340> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Dyschromatosis_universalis_hereditaria>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/343> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Dyskeratosis_congenita>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/344> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/4146>, <http://www.dbpedia.org/resource/Dyslexia>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0476254>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/347> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/4176>, <http://www.dbpedia.org/resource/Dystonia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/35> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Adenosine_deaminase_deficiency>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/350> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Ectodermal_dysplasia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/351> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Distichia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/352> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/EEM_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/353> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Ehlers-Danlos_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/355> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Hereditary_elliptocytosis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/356> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Ellis-van_Creveld_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/357> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Emery-Dreifuss_muscular_dystrophy>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/358> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/4346>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0034067>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/359> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/4356>, <http://www.dbpedia.org/resource/Encephalopathy>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0085584>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/36> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Adenylosuccinate_lyase_deficiency>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/360> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Enchondroma>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/361> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/4396>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0476089>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/369> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Epidermodysplasia_verruciformis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/370> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Epidermolysis_bullosa>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/371> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Epidermolytic_hyperkeratosis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/372> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/4493>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Epilepsy>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0014544>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/374> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Episodic_ataxia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/378> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Erythema>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/379> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Polycythemia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/38> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/490>, <http://www.dbpedia.org/resource/Congenital_adrenal_hyperplasia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/381> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Esophageal_cancer>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0152018>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/384> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Ewing%27s_sarcoma>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/386> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Exostosis>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C1442903>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/39> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/498>, <http://www.dbpedia.org/resource/Adrenocortical_carcinoma>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/391> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/4744>, <http://www.dbpedia.org/resource/Facioscapulohumeral_muscular_dystrophy>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/393> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/4786>, <http://www.dbpedia.org/resource/Familial_Mediterranean_fever>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/394> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/4799>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/395> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Glycogen_storage_disease_type_XI>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/398> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/4823>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/40> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Adrenocorticotropic_hormone_deficiency>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/400> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Feingold_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/403> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Fibromatosis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/404> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/4903>, <http://www.dbpedia.org/resource/Fibrosis>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0016059>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/406> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Lecithin_cholesterol_acyltransferase_deficiency>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/407> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Trimethylaminuria>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/41> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/501>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Adrenoleukodystrophy>, <http://www.dbpedia.org/resource/Adrenoleukodystrophy>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/415> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Fragile_X_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/416> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/5030>, <http://www.dbpedia.org/resource/Fraser_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/417> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Frasier_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/418> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Friedreich%27s_ataxia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/42> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/502>, <http://www.dbpedia.org/resource/Adrenomyeloneuropathy>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/420> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Fructose_bisphosphatase_deficiency>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/422> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Essential_fructosuria>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/424> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/5050>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/426> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Fumarase_deficiency>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/430> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Galactokinase_deficiency>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/431> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Galactose_epimerase_deficiency>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/432> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/5112>, <http://www.dbpedia.org/resource/Galactosemia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/433> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Galactosialidosis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/434> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Guanidinoacetate_methyltransferase_deficiency>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/435> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Gardner%27s_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/436> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Stomach_cancer>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0699791>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/437> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Gastrointestinal_stromal_tumor>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/438> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Gaucher%27s_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/439> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Conjugate_gaze_palsy>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/440> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Generalised_epilepsy>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/442> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Gerstmann-Str%C3%A4ussler-Scheinker_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/443> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Giant_axonal_neuropathy>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/446> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Gilbert%27s_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/447> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Gitelman_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/448> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Glanzmann%27s_thrombasthenia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/449> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/5287>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Glaucoma>, <http://www.dbpedia.org/resource/Glaucoma>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0017601>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/45> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Advanced_sleep_phase_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/450> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/5298>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Glioblastoma>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/452> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Glomerulosclerosis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/455> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Glucose-galactose_malabsorption>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/459> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Glutaric_acidemia_type_2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/46> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Congenital_afibrinogenemia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/460> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Glutathione_synthetase_deficiency>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/462> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/D-Glyceric_acidemia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/463> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Glycogen_storage_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/464> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Phosphofructokinase_deficiency>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/465> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/GM2_gangliosidoses>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/467> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/5351>, <http://www.dbpedia.org/resource/Goitre>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0018021>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/469> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Gonadal_dysgenesis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/47> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/651>, <http://www.dbpedia.org/resource/Hypogammaglobulinemia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/471> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Graft-versus-host_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/472> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Graves%27_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/474> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Greig_cephalopolysyndactyly_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/475> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/5406>, <http://www.dbpedia.org/resource/Griscelli_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/479> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Hailey_Hailey_Disease_%28Familial_Benign_Pemphigus%29>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/485> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Hay-Wells_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/488> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Heart_block>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0018794>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/492> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/5752>, <http://www.dbpedia.org/resource/Hemangioma>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0018916>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/496> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Familial_hemiplegic_migraine>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/497> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/5791>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0018995>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/499> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Hemolytic_anemia>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0002878>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/500> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Hemolytic-uremic_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/501> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/5814>, <http://www.dbpedia.org/resource/Hemophagocytic_lymphohistiocytosis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/502> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/5815>, <http://www.dbpedia.org/resource/Haemophilia>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0684275>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/503> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Bleeding_diathesis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/506> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Hepatocellular_adenoma>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/507> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Hereditary_hemorrhagic_telangiectasia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/508> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Hermansky-Pudlak_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/51> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/52>, <http://www.dbpedia.org/resource/AIDS>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/510> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Strabismus>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/513> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Hirschsprung%27s_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/514> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Histidinemia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/515> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/6025>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/516> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/5478>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/518> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Holocarboxylase_synthetase_deficiency>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/519> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/6042>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/52> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/700>, <http://www.dbpedia.org/resource/Alagille_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/520> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Holt-Oram_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/522> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/6049>, <http://www.dbpedia.org/resource/Homocystinuria>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/529> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/6128>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/53> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/701>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/531> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/6143>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0020255>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/533> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/6161>, <http://www.dbpedia.org/resource/Hyperammonemia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/534> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/6162>, <http://www.dbpedia.org/resource/Cushing%27s_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/536> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/6164>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/537> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/6167>, <http://www.dbpedia.org/resource/Hypercalciuria>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0020438>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/538> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Hypervolemia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/539> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/6173>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Hypercholesterolemia>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0020443>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/54> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/714>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0001973>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/540> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Hyperekplexia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/541> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Hypereosinophilic_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/543> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Hyper_IgM_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/544> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/6194>, <http://www.dbpedia.org/resource/Hyperinsulinism>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/546> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Hyperkalemic_periodic_paralysis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/548> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/6201>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Hyperlipidemia>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0020473>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/549> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/6205>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0020476>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/55> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/744>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Alcoholism>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/550> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Hyperlysinemia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/551> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Hypermethioninemia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/552> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Ornithine_translocase_deficiency>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/554> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/6216>, <http://www.dbpedia.org/resource/Hyperoxaluria>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/555> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/6218>, <http://www.dbpedia.org/resource/Hyperparathyroidism>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0020502>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/558> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Hyperprolinemia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/6238>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Hypertension>, <http://www.dbpedia.org/resource/Hypertension>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0020538>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/562> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/6258>, <http://www.dbpedia.org/resource/Hypertelorism>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/563> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/6258>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Hyperthyroidism>, <http://www.dbpedia.org/resource/Hyperthyroidism>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0020550>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/564> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/6261>, <http://www.dbpedia.org/resource/Hypertriglyceridemia>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0020557>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/565> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Hyperlysinemia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/567> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/6278>, <http://www.dbpedia.org/resource/Hypoaldosteronism>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/569> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/6280>, <http://www.dbpedia.org/resource/Hypobetalipoproteinemia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/570> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/6282>, <http://www.dbpedia.org/resource/Hypovolemia>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0020598>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/573> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Hypochondroplasia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/575> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Hyperdontia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/578> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/6286>, <http://www.dbpedia.org/resource/Hypoglycemia>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0020615>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/58> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/745>, <http://www.dbpedia.org/resource/Hyperaldosteronism>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/580> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/6292>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0022735>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/582> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/6295>, <http://www.dbpedia.org/resource/Hypokalemic_periodic_paralysis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/584> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/6298>, <http://www.dbpedia.org/resource/Hypomagnesemia>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0151723>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/585> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/6304>, <http://www.dbpedia.org/resource/Hypoparathyroidism>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/587> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/6304>, <http://www.dbpedia.org/resource/Hypoparathyroidism>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0020626>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/588> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/6310>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/589> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/6311>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0085682>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/593> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/6332>, <http://www.dbpedia.org/resource/Hypothyroidism>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0020676>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/594> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Hypotrichosis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/595> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Hypouricemia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/598> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/6380>, <http://www.dbpedia.org/resource/Ichthyosis>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0020757>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/60> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/749>, <http://www.dbpedia.org/resource/Alkaptonuria>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/601> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/IgG_deficiency>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/604> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/6455>, <http://www.dbpedia.org/resource/Immunodeficiency>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/606> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Immunoglobulin_M_deficiency>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/613> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/6684>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0917801>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/614> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/6692>, <http://data.linkedct.org/resource/condition/6699>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Insulin_Resistance>, <http://www.dbpedia.org/resource/Insulin_resistance>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/62> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/770>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0002103>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/625> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Jackson-Weiss_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/627> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Jervell_and_Lange-Nielsen_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/628> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Joubert_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/63> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/804>, <http://www.dbpedia.org/resource/Alopecia_universalis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/632> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/6956>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/634> <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0036220>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/636> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Primary_ciliary_dyskinesia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/638> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/6969>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Keratitis>, <http://www.dbpedia.org/resource/Keratitis>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0022568>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/64> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Alpers%27_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/640> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/6974>, <http://www.dbpedia.org/resource/Keratoconus>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/643> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Ketoacidosis>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0220982>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/644> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Keutel_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/645> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Kindler_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/648> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Kniest_dysplasia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/650> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/7042>, <http://www.dbpedia.org/resource/Krabbe_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/651> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/2-Hydroxyglutaric_aciduria>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/655> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Laron_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/656> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Capillary_leak_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/660> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Lead_Poisoning>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0023176>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/662> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Leber%27s_congenital_amaurosis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/665> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Legionellosis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/666> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Leigh%27s_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/667> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/7184>, <http://www.dbpedia.org/resource/Leiomyoma>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/668> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Leopard_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/669> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Donohue_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/67> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Beta-ketothiolase_deficiency>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/670> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/7201>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Leprosy>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0023343>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/671> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/L%C3%A9ri-Weill_dyschondrosteosis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/672> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/7205>, <http://www.dbpedia.org/resource/Lesch-Nyhan_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/673> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/7212>, <http://data.linkedct.org/resource/condition/7260>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Leukemia>, <http://www.dbpedia.org/resource/Vitiligo>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0023418>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/674> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Leukocyte_adhesion_deficiency>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/678> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Liddle%27s_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/680> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/7281>, <http://www.dbpedia.org/resource/Li-Fraumeni_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/683> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/7312>, <http://www.dbpedia.org/resource/Lipodystrophy>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0023787>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/685> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/7315>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/687> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Lissencephaly>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/689> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Loeys-Dietz_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/693> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Oculocerebrorenal_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/697> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Lung_cancer>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0684249>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/698> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Systemic_lupus_erythematosus>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/699> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/7519>, <http://www.dbpedia.org/resource/Lymphangioleiomyomatosis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/7> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/3-Methylglutaconic_aciduria>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/70> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/809>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/700> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/7527>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Lymphedema>, <http://www.dbpedia.org/resource/Lymphedema>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0024236>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/701> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/7549>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Lymphoma>, <http://www.dbpedia.org/resource/Adult_T-cell_leukemia>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0024299>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/703> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Lysinuric_protein_intolerance>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/704> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Machado-Joseph_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/705> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Macrocytic_anemia>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0002886>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/707> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Macular_Degeneration>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0024437>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/709> <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C1269683>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/710> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/7686>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Malaria>, <http://www.dbpedia.org/resource/Malaria>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/712> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Malonyl-CoA_decarboxylase_deficiency>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/715> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/7787>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/717> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Marfan_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/718> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Acrodysostosis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/72> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Alternating_hemiplegia_of_childhood>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/726> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/May_Hegglin_anomaly>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/727> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Glycogen_storage_disease_type_V>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/728> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/McCune-Albright_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/73> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Alveolar_soft_part_sarcoma>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/732> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/7885>, <http://data.linkedct.org/resource/condition/7886>, <http://www.dbpedia.org/resource/Medulloblastoma>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/736> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Megaloblastic_anemia>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0002888>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/737> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/7891>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Melanoma>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/738> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Meleda_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/829>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Alzheimer_Disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/741> <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0233794>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/742> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/M%C3%A9ni%C3%A8re%27s_disease>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0025281>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/743> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/7920>, <http://www.dbpedia.org/resource/Meningioma>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0025286>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/744> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/7928>, <http://www.dbpedia.org/resource/Meningococcal_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/745> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Menkes_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/746> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Mental_retardation>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0025362>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/748> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Merkel_cell_cancer>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/75> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Amelogenesis_imperfecta>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/750> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/7985>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/751> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/8007>, <http://www.dbpedia.org/resource/Metachromatic_leukodystrophy>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/753> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Methemoglobinemia>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0025637>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/757> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Methylmalonic_acidemia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/758> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/8104>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/760> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/8106>, <http://www.dbpedia.org/resource/Macrocephaly>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/763> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Microphthalmia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/764> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/8122>, <http://www.dbpedia.org/resource/Migraine>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0149931>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/767> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Distal_muscular_dystrophy>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/768> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Maturity_onset_diabetes_of_the_young>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/771> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Monilethrix>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/773> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Mowat-Wilson_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/775> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Muckle-Wells_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/777> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Mucolipidosis>, <http://www.dbpedia.org/resource/Mucolipidosis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/778> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/8309>, <http://www.dbpedia.org/resource/Mucopolysaccharidosis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/779> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Muenke_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/780> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Muir-Torre_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/781> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Mulibrey_nanism>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/782> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/8342>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/785> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/8394>, <http://www.dbpedia.org/resource/Muscular_dystrophy>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/786> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Myasthenia_gravis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/788> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Mycobacterium_Infection>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/789> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/8444>, <http://data.linkedct.org/resource/condition/8449>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0026986>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/79> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/874>, <http://www.dbpedia.org/resource/Amyloidosis>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0002726>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/791> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Myeloid_leukemia>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0023470>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/794> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Myeloperoxidase_deficiency>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/795> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Myelodysplastic-myeloproliferative_diseases>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0027022>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/797> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/8483>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Myocardial_Infarction>, <http://www.dbpedia.org/resource/Myocardial_infarction>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0027051>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/798> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Myoclonic_epilepsy>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0014550>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/8> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/3-M_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/80> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/875>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/802> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/8511>, <http://www.dbpedia.org/resource/Myopathy>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0026848>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/804> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/8518>, <http://www.dbpedia.org/resource/Myotonia_congenita>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/805> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/8520>, <http://www.dbpedia.org/resource/Myotonic_dystrophy>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/806> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Centronuclear_myopathy>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/807> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/8524>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/809> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/N-Acetylglutamate_synthase_deficiency>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/810> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Nail-patella_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/812> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/8544>, <http://www.dbpedia.org/resource/Narcolepsy>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0027404>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/813> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Nasopharyngeal_carcinoma>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/815> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Arrhythmogenic_right_ventricular_dysplasia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/816> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/8608>, <http://www.dbpedia.org/resource/Nemaline_myopathy>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/818> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/8692>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0392525>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/819> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/8694>, <http://www.dbpedia.org/resource/Nephronophthisis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/821> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/8695>, <http://www.dbpedia.org/resource/Nephropathy>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0022658>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/822> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Nephrotic_Syndrome>, <http://www.dbpedia.org/resource/Nephrotic_syndrome>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0027726>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/823> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/8713>, <http://www.dbpedia.org/resource/Netherton_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/825> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/8731>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Neuroblastoma>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0027819>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/826> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Neurodegenerative_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/827> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Neuroectodermal_Tumor>, <http://www.dbpedia.org/resource/Neuroectodermal_tumor>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/828> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/8762>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Neurofibromatosis_1>, <http://www.dbpedia.org/resource/Neurofibromatosis>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0162678>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/830> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/8762>, <http://www.dbpedia.org/resource/Neurofibromatosis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/832> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/8816>, <http://www.dbpedia.org/resource/Neuropathy>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0442874>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/833> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/8828>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Neutropenia>, <http://www.dbpedia.org/resource/Neutropenia>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0027947>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/839> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/8867>, <http://www.dbpedia.org/resource/Niemann-Pick_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/84> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Androgen_insensitivity_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/840> <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0028077>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/841> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Nijmegen_breakage_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/844> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Non-Hodgkin_lymphoma>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/846> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Noonan_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/85> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/928>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Anemia>, <http://www.dbpedia.org/resource/Anemia>, <http://www.dbpedia.org/resource/Nominal_aphasia>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0002871>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/851> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/9106>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0028754>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/852> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Obsessive-compulsive_disorder>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0028768>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/853> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Occipital_horn_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/854> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Ocular_albinism>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/855> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Oculodentodigital_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/857> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Oculopharyngeal_muscular_dystrophy>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/859> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Oguchi_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/86> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/967>, <http://www.dbpedia.org/resource/Angelman_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/860> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/9196>, <http://www.dbpedia.org/resource/Oligodendroglioma>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/861> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Hypodontia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/863> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/9203>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/866> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Optic_atrophy>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0029124>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/868> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/9318>, <http://www.dbpedia.org/resource/Ornithine_transcarbamylase_deficiency>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/87> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/975>, <http://www.dbpedia.org/resource/Angioedema>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0002994>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/872> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Orthostatic_intolerance>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/876> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/9354>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Osteoarthritis>, <http://www.dbpedia.org/resource/Osteoarthritis>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0029408>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/877> <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0029434>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/878> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/9376>, <http://www.dbpedia.org/resource/Osteolysis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/879> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/9388>, <http://www.dbpedia.org/resource/Osteopetrosis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/880> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Osteopoikilosis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/881> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/9389>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0029456>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/883> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/9389>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0029456>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/884> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/9402>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Osteosarcoma>, <http://data.linkedct.org/resource/condition/9402>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Osteosarcoma>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0029463>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/886> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/9444>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/887> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Leukoencephalopathy_with_vanishing_white_matter>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/888> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Pachyonychia_congenita>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/892> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Palmoplantar_keratoderma>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/893> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/9587>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0235974>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/894> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/9610>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Pancreatitis>, <http://www.dbpedia.org/resource/Pancreatitis>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0030305>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/896> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Papillon-Lefevre_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/897> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Paraganglioma>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/898> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/9649>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/899> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Parathyroid_adenoma>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/902> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Parkinson_Disease>, <http://www.dbpedia.org/resource/Parkinson%27s_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/906> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Pelger-Huet_anomaly>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/907> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Pelizaeus-Merzbacher_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/909> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Pendred_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/912> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/9954>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Periodontitis>, <http://www.dbpedia.org/resource/Periodontitis>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0031099>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/915> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Persistent_Mullerian_duct_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/917> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Peutz-Jeghers_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/918> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Pfeiffer_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/919> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/10076>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/92> <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0038013>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/921> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/10078>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Pheochromocytoma>, <http://www.dbpedia.org/resource/Pheochromocytoma>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0031511>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/926> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Pick%27s_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/93> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Anophthalmia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/932> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/10154>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/938> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Polycystic_Kidney_Disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/939> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Polycythemia_vera>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0032461>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/94> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/1016>, <http://www.dbpedia.org/resource/Anorexia_nervosa>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0003125>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/940> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/10256>, <http://www.dbpedia.org/resource/Polydactyly>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/941> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Polymicrogyria>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/942> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Polyp_%28medicine%29>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/945> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/10295>, <http://www.dbpedia.org/resource/Porphyria>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0032708>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/947> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Prader-Willi_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/949> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/10536>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0032914>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/951> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Premature_ovarian_failure>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/952> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Primary_lateral_sclerosis>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/958> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Properdin_deficiency>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/959> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/10826>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/96> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/1088>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/960> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/10834>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0600139>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/962> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/10871>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0033687>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/965> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Pseudoachondroplasia>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/966> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Pseudohermaphroditism>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/967> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/10899>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/968> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/10901>, <http://www.dbpedia.org/resource/Pseudohypoparathyroidism>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/969> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Pseudovaginal_perineoscrotal_hypospadias>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/97> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Antley-Bixler_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/971> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/10918>, <http://www.dbpedia.org/resource/Pseudoxanthoma_elasticum>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/972> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Psoriasis>, <http://www.dbpedia.org/resource/Psoriasis>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0033860>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/973> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/disease/Pulmonary_Fibrosis>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0034069>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/979> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Rabson-Mendenhall_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/981> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Rapadilino_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/985> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Refsum%27s_disease>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/99> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/1108>, <http://www.dbpedia.org/resource/Aortic_aneurysm>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0003486>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/992> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/11573>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/993> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/11577>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/995> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/11581>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/996> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Rett_syndrome>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/998> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/11600>, <http://www.dbpedia.org/resource/Rhabdomyosarcoma>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0035412>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/999> <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/11608>, <http://www.dbpedia.org/resource/Rheumatoid_arthritis>, <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0003873>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/A4GALT> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/A4GALT>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AACT> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Alpha_1-antichymotrypsin>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AASS> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/AASS>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ABAT> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/ABAT>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ABCA1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ABCA1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ABCA3> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ABCA3>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ABCA4> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ABCA4>, <http://www.dbpedia.org/resource/ABCA4>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ABCB1> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/ABCB1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ABCB4> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ABCB4>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ABCB7> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/ABCB7>, <http://www.dbpedia.org/resource/ABCB7>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ABCC2> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/ABCC2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ABCC6> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ABCC6>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ABCC8> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ABCC8>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ABCD1> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/ABCD1>, <http://www.dbpedia.org/resource/ABCD1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ABCD3> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ABCD3>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ABCG5> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ABCG5>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ABCG8> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ABCG8>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ABL1> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/ABL1>, <http://www.dbpedia.org/resource/Abl_gene>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ABO> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/ABO>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ACAT1> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/ACAT1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ACE> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/ACE>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ACHE> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/ACHE>, <http://www.dbpedia.org/resource/Acetylcholinesterase>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ACSL4> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ACSL4>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ACSL6> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/ACSL6>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ACTG1> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/ACTG1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ACTN4> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Actinin_alpha_4>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ACVR1B> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ACVR1B>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ACVR2B> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ACVR2B>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ACVRL1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ACVRL1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ADA> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/ADA>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ADAMTS10> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ADAMTS10>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ADAMTS2> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/ADAMTS2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ADAR> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ADAR>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ADD1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ADD1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ADIPOQ> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Adiponectin>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ADRA2C> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Alpha-2C_adrenergic_receptor>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ADRB1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Beta-1_adrenergic_receptor>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ADRB2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Beta-2_adrenergic_receptor>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ADRB3> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Beta-3_adrenergic_receptor>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AFF2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/AFF2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AFP> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/AFP>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AGC1> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/AGC1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AGPAT2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/AGPAT2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AGPS> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/AGPS>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AGT> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/AGT>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AGTR2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Angiotensin_II_receptor_type_2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AGXT> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/AGXT>, <http://www.dbpedia.org/resource/AGXT>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AHI1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/AHI1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AICDA> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/AICDA>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AIM1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/AIM1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AIPL1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/AIPL1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AITD3> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Thyroglobulin>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AKAP10> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/AKAP10>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AKT2> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/AKT2>, <http://www.dbpedia.org/resource/AKT2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ALAD> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/ALAD>, <http://www.dbpedia.org/resource/ALAD>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ALB> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/ALB>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ALDH18A1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ALDH18A1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ALDH2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ALDH2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ALDH3A2> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/ALDH3A2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ALDH4A1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ALDH4A1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ALDH5A1> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/ALDH5A1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ALDH6A1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ALDH6A1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ALDOA> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Aldolase_A>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ALDOB> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Aldolase_B>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ALG1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ALG1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ALG12> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ALG12>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ALG2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ALG2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ALG3> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ALG3>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ALG6> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ALG6>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ALG8> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ALG8>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ALG9> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ALG9>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ALOX12B> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ALOX12B>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ALOX5> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/ALOX5>, <http://www.dbpedia.org/resource/Arachidonate_5-lipoxygenase>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ALOXE3> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ALOXE3>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ALPL> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ALPL>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ALRH> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Interleukin_13>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ALS2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ALS2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ALX4> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/ALX4>, <http://www.dbpedia.org/resource/ALX4>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AMACR> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/AMACR>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AMPD1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/AMP_deaminase>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AMPD3> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/AMPD3>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ANK1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ANK1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ANKH> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ANKH>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ANTXR2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ANTXR2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AP3B1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/AP3B1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/APBB2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/APBB2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/APC> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/APC>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/APOA1> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/APOA1>, <http://www.dbpedia.org/resource/Apolipoprotein_A1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/APOA2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/APOA2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/APOA5> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/APOA5>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/APOC2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/APOC2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/APOC3> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Apolipoprotein_C3>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/APOE> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/APOE>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/APOH> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Apolipoprotein_H>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/APP> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/APP>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/APRT> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/APRT>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/APTX> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Aprataxin>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AQP1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Aquaporin_1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AQP2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Aquaporin_2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AR> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/AR>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ARFGEF2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ARFGEF2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ARG1> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/ARG1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ARHGAP26> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ARHGAP26>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ARHGEF10> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ARHGEF10>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ARHGEF12> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ARHGEF12>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ARHGEF6> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ARHGEF6>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ARL11> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ARL11>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ARMET> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ARMET>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ARNT> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Aryl_hydrocarbon_receptor_nuclear_translocator>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ARSA> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/ARSA>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ART4> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ART4>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ASAH> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ASAH1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ASLN> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/COL4A5>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ASPN> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Asporin>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ASPSCR1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ASPSCR1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AT1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Angiotensin_II_receptor_type_1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ATBF1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ATBF1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ATM> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/ATM>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ATN1> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/ATN1>, <http://www.dbpedia.org/resource/ATN1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ATP1A2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ATP1A2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ATP1A3> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/ATP1A3>, <http://www.dbpedia.org/resource/ATP1A3>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ATP2A1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ATP2A1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ATP2B2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ATP2B2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ATP2C1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ATP2C1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ATP6V0A4> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ATP6V0A4>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ATP6V1B1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ATP6V1B1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ATP7A> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ATP7A>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ATP7B> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Wilson_disease_protein>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ATP8B1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ATP8B1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ATPAF2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ATPAF2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ATRX> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ATRX>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ATXN1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Ataxin_1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ATXN10> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ATXN10>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ATXN2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ATXN2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ATXN3> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Ataxin_3>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AVP> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/AVP>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AVPR2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Arginine_vasopressin_receptor_2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AXIN1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/AXIN1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AXIN2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/AXIN2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/B4GALT1> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/B4GALT1>, <http://www.dbpedia.org/resource/B4GALT1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/B4GALT7> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/B4GALT7>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BAAT> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/BAAT>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BACH1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/BACH1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BARD1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/BARD1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BAX> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/BAX>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BBS1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/BBS1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BBS2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/BBS2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BBS3> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ARL6>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BBS4> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/BBS4>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BBS5> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/BBS5>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BBS6> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/MKKS>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BCAM> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/BCAM>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BCHE> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Butyrylcholinesterase>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BCKDHA> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/BCKDHA>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BCKDHB> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/BCKDHB>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BCL10> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/BCL10>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BCL2> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/BCL2>, <http://www.dbpedia.org/resource/Bcl-2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BCOR> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/BCOR>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BCR> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/BCR>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BCS1L> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/BCS1L>, <http://www.dbpedia.org/resource/BCS1L>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BDNF> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/BDNF>, <http://www.dbpedia.org/resource/Brain-derived_neurotrophic_factor>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BFSP2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/BFSP2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BLM> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/BLM>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BLMH> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/BLMH>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BLNK> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/B-cell_linker>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BMP15> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Bone_morphogenetic_protein_15>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BSCL2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/BSCL2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BSND> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/BSND>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BTNL2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/BTNL2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BUB1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/BUB1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BUB1B> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/BUB1B>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/C1QA> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/C1QA>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/C1QTNF5> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/C1QTNF5>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/C1S> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/C1S>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/C3BR> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Complement_receptor_1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/C4A> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/C4A>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/C7orf11> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/C7orf11>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/C7orf16> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/C7orf16>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CA2> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/CA2>, <http://www.dbpedia.org/resource/Carbonic_anhydrase_II>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CA4> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/CA4>, <http://www.dbpedia.org/resource/CA4>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CACNA1A> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Cav2.1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CACNA1C> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Cav1.2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CACNA1F> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Cav1.4>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CACNA1S> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Cav1.1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CACNB4> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CACNB4>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CALCA> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/CALCA>, <http://www.dbpedia.org/resource/Calcitonin>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CALCR> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/CALCR>, <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/CALCR>, <http://www.dbpedia.org/resource/Calcitonin_receptor>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CAPN10> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CAPN10>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CAPN3> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CAPN3>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CART> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/CART>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CASP10> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Caspase_10>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CASP8> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/CASP8>, <http://www.dbpedia.org/resource/Caspase_8>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CAT> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/CAT>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CBFA1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Runx2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CBFA2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/RUNX1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CBFB> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CBFB>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CCL5> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/CCL5>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CCM2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CCM2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CCND1> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/CCND1>, <http://www.dbpedia.org/resource/Cyclin_D1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CCR5> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/CCR5>, <http://www.dbpedia.org/resource/CCR5>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CD151> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CD151>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CD209> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/DC-SIGN>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CD2AP> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CD2AP>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CD36> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CD36>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CD3D> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CD3D>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CD3E> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CD3E>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CD3G> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CD3G>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CD40> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/CD40>, <http://www.dbpedia.org/resource/CD40_%28protein%29>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CD44> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CD44>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CD45> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CD45>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CD8A> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/CD8A>, <http://www.dbpedia.org/resource/CD8A>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CD95> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Fas_receptor>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CDC73> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CDC73>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CDH1> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/CDH1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CDH23> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CDH23>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CDK4> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/CDK4>, <http://www.dbpedia.org/resource/Cyclin-dependent_kinase_4>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CDK5RAP2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CDK5RAP2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CDKN1C> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Cyclin-dependent_kinase_inhibitor_1C>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CDKN2A> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/CDKN2A>, <http://www.dbpedia.org/resource/P16_%28gene%29>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CDS1> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/CDS1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CDSN> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CDSN>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CEBPA> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CEBPA>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CEBPE> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CEBPE>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CENPJ> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/CENPJ>, <http://www.dbpedia.org/resource/CENPJ>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CETP> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Cholesterylester_transfer_protein>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CFD1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Fibroblast_growth_factor_receptor_2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CFTR> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Cystic_fibrosis_transmembrane_conductance_regulator>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CGI58> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ABHD5>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CHAT> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/CHAT>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CHIT1> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/CHIT1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CHRNA1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CHRNA1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CHRNA4> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CHRNA4>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CHRNB1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CHRNB1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CHRNB2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CHRNB2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CHRND> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CHRND>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CHRNE> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CHRNE>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CHST6> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CHST6>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CIAS1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CIAS1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CIITA> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CIITA>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CILP> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CILP>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CIRH1A> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CIRH1A>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CLCN1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CLCN1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CLCN2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CLCN2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CLCN5> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CLCN5>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CLCN7> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CLCN7>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CLCNKA> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CLCNKA>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CLCNKB> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CLCNKB>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CLDN1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CLDN1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CLDN14> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CLDN14>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CLDN16> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CLDN16>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CLN3> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CLN3>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CLN5> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CLN5>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CLN6> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CLN6>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CLN8> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CLN8>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CMKBR2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CCR2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CMOAT> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ABCC2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CNGA1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Cyclic_nucleotide-gated_channel_alpha_1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CNGA3> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Cyclic_nucleotide-gated_channel_alpha_3>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CNGB1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CNGB1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CNGB3> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Cyclic_nucleotide_gated_channel_beta_3>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/COCH> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/COCH>, <http://www.dbpedia.org/resource/COCH>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/COG7> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/COG7>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/COL10A1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/COL10A1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/COL11A1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/COL11A1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/COL17A1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Collagen_XVII>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/COL18A1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/COL18A1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/COL1A1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/COL1A1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/COL1A2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/COL1A2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/COL3A1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Type-III_collagen>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/COL4A1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/COL4A1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/COL4A3> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/COL4A3>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/COL4A4> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/COL4A4>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/COL4A6> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/COL4A6>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/COL5A1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/COL5A1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/COL5A2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/COL5A2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/COL6A1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/COL6A1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/COL6A2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/COL6A2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/COL6A3> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/COL6A3>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/COL7A1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/COL7A1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/COL8A2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/COL8A2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/COL9A1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/COL9A1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/COL9A2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/COL9A2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/COL9A3> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/COL9A3>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/COLQ> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/COLQ>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/COMP> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Cartilage_oligomeric_matrix_protein>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/COMT> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/COMT>, <http://www.dbpedia.org/resource/Catechol-O-methyl_transferase>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/COX10> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/COX10>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/COX15> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/COX15>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CPN1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CPN1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CR1> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/CR1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CRB1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CRB1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CREBBP> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CREB_binding_protein>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CRELD1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CRELD1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CRLF1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CRLF1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CRYA2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CRYAB>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CRYAA> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CRYAA>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CRYBA1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CRYBA1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CRYBB1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CRYBB1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CRYBB2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CRYBB2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CRYGC> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/CRYGC>, <http://www.dbpedia.org/resource/CRYGC>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CRYGD> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Crystallin%2C_gamma_D>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CRYM> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CRYM>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CSF1R> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Colony_stimulating_factor_1_receptor>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CSRP3> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/CSRP3>, <http://www.dbpedia.org/resource/CSRP3>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CSTB> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/CSTB>, <http://www.dbpedia.org/resource/Cystatin_B>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CTDP1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CTDP1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CTLA4> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CTLA-4>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CTNNB1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Beta-catenin>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CTSA> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Cathepsin_A>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CTSC> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Cathepsin_C>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CTSK> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Cathepsin_K>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CUBN> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CUBN>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CUL7> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CUL7>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CX32> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/GJB1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CX3CR1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CX3CR1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CX43> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/GJA1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CXCL12> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/CXCL12>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CXCR4> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/CXCR4>, <http://www.dbpedia.org/resource/CXCR4>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CYB5R3> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CYB5R3>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CYBB> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CYBB>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CYLD> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/CYLD>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CYP11B1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Steroid_11-beta-hydroxylase>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CYP11B2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Aldosterone_synthase>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CYP19A1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Aromatase>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CYP21A2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/21-Hydroxylase>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CYP27A1> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/CYP27A1>, <http://www.dbpedia.org/resource/CYP27A1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CYP2A> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CYP2A>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CYP2A3> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CYP2A6>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CYP2C19> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/CYP2C19>, <http://www.dbpedia.org/resource/CYP2C19>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CYP2C9> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/CYP2C9>, <http://www.dbpedia.org/resource/CYP2C9>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CYP2D6> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/CYP2D6>, <http://www.dbpedia.org/resource/CYP2D6>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CYP2R1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CYP2R1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CYP4V2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CYP4V2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CYP7B1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/CYP7B1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DAD1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/DAD1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DAF> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/DAF>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DAX1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/DAX1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DAZL> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/DAZL>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DBH> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/DBH>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DBT> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/DBT>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DCC> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Deleted_in_Colorectal_Cancer>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DCLRE1C> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/DCLRE1C>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DCTN1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/DCTN1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DDB2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/DDB2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DDC> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/DDC>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DDIT3> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/DNA_damage-inducible_transcript_3>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DES> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/DES>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DFNA26> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ACTG1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DFNA3> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Gap_junction_protein>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DFNA5> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/DFNA5>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DFNB1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/GJB2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DFNB31> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/DFNB31>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DGUOK> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/DGUOK>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DHCR24> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/24-dehydrocholesterol_reductase>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DHCR7> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/7-Dehydrocholesterol_reductase>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DIAPH1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/DIAPH1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DIAPH2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/DIAPH2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DISC1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/DISC1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DKC1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Dyskerin>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DLC1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/DLC1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DLG3> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/DLG3>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DLG5> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/DLG5>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DLL3> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/DLL3>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DLX2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/DLX2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DMBT1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/DMBT1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DMPK> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Myotonic_dystrophy_protein_kinase>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DNAH11> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/DNAH11>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DNAH5> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/DNAH5>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DNAI1> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/DNAI1>, <http://www.dbpedia.org/resource/DNAI1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DNASE1> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/DNASE1>, <http://www.dbpedia.org/resource/Deoxyribonuclease_I>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DNM2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/DNM2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DNMT3B> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/DNMT3B>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DPAGT1> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/DPAGT1>, <http://www.dbpedia.org/resource/DPAGT1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DPM1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/DPM1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DPYD> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/DPYD>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DPYS> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/DPYS>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DR5> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/TNFRSF10B>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DRD2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Dopamine_receptor_D2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DRD4> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Dopamine_receptor_D4>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DRD5> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Dopamine_receptor_D5>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DSG1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Desmoglein_1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DSG4> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/DSG4>, <http://www.dbpedia.org/resource/DSG4>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DSPP> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/DSPP>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DTNA> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/DTNA>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DUOX2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/DUOX2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DYM> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/DYM>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DYSF> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Dysferlin>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DYT1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Torsin_A>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DYX1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/DYX1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DYX1C1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/DYX1C1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ECE1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Endothelin_converting_enzyme_1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ECGF1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ECGF1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ECM1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ECM1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/EDAR> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/EDAR>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/EDARADD> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/EDARADD>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/EDN3> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Endothelin_3>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/EDNRA> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/EDNRA>, <http://www.dbpedia.org/resource/Endothelin_receptor_type_A>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/EDNRB> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Endothelin_receptor_type_B>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/EFEMP1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/EFEMP1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/EFHC1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/EFHC1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/EFNB1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/EFNB1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/EGFR> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/EGFR>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/EGR2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/EGR2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/EIF2AK3> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/EIF2AK3>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/EIF2B1> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/EIF2B1>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/EIF2B2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/EIF2B2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/EIF2B3> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/EIF2B3>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/EIF2B4> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/EIF2B4>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/EIF2B5> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/EIF2B5>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ELA2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Neutrophil_elastase>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ELAC2> <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/ELAC2>.
+<http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ELN> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/net/tcm/tcm.lifescience.ntu.edu.tw/id/gene/ELN>.
