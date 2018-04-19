@@ -4,21 +4,67 @@ const commander = require('commander')
 const path = require('path')
 const fs = require('fs')
 const AbstractSimplePeer = require('../webrtc-dequenpeda').AbstractSimplePeer
+const shuffle = require('lodash.shuffle')
 
 commander
-  .option('-q, --query <query>', 'Query to execute (path relative to the script)', (e) => readQuery(e), readQuery('./queries/diseasome-test.rq'))
   .option('-c, --clients <clients>', 'Number of clients', (e) => parseInt(e), 1)
   .option('-t, --timeout <timeout>', 'Query Timeout', (e) => parseFloat(e), 24 * 3600 *1000)
-  .option('-d, --data <data>', 'Data directory', (p) => p, '../data/diseasome/fragments')
   .parse(process.argv)
 
 commander.timeout = parseFloat(commander.timeout)
 console.log('[PARAMETER] Number of clients: ', commander.clients)
-console.log('[PARAMETER] Query: \n', commander.query)
 console.log('[PARAMETER] Timeout: ', commander.timeout)
-console.log('[PARAMETER] Data dir: ', commander.data)
 
+const config = {
+  datasets: [
+    { data: "../data/diseasome/fragments/", queries: "../data/diseasome/queries/queries.json", results: "../data/diseasome/results/" },
+    { data: "../data/linkedmdb/fragments/", queries: "../data/linkedmdb/queries/queries.json", results: "../data/linkedmdb/results/" }
+  ]
+}
 
+loadQueries(config).then((results) => {
+  console.log('Queries loaded.')
+  console.log('Number of datasets: ', results.length)
+})
+
+/**
+ * Load queries and return an array of array of queries with their results number [[{query: '...', filename: 'q1.rq', card: 2}, ...], ...]
+ * @param  {[type]} config           [description]
+ * @param  {Number} [limit=Infinity] [description]
+ * @return {[type]}                  [description]
+ */
+function loadQueries (config, limit = Infinity) {
+  return new Promise((resolve, reject) => {
+    config.datasets.reduce((datasetsAcc, dataset) => datasetsAcc.then((resultGlobal) => {
+      return new Promise((res, rej) => {
+        console.log(dataset)
+        const qPath = path.resolve(path.join(__dirname, dataset.queries))
+        const rPath = path.resolve(path.join(__dirname, dataset.results))
+        const queries = JSON.parse(fs.readFileSync(qPath, 'utf8'))
+        const results = shell.ls(rPath+'*')
+        queries.reduce((qAcc, query, ind) => qAcc.then((resDataset) => {
+          //console.log(query, results[ind])
+          const result = JSON.parse(fs.readFileSync(path.resolve(path.join(__dirname, dataset.results+results[ind])), 'utf8'))
+          return Promise.resolve([...resDataset, {
+            query,
+            filename: results[ind],
+            card: result.length,
+            results: result
+          }])
+        }), Promise.resolve([])).then((resultDataset) => {
+          res([...resultGlobal, resultDataset])
+        }).catch(e => {
+          rej(e)
+        })
+      })
+    }), Promise.resolve([])).then((results) => {
+      resolve(results)
+    }).catch(e => {
+      console.error(e)
+      reject(e)
+    })
+  })
+}
 
 function readQuery(queryPath) {
   const pat = path.resolve(__dirname, queryPath)
@@ -30,7 +76,7 @@ function readQuery(queryPath) {
   }
 }
 
-const pathData = path.resolve(__dirname, commander.data)
+//const pathData = path.resolve(__dirname, commander.data)
 
 let extractFilename = (pathData, max) => new Promise((resolve, reject) => {
   try {
@@ -38,121 +84,96 @@ let extractFilename = (pathData, max) => new Promise((resolve, reject) => {
     let res = []
     console.log('Searching for: ', pathData + '/*.ttl')
     res = shell.ls(pathData + '/*.ttl')//.forEach(function (file) {
-    //   console.log(file)
-    //   if (i < max) {
-    //     res.push(file)
-    //     i++
-    //   } else {
-    //     resolve(res)
-    //   }
-    // })
     resolve(res)
   } catch (e) {
     reject(e)
   }
 })
 
-extractFilename(pathData, commander.clients).then((res) => {
-  console.log('Loaded files: ', res.length)
 
-  const refClient = createClient()
+// extractFilename(pathData, commander.clients).then((res) => {
+//   console.log('Loaded files: ', res.length)
+//
+//   const refClient = createClient()
+//   loadFiles(res, [refClient]).then(() => {
+//     // execute the query ref
+//     function execute (q) {
+//       return new Promise((resolve, reject) => {
+//         const query = refClient.query(q, 'normal', {
+//           timeout: Infinity
+//         })
+//         query.on('loaded', (result) => {
+//           console.log('[REFERENCE] Number of results when initiated: ', result.length)
+//           console.log('[REFERENCE] stop the query cause we are alone, we have all results')
+//           refClient.stop(query._id)
+//         })
+//         query.on('end', (result) => {
+//           console.log('[REFERENCE] Number of results when terminated: ', result.length)
+//           resolve(result)
+//         })
+//       })
+//     }
+//     // execute the ref
+//     execute(commander.query).then((resultRef) => {
+//       console.log('Reference executed.')
+//       // load N clients
+//       let clients = []
+//       let tmpFoglets = []
+//       const max = commander.clients
+//       for (let i = 0; i < max; i++) {
+//         if (i !== 0) tmpFoglets.push(i)
+//         const c = createClient()
+//         c._foglet.on('connect', () => {
+//           console.log('client: ', i, 'connected.')
+//         })
+//         clients.push(c)
+//
+//       }
+//       // load fragments on the clients
+//       loadFiles(res, clients).then(() => {
+//         tmpFoglets.reduce((acc, ind) => acc.then(() => {
+//           return clients[ind].connection(clients[0])
+//         }), Promise.resolve()).then(() => {
+//           // execute the query we want to execute
+//           let shuffle = []
+//           // query all data of clients[1]
+//           const query = clients[0].query(commander.query, 'normal', {
+//             timeout: commander.timeout
+//           })
+//           query.on('loaded', (result) => {
+//             console.log(result)
+//             console.log(`[client0-${shuffle.length}] Number of results when initiated: `, result.length)
+//             shuffle.push(result)
+//             // stop when query results are equal to ref results
+//             if (result.length === resultRef.length) clients[0].stop(query._id)
+//           })
+//           query.on('updated', (result) => {
+//             console.log(result)
+//             console.log(`[client0-${shuffle.length}] Number of results when updated: `, result.length)
+//             shuffle.push(result)
+//             // stop when query results are equal to ref results
+//             if (result.length === resultRef.length) clients[0].stop(query._id)
+//           })
+//           query.on('end', (result) => {
+//             console.log(result)
+//             console.log(`[client0-${shuffle.length}] Number of results when terminated: `, result.length)
+//             console.log(`[client0-${shuffle.length}] Number of shuffle for the query: `, shuffle.length)
+//             process.exit(0)
+//           })
+//         }).catch(e => {
+//           console.error('[client-reduce] loadtriples: ', e)
+//         })
+//       }).catch(e => {
+//         console.error(e)
+//       })
+//     })
+//   })
+// })
 
-  // let clients = []
-  // let tmpFoglets = []
-  // const max = commander.clients
-  // for (let i = 0; i < max; i++) {
-  //   if (i !== 0) tmpFoglets.push(i)
-  //   clients.push(createClient())
-  // }
-
-  loadFiles(res, [refClient]).then(() => {
-    // execute the query ref
-    function execute (q) {
-      return new Promise((resolve, reject) => {
-        const query = refClient.query(q, 'normal', {
-          timeout: Infinity
-        })
-        query.on('loaded', (result) => {
-          console.log('[REFERENCE] Number of results when initiated: ', result.length)
-          console.log('[REFERENCE] stop the query cause we are alone, we have all results')
-          refClient.stop(query._id)
-        })
-        query.on('end', (result) => {
-          console.log('[REFERENCE] Number of results when terminated: ', result.length)
-          resolve(result)
-        })
-      })
-    }
-    // execute the ref
-    execute(commander.query).then((resultRef) => {
-      console.log('Reference executed.')
-      // load N clients
-      let clients = []
-      let tmpFoglets = []
-      const max = commander.clients
-      for (let i = 0; i < max; i++) {
-        if (i !== 0) tmpFoglets.push(i)
-        const c = createClient()
-        c._foglet.on('connect', () => {
-          console.log('client: ', i, 'connected.')
-        })
-        clients.push(c)
-
-      }
-      // load fragments on the clients
-      loadFiles(res, clients).then(() => {
-        tmpFoglets.reduce((acc, ind) => acc.then(() => {
-          return clients[ind].connection(clients[0])
-        }), Promise.resolve()).then(() => {
-          // execute the query we want to execute
-          let shuffle = []
-          // query all data of clients[1]
-          const query = clients[0].query(commander.query, 'normal', {
-            timeout: commander.timeout
-          })
-          query.on('loaded', (result) => {
-            console.log(result)
-            console.log(`[client0-${shuffle.length}] Number of results when initiated: `, result.length)
-            shuffle.push(result)
-            // stop when query results are equal to ref results
-            if (result.length === resultRef.length) clients[0].stop(query._id)
-          })
-          query.on('updated', (result) => {
-            console.log(result)
-            console.log(`[client0-${shuffle.length}] Number of results when updated: `, result.length)
-            shuffle.push(result)
-            // stop when query results are equal to ref results
-            if (result.length === resultRef.length) clients[0].stop(query._id)
-          })
-          query.on('end', (result) => {
-            console.log(result)
-            console.log(`[client0-${shuffle.length}] Number of results when terminated: `, result.length)
-            console.log(`[client0-${shuffle.length}] Number of shuffle for the query: `, shuffle.length)
-            process.exit(0)
-          })
-        }).catch(e => {
-          console.error('[client-reduce] loadtriples: ', e)
-        })
-      }).catch(e => {
-        console.error(e)
-      })
-    })
-  })
-})
-
-// const dataSublistOfFiles = [
-//   'triple_person/2xusiez7gijdmxg04e.ttl',
-//   'triple_person/2xusiez7gijdmxg04f.ttl',
-//   'triple_person/2xusiez7gijdmxg04g.ttl',
-//   'triple_person/2xusiez7gijdmxg04h.ttl',
-//   'triple_person/2xusiez7gijdmxg04i.ttl',
-//   'triple_person/2xusiez7gijdmxg04j.ttl',
-//   'triple_person/2xusiez7gijdmxg04k.ttl',
-//   'triple_person/2xusiez7gijdmxg04l.ttl',
-//   'triple_person/2xusiez7gijdmxg04m.ttl',
-//   'triple_person/2xusiez7gijdmxg04n.ttl'
-// ]
-
+/**
+ * Create a Dequenpeda client
+ * @return {[type]} [description]
+ */
 function createClient () {
   return new Dequenpeda({
     foglet: {
@@ -168,6 +189,11 @@ function createClient () {
   })
 }
 
+/**
+ * Read a .ttl and return the content
+ * @param  {[type]} location [description]
+ * @return {[type]}          [description]
+ */
 function readTurtleFile (location) {
   return new Promise((resolve, reject) => {
     const fs = require('fs')
@@ -179,7 +205,15 @@ function readTurtleFile (location) {
   })
 }
 
+/**
+ * Load fragments on clients
+ * Return an array of clients which have at least one fragments
+ */
 function loadFiles(fragments, clients) {
+  // shuffle fragments and clients
+  fragments = shuffle(fragments)
+  clients = shuffle(clients)
+
   console.log('Loading fragments on clients...')
   return new Promise((resolve, reject) => {
     let elements = 0
@@ -195,6 +229,7 @@ function loadFiles(fragments, clients) {
     console.log('remaining file: ', remaining)
     let fragmentIndex = 0
     let insertedGlobal = 0
+    let clientsSelected = []
     clients.reduce((clientsAcc, client, indClient) => clientsAcc.then(() => {
       console.log('Beginning loading on client: ', indClient)
       let inserted = 0
@@ -207,6 +242,9 @@ function loadFiles(fragments, clients) {
                 const file = readTurtleFile(fragment).then((file) => {
                   setTimeout(() => {
                     client.loadTriples(file).then(() => {
+                      if(!clientsSelected.includes(ind)) {
+                        clientsSelected.push(client)
+                      }
                       console.log('File %f loaded on client %f ', indFrag, indClient)
                       fragmentIndex++
                       insertedGlobal++
@@ -236,7 +274,7 @@ function loadFiles(fragments, clients) {
         })
       })
     }), Promise.resolve()).then(() => {
-      if((insertedGlobal === fragmentIndex) && (insertedGlobal === fragments.length)) resolve()
+      if((insertedGlobal === fragmentIndex) && (insertedGlobal === fragments.length)) resolve(clientsSelected)
       // now load all remaining files
       clients.reduce((clientsAcc, client, indClient) => clientsAcc.then(() => {
         console.log('Beginning loading remaining file on client: ', indClient)
@@ -250,6 +288,9 @@ function loadFiles(fragments, clients) {
                   const file = readTurtleFile(fragment).then((file) => {
                     setTimeout(() => {
                       client.loadTriples(file).then(() => {
+                        if(!clientsSelected.includes(ind)) {
+                          clientsSelected.push(client)
+                        }
                         console.log('File %f loaded on client %f ', indFrag, indClient)
                         insertedGlobal++
                         inserted++
@@ -278,7 +319,7 @@ function loadFiles(fragments, clients) {
           })
         })
       }), Promise.resolve()).then(() => {
-        resolve()
+        resolve(clientsSelected)
       }).catch(e => {
         reject()
       })
