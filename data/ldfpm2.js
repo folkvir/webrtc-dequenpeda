@@ -7,4 +7,4 @@ try {
   console.error(e)
   process.exit(1)
 }
-shell.exec('ldf-server ldfconfignormal.js 5678 12')
+shell.exec('ldf-server ldfconfignormal.json 5678 12')

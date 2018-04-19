@@ -5,19 +5,19 @@
       "title": "Diseasome",
       "type": "HdtDatasource",
       "description": "Diseasome Dataset",
-      "settings": { "file": "/data/diseasome.hdt" }
+      "settings": { "file": "./diseasome/federationData.hdt" }
     },
     "geocoordinates": {
       "title": "GeoCoordinates",
       "type": "HdtDatasource",
       "description": "GeoCoordinates Dataset",
-      "settings": { "file": "/data/geocoordinates.hdt" }
+      "settings": { "file": "./geocoordinates/federationData.hdt" }
     },
     "linkedmdb": {
       "title": "LinkedMDB",
       "type": "HdtDatasource",
       "description": "LinkedMDB Dataset",
-      "settings": { "file": "/data/linkedmdb.hdt" }
+      "settings": { "file": "./linkedmdb/federationData.hdt" }
     }
   },
   "logging": {
