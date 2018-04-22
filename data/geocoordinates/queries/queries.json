@@ -1,102 +1,1171 @@
 [
-	"SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://www.georss.org/georss/point> \"-80.7 157.46666666666667\"@en   } ",
-	"SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://www.georss.org/georss/point> \"51.708888888888886 20.072222222222223\"@en   } ",
-	"SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://www.georss.org/georss/point> \"46.971944444444446 -92.3411111111111\"@en   } ",
-	"SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://www.georss.org/georss/point> \"-22.916666666666668 -43.35\"@en   } ",
-	"SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Sandi%C3%A1s> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Sandi%C3%A1s> <http://www.georss.org/georss/point> ?x3   } ",
-	"SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Khmara_Island> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Khmara_Island> <http://www.georss.org/georss/point> ?x3   } ",
-	"SELECT DISTINCT  ?x2 WHERE   { <http://dbpedia.org/resource/Tether_Rock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Tether_Rock> <http://www.georss.org/georss/point> ?x3   } ",
-	"SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Eastern_Division,_Fiji> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Eastern_Division,_Fiji> <http://www.georss.org/georss/point> ?x3   } ",
-	"SELECT DISTINCT  ?x2 WHERE   { <http://dbpedia.org/resource/Surajgarh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Surajgarh> <http://www.georss.org/georss/point> ?x3   } ",
-	"SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Jastrz%C4%99bie-Zdr%C3%B3j> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Jastrz%C4%99bie-Zdr%C3%B3j> <http://www.georss.org/georss/point> ?x3   } ",
-	"SELECT DISTINCT  ?x2 WHERE   { <http://dbpedia.org/resource/Battle_Abbey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Battle_Abbey> <http://www.georss.org/georss/point> ?x3   } ",
-	"SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Condon_Hills> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Condon_Hills> <http://www.georss.org/georss/point> ?x3   } ",
-	"SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Baden_Powell_College> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Baden_Powell_College> <http://www.georss.org/georss/point> ?x3   } ",
-	"SELECT DISTINCT  ?x3 WHERE   { <http://dbpedia.org/resource/63rd_Street_Tunnel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/63rd_Street_Tunnel> <http://www.georss.org/georss/point> ?x3   } ",
-	"SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Mierzyno> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Mierzyno> <http://www.georss.org/georss/point> ?x3   } ",
-	"SELECT DISTINCT  ?x2 WHERE   { <http://dbpedia.org/resource/Descartes_Island> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Descartes_Island> <http://www.georss.org/georss/point> ?x3   } ",
-	"SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Soraya_District> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Soraya_District> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
-	"SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Cam%C3%AD_de_Cavalls> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Cam%C3%AD_de_Cavalls> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
-	"SELECT DISTINCT  ?x3 WHERE   { <http://dbpedia.org/resource/Walnut_Park_West,_St._Louis> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Walnut_Park_West,_St._Louis> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
-	"SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Kremena_Ice_Piedmont> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Kremena_Ice_Piedmont> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
-	"SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Rockham,_South_Dakota> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Rockham,_South_Dakota> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
-	"SELECT DISTINCT  ?x2 WHERE   { <http://dbpedia.org/resource/Bingo-Mikawa_Station> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Bingo-Mikawa_Station> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
-	"SELECT DISTINCT  ?x3 WHERE   { <http://dbpedia.org/resource/Aoyama_Station_(Iwate)> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Aoyama_Station_(Iwate)> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
-	"SELECT DISTINCT  ?x2 WHERE   { <http://dbpedia.org/resource/Tribe%C4%8D> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Tribe%C4%8D> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
-	"SELECT DISTINCT  ?x2 WHERE   { <http://dbpedia.org/resource/KDXX> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/KDXX> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
-	"SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Rinsumageast> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Rinsumageast> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
-	"SELECT DISTINCT  ?x3 WHERE   { <http://dbpedia.org/resource/Fawbert_and_Barnard's_School> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Fawbert_and_Barnard's_School> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
-	"SELECT DISTINCT  ?x3 WHERE   { <http://dbpedia.org/resource/R%C9%99z%C9%99v%C3%BCl> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/R%C9%99z%C9%99v%C3%BCl> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
-	"SELECT DISTINCT  ?x2 WHERE   { <http://dbpedia.org/resource/Snyder,_Oklahoma> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Snyder,_Oklahoma> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
-	"SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Lake_Shunet> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Lake_Shunet> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
-	"SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Redcar_Racecourse> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Redcar_Racecourse> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
-	"SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Copenhagen_Harbour_Baths> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Copenhagen_Harbour_Baths> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
-	"SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Bayview,_Newfoundland_and_Labrador> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Bayview,_Newfoundland_and_Labrador> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
-	"SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/List_of_United_Kingdom_locations:_Bar> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/List_of_United_Kingdom_locations:_Bar> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
-	"SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://www.georss.org/georss/point> \"56.1 -120.38333333333334\"@en .     ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3   } ",
-	"SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www.georss.org/georss/point> \"-19.916666666666668 44.86666666666667\"@en .     ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3   } ",
-	"SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://www.georss.org/georss/point> \"50.25 30.37\"@en .     ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3   } ",
-	"SELECT DISTINCT  ?x3 WHERE   { <http://dbpedia.org/resource/Pekina> <http://www.georss.org/georss/point> ?x2 .     <http://dbpedia.org/resource/Pekina> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3   } ",
-	"SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www.georss.org/georss/point> \"58.65 23.316666666666666\"@en .     ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3   } ",
-	"SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://www.georss.org/georss/point> \"50.96666666666667 -1.6333333333333333\"@en .     ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3   } ",
-	"SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://www.georss.org/georss/point> \"44.08722222222222 41.973333333333336\"@en .     ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3   } ",
-	"SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://www.georss.org/georss/point> \"52.36666666666667 6.466666666666667\"@en .     ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3   } ",
-	"SELECT DISTINCT  ?x3 WHERE   { <http://dbpedia.org/resource/Pruszcz,_Gryfice_County> <http://www.georss.org/georss/point> ?x2 .     <http://dbpedia.org/resource/Pruszcz,_Gryfice_County> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3   } ",
-	"SELECT DISTINCT  ?x2 WHERE   { <http://dbpedia.org/resource/Thakur_College_of_Engineering_and_Technology> <http://www.georss.org/georss/point> ?x2 .     <http://dbpedia.org/resource/Thakur_College_of_Engineering_and_Technology> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3   } ",
-	"SELECT DISTINCT  ?x3 WHERE   { <http://dbpedia.org/resource/Palace_of_the_Fans> <http://www.georss.org/georss/point> ?x2 .     <http://dbpedia.org/resource/Palace_of_the_Fans> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3   } ",
-	"SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Elizabeth_Park,_South_Australia> <http://www.georss.org/georss/point> ?x2 .     <http://dbpedia.org/resource/Elizabeth_Park,_South_Australia> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3   } ",
-	"SELECT DISTINCT  ?x3 WHERE   { <http://dbpedia.org/resource/Tyligul_River> <http://www.georss.org/georss/point> ?x2 .     <http://dbpedia.org/resource/Tyligul_River> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3   } ",
-	"SELECT DISTINCT  ?x2 WHERE   { ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     ?x1 <http://www.georss.org/georss/point> \"34.36944444444445 -80.08083333333333\"@en   } ",
-	"SELECT DISTINCT  ?x3 WHERE   { <http://dbpedia.org/resource/Bommenede> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     <http://dbpedia.org/resource/Bommenede> <http://www.georss.org/georss/point> ?x3   } ",
-	"SELECT DISTINCT  ?x2 WHERE   { <http://dbpedia.org/resource/Black_River_(Mackinac_County)> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     <http://dbpedia.org/resource/Black_River_(Mackinac_County)> <http://www.georss.org/georss/point> ?x3   } ",
-	"SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Thila> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     <http://dbpedia.org/resource/Thila> <http://www.georss.org/georss/point> ?x3   } ",
-	"SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Florence_County,_South_Carolina> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     <http://dbpedia.org/resource/Florence_County,_South_Carolina> <http://www.georss.org/georss/point> ?x3   } ",
-	"SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Al_Rifa> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     <http://dbpedia.org/resource/Al_Rifa> <http://www.georss.org/georss/point> ?x3   } ",
-	"SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     ?x1 <http://www.georss.org/georss/point> \"35.0096 136.8939\"@en   } ",
-	"SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     ?x1 <http://www.georss.org/georss/point> \"53.85722222222222 19.389444444444443\"@en   } ",
-	"SELECT DISTINCT  ?x2 WHERE   { ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     ?x1 <http://www.georss.org/georss/point> \"51.72666666666667 -0.09472222222222222\"@en   } ",
-	"SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Codorniz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Codorniz> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
-	"SELECT DISTINCT  ?x3 WHERE   { <http://dbpedia.org/resource/Museum_of_Army_Chaplaincy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Museum_of_Army_Chaplaincy> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
-	"SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Wild_Spur> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Wild_Spur> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
-	"SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Peninsula_College> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Peninsula_College> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
-	"SELECT DISTINCT  ?x3 WHERE   { <http://dbpedia.org/resource/Hu%C3%ADla_Province> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Hu%C3%ADla_Province> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
-	"SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Grobi%C5%86a_parish> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Grobi%C5%86a_parish> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
-	"SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Webster_Knob> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Webster_Knob> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
-	"SELECT DISTINCT  ?x4 ?x2 WHERE   { <http://dbpedia.org/resource/Eassie_Stone> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     <http://dbpedia.org/resource/Eassie_Stone> <http://www.georss.org/georss/point> ?x3 .     <http://dbpedia.org/resource/Eassie_Stone> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x4   } ",
-	"SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Ma%C5%9Bluchowice> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     <http://dbpedia.org/resource/Ma%C5%9Bluchowice> <http://www.georss.org/georss/point> ?x3 .     <http://dbpedia.org/resource/Ma%C5%9Bluchowice> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x4   } ",
-	"SELECT DISTINCT  ?x4 ?x2 WHERE   { <http://dbpedia.org/resource/KSTN_(AM)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/KSTN_(AM)> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/KSTN_(AM)> <http://www.georss.org/georss/point> ?x4   } ",
-	"SELECT DISTINCT  ?x4 ?x2 WHERE   { <http://dbpedia.org/resource/Wynberg_Boys'_High_School> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Wynberg_Boys'_High_School> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/Wynberg_Boys'_High_School> <http://www.georss.org/georss/point> ?x4   } ",
-	"SELECT DISTINCT  ?x2 WHERE   { <http://dbpedia.org/resource/M%C3%A1traf%C3%BCred> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/M%C3%A1traf%C3%BCred> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/M%C3%A1traf%C3%BCred> <http://www.georss.org/georss/point> ?x4   } ",
-	"SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     ?x1 <http://www.georss.org/georss/point> \"57.80653 -5.25166\"@en   } ",
-	"SELECT DISTINCT  ?x2 WHERE   { <http://dbpedia.org/resource/CHSR-FM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/CHSR-FM> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/CHSR-FM> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x4   } ",
-	"SELECT DISTINCT  ?x4 ?x2 WHERE   { <http://dbpedia.org/resource/Independence_Township,_Michigan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Independence_Township,_Michigan> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/Independence_Township,_Michigan> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x4   } ",
-	"SELECT DISTINCT  ?x4 WHERE   { <http://dbpedia.org/resource/Earlville,_New_York> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Earlville,_New_York> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3 .     <http://dbpedia.org/resource/Earlville,_New_York> <http://www.georss.org/georss/point> ?x4   } ",
-	"SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3 .     ?x1 <http://www.georss.org/georss/point> \"41.43333333333333 22.233333333333334\"@en   } ",
-	"SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3 .     ?x1 <http://www.georss.org/georss/point> \"11.256944444444445 76.66972222222222\"@en   } ",
-	"SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3 .     ?x1 <http://www.georss.org/georss/point> \"48.19583333333333 11.571944444444444\"@en   } ",
-	"SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Kalterer_See> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Kalterer_See> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3 .     <http://dbpedia.org/resource/Kalterer_See> <http://www.georss.org/georss/point> ?x4   } ",
-	"SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3 .     ?x1 <http://www.georss.org/georss/point> \"28.744305555555556 -113.75416666666666\"@en   } ",
-	"SELECT DISTINCT  ?x4 WHERE   { <http://dbpedia.org/resource/Copy_of_Diana_of_Versailles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Copy_of_Diana_of_Versailles> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/Copy_of_Diana_of_Versailles> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x4 .     <http://dbpedia.org/resource/Copy_of_Diana_of_Versailles> <http://www.georss.org/georss/point> ?x5   } ",
-	"SELECT DISTINCT  ?x3 ?x4 ?x2 ?x5 WHERE   { <http://dbpedia.org/resource/Luther_Jackson_Middle_School> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Luther_Jackson_Middle_School> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/Luther_Jackson_Middle_School> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x4 .     <http://dbpedia.org/resource/Luther_Jackson_Middle_School> <http://www.georss.org/georss/point> ?x5   } ",
-	"SELECT DISTINCT  ?x2 WHERE   { <http://dbpedia.org/resource/Yekaterinovsky_District> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Yekaterinovsky_District> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/Yekaterinovsky_District> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x4 .     <http://dbpedia.org/resource/Yekaterinovsky_District> <http://www.georss.org/georss/point> ?x5   } ",
-	"SELECT DISTINCT  ?x3 ?x5 WHERE   { <http://dbpedia.org/resource/Matakaoa_Ward> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Matakaoa_Ward> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/Matakaoa_Ward> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x4 .     <http://dbpedia.org/resource/Matakaoa_Ward> <http://www.georss.org/georss/point> ?x5   } ",
-	"SELECT DISTINCT  ?x4 ?x2 WHERE   { <http://dbpedia.org/resource/Loutraki> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Loutraki> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/Loutraki> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x4   } ",
-	"SELECT DISTINCT  ?x4 ?x1 ?x2 WHERE   { ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     ?x1 <http://www.georss.org/georss/point> \"-18.866666666666667 -159.76666666666668\"@en .     ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x4   } ",
-	"SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     ?x1 <http://www.georss.org/georss/point> \"46.56666666666667 14.616666666666667\"@en .     ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x4   } ",
-	"SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Driehuizen,_Texel> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     <http://dbpedia.org/resource/Driehuizen,_Texel> <http://www.georss.org/georss/point> ?x3 .     <http://dbpedia.org/resource/Driehuizen,_Texel> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x4   } ",
-	"SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Ferriday,_Louisiana> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     <http://dbpedia.org/resource/Ferriday,_Louisiana> <http://www.georss.org/georss/point> ?x3 .     <http://dbpedia.org/resource/Ferriday,_Louisiana> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x4   } ",
-	"SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Nienadowa> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Nienadowa> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
-	"SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/St_George's_Cricket_Ground> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/St_George's_Cricket_Ground> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
-	"SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Anetan_District> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Anetan_District> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
-	"SELECT DISTINCT  ?x3 WHERE   { <http://dbpedia.org/resource/Mihal%C4%B1%C3%A7%C3%A7%C4%B1k> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     <http://dbpedia.org/resource/Mihal%C4%B1%C3%A7%C3%A7%C4%B1k> <http://www.georss.org/georss/point> ?x3   } ",
-	"SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Nhu_Thanh_District> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     <http://dbpedia.org/resource/Nhu_Thanh_District> <http://www.georss.org/georss/point> ?x3   } ",
-	"SELECT DISTINCT  ?x4 ?x2 ?x5 WHERE   { <http://dbpedia.org/resource/La_Uni%C3%B3n,_Murcia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/La_Uni%C3%B3n,_Murcia> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/La_Uni%C3%B3n,_Murcia> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x4 .     <http://dbpedia.org/resource/La_Uni%C3%B3n,_Murcia> <http://www.georss.org/georss/point> ?x5   } ",
-	"SELECT DISTINCT  ?x5 WHERE   { <http://dbpedia.org/resource/Dharmasoka_College> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Dharmasoka_College> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/Dharmasoka_College> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x4 .     <http://dbpedia.org/resource/Dharmasoka_College> <http://www.georss.org/georss/point> ?x5   } ",
-	"SELECT DISTINCT  ?x3 ?x4 WHERE   { <http://dbpedia.org/resource/Nassau_Street_(Dublin)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Nassau_Street_(Dublin)> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/Nassau_Street_(Dublin)> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x4 .     <http://dbpedia.org/resource/Nassau_Street_(Dublin)> <http://www.georss.org/georss/point> ?x5   } ",
-	"SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Radziochy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Radziochy> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
-	"SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Kingdom_of_Navarre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Kingdom_of_Navarre> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
-	"SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Aruv%C3%A4lja,_Ida-Viru_County> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Aruv%C3%A4lja,_Ida-Viru_County> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
-	"SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Walk_Glacier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Walk_Glacier> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/Walk_Glacier> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x4   } ",
-	"SELECT DISTINCT  ?x4 ?x2 WHERE   { <http://dbpedia.org/resource/Woodenbong,_New_South_Wales> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Woodenbong,_New_South_Wales> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/Woodenbong,_New_South_Wales> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x4   } ",
-	"SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Narona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Narona> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/Narona> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x4   } "
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://www.georss.org/georss/point> \"-80.7 157.46666666666667\"@en   } ",
+		"filename": "q0.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://dbpedia.org/resource/Brecher_Glacier",
+				"?x2": "http://www.opengis.net/gml/_Feature"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://www.georss.org/georss/point> \"51.708888888888886 20.072222222222223\"@en   } ",
+		"filename": "q1.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://dbpedia.org/resource/Soko%C5%82%C3%B3wka,_%C5%81%C3%B3d%C5%BA_Voivodeship"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://www.georss.org/georss/point> \"46.971944444444446 -92.3411111111111\"@en   } ",
+		"filename": "q2.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://dbpedia.org/resource/Us-kab-wan-ka_River",
+				"?x2": "http://www.opengis.net/gml/_Feature"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://www.georss.org/georss/point> \"-22.916666666666668 -43.35\"@en   } ",
+		"filename": "q3.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://dbpedia.org/resource/Pechincha_(Rio_de_Janeiro)",
+				"?x2": "http://www.opengis.net/gml/_Feature"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Sandi%C3%A1s> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Sandi%C3%A1s> <http://www.georss.org/georss/point> ?x3   } ",
+		"filename": "q4.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"42.111 -7.758\"@en",
+				"?x2": "http://www.opengis.net/gml/_Feature"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Khmara_Island> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Khmara_Island> <http://www.georss.org/georss/point> ?x3   } ",
+		"filename": "q5.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"-66.55 93.0\"@en",
+				"?x2": "http://www.opengis.net/gml/_Feature"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x2 WHERE   { <http://dbpedia.org/resource/Tether_Rock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Tether_Rock> <http://www.georss.org/georss/point> ?x3   } ",
+		"filename": "q6.json",
+		"card": 1,
+		"results": [
+			{
+				"?x2": "http://www.opengis.net/gml/_Feature"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Eastern_Division,_Fiji> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Eastern_Division,_Fiji> <http://www.georss.org/georss/point> ?x3   } ",
+		"filename": "q7.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"-18.5 180.0\"@en",
+				"?x2": "http://www.opengis.net/gml/_Feature"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x2 WHERE   { <http://dbpedia.org/resource/Surajgarh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Surajgarh> <http://www.georss.org/georss/point> ?x3   } ",
+		"filename": "q8.json",
+		"card": 1,
+		"results": [
+			{
+				"?x2": "http://www.opengis.net/gml/_Feature"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Jastrz%C4%99bie-Zdr%C3%B3j> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Jastrz%C4%99bie-Zdr%C3%B3j> <http://www.georss.org/georss/point> ?x3   } ",
+		"filename": "q9.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"49.95 18.583333333333332\"@en",
+				"?x2": "http://www.opengis.net/gml/_Feature"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x2 WHERE   { <http://dbpedia.org/resource/Battle_Abbey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Battle_Abbey> <http://www.georss.org/georss/point> ?x3   } ",
+		"filename": "q10.json",
+		"card": 1,
+		"results": [
+			{
+				"?x2": "http://www.opengis.net/gml/_Feature"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Condon_Hills> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Condon_Hills> <http://www.georss.org/georss/point> ?x3   } ",
+		"filename": "q11.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"-67.88333333333334 48.63333333333333\"@en",
+				"?x2": "http://www.opengis.net/gml/_Feature"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Baden_Powell_College> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Baden_Powell_College> <http://www.georss.org/georss/point> ?x3   } ",
+		"filename": "q12.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"-37.85944444444444 144.6911111111111\"@en",
+				"?x2": "http://www.opengis.net/gml/_Feature"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 WHERE   { <http://dbpedia.org/resource/63rd_Street_Tunnel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/63rd_Street_Tunnel> <http://www.georss.org/georss/point> ?x3   } ",
+		"filename": "q13.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"40.76 -73.955\"@en"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Mierzyno> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Mierzyno> <http://www.georss.org/georss/point> ?x3   } ",
+		"filename": "q14.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"54.69694444444445 17.969722222222224\"@en",
+				"?x2": "http://www.opengis.net/gml/_Feature"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x2 WHERE   { <http://dbpedia.org/resource/Descartes_Island> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Descartes_Island> <http://www.georss.org/georss/point> ?x3   } ",
+		"filename": "q15.json",
+		"card": 1,
+		"results": [
+			{
+				"?x2": "http://www.opengis.net/gml/_Feature"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Soraya_District> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Soraya_District> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
+		"filename": "q16.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"-73.31194444444445\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x2": "\"-14.163055555555555\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Cam%C3%AD_de_Cavalls> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Cam%C3%AD_de_Cavalls> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
+		"filename": "q17.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"3.9091666666666667\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x2": "\"39.92638888888889\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 WHERE   { <http://dbpedia.org/resource/Walnut_Park_West,_St._Louis> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Walnut_Park_West,_St._Louis> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
+		"filename": "q18.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"-90.2567\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Kremena_Ice_Piedmont> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Kremena_Ice_Piedmont> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
+		"filename": "q19.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"-62.63333333333333\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x2": "\"-63.06666666666667\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Rockham,_South_Dakota> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Rockham,_South_Dakota> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
+		"filename": "q20.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"-98.82555555555555\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x2": "\"44.90361111111111\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x2 WHERE   { <http://dbpedia.org/resource/Bingo-Mikawa_Station> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Bingo-Mikawa_Station> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
+		"filename": "q21.json",
+		"card": 1,
+		"results": [
+			{
+				"?x2": "\"34.6302\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 WHERE   { <http://dbpedia.org/resource/Aoyama_Station_(Iwate)> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Aoyama_Station_(Iwate)> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
+		"filename": "q22.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"141.117944\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x2 WHERE   { <http://dbpedia.org/resource/Tribe%C4%8D> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Tribe%C4%8D> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
+		"filename": "q23.json",
+		"card": 1,
+		"results": [
+			{
+				"?x2": "\"48.5\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x2 WHERE   { <http://dbpedia.org/resource/KDXX> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/KDXX> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
+		"filename": "q24.json",
+		"card": 1,
+		"results": [
+			{
+				"?x2": "\"32.586\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Rinsumageast> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Rinsumageast> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
+		"filename": "q25.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"5.9475\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x2": "\"53.29666666666667\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 WHERE   { <http://dbpedia.org/resource/Fawbert_and_Barnard's_School> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Fawbert_and_Barnard's_School> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
+		"filename": "q26.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"0.1332\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 WHERE   { <http://dbpedia.org/resource/R%C9%99z%C9%99v%C3%BCl> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/R%C9%99z%C9%99v%C3%BCl> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
+		"filename": "q27.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"48.483333333333334\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x2 WHERE   { <http://dbpedia.org/resource/Snyder,_Oklahoma> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Snyder,_Oklahoma> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
+		"filename": "q28.json",
+		"card": 1,
+		"results": [
+			{
+				"?x2": "\"34.657222222222224\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Lake_Shunet> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Lake_Shunet> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
+		"filename": "q29.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"90.2280555656\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x2": "\"54.4186111211\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Redcar_Racecourse> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Redcar_Racecourse> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
+		"filename": "q30.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"-1.065\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x2": "\"54.6075\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Copenhagen_Harbour_Baths> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Copenhagen_Harbour_Baths> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
+		"filename": "q31.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"12.5776\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x2": "\"55.6686\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Bayview,_Newfoundland_and_Labrador> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Bayview,_Newfoundland_and_Labrador> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
+		"filename": "q32.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"-54.743611111111115\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x2": "\"49.61388888888889\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/List_of_United_Kingdom_locations:_Bar> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/List_of_United_Kingdom_locations:_Bar> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
+		"filename": "q33.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"-6.51\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x2": "\"58.35\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://www.georss.org/georss/point> \"56.1 -120.38333333333334\"@en .     ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3   } ",
+		"filename": "q34.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"56.1\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x1": "http://dbpedia.org/resource/Beatton_River"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www.georss.org/georss/point> \"-19.916666666666668 44.86666666666667\"@en .     ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3   } ",
+		"filename": "q35.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://dbpedia.org/resource/Antsoha,_Belo_sur_Tsiribihina"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://www.georss.org/georss/point> \"50.25 30.37\"@en .     ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3   } ",
+		"filename": "q36.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"50.25\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x1": "http://dbpedia.org/resource/Zelenyi_Bir"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 WHERE   { <http://dbpedia.org/resource/Pekina> <http://www.georss.org/georss/point> ?x2 .     <http://dbpedia.org/resource/Pekina> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3   } ",
+		"filename": "q37.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"-32.833333333333336\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www.georss.org/georss/point> \"58.65 23.316666666666666\"@en .     ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3   } ",
+		"filename": "q38.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://dbpedia.org/resource/Vahtraste"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://www.georss.org/georss/point> \"50.96666666666667 -1.6333333333333333\"@en .     ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3   } ",
+		"filename": "q39.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"50.96666666666667\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x1": "http://dbpedia.org/resource/Landford"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://www.georss.org/georss/point> \"44.08722222222222 41.973333333333336\"@en .     ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3   } ",
+		"filename": "q40.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"44.08722222222222\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x1": "http://dbpedia.org/resource/Ust-Dzheguta"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://www.georss.org/georss/point> \"52.36666666666667 6.466666666666667\"@en .     ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3   } ",
+		"filename": "q41.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"52.36666666666667\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x1": "http://dbpedia.org/resource/Nijverdal"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 WHERE   { <http://dbpedia.org/resource/Pruszcz,_Gryfice_County> <http://www.georss.org/georss/point> ?x2 .     <http://dbpedia.org/resource/Pruszcz,_Gryfice_County> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3   } ",
+		"filename": "q42.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"53.96666666666667\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x2 WHERE   { <http://dbpedia.org/resource/Thakur_College_of_Engineering_and_Technology> <http://www.georss.org/georss/point> ?x2 .     <http://dbpedia.org/resource/Thakur_College_of_Engineering_and_Technology> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3   } ",
+		"filename": "q43.json",
+		"card": 1,
+		"results": [
+			{
+				"?x2": "\"19.206527 72.874761\"@en"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 WHERE   { <http://dbpedia.org/resource/Palace_of_the_Fans> <http://www.georss.org/georss/point> ?x2 .     <http://dbpedia.org/resource/Palace_of_the_Fans> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3   } ",
+		"filename": "q44.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"39.11694444444444\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Elizabeth_Park,_South_Australia> <http://www.georss.org/georss/point> ?x2 .     <http://dbpedia.org/resource/Elizabeth_Park,_South_Australia> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3   } ",
+		"filename": "q45.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"-34.71239\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x2": "\"-34.71239 138.68543\"@en"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 WHERE   { <http://dbpedia.org/resource/Tyligul_River> <http://www.georss.org/georss/point> ?x2 .     <http://dbpedia.org/resource/Tyligul_River> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3   } ",
+		"filename": "q46.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"46.8575\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x2 WHERE   { ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     ?x1 <http://www.georss.org/georss/point> \"34.36944444444445 -80.08083333333333\"@en   } ",
+		"filename": "q47.json",
+		"card": 1,
+		"results": [
+			{
+				"?x2": "\"-80.08083333333333\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 WHERE   { <http://dbpedia.org/resource/Bommenede> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     <http://dbpedia.org/resource/Bommenede> <http://www.georss.org/georss/point> ?x3   } ",
+		"filename": "q48.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"51.733333333333334 3.9333333333333336\"@en"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x2 WHERE   { <http://dbpedia.org/resource/Black_River_(Mackinac_County)> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     <http://dbpedia.org/resource/Black_River_(Mackinac_County)> <http://www.georss.org/georss/point> ?x3   } ",
+		"filename": "q49.json",
+		"card": 1,
+		"results": [
+			{
+				"?x2": "\"-85.34166666666667\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Thila> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     <http://dbpedia.org/resource/Thila> <http://www.georss.org/georss/point> ?x3   } ",
+		"filename": "q50.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"15.583333333333334 43.9\"@en",
+				"?x2": "\"43.9\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Florence_County,_South_Carolina> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     <http://dbpedia.org/resource/Florence_County,_South_Carolina> <http://www.georss.org/georss/point> ?x3   } ",
+		"filename": "q51.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"34.02 -79.71\"@en",
+				"?x2": "\"-79.71\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Al_Rifa> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     <http://dbpedia.org/resource/Al_Rifa> <http://www.georss.org/georss/point> ?x3   } ",
+		"filename": "q52.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"25.25688 55.28904\"@en",
+				"?x2": "\"55.28904\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     ?x1 <http://www.georss.org/georss/point> \"35.0096 136.8939\"@en   } ",
+		"filename": "q53.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://dbpedia.org/resource/Takayokosuka_Station"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     ?x1 <http://www.georss.org/georss/point> \"53.85722222222222 19.389444444444443\"@en   } ",
+		"filename": "q54.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://dbpedia.org/resource/Zakr%C4%99ty,_Pomeranian_Voivodeship",
+				"?x2": "\"19.389444444444443\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x2 WHERE   { ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     ?x1 <http://www.georss.org/georss/point> \"51.72666666666667 -0.09472222222222222\"@en   } ",
+		"filename": "q55.json",
+		"card": 1,
+		"results": [
+			{
+				"?x2": "\"-0.09472222222222222\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Codorniz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Codorniz> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
+		"filename": "q56.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"-4.6\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x2": "http://www.opengis.net/gml/_Feature"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 WHERE   { <http://dbpedia.org/resource/Museum_of_Army_Chaplaincy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Museum_of_Army_Chaplaincy> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
+		"filename": "q57.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"-1.5767\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Wild_Spur> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Wild_Spur> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
+		"filename": "q58.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"-62.53333333333333\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x2": "http://www.opengis.net/gml/_Feature"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Peninsula_College> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Peninsula_College> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
+		"filename": "q59.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://www.opengis.net/gml/_Feature",
+				"?x2": "\"48.100833333333334\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 WHERE   { <http://dbpedia.org/resource/Hu%C3%ADla_Province> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Hu%C3%ADla_Province> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
+		"filename": "q60.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://www.opengis.net/gml/_Feature"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Grobi%C5%86a_parish> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Grobi%C5%86a_parish> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
+		"filename": "q61.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://www.opengis.net/gml/_Feature",
+				"?x2": "\"56.47638888888889\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Webster_Knob> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Webster_Knob> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
+		"filename": "q62.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://www.opengis.net/gml/_Feature",
+				"?x2": "\"-85.3\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x4 ?x2 WHERE   { <http://dbpedia.org/resource/Eassie_Stone> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     <http://dbpedia.org/resource/Eassie_Stone> <http://www.georss.org/georss/point> ?x3 .     <http://dbpedia.org/resource/Eassie_Stone> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x4   } ",
+		"filename": "q63.json",
+		"card": 1,
+		"results": [
+			{
+				"?x4": "\"56.61442\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x2": "\"-3.05661\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Ma%C5%9Bluchowice> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     <http://dbpedia.org/resource/Ma%C5%9Bluchowice> <http://www.georss.org/georss/point> ?x3 .     <http://dbpedia.org/resource/Ma%C5%9Bluchowice> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x4   } ",
+		"filename": "q64.json",
+		"card": 1,
+		"results": [
+			{
+				"?x4": "\"49.74638888888889\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x3": "\"49.74638888888889 21.163333333333334\"@en",
+				"?x2": "\"21.163333333333334\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x4 ?x2 WHERE   { <http://dbpedia.org/resource/KSTN_(AM)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/KSTN_(AM)> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/KSTN_(AM)> <http://www.georss.org/georss/point> ?x4   } ",
+		"filename": "q65.json",
+		"card": 1,
+		"results": [
+			{
+				"?x4": "\"37.925555555555555 -121.24555555555555\"@en",
+				"?x2": "http://www.opengis.net/gml/_Feature"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x4 ?x2 WHERE   { <http://dbpedia.org/resource/Wynberg_Boys'_High_School> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Wynberg_Boys'_High_School> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/Wynberg_Boys'_High_School> <http://www.georss.org/georss/point> ?x4   } ",
+		"filename": "q66.json",
+		"card": 1,
+		"results": [
+			{
+				"?x4": "\"-33.99638888888889 18.45888888888889\"@en",
+				"?x2": "http://www.opengis.net/gml/_Feature"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x2 WHERE   { <http://dbpedia.org/resource/M%C3%A1traf%C3%BCred> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/M%C3%A1traf%C3%BCred> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/M%C3%A1traf%C3%BCred> <http://www.georss.org/georss/point> ?x4   } ",
+		"filename": "q67.json",
+		"card": 1,
+		"results": [
+			{
+				"?x2": "http://www.opengis.net/gml/_Feature"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     ?x1 <http://www.georss.org/georss/point> \"57.80653 -5.25166\"@en   } ",
+		"filename": "q68.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://dbpedia.org/resource/An_Teallach",
+				"?x2": "http://www.opengis.net/gml/_Feature"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x2 WHERE   { <http://dbpedia.org/resource/CHSR-FM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/CHSR-FM> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/CHSR-FM> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x4   } ",
+		"filename": "q69.json",
+		"card": 1,
+		"results": [
+			{
+				"?x2": "http://www.opengis.net/gml/_Feature"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x4 ?x2 WHERE   { <http://dbpedia.org/resource/Independence_Township,_Michigan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Independence_Township,_Michigan> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/Independence_Township,_Michigan> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x4   } ",
+		"filename": "q70.json",
+		"card": 1,
+		"results": [
+			{
+				"?x4": "\"-83.34138888888889\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x2": "http://www.opengis.net/gml/_Feature"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x4 WHERE   { <http://dbpedia.org/resource/Earlville,_New_York> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Earlville,_New_York> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3 .     <http://dbpedia.org/resource/Earlville,_New_York> <http://www.georss.org/georss/point> ?x4   } ",
+		"filename": "q71.json",
+		"card": 1,
+		"results": [
+			{
+				"?x4": "\"42.74111111111111 -75.54388888888889\"@en"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3 .     ?x1 <http://www.georss.org/georss/point> \"41.43333333333333 22.233333333333334\"@en   } ",
+		"filename": "q72.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://dbpedia.org/resource/Kore%C5%A1nica",
+				"?x2": "http://www.opengis.net/gml/_Feature"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3 .     ?x1 <http://www.georss.org/georss/point> \"11.256944444444445 76.66972222222222\"@en   } ",
+		"filename": "q73.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://dbpedia.org/resource/Kilkunda"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3 .     ?x1 <http://www.georss.org/georss/point> \"48.19583333333333 11.571944444444444\"@en   } ",
+		"filename": "q74.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://dbpedia.org/resource/Am_Hart_(Munich_U-Bahn)"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Kalterer_See> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Kalterer_See> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3 .     <http://dbpedia.org/resource/Kalterer_See> <http://www.georss.org/georss/point> ?x4   } ",
+		"filename": "q75.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"11.2625\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x2": "http://www.opengis.net/gml/_Feature"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3 .     ?x1 <http://www.georss.org/georss/point> \"28.744305555555556 -113.75416666666666\"@en   } ",
+		"filename": "q76.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://dbpedia.org/resource/Misi%C3%B3n_San_Francisco_Borja",
+				"?x2": "http://www.opengis.net/gml/_Feature"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x4 WHERE   { <http://dbpedia.org/resource/Copy_of_Diana_of_Versailles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Copy_of_Diana_of_Versailles> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/Copy_of_Diana_of_Versailles> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x4 .     <http://dbpedia.org/resource/Copy_of_Diana_of_Versailles> <http://www.georss.org/georss/point> ?x5   } ",
+		"filename": "q77.json",
+		"card": 1,
+		"results": [
+			{
+				"?x4": "\"-86.18558888888889\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 ?x4 ?x2 ?x5 WHERE   { <http://dbpedia.org/resource/Luther_Jackson_Middle_School> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Luther_Jackson_Middle_School> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/Luther_Jackson_Middle_School> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x4 .     <http://dbpedia.org/resource/Luther_Jackson_Middle_School> <http://www.georss.org/georss/point> ?x5   } ",
+		"filename": "q78.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"38.8693\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x4": "\"-77.22736388888889\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x2": "http://www.opengis.net/gml/_Feature",
+				"?x5": "\"38.8693 -77.22736388888889\"@en"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x2 WHERE   { <http://dbpedia.org/resource/Yekaterinovsky_District> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Yekaterinovsky_District> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/Yekaterinovsky_District> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x4 .     <http://dbpedia.org/resource/Yekaterinovsky_District> <http://www.georss.org/georss/point> ?x5   } ",
+		"filename": "q79.json",
+		"card": 1,
+		"results": [
+			{
+				"?x2": "http://www.opengis.net/gml/_Feature"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 ?x5 WHERE   { <http://dbpedia.org/resource/Matakaoa_Ward> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Matakaoa_Ward> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/Matakaoa_Ward> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x4 .     <http://dbpedia.org/resource/Matakaoa_Ward> <http://www.georss.org/georss/point> ?x5   } ",
+		"filename": "q80.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"-37.733333333333334\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x5": "\"-37.733333333333334 178.23333333333332\"@en"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x4 ?x2 WHERE   { <http://dbpedia.org/resource/Loutraki> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Loutraki> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/Loutraki> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x4   } ",
+		"filename": "q81.json",
+		"card": 1,
+		"results": [
+			{
+				"?x4": "\"22.976666666666667\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x2": "http://www.opengis.net/gml/_Feature"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x4 ?x1 ?x2 WHERE   { ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     ?x1 <http://www.georss.org/georss/point> \"-18.866666666666667 -159.76666666666668\"@en .     ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x4   } ",
+		"filename": "q82.json",
+		"card": 1,
+		"results": [
+			{
+				"?x4": "\"-18.866666666666667\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x1": "http://dbpedia.org/resource/Amuri,_Cook_Islands",
+				"?x2": "\"-159.76666666666668\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     ?x1 <http://www.georss.org/georss/point> \"46.56666666666667 14.616666666666667\"@en .     ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x4   } ",
+		"filename": "q83.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://dbpedia.org/resource/G%C3%B6sselsdorfer_See"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Driehuizen,_Texel> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     <http://dbpedia.org/resource/Driehuizen,_Texel> <http://www.georss.org/georss/point> ?x3 .     <http://dbpedia.org/resource/Driehuizen,_Texel> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x4   } ",
+		"filename": "q84.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"53.04666666666667 4.776111111111112\"@en",
+				"?x2": "\"4.776111111111112\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Ferriday,_Louisiana> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     <http://dbpedia.org/resource/Ferriday,_Louisiana> <http://www.georss.org/georss/point> ?x3 .     <http://dbpedia.org/resource/Ferriday,_Louisiana> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x4   } ",
+		"filename": "q85.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"31.630555555555556 -91.55666666666667\"@en",
+				"?x2": "\"-91.55666666666667\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Nienadowa> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Nienadowa> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
+		"filename": "q86.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"22.4325\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x2": "\"49.831944444444446\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/St_George's_Cricket_Ground> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/St_George's_Cricket_Ground> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
+		"filename": "q87.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"-2.4303305555555554\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x2": "\"52.695747222222224\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Anetan_District> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Anetan_District> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
+		"filename": "q88.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"166.9425\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x2": "\"-0.5052777777777778\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 WHERE   { <http://dbpedia.org/resource/Mihal%C4%B1%C3%A7%C3%A7%C4%B1k> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     <http://dbpedia.org/resource/Mihal%C4%B1%C3%A7%C3%A7%C4%B1k> <http://www.georss.org/georss/point> ?x3   } ",
+		"filename": "q89.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"39.86416666666667 31.495277777777776\"@en"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Nhu_Thanh_District> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     <http://dbpedia.org/resource/Nhu_Thanh_District> <http://www.georss.org/georss/point> ?x3   } ",
+		"filename": "q90.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"19.617 105.533\"@en",
+				"?x2": "\"105.533\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x4 ?x2 ?x5 WHERE   { <http://dbpedia.org/resource/La_Uni%C3%B3n,_Murcia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/La_Uni%C3%B3n,_Murcia> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/La_Uni%C3%B3n,_Murcia> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x4 .     <http://dbpedia.org/resource/La_Uni%C3%B3n,_Murcia> <http://www.georss.org/georss/point> ?x5   } ",
+		"filename": "q91.json",
+		"card": 1,
+		"results": [
+			{
+				"?x4": "\"-0.8666666666666667\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x2": "http://www.opengis.net/gml/_Feature",
+				"?x5": "\"37.61666666666667 -0.8666666666666667\"@en"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x5 WHERE   { <http://dbpedia.org/resource/Dharmasoka_College> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Dharmasoka_College> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/Dharmasoka_College> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x4 .     <http://dbpedia.org/resource/Dharmasoka_College> <http://www.georss.org/georss/point> ?x5   } ",
+		"filename": "q92.json",
+		"card": 1,
+		"results": [
+			{
+				"?x5": "\"6.925 79.86916666666667\"@en"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 ?x4 WHERE   { <http://dbpedia.org/resource/Nassau_Street_(Dublin)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Nassau_Street_(Dublin)> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/Nassau_Street_(Dublin)> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x4 .     <http://dbpedia.org/resource/Nassau_Street_(Dublin)> <http://www.georss.org/georss/point> ?x5   } ",
+		"filename": "q93.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"53.342718\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x4": "\"-6.256892\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Radziochy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Radziochy> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
+		"filename": "q94.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"19.3167\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x2": "http://www.opengis.net/gml/_Feature"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Kingdom_of_Navarre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Kingdom_of_Navarre> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
+		"filename": "q95.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"-1.642777777777778\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x2": "http://www.opengis.net/gml/_Feature"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Aruv%C3%A4lja,_Ida-Viru_County> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Aruv%C3%A4lja,_Ida-Viru_County> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
+		"filename": "q96.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://www.opengis.net/gml/_Feature",
+				"?x2": "\"59.3025\"^^http://www.w3.org/2001/XMLSchema#float"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Walk_Glacier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Walk_Glacier> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/Walk_Glacier> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x4   } ",
+		"filename": "q97.json",
+		"card": 1,
+		"results": [
+			{
+				"?x4": "\"-94.3\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x3": "\"-73.63333333333334\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x2": "http://www.opengis.net/gml/_Feature"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  ?x4 ?x2 WHERE   { <http://dbpedia.org/resource/Woodenbong,_New_South_Wales> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Woodenbong,_New_South_Wales> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/Woodenbong,_New_South_Wales> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x4   } ",
+		"filename": "q98.json",
+		"card": 1,
+		"results": [
+			{
+				"?x4": "\"152.6\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x2": "http://www.opengis.net/gml/_Feature"
+			}
+		]
+	},
+	{
+		"name": "geocoordinates",
+		"query": "SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Narona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Narona> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/Narona> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x4   } ",
+		"filename": "q99.json",
+		"card": 1,
+		"results": [
+			{
+				"?x4": "\"17.59861111111111\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x3": "\"43.04638888888889\"^^http://www.w3.org/2001/XMLSchema#float",
+				"?x2": "http://www.opengis.net/gml/_Feature"
+			}
+		]
+	}
 ]

@@ -1,6 +1,12 @@
-[
-	{
-		"?x4": "http://www.freebase.com/view/guid/9202a8c04000641f800000000557afec",
-		"?x1": "http://data.linkedmdb.org/film/14247"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x4 ?x1 WHERE   { ?x1 <http://dbpedia.org/property/hasPhotoCollection> <http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Akasa_Veedhilo> .     ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x3 .     ?x1 <http://xmlns.com/foaf/0.1/page> ?x4   } ",
+	"filename": "q24.json",
+	"card": 1,
+	"results": [
+		{
+			"?x4": "http://www.freebase.com/view/guid/9202a8c04000641f800000000557afec",
+			"?x1": "http://data.linkedmdb.org/film/14247"
+		}
+	]
+}

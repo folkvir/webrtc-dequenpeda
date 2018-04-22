@@ -1,8 +1,14 @@
-[
-	{
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2677",
-		"?x7": "http://bio2rdf.org/omim:107741",
-		"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Metabolic",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x1 ?x7 ?x5 ?x6 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x5 .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x6 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x7 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> \"Hyperlipoproteinemia, type III\"   } ",
+	"filename": "q85.json",
+	"card": 1,
+	"results": [
+		{
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2677",
+			"?x7": "http://bio2rdf.org/omim:107741",
+			"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Metabolic",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases"
+		}
+	]
+}

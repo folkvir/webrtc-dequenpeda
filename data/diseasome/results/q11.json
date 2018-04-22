@@ -1,5 +1,11 @@
-[
-	{
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3724"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/RTA1C> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x3   } ",
+	"filename": "q11.json",
+	"card": 1,
+	"results": [
+		{
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3724"
+		}
+	]
+}

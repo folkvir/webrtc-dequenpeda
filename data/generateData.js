@@ -10,13 +10,16 @@ ldfclient.Logger.setLevel('warning')
 
 const config = {
   fragmentationFactor: 0.5,
-  server: 'http://172.16.9.3:5678',
+  server: 'http://localhost:5678',
   datasets: [
     { dir: "./diseasome", uri: "/diseasome" },
-    { dir: "./geocoordinates", uri: "/geocoordinates" },
-    { dir: "./linkedmdb", uri: "/linkedmdb" }
+    //{ dir: "./geocoordinates", uri: "/geocoordinates" },
+    //{ dir: "./linkedmdb", uri: "/linkedmdb" }
   ]
 }
+
+let globalCount = 0
+let globalCountFragmented = 0
 
 config.datasets.reduce((datasetAcc, dataset) => datasetAcc.then(() => {
   return new Promise((resolve, reject) => {
@@ -43,7 +46,8 @@ config.datasets.reduce((datasetAcc, dataset) => datasetAcc.then(() => {
     })
   })
 }), Promise.resolve()).then(() => {
-  console.log('Generated.')
+  console.log('Generated. %f triples, %f triples fragmented', globalCount, globalCountFragmented)
+
 }).catch(e => {
   console.error(e)
 })
@@ -68,6 +72,7 @@ function fragment(name, result, destination) {
         const writer = Writer()
         chunkified[i].forEach(triple => {
           writer.addTriple(triple)
+          globalCountFragmented++
         })
         writer.end(function (error, result) { writeFragments(result, destination+'/'+path.parse(name+'_fragment_f'+i+'.ttl').base) });
     }
@@ -88,6 +93,7 @@ function execute(query, server) {
     let result = []
     results.on('data', (data) => {
       count++
+      globalCount++
       result.push(data)
     })
     results.on('end', () => {

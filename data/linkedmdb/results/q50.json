@@ -1,5 +1,11 @@
-[
-	{
-		"?x1": "http://data.linkedmdb.org/film/329"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x2 .     ?x1 <http://dbpedia.org/property/hasPhotoCollection> ?x3 .     ?x1 <http://xmlns.com/foaf/0.1/page> <http://www.imdb.com/title/tt0099674>   } ",
+	"filename": "q50.json",
+	"card": 1,
+	"results": [
+		{
+			"?x1": "http://data.linkedmdb.org/film/329"
+		}
+	]
+}

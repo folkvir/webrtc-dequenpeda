@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "http://bio2rdf.org/omim:600946",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x3 ?x6 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3882> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3882> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3882> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3882> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3882> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x6   } ",
+	"filename": "q62.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "http://bio2rdf.org/omim:600946",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases"
+		}
+	]
+}

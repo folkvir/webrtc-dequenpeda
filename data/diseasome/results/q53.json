@@ -1,22 +1,28 @@
-[
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/1349",
-		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/9q22.3",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2655"
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/2881",
-		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/9q22.3",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2655"
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/3628",
-		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/9q22.3",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2655"
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00145",
-		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/9q22.3",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2655"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x3 ?x4 ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/538> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x5   } ",
+	"filename": "q53.json",
+	"card": 4,
+	"results": [
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/1349",
+			"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/9q22.3",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2655"
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/2881",
+			"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/9q22.3",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2655"
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/3628",
+			"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/9q22.3",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2655"
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00145",
+			"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/9q22.3",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2655"
+		}
+	]
+}

@@ -1,42 +1,48 @@
-[
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Hematological",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1436",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/81"
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Endocrine",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1439",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/84"
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Cancer",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1676",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/173"
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Hematological",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2198",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/338"
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Endocrine",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3559",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/910"
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Cancer",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3658",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/960"
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Cancer",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3664",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/960"
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Muscular",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3934",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1080"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x3 ?x1 ?x6 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/2894> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x6   } ",
+	"filename": "q61.json",
+	"card": 8,
+	"results": [
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Hematological",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1436",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/81"
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Endocrine",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1439",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/84"
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Cancer",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1676",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/173"
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Hematological",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2198",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/338"
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Endocrine",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3559",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/910"
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Cancer",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3658",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/960"
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Cancer",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3664",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/960"
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Muscular",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3934",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1080"
+		}
+	]
+}

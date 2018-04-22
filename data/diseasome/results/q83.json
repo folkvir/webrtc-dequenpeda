@@ -1,9 +1,15 @@
-[
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/multiple",
-		"?x4": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=147670",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3703",
-		"?x2": "http://bio2rdf.org/omim:147670",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/19p13.2"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x3 ?x4 ?x1 ?x2 ?x6 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x4 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> \"Rabson-Mendenhall syndrome, 262190\" .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x6 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x7   } ",
+	"filename": "q83.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/multiple",
+			"?x4": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=147670",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3703",
+			"?x2": "http://bio2rdf.org/omim:147670",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/19p13.2"
+		}
+	]
+}

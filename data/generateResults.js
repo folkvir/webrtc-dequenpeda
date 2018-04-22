@@ -7,9 +7,9 @@ const shell = require('shelljs')
 const config = {
   server: 'http://localhost:5678',
   datasets: [
-    { prefix: '/diseasome', dir: "./diseasome", queries: 'queries.json' },
-    { prefix: '/geocoordinates', dir: "./geocoordinates", queries: 'queries.json' },
-    { prefix: '/linkedmdb', dir: "./linkedmdb", queries: 'queries.json' }
+    { name: 'diseasome', prefix: '/diseasome', dir: "./diseasome", queries: 'queries.json' },
+    { name: 'geocoordinates', prefix: '/geocoordinates', dir: "./geocoordinates", queries: 'queries.json' },
+    { name: 'linkedmdb', prefix: '/linkedmdb', dir: "./linkedmdb", queries: 'queries.json' }
   ]
 }
 
@@ -21,13 +21,21 @@ config.datasets.reduce((datasetAcc, dataset) => datasetAcc.then((res) => {
     console.log(queries2executePath)
     const queries = JSON.parse(fs.readFileSync(queries2executePath, 'utf8'))
     const server = config.server+dataset.prefix
-    queries.reduce((qAcc, query, ind) => qAcc.then(() => {
+    queries.reduce((qAcc, query, ind) => qAcc.then((results) => {
       return execute(query, server).then((res) => {
         console.log('[%s] Queries %f executed', dataset.dir, ind)
-        fs.writeFileSync(destination+'/q'+ind+'.json', JSON.stringify(res, null, '\t'), 'utf8')
-        return Promise.resolve()
+        const save = {
+          name: dataset.name,
+          query,
+          filename: 'q'+ind+'.json',
+          card: res.length,
+          results: res
+        }
+        fs.writeFileSync(destination+'/q'+ind+'.json', JSON.stringify(save, null, '\t'), 'utf8')
+        return Promise.resolve([...results, save])
       }).catch(e => Promise.reject(e))
-    }), Promise.resolve()).then(() => {
+    }), Promise.resolve([])).then((all) => {
+      fs.writeFileSync(path.resolve(dataset.dir+'/queries/queries.json'), JSON.stringify(all, null, '\t'), 'utf8')
       console.log('Queries for the dataset %s on %s generated', dataset.dir, server)
       resolve()
     }).catch(e => {

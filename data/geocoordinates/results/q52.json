@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "\"25.25688 55.28904\"@en",
-		"?x2": "\"55.28904\"^^http://www.w3.org/2001/XMLSchema#float"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Al_Rifa> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     <http://dbpedia.org/resource/Al_Rifa> <http://www.georss.org/georss/point> ?x3   } ",
+	"filename": "q52.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"25.25688 55.28904\"@en",
+			"?x2": "\"55.28904\"^^http://www.w3.org/2001/XMLSchema#float"
+		}
+	]
+}

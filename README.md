@@ -6,10 +6,13 @@ This is a decentralized query engine using WebRTC for personal data.
 (Windows) Warning: dont use powershell, use cmd.exe
 
 ```
-git clone https://github.com/folkvir/webrtc-dequenpeda.git
+git clone --recurse-submodules https://github.com/chaconinc/MainProject
+// or git clone https://github.com/folkvir/webrtc-dequenpeda.git
+// git submodule init
+// git submodule update
 cd webrtc-dequenpeda
 npm install
-// 
+//
 ```
 
 For node testing purposes only **extract the archive in ./data/**

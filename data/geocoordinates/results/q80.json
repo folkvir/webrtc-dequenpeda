@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "\"-37.733333333333334\"^^http://www.w3.org/2001/XMLSchema#float",
-		"?x5": "\"-37.733333333333334 178.23333333333332\"@en"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  ?x3 ?x5 WHERE   { <http://dbpedia.org/resource/Matakaoa_Ward> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Matakaoa_Ward> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/Matakaoa_Ward> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x4 .     <http://dbpedia.org/resource/Matakaoa_Ward> <http://www.georss.org/georss/point> ?x5   } ",
+	"filename": "q80.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"-37.733333333333334\"^^http://www.w3.org/2001/XMLSchema#float",
+			"?x5": "\"-37.733333333333334 178.23333333333332\"@en"
+		}
+	]
+}

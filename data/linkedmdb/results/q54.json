@@ -1,17 +1,23 @@
-[
-	{
-		"?x3": "\"Awaara\"",
-		"?x2": "http://data.linkedmdb.org/movie/film",
-		"?x5": "http://www.freebase.com/view/topic/en/awaara"
-	},
-	{
-		"?x3": "\"Awaara\"",
-		"?x2": "http://data.linkedmdb.org/movie/film",
-		"?x5": "http://www.imdb.com/title/tt0043306"
-	},
-	{
-		"?x3": "\"Awaara\"",
-		"?x2": "http://data.linkedmdb.org/movie/film",
-		"?x5": "http://www.rottentomatoes.com/alias?type=imdbid&s=0043306"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x3 ?x2 ?x5 WHERE   { <http://data.linkedmdb.org/film/25934> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://data.linkedmdb.org/film/25934> <http://www.w3.org/2000/01/rdf-schema#label> ?x3 .     <http://data.linkedmdb.org/film/25934> <http://xmlns.com/foaf/0.1/based_near> ?x4 .     <http://data.linkedmdb.org/film/25934> <http://xmlns.com/foaf/0.1/page> ?x5   } ",
+	"filename": "q54.json",
+	"card": 3,
+	"results": [
+		{
+			"?x3": "\"Awaara\"",
+			"?x2": "http://data.linkedmdb.org/movie/film",
+			"?x5": "http://www.freebase.com/view/topic/en/awaara"
+		},
+		{
+			"?x3": "\"Awaara\"",
+			"?x2": "http://data.linkedmdb.org/movie/film",
+			"?x5": "http://www.imdb.com/title/tt0043306"
+		},
+		{
+			"?x3": "\"Awaara\"",
+			"?x2": "http://data.linkedmdb.org/movie/film",
+			"?x5": "http://www.rottentomatoes.com/alias?type=imdbid&s=0043306"
+		}
+	]
+}

@@ -1,6 +1,12 @@
-[
-	{
-		"?x1": "http://dbpedia.org/resource/Kore%C5%A1nica",
-		"?x2": "http://www.opengis.net/gml/_Feature"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3 .     ?x1 <http://www.georss.org/georss/point> \"41.43333333333333 22.233333333333334\"@en   } ",
+	"filename": "q72.json",
+	"card": 1,
+	"results": [
+		{
+			"?x1": "http://dbpedia.org/resource/Kore%C5%A1nica",
+			"?x2": "http://www.opengis.net/gml/_Feature"
+		}
+	]
+}

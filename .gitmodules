@@ -1,0 +1,3 @@
+[submodule "src/rdfstore-js"]
+	path = src/rdfstore-js
+	url = https://github.com/folkvir/rdfstore-js.git

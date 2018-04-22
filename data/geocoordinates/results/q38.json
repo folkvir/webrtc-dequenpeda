@@ -1,5 +1,11 @@
-[
-	{
-		"?x1": "http://dbpedia.org/resource/Vahtraste"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www.georss.org/georss/point> \"58.65 23.316666666666666\"@en .     ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3   } ",
+	"filename": "q38.json",
+	"card": 1,
+	"results": [
+		{
+			"?x1": "http://dbpedia.org/resource/Vahtraste"
+		}
+	]
+}

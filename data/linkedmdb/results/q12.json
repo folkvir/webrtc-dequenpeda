@@ -1,18 +1,24 @@
-[
-	{
-		"?x3": "http://data.linkedmdb.org/movie/actor",
-		"?x2": "http://dbpedia.org/resource/Christian_Meier"
-	},
-	{
-		"?x3": "http://data.linkedmdb.org/movie/actor",
-		"?x2": "http://mpii.de/yago/resource/Christian_Meier"
-	},
-	{
-		"?x3": "http://xmlns.com/foaf/0.1/Person",
-		"?x2": "http://dbpedia.org/resource/Christian_Meier"
-	},
-	{
-		"?x3": "http://xmlns.com/foaf/0.1/Person",
-		"?x2": "http://mpii.de/yago/resource/Christian_Meier"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://data.linkedmdb.org/actor/14953> <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     <http://data.linkedmdb.org/actor/14953> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
+	"filename": "q12.json",
+	"card": 4,
+	"results": [
+		{
+			"?x3": "http://data.linkedmdb.org/movie/actor",
+			"?x2": "http://dbpedia.org/resource/Christian_Meier"
+		},
+		{
+			"?x3": "http://data.linkedmdb.org/movie/actor",
+			"?x2": "http://mpii.de/yago/resource/Christian_Meier"
+		},
+		{
+			"?x3": "http://xmlns.com/foaf/0.1/Person",
+			"?x2": "http://dbpedia.org/resource/Christian_Meier"
+		},
+		{
+			"?x3": "http://xmlns.com/foaf/0.1/Person",
+			"?x2": "http://mpii.de/yago/resource/Christian_Meier"
+		}
+	]
+}

@@ -1,7 +1,13 @@
-[
-	{
-		"?x4": "\"-18.866666666666667\"^^http://www.w3.org/2001/XMLSchema#float",
-		"?x1": "http://dbpedia.org/resource/Amuri,_Cook_Islands",
-		"?x2": "\"-159.76666666666668\"^^http://www.w3.org/2001/XMLSchema#float"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  ?x4 ?x1 ?x2 WHERE   { ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     ?x1 <http://www.georss.org/georss/point> \"-18.866666666666667 -159.76666666666668\"@en .     ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x4   } ",
+	"filename": "q82.json",
+	"card": 1,
+	"results": [
+		{
+			"?x4": "\"-18.866666666666667\"^^http://www.w3.org/2001/XMLSchema#float",
+			"?x1": "http://dbpedia.org/resource/Amuri,_Cook_Islands",
+			"?x2": "\"-159.76666666666668\"^^http://www.w3.org/2001/XMLSchema#float"
+		}
+	]
+}

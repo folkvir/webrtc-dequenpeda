@@ -1,6 +1,12 @@
-[
-	{
-		"?x4": "\"-33.99638888888889 18.45888888888889\"@en",
-		"?x2": "http://www.opengis.net/gml/_Feature"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  ?x4 ?x2 WHERE   { <http://dbpedia.org/resource/Wynberg_Boys'_High_School> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Wynberg_Boys'_High_School> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/Wynberg_Boys'_High_School> <http://www.georss.org/georss/point> ?x4   } ",
+	"filename": "q66.json",
+	"card": 1,
+	"results": [
+		{
+			"?x4": "\"-33.99638888888889 18.45888888888889\"@en",
+			"?x2": "http://www.opengis.net/gml/_Feature"
+		}
+	]
+}

@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "http://www.opengis.net/gml/_Feature",
-		"?x2": "\"48.100833333333334\"^^http://www.w3.org/2001/XMLSchema#float"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Peninsula_College> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Peninsula_College> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
+	"filename": "q59.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "http://www.opengis.net/gml/_Feature",
+			"?x2": "\"48.100833333333334\"^^http://www.w3.org/2001/XMLSchema#float"
+		}
+	]
+}

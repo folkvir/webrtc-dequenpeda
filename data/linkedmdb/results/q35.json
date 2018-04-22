@@ -1,5 +1,11 @@
-[
-	{
-		"?x2": "\"Scrooged\""
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x2 WHERE   { ?x1 <http://purl.org/dc/terms/title> ?x2 .     ?x1 <http://dbpedia.org/property/hasPhotoCollection> ?x3 .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> <http://data.linkedmdb.org/film_subject/70>   } ",
+	"filename": "q35.json",
+	"card": 1,
+	"results": [
+		{
+			"?x2": "\"Scrooged\""
+		}
+	]
+}

@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "http://data.linkedmdb.org/movie/film",
-		"?x2": "http://sws.geonames.org/6252001/"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  * WHERE   { <http://data.linkedmdb.org/film/16845> <http://xmlns.com/foaf/0.1/based_near> ?x2 .     <http://data.linkedmdb.org/film/16845> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
+	"filename": "q13.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "http://data.linkedmdb.org/movie/film",
+			"?x2": "http://sws.geonames.org/6252001/"
+		}
+	]
+}

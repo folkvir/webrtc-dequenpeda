@@ -1,7 +1,13 @@
-[
-	{
-		"?x4": "\"49.74638888888889\"^^http://www.w3.org/2001/XMLSchema#float",
-		"?x3": "\"49.74638888888889 21.163333333333334\"@en",
-		"?x2": "\"21.163333333333334\"^^http://www.w3.org/2001/XMLSchema#float"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Ma%C5%9Bluchowice> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     <http://dbpedia.org/resource/Ma%C5%9Bluchowice> <http://www.georss.org/georss/point> ?x3 .     <http://dbpedia.org/resource/Ma%C5%9Bluchowice> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x4   } ",
+	"filename": "q64.json",
+	"card": 1,
+	"results": [
+		{
+			"?x4": "\"49.74638888888889\"^^http://www.w3.org/2001/XMLSchema#float",
+			"?x3": "\"49.74638888888889 21.163333333333334\"@en",
+			"?x2": "\"21.163333333333334\"^^http://www.w3.org/2001/XMLSchema#float"
+		}
+	]
+}

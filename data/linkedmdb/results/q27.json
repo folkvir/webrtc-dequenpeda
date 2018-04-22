@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "\"The Other Side of Sunday\"",
-		"?x4": "http://sws.geonames.org/3144096/"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x3 ?x4 WHERE   { <http://data.linkedmdb.org/film/21765> <http://purl.org/dc/terms/title> ?x2 .     <http://data.linkedmdb.org/film/21765> <http://www.w3.org/2000/01/rdf-schema#label> ?x3 .     <http://data.linkedmdb.org/film/21765> <http://xmlns.com/foaf/0.1/based_near> ?x4   } ",
+	"filename": "q27.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"The Other Side of Sunday\"",
+			"?x4": "http://sws.geonames.org/3144096/"
+		}
+	]
+}

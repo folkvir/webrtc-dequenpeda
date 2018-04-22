@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "\"52.36666666666667\"^^http://www.w3.org/2001/XMLSchema#float",
-		"?x1": "http://dbpedia.org/resource/Nijverdal"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://www.georss.org/georss/point> \"52.36666666666667 6.466666666666667\"@en .     ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3   } ",
+	"filename": "q41.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"52.36666666666667\"^^http://www.w3.org/2001/XMLSchema#float",
+			"?x1": "http://dbpedia.org/resource/Nijverdal"
+		}
+	]
+}

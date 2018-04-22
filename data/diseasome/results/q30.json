@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "\"1\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/FLNA"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  * WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/510> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/510> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/size> ?x3   } ",
+	"filename": "q30.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"1\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/FLNA"
+		}
+	]
+}

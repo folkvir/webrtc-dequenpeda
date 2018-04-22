@@ -1,32 +1,38 @@
-[
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/To_Gillian_on_Her_37th_Birthday",
-		"?x4": "http://www.freebase.com/view/guid/9202a8c04000641f800000000087cb3d",
-		"?x2": "http://dbpedia.org/resource/To_Gillian_on_Her_37th_Birthday"
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/To_Gillian_on_Her_37th_Birthday",
-		"?x4": "http://www.freebase.com/view/guid/9202a8c04000641f800000000087cb3d",
-		"?x2": "http://mpii.de/yago/resource/To_Gillian_on_Her_37th_Birthday"
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/To_Gillian_on_Her_37th_Birthday",
-		"?x4": "http://www.imdb.com/title/tt0117924",
-		"?x2": "http://dbpedia.org/resource/To_Gillian_on_Her_37th_Birthday"
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/To_Gillian_on_Her_37th_Birthday",
-		"?x4": "http://www.imdb.com/title/tt0117924",
-		"?x2": "http://mpii.de/yago/resource/To_Gillian_on_Her_37th_Birthday"
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/To_Gillian_on_Her_37th_Birthday",
-		"?x4": "http://www.rottentomatoes.com/alias?type=imdbid&s=0117924",
-		"?x2": "http://dbpedia.org/resource/To_Gillian_on_Her_37th_Birthday"
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/To_Gillian_on_Her_37th_Birthday",
-		"?x4": "http://www.rottentomatoes.com/alias?type=imdbid&s=0117924",
-		"?x2": "http://mpii.de/yago/resource/To_Gillian_on_Her_37th_Birthday"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x3 ?x4 ?x2 WHERE   { <http://data.linkedmdb.org/film/4568> <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     <http://data.linkedmdb.org/film/4568> <http://dbpedia.org/property/hasPhotoCollection> ?x3 .     <http://data.linkedmdb.org/film/4568> <http://xmlns.com/foaf/0.1/page> ?x4   } ",
+	"filename": "q51.json",
+	"card": 6,
+	"results": [
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/To_Gillian_on_Her_37th_Birthday",
+			"?x4": "http://www.freebase.com/view/guid/9202a8c04000641f800000000087cb3d",
+			"?x2": "http://dbpedia.org/resource/To_Gillian_on_Her_37th_Birthday"
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/To_Gillian_on_Her_37th_Birthday",
+			"?x4": "http://www.freebase.com/view/guid/9202a8c04000641f800000000087cb3d",
+			"?x2": "http://mpii.de/yago/resource/To_Gillian_on_Her_37th_Birthday"
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/To_Gillian_on_Her_37th_Birthday",
+			"?x4": "http://www.imdb.com/title/tt0117924",
+			"?x2": "http://dbpedia.org/resource/To_Gillian_on_Her_37th_Birthday"
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/To_Gillian_on_Her_37th_Birthday",
+			"?x4": "http://www.imdb.com/title/tt0117924",
+			"?x2": "http://mpii.de/yago/resource/To_Gillian_on_Her_37th_Birthday"
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/To_Gillian_on_Her_37th_Birthday",
+			"?x4": "http://www.rottentomatoes.com/alias?type=imdbid&s=0117924",
+			"?x2": "http://dbpedia.org/resource/To_Gillian_on_Her_37th_Birthday"
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/To_Gillian_on_Her_37th_Birthday",
+			"?x4": "http://www.rottentomatoes.com/alias?type=imdbid&s=0117924",
+			"?x2": "http://mpii.de/yago/resource/To_Gillian_on_Her_37th_Birthday"
+		}
+	]
+}

@@ -1,7 +1,13 @@
-[
-	{
-		"?x4": "\"17.59861111111111\"^^http://www.w3.org/2001/XMLSchema#float",
-		"?x3": "\"43.04638888888889\"^^http://www.w3.org/2001/XMLSchema#float",
-		"?x2": "http://www.opengis.net/gml/_Feature"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Narona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Narona> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/Narona> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x4   } ",
+	"filename": "q99.json",
+	"card": 1,
+	"results": [
+		{
+			"?x4": "\"17.59861111111111\"^^http://www.w3.org/2001/XMLSchema#float",
+			"?x3": "\"43.04638888888889\"^^http://www.w3.org/2001/XMLSchema#float",
+			"?x2": "http://www.opengis.net/gml/_Feature"
+		}
+	]
+}

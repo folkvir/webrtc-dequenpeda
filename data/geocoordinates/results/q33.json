@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "\"-6.51\"^^http://www.w3.org/2001/XMLSchema#float",
-		"?x2": "\"58.35\"^^http://www.w3.org/2001/XMLSchema#float"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/List_of_United_Kingdom_locations:_Bar> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/List_of_United_Kingdom_locations:_Bar> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
+	"filename": "q33.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"-6.51\"^^http://www.w3.org/2001/XMLSchema#float",
+			"?x2": "\"58.35\"^^http://www.w3.org/2001/XMLSchema#float"
+		}
+	]
+}

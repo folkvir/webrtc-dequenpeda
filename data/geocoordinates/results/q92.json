@@ -1,5 +1,11 @@
-[
-	{
-		"?x5": "\"6.925 79.86916666666667\"@en"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  ?x5 WHERE   { <http://dbpedia.org/resource/Dharmasoka_College> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Dharmasoka_College> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/Dharmasoka_College> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x4 .     <http://dbpedia.org/resource/Dharmasoka_College> <http://www.georss.org/georss/point> ?x5   } ",
+	"filename": "q92.json",
+	"card": 1,
+	"results": [
+		{
+			"?x5": "\"6.925 79.86916666666667\"@en"
+		}
+	]
+}

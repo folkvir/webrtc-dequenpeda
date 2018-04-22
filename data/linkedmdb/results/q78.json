@@ -1,6 +1,12 @@
-[
-	{
-		"?x1": "http://data.linkedmdb.org/film/9976",
-		"?x2": "\"1995-11-18\""
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://purl.org/dc/terms/date> ?x2 .     ?x1 <http://dbpedia.org/property/hasPhotoCollection> <http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Ghost_in_the_Shell_(film)> .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x4 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x5   } ",
+	"filename": "q78.json",
+	"card": 1,
+	"results": [
+		{
+			"?x1": "http://data.linkedmdb.org/film/9976",
+			"?x2": "\"1995-11-18\""
+		}
+	]
+}

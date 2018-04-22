@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "\"Maple syrup urine disease, type Ia, 248600\"",
-		"?x2": "http://bio2rdf.org/omim:608348"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3055> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3055> <http://www.w3.org/2000/01/rdf-schema#label> ?x3   } ",
+	"filename": "q8.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"Maple syrup urine disease, type Ia, 248600\"",
+			"?x2": "http://bio2rdf.org/omim:608348"
+		}
+	]
+}

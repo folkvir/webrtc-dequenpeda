@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "http://data.linkedmdb.org/film_subject/169",
-		"?x1": "http://data.linkedmdb.org/film/26282"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x3 .     ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x4 .     ?x1 <http://purl.org/dc/terms/date> ?x5 .     ?x1 <http://xmlns.com/foaf/0.1/page> <http://www.freebase.com/view/topic/en/back_to_the_future_part_ii>   } ",
+	"filename": "q96.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "http://data.linkedmdb.org/film_subject/169",
+			"?x1": "http://data.linkedmdb.org/film/26282"
+		}
+	]
+}

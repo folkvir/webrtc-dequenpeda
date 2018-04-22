@@ -1,29 +1,35 @@
-[
-	{
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1080"
-	},
-	{
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/431"
-	},
-	{
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561"
-	},
-	{
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74"
-	},
-	{
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/79"
-	},
-	{
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/932"
-	},
-	{
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2359"
-	},
-	{
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2706"
-	},
-	{
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3600"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01867> .     ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x3   } ",
+	"filename": "q13.json",
+	"card": 9,
+	"results": [
+		{
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1080"
+		},
+		{
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/431"
+		},
+		{
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561"
+		},
+		{
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74"
+		},
+		{
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/79"
+		},
+		{
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/932"
+		},
+		{
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2359"
+		},
+		{
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2706"
+		},
+		{
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3600"
+		}
+	]
+}

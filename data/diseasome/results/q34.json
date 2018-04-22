@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "\"Adrenocortical insufficiency\"",
-		"?x2": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB04752"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1215> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1215> <http://www.w3.org/2000/01/rdf-schema#label> ?x3   } ",
+	"filename": "q34.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"Adrenocortical insufficiency\"",
+			"?x2": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB04752"
+		}
+	]
+}

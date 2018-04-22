@@ -1,8 +1,14 @@
-[
-	{
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/139"
-	},
-	{
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/49"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00761>   } ",
+	"filename": "q41.json",
+	"card": 2,
+	"results": [
+		{
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/139"
+		},
+		{
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/49"
+		}
+	]
+}

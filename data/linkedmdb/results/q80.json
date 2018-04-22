@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "\"Sweet Sweetback's Baadasssss Song\"",
-		"?x4": "\"Sweet Sweetback's Baadasssss Song\""
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x3 ?x4 WHERE   { <http://data.linkedmdb.org/film/2113> <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     <http://data.linkedmdb.org/film/2113> <http://purl.org/dc/terms/title> ?x3 .     <http://data.linkedmdb.org/film/2113> <http://www.w3.org/2000/01/rdf-schema#label> ?x4 .     <http://data.linkedmdb.org/film/2113> <http://dbpedia.org/property/hasPhotoCollection> ?x5   } ",
+	"filename": "q80.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"Sweet Sweetback's Baadasssss Song\"",
+			"?x4": "\"Sweet Sweetback's Baadasssss Song\""
+		}
+	]
+}

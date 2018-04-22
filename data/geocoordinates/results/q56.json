@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "\"-4.6\"^^http://www.w3.org/2001/XMLSchema#float",
-		"?x2": "http://www.opengis.net/gml/_Feature"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Codorniz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Codorniz> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
+	"filename": "q56.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"-4.6\"^^http://www.w3.org/2001/XMLSchema#float",
+			"?x2": "http://www.opengis.net/gml/_Feature"
+		}
+	]
+}

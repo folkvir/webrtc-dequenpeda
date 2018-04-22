@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "\"166.9425\"^^http://www.w3.org/2001/XMLSchema#float",
-		"?x2": "\"-0.5052777777777778\"^^http://www.w3.org/2001/XMLSchema#float"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Anetan_District> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Anetan_District> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
+	"filename": "q88.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"166.9425\"^^http://www.w3.org/2001/XMLSchema#float",
+			"?x2": "\"-0.5052777777777778\"^^http://www.w3.org/2001/XMLSchema#float"
+		}
+	]
+}

@@ -1,7 +1,13 @@
-[
-	{
-		"?x4": "http://data.linkedmdb.org/film_subject/157",
-		"?x1": "http://data.linkedmdb.org/film/362",
-		"?x2": "\"2002-05-03\""
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x4 ?x1 ?x2 WHERE   { ?x1 <http://purl.org/dc/terms/date> ?x2 .     ?x1 <http://dbpedia.org/property/hasPhotoCollection> <http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Spider-Man_(film)> .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x4 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x5   } ",
+	"filename": "q79.json",
+	"card": 1,
+	"results": [
+		{
+			"?x4": "http://data.linkedmdb.org/film_subject/157",
+			"?x1": "http://data.linkedmdb.org/film/362",
+			"?x2": "\"2002-05-03\""
+		}
+	]
+}

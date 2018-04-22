@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "http://bio2rdf.org/geneid:6448",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SGSH"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/bio2rdfSymbol> <http://symbol.bio2rdf.org/symbol:SGSH> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/geneId> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/hgncIdPage> ?x4   } ",
+	"filename": "q38.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "http://bio2rdf.org/geneid:6448",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SGSH"
+		}
+	]
+}

@@ -1,14 +1,20 @@
-[
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
-		"?x4": "\"Infundibular hypoplasia and hypopituitarism\"",
-		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/MRGH",
-		"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Endocrine"
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
-		"?x4": "\"Infundibular hypoplasia and hypopituitarism\"",
-		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SOX3",
-		"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Endocrine"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x3 ?x4 ?x2 ?x5 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2804> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2804> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2804> <http://www.w3.org/2000/01/rdf-schema#label> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2804> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2804> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x6   } ",
+	"filename": "q63.json",
+	"card": 2,
+	"results": [
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+			"?x4": "\"Infundibular hypoplasia and hypopituitarism\"",
+			"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/MRGH",
+			"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Endocrine"
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+			"?x4": "\"Infundibular hypoplasia and hypopituitarism\"",
+			"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SOX3",
+			"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Endocrine"
+		}
+	]
+}

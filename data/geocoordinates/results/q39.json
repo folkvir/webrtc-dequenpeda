@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "\"50.96666666666667\"^^http://www.w3.org/2001/XMLSchema#float",
-		"?x1": "http://dbpedia.org/resource/Landford"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://www.georss.org/georss/point> \"50.96666666666667 -1.6333333333333333\"@en .     ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3   } ",
+	"filename": "q39.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"50.96666666666667\"^^http://www.w3.org/2001/XMLSchema#float",
+			"?x1": "http://dbpedia.org/resource/Landford"
+		}
+	]
+}

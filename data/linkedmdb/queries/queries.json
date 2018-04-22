@@ -1,102 +1,2387 @@
 [
-	"SELECT DISTINCT  * WHERE   { ?x1 <http://www.w3.org/2004/02/skos/core#subject> <http://data.linkedmdb.org/film_subject/125> .     <http://data.linkedmdb.org/film_subject/125> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
-	"SELECT DISTINCT  ?x3 WHERE   { <http://data.linkedmdb.org/film/32223> <http://www.w3.org/2004/02/skos/core#subject> ?x2 .     ?x2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
-	"SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/made> <http://data.linkedmdb.org/film/26556> .     <http://data.linkedmdb.org/film/26556> <http://purl.org/dc/terms/date> ?x3   } ",
-	"SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/made> ?x2 .     ?x2 <http://purl.org/dc/terms/date> \"1998-04-08\"   } ",
-	"SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x2 .     ?x2 <http://xmlns.com/foaf/0.1/page> <http://www.freebase.com/view/guid/9202a8c04000641f800000000022991c>   } ",
-	"SELECT DISTINCT  ?x3 WHERE   { ?x1 <http://www.w3.org/2004/02/skos/core#subject> <http://data.linkedmdb.org/film_subject/64> .     <http://data.linkedmdb.org/film_subject/64> <http://xmlns.com/foaf/0.1/page> ?x3   } ",
-	"SELECT DISTINCT  ?x2 WHERE   { <http://data.linkedmdb.org/director/789> <http://xmlns.com/foaf/0.1/made> ?x2 .     ?x2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
-	"SELECT DISTINCT  ?x3 WHERE   { <http://data.linkedmdb.org/film/3605> <http://purl.org/dc/terms/date> ?x2 .     <http://data.linkedmdb.org/film/3605> <http://purl.org/dc/terms/title> ?x3   } ",
-	"SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://data.linkedmdb.org/film/6005> <http://purl.org/dc/terms/date> ?x2 .     <http://data.linkedmdb.org/film/6005> <http://www.w3.org/2002/07/owl#sameAs> ?x3   } ",
-	"SELECT DISTINCT  * WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://xmlns.com/foaf/0.1/page> <http://www.freebase.com/view/guid/9202a8c04000641f8000000004768fe4>   } ",
-	"SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x2 .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> <http://data.linkedmdb.org/film_subject/116>   } ",
-	"SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://data.linkedmdb.org/film/34237> <http://www.w3.org/2004/02/skos/core#subject> ?x2 .     <http://data.linkedmdb.org/film/34237> <http://xmlns.com/foaf/0.1/page> ?x3   } ",
-	"SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://data.linkedmdb.org/actor/14953> <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     <http://data.linkedmdb.org/actor/14953> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
-	"SELECT DISTINCT  * WHERE   { <http://data.linkedmdb.org/film/16845> <http://xmlns.com/foaf/0.1/based_near> ?x2 .     <http://data.linkedmdb.org/film/16845> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
-	"SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://dbpedia.org/property/hasPhotoCollection> <http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Orion's_Belt_(film)> .     ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x3   } ",
-	"SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x2 .     ?x1 <http://purl.org/dc/terms/title> \"Sylvia\"   } ",
-	"SELECT DISTINCT  ?x2 WHERE   { <http://data.linkedmdb.org/film/7901> <http://dbpedia.org/property/hasPhotoCollection> ?x2 .     <http://data.linkedmdb.org/film/7901> <http://purl.org/dc/terms/date> ?x3   } ",
-	"SELECT DISTINCT  * WHERE   { <http://data.linkedmdb.org/film/24370> <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     <http://data.linkedmdb.org/film/24370> <http://xmlns.com/foaf/0.1/based_near> ?x3   } ",
-	"SELECT DISTINCT  ?x3 WHERE   { <http://data.linkedmdb.org/film/14971> <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     <http://data.linkedmdb.org/film/14971> <http://xmlns.com/foaf/0.1/based_near> ?x3   } ",
-	"SELECT DISTINCT  ?x3 WHERE   { <http://data.linkedmdb.org/film/14528> <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     <http://data.linkedmdb.org/film/14528> <http://xmlns.com/foaf/0.1/based_near> ?x3   } ",
-	"SELECT DISTINCT  * WHERE   { <http://data.linkedmdb.org/film/20922> <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     <http://data.linkedmdb.org/film/20922> <http://xmlns.com/foaf/0.1/based_near> ?x3   } ",
-	"SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://data.linkedmdb.org/writer/5900> <http://www.w3.org/2000/01/rdf-schema#SeeAlso> ?x2 .     <http://data.linkedmdb.org/writer/5900> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
-	"SELECT DISTINCT  ?x4 ?x2 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/made> ?x2 .     ?x2 <http://www.w3.org/2004/02/skos/core#subject> <http://data.linkedmdb.org/film_subject/14> .     <http://data.linkedmdb.org/film_subject/14> <http://www.w3.org/2000/01/rdf-schema#label> ?x4   } ",
-	"SELECT DISTINCT  ?x3 WHERE   { <http://data.linkedmdb.org/film/22423> <http://dbpedia.org/property/hasPhotoCollection> ?x2 .     <http://data.linkedmdb.org/film/22423> <http://xmlns.com/foaf/0.1/based_near> ?x3 .     <http://data.linkedmdb.org/film/22423> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x4   } ",
-	"SELECT DISTINCT  ?x4 ?x1 WHERE   { ?x1 <http://dbpedia.org/property/hasPhotoCollection> <http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Akasa_Veedhilo> .     ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x3 .     ?x1 <http://xmlns.com/foaf/0.1/page> ?x4   } ",
-	"SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://data.linkedmdb.org/film/34805> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://data.linkedmdb.org/film/34805> <http://www.w3.org/2004/02/skos/core#subject> ?x3 .     <http://data.linkedmdb.org/film/34805> <http://xmlns.com/foaf/0.1/page> ?x4   } ",
-	"SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://purl.org/dc/terms/date> ?x2 .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x3 .     ?x1 <http://xmlns.com/foaf/0.1/page> <http://www.freebase.com/view/guid/9202a8c04000641f800000000008e6cb>   } ",
-	"SELECT DISTINCT  ?x3 ?x4 WHERE   { <http://data.linkedmdb.org/film/21765> <http://purl.org/dc/terms/title> ?x2 .     <http://data.linkedmdb.org/film/21765> <http://www.w3.org/2000/01/rdf-schema#label> ?x3 .     <http://data.linkedmdb.org/film/21765> <http://xmlns.com/foaf/0.1/based_near> ?x4   } ",
-	"SELECT DISTINCT  ?x3 WHERE   { <http://data.linkedmdb.org/film/18171> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://data.linkedmdb.org/film/18171> <http://purl.org/dc/terms/date> ?x3 .     <http://data.linkedmdb.org/film/18171> <http://xmlns.com/foaf/0.1/page> ?x4   } ",
-	"SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/page> ?x2 .     ?x1 <http://purl.org/dc/terms/title> \"Untitled Gorillaz project\" .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x4   } ",
-	"SELECT DISTINCT  ?x4 ?x1 ?x2 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/page> ?x2 .     ?x1 <http://purl.org/dc/terms/title> \"The Duel\" .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x4   } ",
-	"SELECT DISTINCT  * WHERE   { ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     ?x1 <http://xmlns.com/foaf/0.1/based_near> <http://sws.geonames.org/3077311/> .     ?x1 <http://purl.org/dc/terms/title> ?x4   } ",
-	"SELECT DISTINCT  ?x4 ?x1 WHERE   { ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     ?x1 <http://xmlns.com/foaf/0.1/based_near> <http://sws.geonames.org/2186224/> .     ?x1 <http://purl.org/dc/terms/title> ?x4   } ",
-	"SELECT DISTINCT  ?x4 ?x1 WHERE   { ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     ?x1 <http://xmlns.com/foaf/0.1/based_near> <http://sws.geonames.org/1036973/> .     ?x1 <http://purl.org/dc/terms/title> ?x4   } ",
-	"SELECT DISTINCT  ?x3 ?x4 ?x1 WHERE   { ?x1 <http://dbpedia.org/property/hasPhotoCollection> <http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Kagero-za> .     ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x3 .     ?x1 <http://purl.org/dc/terms/title> ?x4   } ",
-	"SELECT DISTINCT  ?x2 WHERE   { ?x1 <http://purl.org/dc/terms/title> ?x2 .     ?x1 <http://dbpedia.org/property/hasPhotoCollection> ?x3 .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> <http://data.linkedmdb.org/film_subject/70>   } ",
-	"SELECT DISTINCT  ?x4 ?x2 WHERE   { <http://data.linkedmdb.org/film/1988> <http://www.w3.org/2004/02/skos/core#subject> ?x2 .     <http://data.linkedmdb.org/film/1988> <http://purl.org/dc/terms/date> ?x3 .     <http://data.linkedmdb.org/film/1988> <http://www.w3.org/2000/01/rdf-schema#label> ?x4   } ",
-	"SELECT DISTINCT  ?x3 ?x4 ?x1 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/based_near> <http://sws.geonames.org/6251999/> .     ?x1 <http://purl.org/dc/terms/title> ?x3 .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x4   } ",
-	"SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://www.w3.org/2000/01/rdf-schema#label> \"Noel Nosseck (Director)\" .     ?x1 <http://xmlns.com/foaf/0.1/made> ?x3 .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x4   } ",
-	"SELECT DISTINCT  ?x4 ?x1 ?x2 WHERE   { ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x2 .     ?x1 <http://dbpedia.org/property/hasPhotoCollection> <http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Millions> .     ?x1 <http://purl.org/dc/terms/date> ?x4   } ",
-	"SELECT DISTINCT  ?x3 ?x4 ?x1 WHERE   { ?x1 <http://www.w3.org/2004/02/skos/core#subject> <http://data.linkedmdb.org/film_subject/93> .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x3 .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x4   } ",
-	"SELECT DISTINCT  ?x4 WHERE   { ?x1 <http://www.w3.org/2004/02/skos/core#subject> <http://data.linkedmdb.org/film_subject/131> .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x3 .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x4   } ",
-	"SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x2 .     ?x1 <http://purl.org/dc/terms/date> ?x3 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> \"Fantozzi contro tutti\"   } ",
-	"SELECT DISTINCT  ?x4 ?x1 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/based_near> <http://sws.geonames.org/2623032/> .     ?x1 <http://purl.org/dc/terms/date> ?x3 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x4   } ",
-	"SELECT DISTINCT  ?x4 ?x1 ?x2 WHERE   { ?x1 <http://purl.org/dc/terms/title> ?x2 .     ?x1 <http://www.w3.org/2002/07/owl#sameAs> <http://mpii.de/yago/resource/Le_Samoura/u00C3/u00AF> .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x4   } ",
-	"SELECT DISTINCT  ?x3 ?x4 ?x1 WHERE   { ?x1 <http://purl.org/dc/terms/date> \"1992-09-09\" .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x3 .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x4   } ",
-	"SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x2 .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x3 .     ?x1 <http://xmlns.com/foaf/0.1/page> <http://www.rottentomatoes.com/alias?type=imdbid&s=0088763>   } ",
-	"SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://dbpedia.org/property/hasPhotoCollection> ?x2 .     ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x3 .     ?x1 <http://purl.org/dc/terms/title> \"The Honey Pot\"   } ",
-	"SELECT DISTINCT  * WHERE   { <http://data.linkedmdb.org/film/25425> <http://dbpedia.org/property/hasPhotoCollection> ?x2 .     <http://data.linkedmdb.org/film/25425> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3 .     <http://data.linkedmdb.org/film/25425> <http://purl.org/dc/terms/title> ?x4   } ",
-	"SELECT DISTINCT  ?x4 WHERE   { <http://data.linkedmdb.org/film/12975> <http://purl.org/dc/terms/title> ?x2 .     <http://data.linkedmdb.org/film/12975> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3 .     <http://data.linkedmdb.org/film/12975> <http://www.w3.org/2002/07/owl#sameAs> ?x4   } ",
-	"SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x2 .     ?x1 <http://dbpedia.org/property/hasPhotoCollection> ?x3 .     ?x1 <http://xmlns.com/foaf/0.1/page> <http://www.imdb.com/title/tt0099674>   } ",
-	"SELECT DISTINCT  ?x3 ?x4 ?x2 WHERE   { <http://data.linkedmdb.org/film/4568> <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     <http://data.linkedmdb.org/film/4568> <http://dbpedia.org/property/hasPhotoCollection> ?x3 .     <http://data.linkedmdb.org/film/4568> <http://xmlns.com/foaf/0.1/page> ?x4   } ",
-	"SELECT DISTINCT  * WHERE   { <http://data.linkedmdb.org/film/2024> <http://purl.org/dc/terms/title> ?x2 .     <http://data.linkedmdb.org/film/2024> <http://www.w3.org/2004/02/skos/core#subject> ?x3 .     <http://data.linkedmdb.org/film/2024> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x4   } ",
-	"SELECT DISTINCT  ?x2 ?x5 WHERE   { <http://data.linkedmdb.org/film/24243> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://data.linkedmdb.org/film/24243> <http://www.w3.org/2000/01/rdf-schema#label> ?x3 .     <http://data.linkedmdb.org/film/24243> <http://xmlns.com/foaf/0.1/based_near> ?x4 .     <http://data.linkedmdb.org/film/24243> <http://xmlns.com/foaf/0.1/page> ?x5   } ",
-	"SELECT DISTINCT  ?x3 ?x2 ?x5 WHERE   { <http://data.linkedmdb.org/film/25934> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://data.linkedmdb.org/film/25934> <http://www.w3.org/2000/01/rdf-schema#label> ?x3 .     <http://data.linkedmdb.org/film/25934> <http://xmlns.com/foaf/0.1/based_near> ?x4 .     <http://data.linkedmdb.org/film/25934> <http://xmlns.com/foaf/0.1/page> ?x5   } ",
-	"SELECT DISTINCT  ?x4 ?x5 WHERE   { <http://data.linkedmdb.org/film/334> <http://xmlns.com/foaf/0.1/based_near> ?x2 .     <http://data.linkedmdb.org/film/334> <http://www.w3.org/2004/02/skos/core#subject> ?x3 .     <http://data.linkedmdb.org/film/334> <http://xmlns.com/foaf/0.1/page> ?x4 .     <http://data.linkedmdb.org/film/334> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x5   } ",
-	"SELECT DISTINCT  ?x3 ?x4 ?x1 ?x2 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x3 .     ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x4 .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> <http://data.linkedmdb.org/film_subject/15>   } ",
-	"SELECT DISTINCT  ?x2 WHERE   { <http://data.linkedmdb.org/film/32086> <http://www.w3.org/2004/02/skos/core#subject> ?x2 .     <http://data.linkedmdb.org/film/32086> <http://xmlns.com/foaf/0.1/based_near> ?x3 .     <http://data.linkedmdb.org/film/32086> <http://purl.org/dc/terms/title> ?x4 .     <http://data.linkedmdb.org/film/32086> <http://www.w3.org/2000/01/rdf-schema#label> ?x5   } ",
-	"SELECT DISTINCT  ?x3 ?x4 ?x1 ?x5 WHERE   { ?x1 <http://www.w3.org/2004/02/skos/core#subject> <http://data.linkedmdb.org/film_subject/87> .     ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x3 .     ?x1 <http://purl.org/dc/terms/title> ?x4 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x5   } ",
-	"SELECT DISTINCT  ?x2 WHERE   { <http://data.linkedmdb.org/film/956> <http://xmlns.com/foaf/0.1/based_near> ?x2 .     <http://data.linkedmdb.org/film/956> <http://purl.org/dc/terms/date> ?x3 .     <http://data.linkedmdb.org/film/956> <http://purl.org/dc/terms/title> ?x4 .     <http://data.linkedmdb.org/film/956> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x5   } ",
-	"SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x2 .     ?x1 <http://purl.org/dc/terms/date> ?x3 .     ?x1 <http://purl.org/dc/terms/title> \"Rope\" .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x5   } ",
-	"SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x2 .     ?x1 <http://purl.org/dc/terms/date> ?x3 .     ?x1 <http://purl.org/dc/terms/title> \"Under the Radar\" .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x5   } ",
-	"SELECT DISTINCT  ?x3 ?x1 ?x5 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x2 .     ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x3 .     ?x1 <http://dbpedia.org/property/hasPhotoCollection> <http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Anatomy_of_t.A.T.u.> .     ?x1 <http://xmlns.com/foaf/0.1/page> ?x5   } ",
-	"SELECT DISTINCT  ?x3 WHERE   { <http://data.linkedmdb.org/film/23848> <http://xmlns.com/foaf/0.1/based_near> ?x2 .     <http://data.linkedmdb.org/film/23848> <http://www.w3.org/2002/07/owl#sameAs> ?x3 .     <http://data.linkedmdb.org/film/23848> <http://dbpedia.org/property/hasPhotoCollection> ?x4 .     <http://data.linkedmdb.org/film/23848> <http://xmlns.com/foaf/0.1/page> ?x5   } ",
-	"SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://dbpedia.org/property/hasPhotoCollection> ?x2 .     ?x1 <http://xmlns.com/foaf/0.1/page> ?x3 .     ?x1 <http://purl.org/dc/terms/date> ?x4 .     ?x1 <http://purl.org/dc/terms/title> \"Under My Skin\"   } ",
-	"SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Shining_Victory> .     ?x1 <http://purl.org/dc/terms/date> ?x3 .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x4 .     ?x1 <http://xmlns.com/foaf/0.1/page> ?x5   } ",
-	"SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://data.linkedmdb.org/film/4140> <http://www.w3.org/2004/02/skos/core#subject> ?x2 .     <http://data.linkedmdb.org/film/4140> <http://xmlns.com/foaf/0.1/based_near> ?x3 .     <http://data.linkedmdb.org/film/4140> <http://purl.org/dc/terms/date> ?x4 .     <http://data.linkedmdb.org/film/4140> <http://dbpedia.org/property/hasPhotoCollection> ?x5   } ",
-	"SELECT DISTINCT  * WHERE   { <http://data.linkedmdb.org/director/1550> <http://xmlns.com/foaf/0.1/made> ?x2 .     <http://data.linkedmdb.org/director/1550> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3 .     <http://data.linkedmdb.org/director/1550> <http://www.w3.org/2000/01/rdf-schema#label> ?x4 .     <http://data.linkedmdb.org/director/1550> <http://xmlns.com/foaf/0.1/page> ?x5   } ",
-	"SELECT DISTINCT  ?x4 WHERE   { <http://data.linkedmdb.org/film/36516> <http://www.w3.org/2000/01/rdf-schema#label> ?x2 .     <http://data.linkedmdb.org/film/36516> <http://xmlns.com/foaf/0.1/page> ?x3 .     <http://data.linkedmdb.org/film/36516> <http://purl.org/dc/terms/title> ?x4 .     <http://data.linkedmdb.org/film/36516> <http://www.w3.org/2002/07/owl#sameAs> ?x5   } ",
-	"SELECT DISTINCT  ?x3 ?x5 WHERE   { <http://data.linkedmdb.org/film/1988> <http://xmlns.com/foaf/0.1/based_near> ?x2 .     <http://data.linkedmdb.org/film/1988> <http://www.w3.org/2004/02/skos/core#subject> ?x3 .     <http://data.linkedmdb.org/film/1988> <http://purl.org/dc/terms/title> ?x4 .     <http://data.linkedmdb.org/film/1988> <http://www.w3.org/2002/07/owl#sameAs> ?x5   } ",
-	"SELECT DISTINCT  ?x1 ?x5 WHERE   { ?x1 <http://www.w3.org/2004/02/skos/core#subject> <http://data.linkedmdb.org/film_subject/24> .     ?x1 <http://purl.org/dc/terms/date> ?x3 .     ?x1 <http://purl.org/dc/terms/title> ?x4 .     ?x1 <http://xmlns.com/foaf/0.1/page> ?x5   } ",
-	"SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x2 .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x3 .     ?x1 <http://dbpedia.org/property/hasPhotoCollection> ?x4 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> \"The Champ\"   } ",
-	"SELECT DISTINCT  ?x3 WHERE   { <http://data.linkedmdb.org/film/32910> <http://www.w3.org/2004/02/skos/core#subject> ?x2 .     <http://data.linkedmdb.org/film/32910> <http://purl.org/dc/terms/title> ?x3 .     <http://data.linkedmdb.org/film/32910> <http://purl.org/dc/terms/date> ?x4 .     <http://data.linkedmdb.org/film/32910> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x5   } ",
-	"SELECT DISTINCT  ?x3 WHERE   { <http://data.linkedmdb.org/film/25977> <http://xmlns.com/foaf/0.1/page> ?x2 .     <http://data.linkedmdb.org/film/25977> <http://www.w3.org/2002/07/owl#sameAs> ?x3 .     <http://data.linkedmdb.org/film/25977> <http://purl.org/dc/terms/title> ?x4 .     <http://data.linkedmdb.org/film/25977> <http://purl.org/dc/terms/date> ?x5   } ",
-	"SELECT DISTINCT  ?x3 WHERE   { <http://data.linkedmdb.org/film/3957> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://data.linkedmdb.org/film/3957> <http://www.w3.org/2002/07/owl#sameAs> ?x3 .     <http://data.linkedmdb.org/film/3957> <http://www.w3.org/2000/01/rdf-schema#label> ?x4 .     <http://data.linkedmdb.org/film/3957> <http://purl.org/dc/terms/title> ?x5   } ",
-	"SELECT DISTINCT  ?x3 ?x1 ?x2 WHERE   { ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x3 .     ?x1 <http://purl.org/dc/terms/date> ?x4 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> \"Belle /u00C3/u0089poque\"   } ",
-	"SELECT DISTINCT  ?x4 ?x1 ?x5 WHERE   { ?x1 <http://www.w3.org/2004/02/skos/core#subject> <http://data.linkedmdb.org/film_subject/84> .     ?x1 <http://dbpedia.org/property/hasPhotoCollection> ?x3 .     ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x4 .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x5   } ",
-	"SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x2 .     ?x1 <http://purl.org/dc/terms/title> ?x3 .     ?x1 <http://purl.org/dc/terms/date> \"1990-09-19\" .     ?x1 <http://dbpedia.org/property/hasPhotoCollection> ?x5   } ",
-	"SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://purl.org/dc/terms/date> ?x2 .     ?x1 <http://dbpedia.org/property/hasPhotoCollection> <http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Ghost_in_the_Shell_(film)> .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x4 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x5   } ",
-	"SELECT DISTINCT  ?x4 ?x1 ?x2 WHERE   { ?x1 <http://purl.org/dc/terms/date> ?x2 .     ?x1 <http://dbpedia.org/property/hasPhotoCollection> <http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Spider-Man_(film)> .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x4 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x5   } ",
-	"SELECT DISTINCT  ?x3 ?x4 WHERE   { <http://data.linkedmdb.org/film/2113> <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     <http://data.linkedmdb.org/film/2113> <http://purl.org/dc/terms/title> ?x3 .     <http://data.linkedmdb.org/film/2113> <http://www.w3.org/2000/01/rdf-schema#label> ?x4 .     <http://data.linkedmdb.org/film/2113> <http://dbpedia.org/property/hasPhotoCollection> ?x5   } ",
-	"SELECT DISTINCT  ?x3 ?x4 WHERE   { <http://data.linkedmdb.org/film/35975> <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     <http://data.linkedmdb.org/film/35975> <http://www.w3.org/2004/02/skos/core#subject> ?x3 .     <http://data.linkedmdb.org/film/35975> <http://purl.org/dc/terms/date> ?x4 .     <http://data.linkedmdb.org/film/35975> <http://xmlns.com/foaf/0.1/based_near> ?x5   } ",
-	"SELECT DISTINCT  ?x3 ?x5 WHERE   { <http://data.linkedmdb.org/film/37944> <http://xmlns.com/foaf/0.1/page> ?x2 .     <http://data.linkedmdb.org/film/37944> <http://purl.org/dc/terms/title> ?x3 .     <http://data.linkedmdb.org/film/37944> <http://xmlns.com/foaf/0.1/based_near> ?x4 .     <http://data.linkedmdb.org/film/37944> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x5   } ",
-	"SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://dbpedia.org/property/hasPhotoCollection> <http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Coven_(film)> .     ?x1 <http://purl.org/dc/terms/date> ?x3 .     ?x1 <http://purl.org/dc/terms/title> ?x4 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x5   } ",
-	"SELECT DISTINCT  ?x4 ?x1 ?x2 ?x5 WHERE   { ?x1 <http://dbpedia.org/property/hasPhotoCollection> ?x2 .     ?x1 <http://purl.org/dc/terms/title> \"The First Great Train Robbery\" .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x4 .     ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x5   } ",
-	"SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/page> ?x2 .     ?x1 <http://purl.org/dc/terms/title> ?x3 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> \"Blades of Glory\" .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x5   } ",
-	"SELECT DISTINCT  ?x3 ?x1 ?x2 ?x5 WHERE   { ?x1 <http://dbpedia.org/property/hasPhotoCollection> ?x2 .     ?x1 <http://purl.org/dc/terms/title> ?x3 .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> <http://data.linkedmdb.org/film_subject/125> .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x5   } ",
-	"SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://dbpedia.org/property/hasPhotoCollection> ?x2 .     ?x1 <http://purl.org/dc/terms/title> ?x3 .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> <http://data.linkedmdb.org/film_subject/156> .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x5   } ",
-	"SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://purl.org/dc/terms/title> \"Chunuk Bair\" .     ?x1 <http://dbpedia.org/property/hasPhotoCollection> ?x3 .     ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x4 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x5   } ",
-	"SELECT DISTINCT  ?x2 WHERE   { <http://data.linkedmdb.org/film/13091> <http://dbpedia.org/property/hasPhotoCollection> ?x2 .     <http://data.linkedmdb.org/film/13091> <http://xmlns.com/foaf/0.1/page> ?x3 .     <http://data.linkedmdb.org/film/13091> <http://xmlns.com/foaf/0.1/based_near> ?x4 .     <http://data.linkedmdb.org/film/13091> <http://purl.org/dc/terms/date> ?x5   } ",
-	"SELECT DISTINCT  ?x3 ?x4 ?x5 WHERE   { <http://data.linkedmdb.org/film/6795> <http://xmlns.com/foaf/0.1/based_near> ?x2 .     <http://data.linkedmdb.org/film/6795> <http://purl.org/dc/terms/date> ?x3 .     <http://data.linkedmdb.org/film/6795> <http://www.w3.org/2004/02/skos/core#subject> ?x4 .     <http://data.linkedmdb.org/film/6795> <http://xmlns.com/foaf/0.1/page> ?x5 .     <http://data.linkedmdb.org/film/6795> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x6   } ",
-	"SELECT DISTINCT  ?x3 ?x4 WHERE   { <http://data.linkedmdb.org/film/92> <http://xmlns.com/foaf/0.1/page> ?x2 .     <http://data.linkedmdb.org/film/92> <http://purl.org/dc/terms/title> ?x3 .     <http://data.linkedmdb.org/film/92> <http://purl.org/dc/terms/date> ?x4 .     <http://data.linkedmdb.org/film/92> <http://xmlns.com/foaf/0.1/based_near> ?x5 .     <http://data.linkedmdb.org/film/92> <http://www.w3.org/2000/01/rdf-schema#label> ?x6   } ",
-	"SELECT DISTINCT  ?x5 ?x6 WHERE   { <http://data.linkedmdb.org/film/33177> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://data.linkedmdb.org/film/33177> <http://dbpedia.org/property/hasPhotoCollection> ?x3 .     <http://data.linkedmdb.org/film/33177> <http://www.w3.org/2004/02/skos/core#subject> ?x4 .     <http://data.linkedmdb.org/film/33177> <http://xmlns.com/foaf/0.1/based_near> ?x5 .     <http://data.linkedmdb.org/film/33177> <http://purl.org/dc/terms/title> ?x6   } ",
-	"SELECT DISTINCT  ?x4 ?x1 ?x2 ?x6 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://xmlns.com/foaf/0.1/based_near> <http://sws.geonames.org/732800/> .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x4 .     ?x1 <http://purl.org/dc/terms/title> ?x5 .     ?x1 <http://purl.org/dc/terms/date> ?x6   } ",
-	"SELECT DISTINCT  ?x3 ?x1 ?x2 ?x6 WHERE   { ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     ?x1 <http://dbpedia.org/property/hasPhotoCollection> ?x3 .     ?x1 <http://xmlns.com/foaf/0.1/page> ?x4 .     ?x1 <http://xmlns.com/foaf/0.1/based_near> <http://sws.geonames.org/719819/> .     ?x1 <http://purl.org/dc/terms/title> ?x6   } ",
-	"SELECT DISTINCT  ?x3 ?x4 ?x1 ?x6 WHERE   { ?x1 <http://www.w3.org/2002/07/owl#sameAs> <http://mpii.de/yago/resource/The_Passion_of_Joan_of_Arc> .     ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x3 .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x4 .     ?x1 <http://purl.org/dc/terms/title> ?x5 .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x6   } ",
-	"SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x3 .     ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x4 .     ?x1 <http://purl.org/dc/terms/date> ?x5 .     ?x1 <http://xmlns.com/foaf/0.1/page> <http://www.freebase.com/view/topic/en/back_to_the_future_part_ii>   } ",
-	"SELECT DISTINCT  ?x3 ?x4 WHERE   { <http://data.linkedmdb.org/film/34861> <http://purl.org/dc/terms/date> ?x2 .     <http://data.linkedmdb.org/film/34861> <http://purl.org/dc/terms/title> ?x3 .     <http://data.linkedmdb.org/film/34861> <http://xmlns.com/foaf/0.1/page> ?x4 .     <http://data.linkedmdb.org/film/34861> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x5 .     <http://data.linkedmdb.org/film/34861> <http://www.w3.org/2002/07/owl#sameAs> ?x6   } ",
-	"SELECT DISTINCT  ?x4 ?x5 WHERE   { <http://data.linkedmdb.org/film/25747> <http://purl.org/dc/terms/date> ?x2 .     <http://data.linkedmdb.org/film/25747> <http://purl.org/dc/terms/title> ?x3 .     <http://data.linkedmdb.org/film/25747> <http://xmlns.com/foaf/0.1/page> ?x4 .     <http://data.linkedmdb.org/film/25747> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x5 .     <http://data.linkedmdb.org/film/25747> <http://www.w3.org/2002/07/owl#sameAs> ?x6   } ",
-	"SELECT DISTINCT  ?x4 ?x1 ?x5 WHERE   { ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x2 .     ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x3 .     ?x1 <http://dbpedia.org/property/hasPhotoCollection> ?x4 .     ?x1 <http://xmlns.com/foaf/0.1/page> ?x5 .     ?x1 <http://purl.org/dc/terms/title> \"28 Days Later\" .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x7   } "
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  * WHERE   { ?x1 <http://www.w3.org/2004/02/skos/core#subject> <http://data.linkedmdb.org/film_subject/125> .     <http://data.linkedmdb.org/film_subject/125> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
+		"filename": "q0.json",
+		"card": 2,
+		"results": [
+			{
+				"?x3": "http://data.linkedmdb.org/movie/film_subject",
+				"?x1": "http://data.linkedmdb.org/film/26659"
+			},
+			{
+				"?x3": "http://data.linkedmdb.org/movie/film_subject",
+				"?x1": "http://data.linkedmdb.org/film/33177"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 WHERE   { <http://data.linkedmdb.org/film/32223> <http://www.w3.org/2004/02/skos/core#subject> ?x2 .     ?x2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
+		"filename": "q1.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://data.linkedmdb.org/movie/film_subject"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/made> <http://data.linkedmdb.org/film/26556> .     <http://data.linkedmdb.org/film/26556> <http://purl.org/dc/terms/date> ?x3   } ",
+		"filename": "q2.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://data.linkedmdb.org/director/221"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/made> ?x2 .     ?x2 <http://purl.org/dc/terms/date> \"1998-04-08\"   } ",
+		"filename": "q3.json",
+		"card": 2,
+		"results": [
+			{
+				"?x1": "http://data.linkedmdb.org/director/2808",
+				"?x2": "http://data.linkedmdb.org/film/36117"
+			},
+			{
+				"?x1": "http://data.linkedmdb.org/director/5261",
+				"?x2": "http://data.linkedmdb.org/film/863"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x2 .     ?x2 <http://xmlns.com/foaf/0.1/page> <http://www.freebase.com/view/guid/9202a8c04000641f800000000022991c>   } ",
+		"filename": "q4.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://data.linkedmdb.org/film/33177"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 WHERE   { ?x1 <http://www.w3.org/2004/02/skos/core#subject> <http://data.linkedmdb.org/film_subject/64> .     <http://data.linkedmdb.org/film_subject/64> <http://xmlns.com/foaf/0.1/page> ?x3   } ",
+		"filename": "q5.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://www.freebase.com/view/topic/en/british_1st_airborne_division"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x2 WHERE   { <http://data.linkedmdb.org/director/789> <http://xmlns.com/foaf/0.1/made> ?x2 .     ?x2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
+		"filename": "q6.json",
+		"card": 3,
+		"results": [
+			{
+				"?x2": "http://data.linkedmdb.org/film/25928"
+			},
+			{
+				"?x2": "http://data.linkedmdb.org/film/32328"
+			},
+			{
+				"?x2": "http://data.linkedmdb.org/film/34684"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 WHERE   { <http://data.linkedmdb.org/film/3605> <http://purl.org/dc/terms/date> ?x2 .     <http://data.linkedmdb.org/film/3605> <http://purl.org/dc/terms/title> ?x3   } ",
+		"filename": "q7.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"The Arena\""
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://data.linkedmdb.org/film/6005> <http://purl.org/dc/terms/date> ?x2 .     <http://data.linkedmdb.org/film/6005> <http://www.w3.org/2002/07/owl#sameAs> ?x3   } ",
+		"filename": "q8.json",
+		"card": 2,
+		"results": [
+			{
+				"?x3": "http://dbpedia.org/resource/Razorback_28film29",
+				"?x2": "\"1984-11-02\""
+			},
+			{
+				"?x3": "http://mpii.de/yago/resource/Razorback_28film29",
+				"?x2": "\"1984-11-02\""
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  * WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://xmlns.com/foaf/0.1/page> <http://www.freebase.com/view/guid/9202a8c04000641f8000000004768fe4>   } ",
+		"filename": "q9.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://data.linkedmdb.org/film/12097",
+				"?x2": "http://data.linkedmdb.org/movie/film"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x2 .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> <http://data.linkedmdb.org/film_subject/116>   } ",
+		"filename": "q10.json",
+		"card": 6,
+		"results": [
+			{
+				"?x1": "http://data.linkedmdb.org/film/1939",
+				"?x2": "http://sws.geonames.org/3017382/"
+			},
+			{
+				"?x1": "http://data.linkedmdb.org/film/2260",
+				"?x2": "http://sws.geonames.org/6252001/"
+			},
+			{
+				"?x1": "http://data.linkedmdb.org/film/36060",
+				"?x2": "http://sws.geonames.org/2623032/"
+			},
+			{
+				"?x1": "http://data.linkedmdb.org/film/36060",
+				"?x2": "http://sws.geonames.org/3017382/"
+			},
+			{
+				"?x1": "http://data.linkedmdb.org/film/8099",
+				"?x2": "http://sws.geonames.org/6251999/"
+			},
+			{
+				"?x1": "http://data.linkedmdb.org/film/8099",
+				"?x2": "http://sws.geonames.org/6252001/"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://data.linkedmdb.org/film/34237> <http://www.w3.org/2004/02/skos/core#subject> ?x2 .     <http://data.linkedmdb.org/film/34237> <http://xmlns.com/foaf/0.1/page> ?x3   } ",
+		"filename": "q11.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://www.freebase.com/view/topic/en/the_adolescence_of_p-1",
+				"?x2": "http://data.linkedmdb.org/film_subject/59"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://data.linkedmdb.org/actor/14953> <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     <http://data.linkedmdb.org/actor/14953> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
+		"filename": "q12.json",
+		"card": 4,
+		"results": [
+			{
+				"?x3": "http://data.linkedmdb.org/movie/actor",
+				"?x2": "http://dbpedia.org/resource/Christian_Meier"
+			},
+			{
+				"?x3": "http://data.linkedmdb.org/movie/actor",
+				"?x2": "http://mpii.de/yago/resource/Christian_Meier"
+			},
+			{
+				"?x3": "http://xmlns.com/foaf/0.1/Person",
+				"?x2": "http://dbpedia.org/resource/Christian_Meier"
+			},
+			{
+				"?x3": "http://xmlns.com/foaf/0.1/Person",
+				"?x2": "http://mpii.de/yago/resource/Christian_Meier"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  * WHERE   { <http://data.linkedmdb.org/film/16845> <http://xmlns.com/foaf/0.1/based_near> ?x2 .     <http://data.linkedmdb.org/film/16845> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
+		"filename": "q13.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://data.linkedmdb.org/movie/film",
+				"?x2": "http://sws.geonames.org/6252001/"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://dbpedia.org/property/hasPhotoCollection> <http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Orion's_Belt_(film)> .     ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x3   } ",
+		"filename": "q14.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://data.linkedmdb.org/film/8784"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x2 .     ?x1 <http://purl.org/dc/terms/title> \"Sylvia\"   } ",
+		"filename": "q15.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://data.linkedmdb.org/film/1011"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x2 WHERE   { <http://data.linkedmdb.org/film/7901> <http://dbpedia.org/property/hasPhotoCollection> ?x2 .     <http://data.linkedmdb.org/film/7901> <http://purl.org/dc/terms/date> ?x3   } ",
+		"filename": "q16.json",
+		"card": 1,
+		"results": [
+			{
+				"?x2": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Claustrophobia_(film)"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  * WHERE   { <http://data.linkedmdb.org/film/24370> <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     <http://data.linkedmdb.org/film/24370> <http://xmlns.com/foaf/0.1/based_near> ?x3   } ",
+		"filename": "q17.json",
+		"card": 2,
+		"results": [
+			{
+				"?x3": "http://sws.geonames.org/6252001/",
+				"?x2": "http://dbpedia.org/resource/Headin27_South"
+			},
+			{
+				"?x3": "http://sws.geonames.org/6252001/",
+				"?x2": "http://mpii.de/yago/resource/Headin27_South"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 WHERE   { <http://data.linkedmdb.org/film/14971> <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     <http://data.linkedmdb.org/film/14971> <http://xmlns.com/foaf/0.1/based_near> ?x3   } ",
+		"filename": "q18.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://sws.geonames.org/6252001/"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 WHERE   { <http://data.linkedmdb.org/film/14528> <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     <http://data.linkedmdb.org/film/14528> <http://xmlns.com/foaf/0.1/based_near> ?x3   } ",
+		"filename": "q19.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://sws.geonames.org/6252001/"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  * WHERE   { <http://data.linkedmdb.org/film/20922> <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     <http://data.linkedmdb.org/film/20922> <http://xmlns.com/foaf/0.1/based_near> ?x3   } ",
+		"filename": "q20.json",
+		"card": 2,
+		"results": [
+			{
+				"?x3": "http://sws.geonames.org/6252001/",
+				"?x2": "http://dbpedia.org/resource/The_Deep_End_of_the_Ocean_28film29"
+			},
+			{
+				"?x3": "http://sws.geonames.org/6252001/",
+				"?x2": "http://mpii.de/yago/resource/The_Deep_End_of_the_Ocean_28film29"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://data.linkedmdb.org/writer/5900> <http://www.w3.org/2000/01/rdf-schema#SeeAlso> ?x2 .     <http://data.linkedmdb.org/writer/5900> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
+		"filename": "q21.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://data.linkedmdb.org/movie/writer",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/bookmashup/persons/Stanley+Weiser"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x4 ?x2 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/made> ?x2 .     ?x2 <http://www.w3.org/2004/02/skos/core#subject> <http://data.linkedmdb.org/film_subject/14> .     <http://data.linkedmdb.org/film_subject/14> <http://www.w3.org/2000/01/rdf-schema#label> ?x4   } ",
+		"filename": "q22.json",
+		"card": 1,
+		"results": [
+			{
+				"?x4": "\"Charles Wilson (Film Subject)\"",
+				"?x2": "http://data.linkedmdb.org/film/5399"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 WHERE   { <http://data.linkedmdb.org/film/22423> <http://dbpedia.org/property/hasPhotoCollection> ?x2 .     <http://data.linkedmdb.org/film/22423> <http://xmlns.com/foaf/0.1/based_near> ?x3 .     <http://data.linkedmdb.org/film/22423> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x4   } ",
+		"filename": "q23.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://sws.geonames.org/6252001/"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x4 ?x1 WHERE   { ?x1 <http://dbpedia.org/property/hasPhotoCollection> <http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Akasa_Veedhilo> .     ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x3 .     ?x1 <http://xmlns.com/foaf/0.1/page> ?x4   } ",
+		"filename": "q24.json",
+		"card": 1,
+		"results": [
+			{
+				"?x4": "http://www.freebase.com/view/guid/9202a8c04000641f800000000557afec",
+				"?x1": "http://data.linkedmdb.org/film/14247"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://data.linkedmdb.org/film/34805> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://data.linkedmdb.org/film/34805> <http://www.w3.org/2004/02/skos/core#subject> ?x3 .     <http://data.linkedmdb.org/film/34805> <http://xmlns.com/foaf/0.1/page> ?x4   } ",
+		"filename": "q25.json",
+		"card": 2,
+		"results": [
+			{
+				"?x3": "http://data.linkedmdb.org/film_subject/112",
+				"?x2": "http://data.linkedmdb.org/movie/film"
+			},
+			{
+				"?x3": "http://data.linkedmdb.org/film_subject/24",
+				"?x2": "http://data.linkedmdb.org/movie/film"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://purl.org/dc/terms/date> ?x2 .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x3 .     ?x1 <http://xmlns.com/foaf/0.1/page> <http://www.freebase.com/view/guid/9202a8c04000641f800000000008e6cb>   } ",
+		"filename": "q26.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://data.linkedmdb.org/film/252"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 ?x4 WHERE   { <http://data.linkedmdb.org/film/21765> <http://purl.org/dc/terms/title> ?x2 .     <http://data.linkedmdb.org/film/21765> <http://www.w3.org/2000/01/rdf-schema#label> ?x3 .     <http://data.linkedmdb.org/film/21765> <http://xmlns.com/foaf/0.1/based_near> ?x4   } ",
+		"filename": "q27.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"The Other Side of Sunday\"",
+				"?x4": "http://sws.geonames.org/3144096/"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 WHERE   { <http://data.linkedmdb.org/film/18171> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://data.linkedmdb.org/film/18171> <http://purl.org/dc/terms/date> ?x3 .     <http://data.linkedmdb.org/film/18171> <http://xmlns.com/foaf/0.1/page> ?x4   } ",
+		"filename": "q28.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"2007-07-06\""
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/page> ?x2 .     ?x1 <http://purl.org/dc/terms/title> \"Untitled Gorillaz project\" .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x4   } ",
+		"filename": "q29.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://data.linkedmdb.org/film/10240",
+				"?x2": "http://www.freebase.com/view/guid/9202a8c04000641f80000000045df8cc"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x4 ?x1 ?x2 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/page> ?x2 .     ?x1 <http://purl.org/dc/terms/title> \"The Duel\" .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x4   } ",
+		"filename": "q30.json",
+		"card": 1,
+		"results": [
+			{
+				"?x4": "\"The Duel\"",
+				"?x1": "http://data.linkedmdb.org/film/16350",
+				"?x2": "http://www.freebase.com/view/guid/9202a8c04000641f800000000568bbe9"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  * WHERE   { ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     ?x1 <http://xmlns.com/foaf/0.1/based_near> <http://sws.geonames.org/3077311/> .     ?x1 <http://purl.org/dc/terms/title> ?x4   } ",
+		"filename": "q31.json",
+		"card": 18,
+		"results": [
+			{
+				"?x1": "http://data.linkedmdb.org/film/11582",
+				"?x4": "\"The Barber of Siberia\"",
+				"?x2": "http://dbpedia.org/resource/The_Barber_of_Siberia"
+			},
+			{
+				"?x1": "http://data.linkedmdb.org/film/11582",
+				"?x4": "\"The Barber of Siberia\"",
+				"?x2": "http://mpii.de/yago/resource/The_Barber_of_Siberia"
+			},
+			{
+				"?x1": "http://data.linkedmdb.org/film/2016",
+				"?x4": "\"Ecstasy\"",
+				"?x2": "http://dbpedia.org/resource/Ecstasy_28film29"
+			},
+			{
+				"?x1": "http://data.linkedmdb.org/film/2016",
+				"?x4": "\"Ecstasy\"",
+				"?x2": "http://mpii.de/yago/resource/Ecstasy_28film29"
+			},
+			{
+				"?x1": "http://data.linkedmdb.org/film/25410",
+				"?x4": "\"Accumulator 1\"",
+				"?x2": "http://dbpedia.org/resource/Accumulator_1"
+			},
+			{
+				"?x1": "http://data.linkedmdb.org/film/25410",
+				"?x4": "\"Accumulator 1\"",
+				"?x2": "http://mpii.de/yago/resource/Accumulator_1"
+			},
+			{
+				"?x1": "http://data.linkedmdb.org/film/27635",
+				"?x4": "\"Dark Blue World\"",
+				"?x2": "http://dbpedia.org/resource/Dark_Blue_World"
+			},
+			{
+				"?x1": "http://data.linkedmdb.org/film/27635",
+				"?x4": "\"Dark Blue World\"",
+				"?x2": "http://mpii.de/yago/resource/Dark_Blue_World"
+			},
+			{
+				"?x1": "http://data.linkedmdb.org/film/30343",
+				"?x4": "\"Kolya\"",
+				"?x2": "http://dbpedia.org/resource/Kolya"
+			},
+			{
+				"?x1": "http://data.linkedmdb.org/film/30343",
+				"?x4": "\"Kolya\"",
+				"?x2": "http://mpii.de/yago/resource/Kolya"
+			},
+			{
+				"?x1": "http://data.linkedmdb.org/film/32671",
+				"?x4": "\"Ravenous\"",
+				"?x2": "http://dbpedia.org/resource/Ravenous"
+			},
+			{
+				"?x1": "http://data.linkedmdb.org/film/32671",
+				"?x4": "\"Ravenous\"",
+				"?x2": "http://mpii.de/yago/resource/Ravenous"
+			},
+			{
+				"?x1": "http://data.linkedmdb.org/film/5935",
+				"?x4": "\"Plunkett & Macleane\"",
+				"?x2": "http://dbpedia.org/resource/Plunkett_26_Macleane"
+			},
+			{
+				"?x1": "http://data.linkedmdb.org/film/5935",
+				"?x4": "\"Plunkett & Macleane\"",
+				"?x2": "http://mpii.de/yago/resource/Plunkett_26_Macleane"
+			},
+			{
+				"?x1": "http://data.linkedmdb.org/film/996",
+				"?x4": "\"Doom\"",
+				"?x2": "http://dbpedia.org/resource/Doom_28film29"
+			},
+			{
+				"?x1": "http://data.linkedmdb.org/film/996",
+				"?x4": "\"Doom\"",
+				"?x2": "http://mpii.de/yago/resource/Doom_28film29"
+			},
+			{
+				"?x1": "http://data.linkedmdb.org/film/38028",
+				"?x4": "\"/u00C5/u00BDelary\"",
+				"?x2": "http://dbpedia.org/resource//u00C5/u00BDelary"
+			},
+			{
+				"?x1": "http://data.linkedmdb.org/film/38028",
+				"?x4": "\"/u00C5/u00BDelary\"",
+				"?x2": "http://mpii.de/yago/resource//u00C5/u00BDelary"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x4 ?x1 WHERE   { ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     ?x1 <http://xmlns.com/foaf/0.1/based_near> <http://sws.geonames.org/2186224/> .     ?x1 <http://purl.org/dc/terms/title> ?x4   } ",
+		"filename": "q32.json",
+		"card": 45,
+		"results": [
+			{
+				"?x4": "\"The Devil Dared Me To\"",
+				"?x1": "http://data.linkedmdb.org/film/10444"
+			},
+			{
+				"?x4": "\"Eagle vs Shark\"",
+				"?x1": "http://data.linkedmdb.org/film/11585"
+			},
+			{
+				"?x4": "\"Crooked Earth\"",
+				"?x1": "http://data.linkedmdb.org/film/11784"
+			},
+			{
+				"?x4": "\"The Shrimp on the Barbie\"",
+				"?x1": "http://data.linkedmdb.org/film/12227"
+			},
+			{
+				"?x4": "\"The Climb\"",
+				"?x1": "http://data.linkedmdb.org/film/13774"
+			},
+			{
+				"?x4": "\"Once Were Warriors\"",
+				"?x1": "http://data.linkedmdb.org/film/17136"
+			},
+			{
+				"?x4": "\"Came a Hot Friday\"",
+				"?x1": "http://data.linkedmdb.org/film/18358"
+			},
+			{
+				"?x4": "\"In My Father's Den\"",
+				"?x1": "http://data.linkedmdb.org/film/2172"
+			},
+			{
+				"?x4": "\"Broken Barrier\"",
+				"?x1": "http://data.linkedmdb.org/film/26885"
+			},
+			{
+				"?x4": "\"Cinema of Unease\"",
+				"?x1": "http://data.linkedmdb.org/film/27306"
+			},
+			{
+				"?x4": "\"Forgotten Silver\"",
+				"?x1": "http://data.linkedmdb.org/film/28673"
+			},
+			{
+				"?x4": "\"Goodbye Pork Pie\"",
+				"?x1": "http://data.linkedmdb.org/film/29058"
+			},
+			{
+				"?x4": "\"Heavenly Creatures\"",
+				"?x1": "http://data.linkedmdb.org/film/29299"
+			},
+			{
+				"?x4": "\"Meet Me in Miami\"",
+				"?x1": "http://data.linkedmdb.org/film/31179"
+			},
+			{
+				"?x4": "\"Meet the Feebles\"",
+				"?x1": "http://data.linkedmdb.org/film/31181"
+			},
+			{
+				"?x4": "\"Nemesis Game\"",
+				"?x1": "http://data.linkedmdb.org/film/31706"
+			},
+			{
+				"?x4": "\"No. 2\"",
+				"?x1": "http://data.linkedmdb.org/film/31860"
+			},
+			{
+				"?x4": "\"Perfect Creature\"",
+				"?x1": "http://data.linkedmdb.org/film/32263"
+			},
+			{
+				"?x4": "\"River Queen\"",
+				"?x1": "http://data.linkedmdb.org/film/32866"
+			},
+			{
+				"?x4": "\"Smash Palace\"",
+				"?x1": "http://data.linkedmdb.org/film/33529"
+			},
+			{
+				"?x4": "\"Braindead\"",
+				"?x1": "http://data.linkedmdb.org/film/345"
+			},
+			{
+				"?x4": "\"The Frighteners\"",
+				"?x1": "http://data.linkedmdb.org/film/35085"
+			},
+			{
+				"?x4": "\"The Piano\"",
+				"?x1": "http://data.linkedmdb.org/film/36096"
+			},
+			{
+				"?x4": "\"The Ugly\"",
+				"?x1": "http://data.linkedmdb.org/film/36714"
+			},
+			{
+				"?x4": "\"Whale Rider\"",
+				"?x1": "http://data.linkedmdb.org/film/37698"
+			},
+			{
+				"?x4": "\"The World's Fastest Indian\"",
+				"?x1": "http://data.linkedmdb.org/film/4532"
+			},
+			{
+				"?x4": "\"The Lovely Bones\"",
+				"?x1": "http://data.linkedmdb.org/film/5263"
+			},
+			{
+				"?x4": "\"The Price of Milk\"",
+				"?x1": "http://data.linkedmdb.org/film/572"
+			},
+			{
+				"?x4": "\"Utu\"",
+				"?x1": "http://data.linkedmdb.org/film/662"
+			},
+			{
+				"?x4": "\"Sione's Wedding\"",
+				"?x1": "http://data.linkedmdb.org/film/6758"
+			},
+			{
+				"?x4": "\"The Quiet Earth\"",
+				"?x1": "http://data.linkedmdb.org/film/8019"
+			},
+			{
+				"?x4": "\"Spooked\"",
+				"?x1": "http://data.linkedmdb.org/film/9156"
+			},
+			{
+				"?x4": "\"What Becomes of the Broken Hearted?\"",
+				"?x1": "http://data.linkedmdb.org/film/9806"
+			},
+			{
+				"?x4": "\"Channelling Baby\"",
+				"?x1": "http://data.linkedmdb.org/film/10860"
+			},
+			{
+				"?x4": "\"The Ferryman\"",
+				"?x1": "http://data.linkedmdb.org/film/11590"
+			},
+			{
+				"?x4": "\"The Tattooist\"",
+				"?x1": "http://data.linkedmdb.org/film/11605"
+			},
+			{
+				"?x4": "\"Her Majesty\"",
+				"?x1": "http://data.linkedmdb.org/film/11788"
+			},
+			{
+				"?x4": "\"The Locals\"",
+				"?x1": "http://data.linkedmdb.org/film/11824"
+			},
+			{
+				"?x4": "\"Fracture\"",
+				"?x1": "http://data.linkedmdb.org/film/13433"
+			},
+			{
+				"?x4": "\"The Miraculous Adventures of Edward Tulane\"",
+				"?x1": "http://data.linkedmdb.org/film/13517"
+			},
+			{
+				"?x4": "\"Chunuk Bair\"",
+				"?x1": "http://data.linkedmdb.org/film/13824"
+			},
+			{
+				"?x4": "\"Suzie\"",
+				"?x1": "http://data.linkedmdb.org/film/22641"
+			},
+			{
+				"?x4": "\"Aberration\"",
+				"?x1": "http://data.linkedmdb.org/film/6621"
+			},
+			{
+				"?x4": "\"Jack Be Nimble\"",
+				"?x1": "http://data.linkedmdb.org/film/9730"
+			},
+			{
+				"?x4": "\"Stickmen\"",
+				"?x1": "http://data.linkedmdb.org/film/9797"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x4 ?x1 WHERE   { ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     ?x1 <http://xmlns.com/foaf/0.1/based_near> <http://sws.geonames.org/1036973/> .     ?x1 <http://purl.org/dc/terms/title> ?x4   } ",
+		"filename": "q33.json",
+		"card": 1,
+		"results": [
+			{
+				"?x4": "\"The Interpreter\"",
+				"?x1": "http://data.linkedmdb.org/film/35434"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 ?x4 ?x1 WHERE   { ?x1 <http://dbpedia.org/property/hasPhotoCollection> <http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Kagero-za> .     ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x3 .     ?x1 <http://purl.org/dc/terms/title> ?x4   } ",
+		"filename": "q34.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://sws.geonames.org/1861060/",
+				"?x4": "\"Kagero-za\"",
+				"?x1": "http://data.linkedmdb.org/film/30133"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x2 WHERE   { ?x1 <http://purl.org/dc/terms/title> ?x2 .     ?x1 <http://dbpedia.org/property/hasPhotoCollection> ?x3 .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> <http://data.linkedmdb.org/film_subject/70>   } ",
+		"filename": "q35.json",
+		"card": 1,
+		"results": [
+			{
+				"?x2": "\"Scrooged\""
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x4 ?x2 WHERE   { <http://data.linkedmdb.org/film/1988> <http://www.w3.org/2004/02/skos/core#subject> ?x2 .     <http://data.linkedmdb.org/film/1988> <http://purl.org/dc/terms/date> ?x3 .     <http://data.linkedmdb.org/film/1988> <http://www.w3.org/2000/01/rdf-schema#label> ?x4   } ",
+		"filename": "q36.json",
+		"card": 1,
+		"results": [
+			{
+				"?x4": "\"Road Trip\"",
+				"?x2": "http://data.linkedmdb.org/film_subject/24"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 ?x4 ?x1 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/based_near> <http://sws.geonames.org/6251999/> .     ?x1 <http://purl.org/dc/terms/title> ?x3 .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x4   } ",
+		"filename": "q37.json",
+		"card": 7,
+		"results": [
+			{
+				"?x3": "\"Why We Fight\"",
+				"?x4": "http://data.linkedmdb.org/film_subject/122",
+				"?x1": "http://data.linkedmdb.org/film/3048"
+			},
+			{
+				"?x3": "\"Seducing Doctor Lewis\"",
+				"?x4": "http://data.linkedmdb.org/film_subject/137",
+				"?x1": "http://data.linkedmdb.org/film/33211"
+			},
+			{
+				"?x3": "\"Seducing Doctor Lewis\"",
+				"?x4": "http://data.linkedmdb.org/film_subject/43",
+				"?x1": "http://data.linkedmdb.org/film/33211"
+			},
+			{
+				"?x3": "\"Seducing Doctor Lewis\"",
+				"?x4": "http://data.linkedmdb.org/film_subject/44",
+				"?x1": "http://data.linkedmdb.org/film/33211"
+			},
+			{
+				"?x3": "\"The Daytrippers\"",
+				"?x4": "http://data.linkedmdb.org/film_subject/112",
+				"?x1": "http://data.linkedmdb.org/film/34805"
+			},
+			{
+				"?x3": "\"The Daytrippers\"",
+				"?x4": "http://data.linkedmdb.org/film_subject/24",
+				"?x1": "http://data.linkedmdb.org/film/34805"
+			},
+			{
+				"?x3": "\"Joan of Arc\"",
+				"?x4": "http://data.linkedmdb.org/film_subject/116",
+				"?x1": "http://data.linkedmdb.org/film/8099"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://www.w3.org/2000/01/rdf-schema#label> \"Noel Nosseck (Director)\" .     ?x1 <http://xmlns.com/foaf/0.1/made> ?x3 .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x4   } ",
+		"filename": "q38.json",
+		"card": 2,
+		"results": [
+			{
+				"?x3": "http://data.linkedmdb.org/film/6544",
+				"?x1": "http://data.linkedmdb.org/director/1179"
+			},
+			{
+				"?x3": "http://data.linkedmdb.org/film/7709",
+				"?x1": "http://data.linkedmdb.org/director/1179"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x4 ?x1 ?x2 WHERE   { ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x2 .     ?x1 <http://dbpedia.org/property/hasPhotoCollection> <http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Millions> .     ?x1 <http://purl.org/dc/terms/date> ?x4   } ",
+		"filename": "q39.json",
+		"card": 1,
+		"results": [
+			{
+				"?x4": "\"2004-09-14,2005-04-08\"",
+				"?x1": "http://data.linkedmdb.org/film/31269",
+				"?x2": "http://data.linkedmdb.org/film_subject/85"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 ?x4 ?x1 WHERE   { ?x1 <http://www.w3.org/2004/02/skos/core#subject> <http://data.linkedmdb.org/film_subject/93> .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x3 .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x4   } ",
+		"filename": "q40.json",
+		"card": 2,
+		"results": [
+			{
+				"?x3": "\"Drifters\"",
+				"?x4": "http://data.linkedmdb.org/movie/film",
+				"?x1": "http://data.linkedmdb.org/film/24794"
+			},
+			{
+				"?x3": "\"The Whaling Industry\"",
+				"?x4": "http://data.linkedmdb.org/movie/film",
+				"?x1": "http://data.linkedmdb.org/film/24795"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x4 WHERE   { ?x1 <http://www.w3.org/2004/02/skos/core#subject> <http://data.linkedmdb.org/film_subject/131> .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x3 .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x4   } ",
+		"filename": "q41.json",
+		"card": 1,
+		"results": [
+			{
+				"?x4": "http://data.linkedmdb.org/movie/film"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x2 .     ?x1 <http://purl.org/dc/terms/date> ?x3 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> \"Fantozzi contro tutti\"   } ",
+		"filename": "q42.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://data.linkedmdb.org/film/20141",
+				"?x2": "http://sws.geonames.org/3175395/"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x4 ?x1 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/based_near> <http://sws.geonames.org/2623032/> .     ?x1 <http://purl.org/dc/terms/date> ?x3 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x4   } ",
+		"filename": "q43.json",
+		"card": 92,
+		"results": [
+			{
+				"?x4": "\"Dark Horse\"",
+				"?x1": "http://data.linkedmdb.org/film/10205"
+			},
+			{
+				"?x4": "\"Flickering Lights\"",
+				"?x1": "http://data.linkedmdb.org/film/11886"
+			},
+			{
+				"?x4": "\"The Kingdom\"",
+				"?x1": "http://data.linkedmdb.org/film/1210"
+			},
+			{
+				"?x4": "\"A Sunday in Hell\"",
+				"?x1": "http://data.linkedmdb.org/film/12119"
+			},
+			{
+				"?x4": "\"Open Hearts\"",
+				"?x1": "http://data.linkedmdb.org/film/12696"
+			},
+			{
+				"?x4": "\"The Boss of it All\"",
+				"?x1": "http://data.linkedmdb.org/film/12872"
+			},
+			{
+				"?x4": "\"The Mahabharata\"",
+				"?x1": "http://data.linkedmdb.org/film/15030"
+			},
+			{
+				"?x4": "\"Saga Borgar/u00C3/u00A6ttarinnar\"",
+				"?x1": "http://data.linkedmdb.org/film/15394"
+			},
+			{
+				"?x4": "\"Together\"",
+				"?x1": "http://data.linkedmdb.org/film/1607"
+			},
+			{
+				"?x4": "\"Babette's Feast\"",
+				"?x1": "http://data.linkedmdb.org/film/1694"
+			},
+			{
+				"?x4": "\"Pr/u00C3/u00A6sten i Vejlby\"",
+				"?x1": "http://data.linkedmdb.org/film/17283"
+			},
+			{
+				"?x4": "\"Du skal /u00C3/u00A6re din hustru\"",
+				"?x1": "http://data.linkedmdb.org/film/17289"
+			},
+			{
+				"?x4": "\"Ett h/u00C3/u00A5l i mitt hj/u00C3/u00A4rta\"",
+				"?x1": "http://data.linkedmdb.org/film/1730"
+			},
+			{
+				"?x4": "\"Jeg har elsket og levet\"",
+				"?x1": "http://data.linkedmdb.org/film/17640"
+			},
+			{
+				"?x4": "\"Odds 777\"",
+				"?x1": "http://data.linkedmdb.org/film/17643"
+			},
+			{
+				"?x4": "\"Hotel Paradis\"",
+				"?x1": "http://data.linkedmdb.org/film/17644"
+			},
+			{
+				"?x4": "\"Skal vi v/u00C3/u00A6dde en million?\"",
+				"?x1": "http://data.linkedmdb.org/film/17658"
+			},
+			{
+				"?x4": "\"De blaa drenge\"",
+				"?x1": "http://data.linkedmdb.org/film/17659"
+			},
+			{
+				"?x4": "\"The House of the Spirits\"",
+				"?x1": "http://data.linkedmdb.org/film/1766"
+			},
+			{
+				"?x4": "\"N/u00C3/u00B8ddebo Pr/u00C3/u00A6steg/u00C3/u00A5rd\"",
+				"?x1": "http://data.linkedmdb.org/film/17738"
+			},
+			{
+				"?x4": "\"/u00C3/u0084nglag/u00C3/u00A5rd\"",
+				"?x1": "http://data.linkedmdb.org/film/20345"
+			},
+			{
+				"?x4": "\"101 Reykjav/u00C3/u00ADk\"",
+				"?x1": "http://data.linkedmdb.org/film/25238"
+			},
+			{
+				"?x4": "\"Atlantic Rhapsody\"",
+				"?x1": "http://data.linkedmdb.org/film/25880"
+			},
+			{
+				"?x4": "\"Bang Bang Orangutang\"",
+				"?x1": "http://data.linkedmdb.org/film/26348"
+			},
+			{
+				"?x4": "\"Breaking the Waves\"",
+				"?x1": "http://data.linkedmdb.org/film/26834"
+			},
+			{
+				"?x4": "\"Dancer in the Dark\"",
+				"?x1": "http://data.linkedmdb.org/film/27597"
+			},
+			{
+				"?x4": "\"Day of Wrath\"",
+				"?x1": "http://data.linkedmdb.org/film/27683"
+			},
+			{
+				"?x4": "\"Dogville\"",
+				"?x1": "http://data.linkedmdb.org/film/27996"
+			},
+			{
+				"?x4": "\"Fear X\"",
+				"?x1": "http://data.linkedmdb.org/film/28484"
+			},
+			{
+				"?x4": "\"Gayniggers From Outer Space\"",
+				"?x1": "http://data.linkedmdb.org/film/28878"
+			},
+			{
+				"?x4": "\"H/u00C3/u00A4xan\"",
+				"?x1": "http://data.linkedmdb.org/film/29274"
+			},
+			{
+				"?x4": "\"I Am Dina\"",
+				"?x1": "http://data.linkedmdb.org/film/29860"
+			},
+			{
+				"?x4": "\"Pusher\"",
+				"?x1": "http://data.linkedmdb.org/film/3005"
+			},
+			{
+				"?x4": "\"Kinamand\"",
+				"?x1": "http://data.linkedmdb.org/film/30271"
+			},
+			{
+				"?x4": "\"Epidemic\"",
+				"?x1": "http://data.linkedmdb.org/film/3072"
+			},
+			{
+				"?x4": "\"Lilja 4-ever\"",
+				"?x1": "http://data.linkedmdb.org/film/30730"
+			},
+			{
+				"?x4": "\"Manderlay\"",
+				"?x1": "http://data.linkedmdb.org/film/31031"
+			},
+			{
+				"?x4": "\"Nattevagten\"",
+				"?x1": "http://data.linkedmdb.org/film/31680"
+			},
+			{
+				"?x4": "\"Ordet\"",
+				"?x1": "http://data.linkedmdb.org/film/32055"
+			},
+			{
+				"?x4": "\"Pelle the Conqueror\"",
+				"?x1": "http://data.linkedmdb.org/film/32248"
+			},
+			{
+				"?x4": "\"Reptilicus\"",
+				"?x1": "http://data.linkedmdb.org/film/32764"
+			},
+			{
+				"?x4": "\"Songs from the Second Floor\"",
+				"?x1": "http://data.linkedmdb.org/film/33591"
+			},
+			{
+				"?x4": "\"The Celebration\"",
+				"?x1": "http://data.linkedmdb.org/film/34637"
+			},
+			{
+				"?x4": "\"The Element of Crime\"",
+				"?x1": "http://data.linkedmdb.org/film/34929"
+			},
+			{
+				"?x4": "\"The Five Obstructions\"",
+				"?x1": "http://data.linkedmdb.org/film/35035"
+			},
+			{
+				"?x4": "\"The Green Butchers\"",
+				"?x1": "http://data.linkedmdb.org/film/35231"
+			},
+			{
+				"?x4": "\"The Idiots\"",
+				"?x1": "http://data.linkedmdb.org/film/35400"
+			},
+			{
+				"?x4": "\"The Journals of Knud Rasmussen\"",
+				"?x1": "http://data.linkedmdb.org/film/35466"
+			},
+			{
+				"?x4": "\"The King is Alive\"",
+				"?x1": "http://data.linkedmdb.org/film/35503"
+			},
+			{
+				"?x4": "\"The Passion of Joan of Arc\"",
+				"?x1": "http://data.linkedmdb.org/film/36060"
+			},
+			{
+				"?x4": "\"Vampyr\"",
+				"?x1": "http://data.linkedmdb.org/film/37463"
+			},
+			{
+				"?x4": "\"Zentropa\"",
+				"?x1": "http://data.linkedmdb.org/film/38030"
+			},
+			{
+				"?x4": "\"Nemesis\"",
+				"?x1": "http://data.linkedmdb.org/film/4690"
+			},
+			{
+				"?x4": "\"Gertrud\"",
+				"?x1": "http://data.linkedmdb.org/film/5446"
+			},
+			{
+				"?x4": "\"Klatret/u00C3/u00B8sen\"",
+				"?x1": "http://data.linkedmdb.org/film/6870"
+			},
+			{
+				"?x4": "\"It's All About Love\"",
+				"?x1": "http://data.linkedmdb.org/film/846"
+			},
+			{
+				"?x4": "\"Brothers\"",
+				"?x1": "http://data.linkedmdb.org/film/8853"
+			},
+			{
+				"?x4": "\"Adam's Apples\"",
+				"?x1": "http://data.linkedmdb.org/film/9494"
+			},
+			{
+				"?x4": "\"Terkel in Trouble\"",
+				"?x1": "http://data.linkedmdb.org/film/11388"
+			},
+			{
+				"?x4": "\"In China They Eat Dogs\"",
+				"?x1": "http://data.linkedmdb.org/film/12069"
+			},
+			{
+				"?x4": "\"Old Men in New Cars\"",
+				"?x1": "http://data.linkedmdb.org/film/12070"
+			},
+			{
+				"?x4": "\"Shake It All About\"",
+				"?x1": "http://data.linkedmdb.org/film/12591"
+			},
+			{
+				"?x4": "\"J/u00C3/u00B6nssonligan dyker upp igen\"",
+				"?x1": "http://data.linkedmdb.org/film/1478"
+			},
+			{
+				"?x4": "\"Buddhas barn\"",
+				"?x1": "http://data.linkedmdb.org/film/14858"
+			},
+			{
+				"?x4": "\"Brudepigen - F/u00C3/u00A6rgeturen - Jagten p/u00C3/u00A5 k/u00C3/u00A6ledyret\"",
+				"?x1": "http://data.linkedmdb.org/film/16093"
+			},
+			{
+				"?x4": "\"Str/u00C3/u00B8mer\"",
+				"?x1": "http://data.linkedmdb.org/film/17278"
+			},
+			{
+				"?x4": "\"Sp/u00C3/u00B8gelsestoget\"",
+				"?x1": "http://data.linkedmdb.org/film/17279"
+			},
+			{
+				"?x4": "\"Styrmand Karlsen\"",
+				"?x1": "http://data.linkedmdb.org/film/17281"
+			},
+			{
+				"?x4": "\"Stjerneskud\"",
+				"?x1": "http://data.linkedmdb.org/film/17284"
+			},
+			{
+				"?x4": "\"Don Olsen kommer til byen\"",
+				"?x1": "http://data.linkedmdb.org/film/17333"
+			},
+			{
+				"?x4": "\"Bl/u00C3/u00A6ndv/u00C3/u00A6rk\"",
+				"?x1": "http://data.linkedmdb.org/film/17335"
+			},
+			{
+				"?x4": "\"J/u00C3/u00B6nssonligan f/u00C3/u00A5r guldfeber\"",
+				"?x1": "http://data.linkedmdb.org/film/1755"
+			},
+			{
+				"?x4": "\"Der var engang en vicev/u00C3/u00A6rt\"",
+				"?x1": "http://data.linkedmdb.org/film/18071"
+			},
+			{
+				"?x4": "\"Frk. M/u00C3/u00B8llers jubil/u00C3/u00A6um\"",
+				"?x1": "http://data.linkedmdb.org/film/18072"
+			},
+			{
+				"?x4": "\"Bag K/u00C3/u00B8benhavns kulisser\"",
+				"?x1": "http://data.linkedmdb.org/film/18290"
+			},
+			{
+				"?x4": "\"Atlantis\"",
+				"?x1": "http://data.linkedmdb.org/film/1876"
+			},
+			{
+				"?x4": "\"K/u00C3/u00B8benhavnere\"",
+				"?x1": "http://data.linkedmdb.org/film/18835"
+			},
+			{
+				"?x4": "\"Mifune's Last Song\"",
+				"?x1": "http://data.linkedmdb.org/film/1994"
+			},
+			{
+				"?x4": "\"All About Anna\"",
+				"?x1": "http://data.linkedmdb.org/film/25547"
+			},
+			{
+				"?x4": "\"Help I'm a Fish\"",
+				"?x1": "http://data.linkedmdb.org/film/2715"
+			},
+			{
+				"?x4": "\"Du er ikke alene\"",
+				"?x1": "http://data.linkedmdb.org/film/28143"
+			},
+			{
+				"?x4": "\"Italian for Beginners\"",
+				"?x1": "http://data.linkedmdb.org/film/29833"
+			},
+			{
+				"?x4": "\"Minor Mishaps\"",
+				"?x1": "http://data.linkedmdb.org/film/31284"
+			},
+			{
+				"?x4": "\"The Perfect Human\"",
+				"?x1": "http://data.linkedmdb.org/film/36078"
+			},
+			{
+				"?x4": "\"Torremolinos 73\"",
+				"?x1": "http://data.linkedmdb.org/film/37144"
+			},
+			{
+				"?x4": "\"Verdens Undergang\"",
+				"?x1": "http://data.linkedmdb.org/film/37504"
+			},
+			{
+				"?x4": "\"Wilbur Wants to Kill Himself\"",
+				"?x1": "http://data.linkedmdb.org/film/37792"
+			},
+			{
+				"?x4": "\"Himmelskibet\"",
+				"?x1": "http://data.linkedmdb.org/film/4027"
+			},
+			{
+				"?x4": "\"Fr/u00C3/u00A6kke Frida og de frygtl/u00C3/u00B8se spioner\"",
+				"?x1": "http://data.linkedmdb.org/film/5300"
+			},
+			{
+				"?x4": "\"Arven\"",
+				"?x1": "http://data.linkedmdb.org/film/5664"
+			},
+			{
+				"?x4": "\"King's game\"",
+				"?x1": "http://data.linkedmdb.org/film/9137"
+			},
+			{
+				"?x4": "\"Stolen Spring\"",
+				"?x1": "http://data.linkedmdb.org/film/9458"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x4 ?x1 ?x2 WHERE   { ?x1 <http://purl.org/dc/terms/title> ?x2 .     ?x1 <http://www.w3.org/2002/07/owl#sameAs> <http://mpii.de/yago/resource/Le_Samoura/u00C3/u00AF> .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x4   } ",
+		"filename": "q44.json",
+		"card": 2,
+		"results": [
+			{
+				"?x4": "http://data.linkedmdb.org/film_subject/151",
+				"?x1": "http://data.linkedmdb.org/film/30680",
+				"?x2": "\"Le Samoura/u00C3/u00AF\""
+			},
+			{
+				"?x4": "http://data.linkedmdb.org/film_subject/87",
+				"?x1": "http://data.linkedmdb.org/film/30680",
+				"?x2": "\"Le Samoura/u00C3/u00AF\""
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 ?x4 ?x1 WHERE   { ?x1 <http://purl.org/dc/terms/date> \"1992-09-09\" .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x3 .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x4   } ",
+		"filename": "q45.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://data.linkedmdb.org/film_subject/84",
+				"?x4": "http://data.linkedmdb.org/movie/film",
+				"?x1": "http://data.linkedmdb.org/film/2132"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x2 .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x3 .     ?x1 <http://xmlns.com/foaf/0.1/page> <http://www.rottentomatoes.com/alias?type=imdbid&s=0088763>   } ",
+		"filename": "q46.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://data.linkedmdb.org/film/26281"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://dbpedia.org/property/hasPhotoCollection> ?x2 .     ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x3 .     ?x1 <http://purl.org/dc/terms/title> \"The Honey Pot\"   } ",
+		"filename": "q47.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://data.linkedmdb.org/film/35340"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  * WHERE   { <http://data.linkedmdb.org/film/25425> <http://dbpedia.org/property/hasPhotoCollection> ?x2 .     <http://data.linkedmdb.org/film/25425> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3 .     <http://data.linkedmdb.org/film/25425> <http://purl.org/dc/terms/title> ?x4   } ",
+		"filename": "q48.json",
+		"card": 1,
+		"results": [
+			{
+				"?x4": "\"Actrius\"",
+				"?x3": "http://data.linkedmdb.org/movie/film",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Actrius"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x4 WHERE   { <http://data.linkedmdb.org/film/12975> <http://purl.org/dc/terms/title> ?x2 .     <http://data.linkedmdb.org/film/12975> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3 .     <http://data.linkedmdb.org/film/12975> <http://www.w3.org/2002/07/owl#sameAs> ?x4   } ",
+		"filename": "q49.json",
+		"card": 2,
+		"results": [
+			{
+				"?x4": "http://dbpedia.org/resource/Ram_Lakhan"
+			},
+			{
+				"?x4": "http://mpii.de/yago/resource/Ram_Lakhan"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x2 .     ?x1 <http://dbpedia.org/property/hasPhotoCollection> ?x3 .     ?x1 <http://xmlns.com/foaf/0.1/page> <http://www.imdb.com/title/tt0099674>   } ",
+		"filename": "q50.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://data.linkedmdb.org/film/329"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 ?x4 ?x2 WHERE   { <http://data.linkedmdb.org/film/4568> <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     <http://data.linkedmdb.org/film/4568> <http://dbpedia.org/property/hasPhotoCollection> ?x3 .     <http://data.linkedmdb.org/film/4568> <http://xmlns.com/foaf/0.1/page> ?x4   } ",
+		"filename": "q51.json",
+		"card": 6,
+		"results": [
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/To_Gillian_on_Her_37th_Birthday",
+				"?x4": "http://www.freebase.com/view/guid/9202a8c04000641f800000000087cb3d",
+				"?x2": "http://dbpedia.org/resource/To_Gillian_on_Her_37th_Birthday"
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/To_Gillian_on_Her_37th_Birthday",
+				"?x4": "http://www.freebase.com/view/guid/9202a8c04000641f800000000087cb3d",
+				"?x2": "http://mpii.de/yago/resource/To_Gillian_on_Her_37th_Birthday"
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/To_Gillian_on_Her_37th_Birthday",
+				"?x4": "http://www.imdb.com/title/tt0117924",
+				"?x2": "http://dbpedia.org/resource/To_Gillian_on_Her_37th_Birthday"
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/To_Gillian_on_Her_37th_Birthday",
+				"?x4": "http://www.imdb.com/title/tt0117924",
+				"?x2": "http://mpii.de/yago/resource/To_Gillian_on_Her_37th_Birthday"
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/To_Gillian_on_Her_37th_Birthday",
+				"?x4": "http://www.rottentomatoes.com/alias?type=imdbid&s=0117924",
+				"?x2": "http://dbpedia.org/resource/To_Gillian_on_Her_37th_Birthday"
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/To_Gillian_on_Her_37th_Birthday",
+				"?x4": "http://www.rottentomatoes.com/alias?type=imdbid&s=0117924",
+				"?x2": "http://mpii.de/yago/resource/To_Gillian_on_Her_37th_Birthday"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  * WHERE   { <http://data.linkedmdb.org/film/2024> <http://purl.org/dc/terms/title> ?x2 .     <http://data.linkedmdb.org/film/2024> <http://www.w3.org/2004/02/skos/core#subject> ?x3 .     <http://data.linkedmdb.org/film/2024> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x4   } ",
+		"filename": "q52.json",
+		"card": 1,
+		"results": [
+			{
+				"?x4": "http://data.linkedmdb.org/movie/film",
+				"?x3": "http://data.linkedmdb.org/film_subject/130",
+				"?x2": "\"Wilde\""
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x2 ?x5 WHERE   { <http://data.linkedmdb.org/film/24243> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://data.linkedmdb.org/film/24243> <http://www.w3.org/2000/01/rdf-schema#label> ?x3 .     <http://data.linkedmdb.org/film/24243> <http://xmlns.com/foaf/0.1/based_near> ?x4 .     <http://data.linkedmdb.org/film/24243> <http://xmlns.com/foaf/0.1/page> ?x5   } ",
+		"filename": "q53.json",
+		"card": 1,
+		"results": [
+			{
+				"?x2": "http://data.linkedmdb.org/movie/film",
+				"?x5": "http://www.freebase.com/view/guid/9202a8c04000641f8000000006f0e4c5"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 ?x2 ?x5 WHERE   { <http://data.linkedmdb.org/film/25934> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://data.linkedmdb.org/film/25934> <http://www.w3.org/2000/01/rdf-schema#label> ?x3 .     <http://data.linkedmdb.org/film/25934> <http://xmlns.com/foaf/0.1/based_near> ?x4 .     <http://data.linkedmdb.org/film/25934> <http://xmlns.com/foaf/0.1/page> ?x5   } ",
+		"filename": "q54.json",
+		"card": 3,
+		"results": [
+			{
+				"?x3": "\"Awaara\"",
+				"?x2": "http://data.linkedmdb.org/movie/film",
+				"?x5": "http://www.freebase.com/view/topic/en/awaara"
+			},
+			{
+				"?x3": "\"Awaara\"",
+				"?x2": "http://data.linkedmdb.org/movie/film",
+				"?x5": "http://www.imdb.com/title/tt0043306"
+			},
+			{
+				"?x3": "\"Awaara\"",
+				"?x2": "http://data.linkedmdb.org/movie/film",
+				"?x5": "http://www.rottentomatoes.com/alias?type=imdbid&s=0043306"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x4 ?x5 WHERE   { <http://data.linkedmdb.org/film/334> <http://xmlns.com/foaf/0.1/based_near> ?x2 .     <http://data.linkedmdb.org/film/334> <http://www.w3.org/2004/02/skos/core#subject> ?x3 .     <http://data.linkedmdb.org/film/334> <http://xmlns.com/foaf/0.1/page> ?x4 .     <http://data.linkedmdb.org/film/334> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x5   } ",
+		"filename": "q55.json",
+		"card": 3,
+		"results": [
+			{
+				"?x4": "http://www.freebase.com/view/guid/9202a8c04000641f800000000010f1c5",
+				"?x5": "http://data.linkedmdb.org/movie/film"
+			},
+			{
+				"?x4": "http://www.imdb.com/title/tt0212720",
+				"?x5": "http://data.linkedmdb.org/movie/film"
+			},
+			{
+				"?x4": "http://www.rottentomatoes.com/alias?type=imdbid&s=0212720",
+				"?x5": "http://data.linkedmdb.org/movie/film"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 ?x4 ?x1 ?x2 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x3 .     ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x4 .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> <http://data.linkedmdb.org/film_subject/15>   } ",
+		"filename": "q56.json",
+		"card": 2,
+		"results": [
+			{
+				"?x3": "http://sws.geonames.org/6252001/",
+				"?x4": "http://dbpedia.org/resource/Scrooged",
+				"?x1": "http://data.linkedmdb.org/film/33177",
+				"?x2": "http://data.linkedmdb.org/movie/film"
+			},
+			{
+				"?x3": "http://sws.geonames.org/6252001/",
+				"?x4": "http://mpii.de/yago/resource/Scrooged",
+				"?x1": "http://data.linkedmdb.org/film/33177",
+				"?x2": "http://data.linkedmdb.org/movie/film"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x2 WHERE   { <http://data.linkedmdb.org/film/32086> <http://www.w3.org/2004/02/skos/core#subject> ?x2 .     <http://data.linkedmdb.org/film/32086> <http://xmlns.com/foaf/0.1/based_near> ?x3 .     <http://data.linkedmdb.org/film/32086> <http://purl.org/dc/terms/title> ?x4 .     <http://data.linkedmdb.org/film/32086> <http://www.w3.org/2000/01/rdf-schema#label> ?x5   } ",
+		"filename": "q57.json",
+		"card": 1,
+		"results": [
+			{
+				"?x2": "http://data.linkedmdb.org/film_subject/45"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 ?x4 ?x1 ?x5 WHERE   { ?x1 <http://www.w3.org/2004/02/skos/core#subject> <http://data.linkedmdb.org/film_subject/87> .     ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x3 .     ?x1 <http://purl.org/dc/terms/title> ?x4 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x5   } ",
+		"filename": "q58.json",
+		"card": 3,
+		"results": [
+			{
+				"?x3": "http://sws.geonames.org/3175395/",
+				"?x4": "\"The Stranger\"",
+				"?x1": "http://data.linkedmdb.org/film/1097",
+				"?x5": "\"The Stranger\""
+			},
+			{
+				"?x3": "http://sws.geonames.org/6252001/",
+				"?x4": "\"I /u00E2/u0099/u00A5 Huckabees\"",
+				"?x1": "http://data.linkedmdb.org/film/1805",
+				"?x5": "\"I /u00E2/u0099/u00A5 Huckabees\""
+			},
+			{
+				"?x3": "http://sws.geonames.org/3017382/",
+				"?x4": "\"Le Samoura/u00C3/u00AF\"",
+				"?x1": "http://data.linkedmdb.org/film/30680",
+				"?x5": "\"Le Samoura/u00C3/u00AF\""
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x2 WHERE   { <http://data.linkedmdb.org/film/956> <http://xmlns.com/foaf/0.1/based_near> ?x2 .     <http://data.linkedmdb.org/film/956> <http://purl.org/dc/terms/date> ?x3 .     <http://data.linkedmdb.org/film/956> <http://purl.org/dc/terms/title> ?x4 .     <http://data.linkedmdb.org/film/956> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x5   } ",
+		"filename": "q59.json",
+		"card": 1,
+		"results": [
+			{
+				"?x2": "http://sws.geonames.org/6252001/"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x2 .     ?x1 <http://purl.org/dc/terms/date> ?x3 .     ?x1 <http://purl.org/dc/terms/title> \"Rope\" .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x5   } ",
+		"filename": "q60.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://data.linkedmdb.org/film/199",
+				"?x2": "http://sws.geonames.org/6252001/"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x2 .     ?x1 <http://purl.org/dc/terms/date> ?x3 .     ?x1 <http://purl.org/dc/terms/title> \"Under the Radar\" .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x5   } ",
+		"filename": "q61.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://data.linkedmdb.org/film/13040",
+				"?x2": "http://sws.geonames.org/2077456/"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 ?x1 ?x5 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x2 .     ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x3 .     ?x1 <http://dbpedia.org/property/hasPhotoCollection> <http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Anatomy_of_t.A.T.u.> .     ?x1 <http://xmlns.com/foaf/0.1/page> ?x5   } ",
+		"filename": "q62.json",
+		"card": 6,
+		"results": [
+			{
+				"?x3": "http://dbpedia.org/resource/Anatomy_of_t.A.T.u.",
+				"?x1": "http://data.linkedmdb.org/film/8226",
+				"?x5": "http://www.freebase.com/view/guid/9202a8c04000641f8000000000d7481d"
+			},
+			{
+				"?x3": "http://mpii.de/yago/resource/Anatomy_of_t.A.T.u.",
+				"?x1": "http://data.linkedmdb.org/film/8226",
+				"?x5": "http://www.freebase.com/view/guid/9202a8c04000641f8000000000d7481d"
+			},
+			{
+				"?x3": "http://dbpedia.org/resource/Anatomy_of_t.A.T.u.",
+				"?x1": "http://data.linkedmdb.org/film/8226",
+				"?x5": "http://www.imdb.com/title/tt0796202"
+			},
+			{
+				"?x3": "http://mpii.de/yago/resource/Anatomy_of_t.A.T.u.",
+				"?x1": "http://data.linkedmdb.org/film/8226",
+				"?x5": "http://www.imdb.com/title/tt0796202"
+			},
+			{
+				"?x3": "http://dbpedia.org/resource/Anatomy_of_t.A.T.u.",
+				"?x1": "http://data.linkedmdb.org/film/8226",
+				"?x5": "http://www.rottentomatoes.com/alias?type=imdbid&s=0796202"
+			},
+			{
+				"?x3": "http://mpii.de/yago/resource/Anatomy_of_t.A.T.u.",
+				"?x1": "http://data.linkedmdb.org/film/8226",
+				"?x5": "http://www.rottentomatoes.com/alias?type=imdbid&s=0796202"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 WHERE   { <http://data.linkedmdb.org/film/23848> <http://xmlns.com/foaf/0.1/based_near> ?x2 .     <http://data.linkedmdb.org/film/23848> <http://www.w3.org/2002/07/owl#sameAs> ?x3 .     <http://data.linkedmdb.org/film/23848> <http://dbpedia.org/property/hasPhotoCollection> ?x4 .     <http://data.linkedmdb.org/film/23848> <http://xmlns.com/foaf/0.1/page> ?x5   } ",
+		"filename": "q63.json",
+		"card": 2,
+		"results": [
+			{
+				"?x3": "http://dbpedia.org/resource/Under_the_Raven27s_Wing"
+			},
+			{
+				"?x3": "http://mpii.de/yago/resource/Under_the_Raven27s_Wing"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://dbpedia.org/property/hasPhotoCollection> ?x2 .     ?x1 <http://xmlns.com/foaf/0.1/page> ?x3 .     ?x1 <http://purl.org/dc/terms/date> ?x4 .     ?x1 <http://purl.org/dc/terms/title> \"Under My Skin\"   } ",
+		"filename": "q64.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://data.linkedmdb.org/film/1421"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Shining_Victory> .     ?x1 <http://purl.org/dc/terms/date> ?x3 .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x4 .     ?x1 <http://xmlns.com/foaf/0.1/page> ?x5   } ",
+		"filename": "q65.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://data.linkedmdb.org/film/33353"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://data.linkedmdb.org/film/4140> <http://www.w3.org/2004/02/skos/core#subject> ?x2 .     <http://data.linkedmdb.org/film/4140> <http://xmlns.com/foaf/0.1/based_near> ?x3 .     <http://data.linkedmdb.org/film/4140> <http://purl.org/dc/terms/date> ?x4 .     <http://data.linkedmdb.org/film/4140> <http://dbpedia.org/property/hasPhotoCollection> ?x5   } ",
+		"filename": "q66.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://sws.geonames.org/6252001/",
+				"?x2": "http://data.linkedmdb.org/film_subject/187"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  * WHERE   { <http://data.linkedmdb.org/director/1550> <http://xmlns.com/foaf/0.1/made> ?x2 .     <http://data.linkedmdb.org/director/1550> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3 .     <http://data.linkedmdb.org/director/1550> <http://www.w3.org/2000/01/rdf-schema#label> ?x4 .     <http://data.linkedmdb.org/director/1550> <http://xmlns.com/foaf/0.1/page> ?x5   } ",
+		"filename": "q67.json",
+		"card": 2,
+		"results": [
+			{
+				"?x5": "http://www.freebase.com/view/guid/9202a8c04000641f80000000010f86b4",
+				"?x4": "\"Suraj Prakash (Director)\"",
+				"?x3": "http://data.linkedmdb.org/movie/director",
+				"?x2": "http://data.linkedmdb.org/film/29929"
+			},
+			{
+				"?x5": "http://www.freebase.com/view/guid/9202a8c04000641f80000000010f86b4",
+				"?x4": "\"Suraj Prakash (Director)\"",
+				"?x3": "http://xmlns.com/foaf/0.1/Person",
+				"?x2": "http://data.linkedmdb.org/film/29929"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x4 WHERE   { <http://data.linkedmdb.org/film/36516> <http://www.w3.org/2000/01/rdf-schema#label> ?x2 .     <http://data.linkedmdb.org/film/36516> <http://xmlns.com/foaf/0.1/page> ?x3 .     <http://data.linkedmdb.org/film/36516> <http://purl.org/dc/terms/title> ?x4 .     <http://data.linkedmdb.org/film/36516> <http://www.w3.org/2002/07/owl#sameAs> ?x5   } ",
+		"filename": "q68.json",
+		"card": 1,
+		"results": [
+			{
+				"?x4": "\"The Star Wars Holiday Special\""
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 ?x5 WHERE   { <http://data.linkedmdb.org/film/1988> <http://xmlns.com/foaf/0.1/based_near> ?x2 .     <http://data.linkedmdb.org/film/1988> <http://www.w3.org/2004/02/skos/core#subject> ?x3 .     <http://data.linkedmdb.org/film/1988> <http://purl.org/dc/terms/title> ?x4 .     <http://data.linkedmdb.org/film/1988> <http://www.w3.org/2002/07/owl#sameAs> ?x5   } ",
+		"filename": "q69.json",
+		"card": 2,
+		"results": [
+			{
+				"?x3": "http://data.linkedmdb.org/film_subject/24",
+				"?x5": "http://dbpedia.org/resource/Road_Trip"
+			},
+			{
+				"?x3": "http://data.linkedmdb.org/film_subject/24",
+				"?x5": "http://mpii.de/yago/resource/Road_Trip"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x1 ?x5 WHERE   { ?x1 <http://www.w3.org/2004/02/skos/core#subject> <http://data.linkedmdb.org/film_subject/24> .     ?x1 <http://purl.org/dc/terms/date> ?x3 .     ?x1 <http://purl.org/dc/terms/title> ?x4 .     ?x1 <http://xmlns.com/foaf/0.1/page> ?x5   } ",
+		"filename": "q70.json",
+		"card": 15,
+		"results": [
+			{
+				"?x1": "http://data.linkedmdb.org/film/1020",
+				"?x5": "http://www.freebase.com/view/guid/9202a8c04000641f8000000000288c45"
+			},
+			{
+				"?x1": "http://data.linkedmdb.org/film/1020",
+				"?x5": "http://www.imdb.com/title/tt0085995"
+			},
+			{
+				"?x1": "http://data.linkedmdb.org/film/1020",
+				"?x5": "http://www.rottentomatoes.com/alias?type=imdbid&s=0085995"
+			},
+			{
+				"?x1": "http://data.linkedmdb.org/film/1988",
+				"?x5": "http://www.freebase.com/view/guid/9202a8c04000641f800000000045d6b0"
+			},
+			{
+				"?x1": "http://data.linkedmdb.org/film/1988",
+				"?x5": "http://www.imdb.com/title/tt0215129"
+			},
+			{
+				"?x1": "http://data.linkedmdb.org/film/1988",
+				"?x5": "http://www.rottentomatoes.com/alias?type=imdbid&s=0215129"
+			},
+			{
+				"?x1": "http://data.linkedmdb.org/film/30761",
+				"?x5": "http://www.freebase.com/view/topic/en/little_miss_sunshine"
+			},
+			{
+				"?x1": "http://data.linkedmdb.org/film/30761",
+				"?x5": "http://www.imdb.com/title/tt0449059"
+			},
+			{
+				"?x1": "http://data.linkedmdb.org/film/30761",
+				"?x5": "http://www.rottentomatoes.com/alias?type=imdbid&s=0449059"
+			},
+			{
+				"?x1": "http://data.linkedmdb.org/film/34805",
+				"?x5": "http://www.freebase.com/view/topic/en/the_daytrippers"
+			},
+			{
+				"?x1": "http://data.linkedmdb.org/film/34805",
+				"?x5": "http://www.imdb.com/title/tt0116041"
+			},
+			{
+				"?x1": "http://data.linkedmdb.org/film/34805",
+				"?x5": "http://www.rottentomatoes.com/alias?type=imdbid&s=0116041"
+			},
+			{
+				"?x1": "http://data.linkedmdb.org/film/7705",
+				"?x5": "http://www.freebase.com/view/guid/9202a8c04000641f8000000000cca396"
+			},
+			{
+				"?x1": "http://data.linkedmdb.org/film/7705",
+				"?x5": "http://www.imdb.com/title/tt0443453"
+			},
+			{
+				"?x1": "http://data.linkedmdb.org/film/7705",
+				"?x5": "http://www.rottentomatoes.com/alias?type=imdbid&s=0443453"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x2 .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x3 .     ?x1 <http://dbpedia.org/property/hasPhotoCollection> ?x4 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> \"The Champ\"   } ",
+		"filename": "q71.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://data.linkedmdb.org/film_subject/63",
+				"?x1": "http://data.linkedmdb.org/film/34646"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 WHERE   { <http://data.linkedmdb.org/film/32910> <http://www.w3.org/2004/02/skos/core#subject> ?x2 .     <http://data.linkedmdb.org/film/32910> <http://purl.org/dc/terms/title> ?x3 .     <http://data.linkedmdb.org/film/32910> <http://purl.org/dc/terms/date> ?x4 .     <http://data.linkedmdb.org/film/32910> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x5   } ",
+		"filename": "q72.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"Rocky III\""
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 WHERE   { <http://data.linkedmdb.org/film/25977> <http://xmlns.com/foaf/0.1/page> ?x2 .     <http://data.linkedmdb.org/film/25977> <http://www.w3.org/2002/07/owl#sameAs> ?x3 .     <http://data.linkedmdb.org/film/25977> <http://purl.org/dc/terms/title> ?x4 .     <http://data.linkedmdb.org/film/25977> <http://purl.org/dc/terms/date> ?x5   } ",
+		"filename": "q73.json",
+		"card": 2,
+		"results": [
+			{
+				"?x3": "http://dbpedia.org/resource/A_Chinese_Ghost_Story"
+			},
+			{
+				"?x3": "http://mpii.de/yago/resource/A_Chinese_Ghost_Story"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 WHERE   { <http://data.linkedmdb.org/film/3957> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://data.linkedmdb.org/film/3957> <http://www.w3.org/2002/07/owl#sameAs> ?x3 .     <http://data.linkedmdb.org/film/3957> <http://www.w3.org/2000/01/rdf-schema#label> ?x4 .     <http://data.linkedmdb.org/film/3957> <http://purl.org/dc/terms/title> ?x5   } ",
+		"filename": "q74.json",
+		"card": 2,
+		"results": [
+			{
+				"?x3": "http://dbpedia.org/resource/Good_Men2C_Good_Women"
+			},
+			{
+				"?x3": "http://mpii.de/yago/resource/Good_Men2C_Good_Women"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 ?x1 ?x2 WHERE   { ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x3 .     ?x1 <http://purl.org/dc/terms/date> ?x4 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> \"Belle /u00C3/u0089poque\"   } ",
+		"filename": "q75.json",
+		"card": 2,
+		"results": [
+			{
+				"?x3": "http://sws.geonames.org/2510769/",
+				"?x1": "http://data.linkedmdb.org/film/4040",
+				"?x2": "http://dbpedia.org/resource/Belle_/u00C3/u0089poque_28film29"
+			},
+			{
+				"?x3": "http://sws.geonames.org/2510769/",
+				"?x1": "http://data.linkedmdb.org/film/4040",
+				"?x2": "http://mpii.de/yago/resource/Belle_/u00C3/u0089poque_28film29"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x4 ?x1 ?x5 WHERE   { ?x1 <http://www.w3.org/2004/02/skos/core#subject> <http://data.linkedmdb.org/film_subject/84> .     ?x1 <http://dbpedia.org/property/hasPhotoCollection> ?x3 .     ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x4 .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x5   } ",
+		"filename": "q76.json",
+		"card": 2,
+		"results": [
+			{
+				"?x4": "http://sws.geonames.org/6252001/",
+				"?x1": "http://data.linkedmdb.org/film/2982",
+				"?x5": "http://data.linkedmdb.org/movie/film"
+			},
+			{
+				"?x4": "http://sws.geonames.org/6252001/",
+				"?x1": "http://data.linkedmdb.org/film/37000",
+				"?x5": "http://data.linkedmdb.org/movie/film"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x2 .     ?x1 <http://purl.org/dc/terms/title> ?x3 .     ?x1 <http://purl.org/dc/terms/date> \"1990-09-19\" .     ?x1 <http://dbpedia.org/property/hasPhotoCollection> ?x5   } ",
+		"filename": "q77.json",
+		"card": 2,
+		"results": [
+			{
+				"?x1": "http://data.linkedmdb.org/film/29059",
+				"?x2": "http://data.linkedmdb.org/film_subject/110"
+			},
+			{
+				"?x1": "http://data.linkedmdb.org/film/29059",
+				"?x2": "http://data.linkedmdb.org/film_subject/119"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://purl.org/dc/terms/date> ?x2 .     ?x1 <http://dbpedia.org/property/hasPhotoCollection> <http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Ghost_in_the_Shell_(film)> .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x4 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x5   } ",
+		"filename": "q78.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://data.linkedmdb.org/film/9976",
+				"?x2": "\"1995-11-18\""
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x4 ?x1 ?x2 WHERE   { ?x1 <http://purl.org/dc/terms/date> ?x2 .     ?x1 <http://dbpedia.org/property/hasPhotoCollection> <http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Spider-Man_(film)> .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x4 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x5   } ",
+		"filename": "q79.json",
+		"card": 1,
+		"results": [
+			{
+				"?x4": "http://data.linkedmdb.org/film_subject/157",
+				"?x1": "http://data.linkedmdb.org/film/362",
+				"?x2": "\"2002-05-03\""
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 ?x4 WHERE   { <http://data.linkedmdb.org/film/2113> <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     <http://data.linkedmdb.org/film/2113> <http://purl.org/dc/terms/title> ?x3 .     <http://data.linkedmdb.org/film/2113> <http://www.w3.org/2000/01/rdf-schema#label> ?x4 .     <http://data.linkedmdb.org/film/2113> <http://dbpedia.org/property/hasPhotoCollection> ?x5   } ",
+		"filename": "q80.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"Sweet Sweetback's Baadasssss Song\"",
+				"?x4": "\"Sweet Sweetback's Baadasssss Song\""
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 ?x4 WHERE   { <http://data.linkedmdb.org/film/35975> <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     <http://data.linkedmdb.org/film/35975> <http://www.w3.org/2004/02/skos/core#subject> ?x3 .     <http://data.linkedmdb.org/film/35975> <http://purl.org/dc/terms/date> ?x4 .     <http://data.linkedmdb.org/film/35975> <http://xmlns.com/foaf/0.1/based_near> ?x5   } ",
+		"filename": "q81.json",
+		"card": 3,
+		"results": [
+			{
+				"?x3": "http://data.linkedmdb.org/film_subject/135",
+				"?x4": "\"1980\""
+			},
+			{
+				"?x3": "http://data.linkedmdb.org/film_subject/140",
+				"?x4": "\"1980\""
+			},
+			{
+				"?x3": "http://data.linkedmdb.org/film_subject/176",
+				"?x4": "\"1980\""
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 ?x5 WHERE   { <http://data.linkedmdb.org/film/37944> <http://xmlns.com/foaf/0.1/page> ?x2 .     <http://data.linkedmdb.org/film/37944> <http://purl.org/dc/terms/title> ?x3 .     <http://data.linkedmdb.org/film/37944> <http://xmlns.com/foaf/0.1/based_near> ?x4 .     <http://data.linkedmdb.org/film/37944> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x5   } ",
+		"filename": "q82.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"Year of the Dogs\"",
+				"?x5": "http://data.linkedmdb.org/movie/film"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://dbpedia.org/property/hasPhotoCollection> <http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Coven_(film)> .     ?x1 <http://purl.org/dc/terms/date> ?x3 .     ?x1 <http://purl.org/dc/terms/title> ?x4 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x5   } ",
+		"filename": "q83.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://data.linkedmdb.org/film/8868"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x4 ?x1 ?x2 ?x5 WHERE   { ?x1 <http://dbpedia.org/property/hasPhotoCollection> ?x2 .     ?x1 <http://purl.org/dc/terms/title> \"The First Great Train Robbery\" .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x4 .     ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x5   } ",
+		"filename": "q84.json",
+		"card": 1,
+		"results": [
+			{
+				"?x4": "http://data.linkedmdb.org/film_subject/170",
+				"?x1": "http://data.linkedmdb.org/film/35025",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/The_First_Great_Train_Robbery",
+				"?x5": "http://sws.geonames.org/2635167/"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/page> ?x2 .     ?x1 <http://purl.org/dc/terms/title> ?x3 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> \"Blades of Glory\" .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x5   } ",
+		"filename": "q85.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://data.linkedmdb.org/film/9041"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 ?x1 ?x2 ?x5 WHERE   { ?x1 <http://dbpedia.org/property/hasPhotoCollection> ?x2 .     ?x1 <http://purl.org/dc/terms/title> ?x3 .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> <http://data.linkedmdb.org/film_subject/125> .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x5   } ",
+		"filename": "q86.json",
+		"card": 2,
+		"results": [
+			{
+				"?x3": "\"Blade Runner\"",
+				"?x1": "http://data.linkedmdb.org/film/26659",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Blade_Runner",
+				"?x5": "\"Blade Runner\""
+			},
+			{
+				"?x3": "\"Scrooged\"",
+				"?x1": "http://data.linkedmdb.org/film/33177",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Scrooged",
+				"?x5": "\"Scrooged\""
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://dbpedia.org/property/hasPhotoCollection> ?x2 .     ?x1 <http://purl.org/dc/terms/title> ?x3 .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> <http://data.linkedmdb.org/film_subject/156> .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x5   } ",
+		"filename": "q87.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://data.linkedmdb.org/film/5399",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Charlie_Wilson's_War"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://purl.org/dc/terms/title> \"Chunuk Bair\" .     ?x1 <http://dbpedia.org/property/hasPhotoCollection> ?x3 .     ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x4 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x5   } ",
+		"filename": "q88.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://data.linkedmdb.org/film/13824"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x2 WHERE   { <http://data.linkedmdb.org/film/13091> <http://dbpedia.org/property/hasPhotoCollection> ?x2 .     <http://data.linkedmdb.org/film/13091> <http://xmlns.com/foaf/0.1/page> ?x3 .     <http://data.linkedmdb.org/film/13091> <http://xmlns.com/foaf/0.1/based_near> ?x4 .     <http://data.linkedmdb.org/film/13091> <http://purl.org/dc/terms/date> ?x5   } ",
+		"filename": "q89.json",
+		"card": 1,
+		"results": [
+			{
+				"?x2": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Palmy_Days"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 ?x4 ?x5 WHERE   { <http://data.linkedmdb.org/film/6795> <http://xmlns.com/foaf/0.1/based_near> ?x2 .     <http://data.linkedmdb.org/film/6795> <http://purl.org/dc/terms/date> ?x3 .     <http://data.linkedmdb.org/film/6795> <http://www.w3.org/2004/02/skos/core#subject> ?x4 .     <http://data.linkedmdb.org/film/6795> <http://xmlns.com/foaf/0.1/page> ?x5 .     <http://data.linkedmdb.org/film/6795> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x6   } ",
+		"filename": "q90.json",
+		"card": 6,
+		"results": [
+			{
+				"?x3": "\"1966-12-12\"",
+				"?x4": "http://data.linkedmdb.org/film_subject/102",
+				"?x5": "http://www.freebase.com/view/guid/9202a8c04000641f8000000000bb2006"
+			},
+			{
+				"?x3": "\"1966-12-12\"",
+				"?x4": "http://data.linkedmdb.org/film_subject/168",
+				"?x5": "http://www.freebase.com/view/guid/9202a8c04000641f8000000000bb2006"
+			},
+			{
+				"?x3": "\"1966-12-12\"",
+				"?x4": "http://data.linkedmdb.org/film_subject/102",
+				"?x5": "http://www.imdb.com/title/tt0060665"
+			},
+			{
+				"?x3": "\"1966-12-12\"",
+				"?x4": "http://data.linkedmdb.org/film_subject/168",
+				"?x5": "http://www.imdb.com/title/tt0060665"
+			},
+			{
+				"?x3": "\"1966-12-12\"",
+				"?x4": "http://data.linkedmdb.org/film_subject/102",
+				"?x5": "http://www.rottentomatoes.com/alias?type=imdbid&s=0060665"
+			},
+			{
+				"?x3": "\"1966-12-12\"",
+				"?x4": "http://data.linkedmdb.org/film_subject/168",
+				"?x5": "http://www.rottentomatoes.com/alias?type=imdbid&s=0060665"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 ?x4 WHERE   { <http://data.linkedmdb.org/film/92> <http://xmlns.com/foaf/0.1/page> ?x2 .     <http://data.linkedmdb.org/film/92> <http://purl.org/dc/terms/title> ?x3 .     <http://data.linkedmdb.org/film/92> <http://purl.org/dc/terms/date> ?x4 .     <http://data.linkedmdb.org/film/92> <http://xmlns.com/foaf/0.1/based_near> ?x5 .     <http://data.linkedmdb.org/film/92> <http://www.w3.org/2000/01/rdf-schema#label> ?x6   } ",
+		"filename": "q91.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"Trader Horn\"",
+				"?x4": "\"1931\""
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x5 ?x6 WHERE   { <http://data.linkedmdb.org/film/33177> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://data.linkedmdb.org/film/33177> <http://dbpedia.org/property/hasPhotoCollection> ?x3 .     <http://data.linkedmdb.org/film/33177> <http://www.w3.org/2004/02/skos/core#subject> ?x4 .     <http://data.linkedmdb.org/film/33177> <http://xmlns.com/foaf/0.1/based_near> ?x5 .     <http://data.linkedmdb.org/film/33177> <http://purl.org/dc/terms/title> ?x6   } ",
+		"filename": "q92.json",
+		"card": 1,
+		"results": [
+			{
+				"?x5": "http://sws.geonames.org/6252001/",
+				"?x6": "\"Scrooged\""
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x4 ?x1 ?x2 ?x6 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://xmlns.com/foaf/0.1/based_near> <http://sws.geonames.org/732800/> .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x4 .     ?x1 <http://purl.org/dc/terms/title> ?x5 .     ?x1 <http://purl.org/dc/terms/date> ?x6   } ",
+		"filename": "q93.json",
+		"card": 10,
+		"results": [
+			{
+				"?x4": "\"Adaptatziya\"",
+				"?x1": "http://data.linkedmdb.org/film/11348",
+				"?x2": "http://data.linkedmdb.org/movie/film",
+				"?x6": "\"1981-06-22\""
+			},
+			{
+				"?x4": "\"/u00D0/u009A/u00D1/u0080/u00D0/u00B0/u00D0/u00B4/u00D0/u00B5/u00D1/u0086/u00D1/u008A/u00D1/u0082 /u00D0/u00BD/u00D0/u00B0 /u00D0/u00BF/u00D1/u0080/u00D0/u00B0/u00D1/u0081/u00D0/u00BA/u00D0/u00BE/u00D0/u00B2/u00D0/u00B8\"",
+				"?x1": "http://data.linkedmdb.org/film/5455",
+				"?x2": "http://data.linkedmdb.org/movie/film",
+				"?x6": "\"1964\""
+			},
+			{
+				"?x4": "\"Doomed Souls\"",
+				"?x1": "http://data.linkedmdb.org/film/6620",
+				"?x2": "http://data.linkedmdb.org/movie/film",
+				"?x6": "\"1975\""
+			},
+			{
+				"?x4": "\"681 AD: The Glory of Khan\"",
+				"?x1": "http://data.linkedmdb.org/film/7304",
+				"?x2": "http://data.linkedmdb.org/movie/film",
+				"?x6": "\"1981\""
+			},
+			{
+				"?x4": "\"/u00D0/u0092/u00D1/u0087/u00D0/u00B5/u00D1/u0080/u00D0/u00B0\"",
+				"?x1": "http://data.linkedmdb.org/film/8399",
+				"?x2": "http://data.linkedmdb.org/movie/film",
+				"?x6": "\"1988-01-25\""
+			},
+			{
+				"?x4": "\"Brand Hauser: Stuff Happens\"",
+				"?x1": "http://data.linkedmdb.org/film/10264",
+				"?x2": "http://data.linkedmdb.org/movie/film",
+				"?x6": "\"2008\""
+			},
+			{
+				"?x4": "\"A byahme mladi\"",
+				"?x1": "http://data.linkedmdb.org/film/11344",
+				"?x2": "http://data.linkedmdb.org/movie/film",
+				"?x6": "\"1961-03-13\""
+			},
+			{
+				"?x4": "\"A sega nakade?\"",
+				"?x1": "http://data.linkedmdb.org/film/11345",
+				"?x2": "http://data.linkedmdb.org/movie/film",
+				"?x6": "\"1988-10-17\""
+			},
+			{
+				"?x4": "\"Rio Adio\"",
+				"?x1": "http://data.linkedmdb.org/film/11368",
+				"?x2": "http://data.linkedmdb.org/movie/film",
+				"?x6": "\"1989-04-10\""
+			},
+			{
+				"?x4": "\"Est-Ouest\"",
+				"?x1": "http://data.linkedmdb.org/film/11643",
+				"?x2": "http://data.linkedmdb.org/movie/film",
+				"?x6": "\"1999\""
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 ?x1 ?x2 ?x6 WHERE   { ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     ?x1 <http://dbpedia.org/property/hasPhotoCollection> ?x3 .     ?x1 <http://xmlns.com/foaf/0.1/page> ?x4 .     ?x1 <http://xmlns.com/foaf/0.1/based_near> <http://sws.geonames.org/719819/> .     ?x1 <http://purl.org/dc/terms/title> ?x6   } ",
+		"filename": "q94.json",
+		"card": 26,
+		"results": [
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Lily_in_Love",
+				"?x1": "http://data.linkedmdb.org/film/17177",
+				"?x2": "http://dbpedia.org/resource/Lily_in_Love",
+				"?x6": "\"Lily in Love\""
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Lily_in_Love",
+				"?x1": "http://data.linkedmdb.org/film/17177",
+				"?x2": "http://mpii.de/yago/resource/Lily_in_Love",
+				"?x6": "\"Lily in Love\""
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/The_Merry_Widow_(film)",
+				"?x1": "http://data.linkedmdb.org/film/24848",
+				"?x2": "http://dbpedia.org/resource/The_Merry_Widow_28film29",
+				"?x6": "\"The Merry Widow\""
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/The_Merry_Widow_(film)",
+				"?x1": "http://data.linkedmdb.org/film/24848",
+				"?x2": "http://mpii.de/yago/resource/The_Merry_Widow_28film29",
+				"?x6": "\"The Merry Widow\""
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Being_Julia",
+				"?x1": "http://data.linkedmdb.org/film/26465",
+				"?x2": "http://dbpedia.org/resource/Being_Julia",
+				"?x6": "\"Being Julia\""
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Being_Julia",
+				"?x1": "http://data.linkedmdb.org/film/26465",
+				"?x2": "http://mpii.de/yago/resource/Being_Julia",
+				"?x6": "\"Being Julia\""
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/The_Man_from_London",
+				"?x1": "http://data.linkedmdb.org/film/35756",
+				"?x2": "http://dbpedia.org/resource/The_Man_from_London",
+				"?x6": "\"The Man From London\""
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/The_Man_from_London",
+				"?x1": "http://data.linkedmdb.org/film/35756",
+				"?x2": "http://mpii.de/yago/resource/The_Man_from_London",
+				"?x6": "\"The Man From London\""
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Werckmeister_Harmonies",
+				"?x1": "http://data.linkedmdb.org/film/37675",
+				"?x2": "http://dbpedia.org/resource/Werckmeister_Harmonies",
+				"?x6": "\"Werckmeister Harmonies\""
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Werckmeister_Harmonies",
+				"?x1": "http://data.linkedmdb.org/film/37675",
+				"?x2": "http://mpii.de/yago/resource/Werckmeister_Harmonies",
+				"?x6": "\"Werckmeister Harmonies\""
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Napl/u00C3/u00B3_ap/u00C3/u00A1mnak,_any/u00C3/u00A1mnak",
+				"?x1": "http://data.linkedmdb.org/film/6608",
+				"?x2": "http://dbpedia.org/resource/Napl/u00C3/u00B3_ap/u00C3/u00A1mnak2C_any/u00C3/u00A1mnak",
+				"?x6": "\"Napl/u00C3/u00B3 ap/u00C3/u00A1mnak, any/u00C3/u00A1mnak\""
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Napl/u00C3/u00B3_ap/u00C3/u00A1mnak,_any/u00C3/u00A1mnak",
+				"?x1": "http://data.linkedmdb.org/film/6608",
+				"?x2": "http://mpii.de/yago/resource/Napl/u00C3/u00B3_ap/u00C3/u00A1mnak2C_any/u00C3/u00A1mnak",
+				"?x6": "\"Napl/u00C3/u00B3 ap/u00C3/u00A1mnak, any/u00C3/u00A1mnak\""
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Mack_the_Knife_(film)",
+				"?x1": "http://data.linkedmdb.org/film/8762",
+				"?x2": "http://dbpedia.org/resource/Mack_the_Knife_28film29",
+				"?x6": "\"Mack the Knife\""
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Mack_the_Knife_(film)",
+				"?x1": "http://data.linkedmdb.org/film/8762",
+				"?x2": "http://mpii.de/yago/resource/Mack_the_Knife_28film29",
+				"?x6": "\"Mack the Knife\""
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos//u00C3/u0081rv/u00C3/u00A1cska",
+				"?x1": "http://data.linkedmdb.org/film/20428",
+				"?x2": "http://dbpedia.org/resource//u00C3/u0081rv/u00C3/u00A1cska",
+				"?x6": "\"/u00C3/u0081rv/u00C3/u00A1cska\""
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos//u00C3/u0081rv/u00C3/u00A1cska",
+				"?x1": "http://data.linkedmdb.org/film/20428",
+				"?x2": "http://mpii.de/yago/resource//u00C3/u0081rv/u00C3/u00A1cska",
+				"?x6": "\"/u00C3/u0081rv/u00C3/u00A1cska\""
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Confidence_(film)",
+				"?x1": "http://data.linkedmdb.org/film/23344",
+				"?x2": "http://dbpedia.org/resource/Confidence_28film29",
+				"?x6": "\"Confidence\""
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Confidence_(film)",
+				"?x1": "http://data.linkedmdb.org/film/23344",
+				"?x2": "http://mpii.de/yago/resource/Confidence_28film29",
+				"?x6": "\"Confidence\""
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Casanova_(film)",
+				"?x1": "http://data.linkedmdb.org/film/24925",
+				"?x2": "http://dbpedia.org/resource/Casanova_28film29",
+				"?x6": "\"Casanova\""
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Casanova_(film)",
+				"?x1": "http://data.linkedmdb.org/film/24925",
+				"?x2": "http://mpii.de/yago/resource/Casanova_28film29",
+				"?x6": "\"Casanova\""
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/The_Leopard_(film)",
+				"?x1": "http://data.linkedmdb.org/film/24928",
+				"?x2": "http://dbpedia.org/resource/The_Leopard_28film29",
+				"?x6": "\"The Leopard\""
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/The_Leopard_(film)",
+				"?x1": "http://data.linkedmdb.org/film/24928",
+				"?x2": "http://mpii.de/yago/resource/The_Leopard_28film29",
+				"?x6": "\"The Leopard\""
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Lili",
+				"?x1": "http://data.linkedmdb.org/film/24929",
+				"?x2": "http://dbpedia.org/resource/Lili",
+				"?x6": "\"Lili\""
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Lili",
+				"?x1": "http://data.linkedmdb.org/film/24929",
+				"?x2": "http://mpii.de/yago/resource/Lili",
+				"?x6": "\"Lili\""
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/An_American_Rhapsody",
+				"?x1": "http://data.linkedmdb.org/film/25777",
+				"?x2": "http://dbpedia.org/resource/An_American_Rhapsody",
+				"?x6": "\"An American Rhapsody\""
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/An_American_Rhapsody",
+				"?x1": "http://data.linkedmdb.org/film/25777",
+				"?x2": "http://mpii.de/yago/resource/An_American_Rhapsody",
+				"?x6": "\"An American Rhapsody\""
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 ?x4 ?x1 ?x6 WHERE   { ?x1 <http://www.w3.org/2002/07/owl#sameAs> <http://mpii.de/yago/resource/The_Passion_of_Joan_of_Arc> .     ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x3 .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x4 .     ?x1 <http://purl.org/dc/terms/title> ?x5 .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x6   } ",
+		"filename": "q95.json",
+		"card": 2,
+		"results": [
+			{
+				"?x3": "http://sws.geonames.org/2623032/",
+				"?x4": "http://data.linkedmdb.org/film_subject/116",
+				"?x1": "http://data.linkedmdb.org/film/36060",
+				"?x6": "http://data.linkedmdb.org/movie/film"
+			},
+			{
+				"?x3": "http://sws.geonames.org/3017382/",
+				"?x4": "http://data.linkedmdb.org/film_subject/116",
+				"?x1": "http://data.linkedmdb.org/film/36060",
+				"?x6": "http://data.linkedmdb.org/movie/film"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x3 .     ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x4 .     ?x1 <http://purl.org/dc/terms/date> ?x5 .     ?x1 <http://xmlns.com/foaf/0.1/page> <http://www.freebase.com/view/topic/en/back_to_the_future_part_ii>   } ",
+		"filename": "q96.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://data.linkedmdb.org/film_subject/169",
+				"?x1": "http://data.linkedmdb.org/film/26282"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x3 ?x4 WHERE   { <http://data.linkedmdb.org/film/34861> <http://purl.org/dc/terms/date> ?x2 .     <http://data.linkedmdb.org/film/34861> <http://purl.org/dc/terms/title> ?x3 .     <http://data.linkedmdb.org/film/34861> <http://xmlns.com/foaf/0.1/page> ?x4 .     <http://data.linkedmdb.org/film/34861> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x5 .     <http://data.linkedmdb.org/film/34861> <http://www.w3.org/2002/07/owl#sameAs> ?x6   } ",
+		"filename": "q97.json",
+		"card": 3,
+		"results": [
+			{
+				"?x3": "\"The Devil Bat\"",
+				"?x4": "http://www.freebase.com/view/topic/en/the_devil_bat"
+			},
+			{
+				"?x3": "\"The Devil Bat\"",
+				"?x4": "http://www.imdb.com/title/tt0038470/"
+			},
+			{
+				"?x3": "\"The Devil Bat\"",
+				"?x4": "http://www.rottentomatoes.com/alias?type=imdbid&s=0038470/"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x4 ?x5 WHERE   { <http://data.linkedmdb.org/film/25747> <http://purl.org/dc/terms/date> ?x2 .     <http://data.linkedmdb.org/film/25747> <http://purl.org/dc/terms/title> ?x3 .     <http://data.linkedmdb.org/film/25747> <http://xmlns.com/foaf/0.1/page> ?x4 .     <http://data.linkedmdb.org/film/25747> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x5 .     <http://data.linkedmdb.org/film/25747> <http://www.w3.org/2002/07/owl#sameAs> ?x6   } ",
+		"filename": "q98.json",
+		"card": 3,
+		"results": [
+			{
+				"?x4": "http://www.freebase.com/view/topic/en/another_woman",
+				"?x5": "http://data.linkedmdb.org/movie/film"
+			},
+			{
+				"?x4": "http://www.imdb.com/title/tt0094663",
+				"?x5": "http://data.linkedmdb.org/movie/film"
+			},
+			{
+				"?x4": "http://www.rottentomatoes.com/alias?type=imdbid&s=0094663",
+				"?x5": "http://data.linkedmdb.org/movie/film"
+			}
+		]
+	},
+	{
+		"name": "linkedmdb",
+		"query": "SELECT DISTINCT  ?x4 ?x1 ?x5 WHERE   { ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x2 .     ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x3 .     ?x1 <http://dbpedia.org/property/hasPhotoCollection> ?x4 .     ?x1 <http://xmlns.com/foaf/0.1/page> ?x5 .     ?x1 <http://purl.org/dc/terms/title> \"28 Days Later\" .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x7   } ",
+		"filename": "q99.json",
+		"card": 3,
+		"results": [
+			{
+				"?x4": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/28_Days_Later",
+				"?x1": "http://data.linkedmdb.org/film/25279",
+				"?x5": "http://www.freebase.com/view/topic/en/28_days_later"
+			},
+			{
+				"?x4": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/28_Days_Later",
+				"?x1": "http://data.linkedmdb.org/film/25279",
+				"?x5": "http://www.imdb.com/title/tt0289043"
+			},
+			{
+				"?x4": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/28_Days_Later",
+				"?x1": "http://data.linkedmdb.org/film/25279",
+				"?x5": "http://www.rottentomatoes.com/alias?type=imdbid&s=0289043"
+			}
+		]
+	}
 ]

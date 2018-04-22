@@ -1,7 +1,13 @@
-[
-	{
-		"?x3": "http://sws.geonames.org/1861060/",
-		"?x4": "\"Kagero-za\"",
-		"?x1": "http://data.linkedmdb.org/film/30133"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x3 ?x4 ?x1 WHERE   { ?x1 <http://dbpedia.org/property/hasPhotoCollection> <http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Kagero-za> .     ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x3 .     ?x1 <http://purl.org/dc/terms/title> ?x4   } ",
+	"filename": "q34.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "http://sws.geonames.org/1861060/",
+			"?x4": "\"Kagero-za\"",
+			"?x1": "http://data.linkedmdb.org/film/30133"
+		}
+	]
+}

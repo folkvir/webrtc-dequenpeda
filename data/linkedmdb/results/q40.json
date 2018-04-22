@@ -1,12 +1,18 @@
-[
-	{
-		"?x3": "\"Drifters\"",
-		"?x4": "http://data.linkedmdb.org/movie/film",
-		"?x1": "http://data.linkedmdb.org/film/24794"
-	},
-	{
-		"?x3": "\"The Whaling Industry\"",
-		"?x4": "http://data.linkedmdb.org/movie/film",
-		"?x1": "http://data.linkedmdb.org/film/24795"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x3 ?x4 ?x1 WHERE   { ?x1 <http://www.w3.org/2004/02/skos/core#subject> <http://data.linkedmdb.org/film_subject/93> .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x3 .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x4   } ",
+	"filename": "q40.json",
+	"card": 2,
+	"results": [
+		{
+			"?x3": "\"Drifters\"",
+			"?x4": "http://data.linkedmdb.org/movie/film",
+			"?x1": "http://data.linkedmdb.org/film/24794"
+		},
+		{
+			"?x3": "\"The Whaling Industry\"",
+			"?x4": "http://data.linkedmdb.org/movie/film",
+			"?x1": "http://data.linkedmdb.org/film/24795"
+		}
+	]
+}

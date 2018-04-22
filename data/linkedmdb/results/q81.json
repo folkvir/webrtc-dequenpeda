@@ -1,14 +1,20 @@
-[
-	{
-		"?x3": "http://data.linkedmdb.org/film_subject/135",
-		"?x4": "\"1980\""
-	},
-	{
-		"?x3": "http://data.linkedmdb.org/film_subject/140",
-		"?x4": "\"1980\""
-	},
-	{
-		"?x3": "http://data.linkedmdb.org/film_subject/176",
-		"?x4": "\"1980\""
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x3 ?x4 WHERE   { <http://data.linkedmdb.org/film/35975> <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     <http://data.linkedmdb.org/film/35975> <http://www.w3.org/2004/02/skos/core#subject> ?x3 .     <http://data.linkedmdb.org/film/35975> <http://purl.org/dc/terms/date> ?x4 .     <http://data.linkedmdb.org/film/35975> <http://xmlns.com/foaf/0.1/based_near> ?x5   } ",
+	"filename": "q81.json",
+	"card": 3,
+	"results": [
+		{
+			"?x3": "http://data.linkedmdb.org/film_subject/135",
+			"?x4": "\"1980\""
+		},
+		{
+			"?x3": "http://data.linkedmdb.org/film_subject/140",
+			"?x4": "\"1980\""
+		},
+		{
+			"?x3": "http://data.linkedmdb.org/film_subject/176",
+			"?x4": "\"1980\""
+		}
+	]
+}

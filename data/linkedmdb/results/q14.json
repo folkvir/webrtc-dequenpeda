@@ -1,5 +1,11 @@
-[
-	{
-		"?x1": "http://data.linkedmdb.org/film/8784"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://dbpedia.org/property/hasPhotoCollection> <http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Orion's_Belt_(film)> .     ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x3   } ",
+	"filename": "q14.json",
+	"card": 1,
+	"results": [
+		{
+			"?x1": "http://data.linkedmdb.org/film/8784"
+		}
+	]
+}

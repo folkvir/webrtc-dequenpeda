@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "\"-62.63333333333333\"^^http://www.w3.org/2001/XMLSchema#float",
-		"?x2": "\"-63.06666666666667\"^^http://www.w3.org/2001/XMLSchema#float"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Kremena_Ice_Piedmont> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Kremena_Ice_Piedmont> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
+	"filename": "q19.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"-62.63333333333333\"^^http://www.w3.org/2001/XMLSchema#float",
+			"?x2": "\"-63.06666666666667\"^^http://www.w3.org/2001/XMLSchema#float"
+		}
+	]
+}

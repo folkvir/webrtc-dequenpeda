@@ -1,6 +1,12 @@
-[
-	{
-		"?x4": "\"Charles Wilson (Film Subject)\"",
-		"?x2": "http://data.linkedmdb.org/film/5399"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x4 ?x2 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/made> ?x2 .     ?x2 <http://www.w3.org/2004/02/skos/core#subject> <http://data.linkedmdb.org/film_subject/14> .     <http://data.linkedmdb.org/film_subject/14> <http://www.w3.org/2000/01/rdf-schema#label> ?x4   } ",
+	"filename": "q22.json",
+	"card": 1,
+	"results": [
+		{
+			"?x4": "\"Charles Wilson (Film Subject)\"",
+			"?x2": "http://data.linkedmdb.org/film/5399"
+		}
+	]
+}

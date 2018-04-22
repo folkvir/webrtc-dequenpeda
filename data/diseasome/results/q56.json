@@ -1,6 +1,12 @@
-[
-	{
-		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Ophthamological",
-		"?x2": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=312610"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x4 ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3034> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3034> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3034> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3034> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x5   } ",
+	"filename": "q56.json",
+	"card": 1,
+	"results": [
+		{
+			"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Ophthamological",
+			"?x2": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=312610"
+		}
+	]
+}

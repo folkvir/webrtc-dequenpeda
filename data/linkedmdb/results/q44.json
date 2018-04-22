@@ -1,12 +1,18 @@
-[
-	{
-		"?x4": "http://data.linkedmdb.org/film_subject/151",
-		"?x1": "http://data.linkedmdb.org/film/30680",
-		"?x2": "\"Le Samoura/u00C3/u00AF\""
-	},
-	{
-		"?x4": "http://data.linkedmdb.org/film_subject/87",
-		"?x1": "http://data.linkedmdb.org/film/30680",
-		"?x2": "\"Le Samoura/u00C3/u00AF\""
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x4 ?x1 ?x2 WHERE   { ?x1 <http://purl.org/dc/terms/title> ?x2 .     ?x1 <http://www.w3.org/2002/07/owl#sameAs> <http://mpii.de/yago/resource/Le_Samoura/u00C3/u00AF> .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x4   } ",
+	"filename": "q44.json",
+	"card": 2,
+	"results": [
+		{
+			"?x4": "http://data.linkedmdb.org/film_subject/151",
+			"?x1": "http://data.linkedmdb.org/film/30680",
+			"?x2": "\"Le Samoura/u00C3/u00AF\""
+		},
+		{
+			"?x4": "http://data.linkedmdb.org/film_subject/87",
+			"?x1": "http://data.linkedmdb.org/film/30680",
+			"?x2": "\"Le Samoura/u00C3/u00AF\""
+		}
+	]
+}

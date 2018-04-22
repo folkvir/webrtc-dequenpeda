@@ -1,32 +1,38 @@
-[
-	{
-		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/488",
-		"?x2": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=600163",
-		"?x7": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/HB1"
-	},
-	{
-		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/488",
-		"?x2": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=600163",
-		"?x7": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/IVF"
-	},
-	{
-		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/488",
-		"?x2": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=600163",
-		"?x7": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/LQT3"
-	},
-	{
-		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/488",
-		"?x2": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=600163",
-		"?x7": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SCN5A"
-	},
-	{
-		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/488",
-		"?x2": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=600163",
-		"?x7": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SSS1"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x4 ?x2 ?x7 ?x6 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2541> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2541> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2541> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2541> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2541> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x6 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2541> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x7   } ",
+	"filename": "q79.json",
+	"card": 5,
+	"results": [
+		{
+			"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/488",
+			"?x2": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=600163",
+			"?x7": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/HB1"
+		},
+		{
+			"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/488",
+			"?x2": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=600163",
+			"?x7": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/IVF"
+		},
+		{
+			"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/488",
+			"?x2": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=600163",
+			"?x7": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/LQT3"
+		},
+		{
+			"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/488",
+			"?x2": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=600163",
+			"?x7": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SCN5A"
+		},
+		{
+			"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/488",
+			"?x2": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=600163",
+			"?x7": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SSS1"
+		}
+	]
+}

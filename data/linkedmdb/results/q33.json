@@ -1,6 +1,12 @@
-[
-	{
-		"?x4": "\"The Interpreter\"",
-		"?x1": "http://data.linkedmdb.org/film/35434"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x4 ?x1 WHERE   { ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     ?x1 <http://xmlns.com/foaf/0.1/based_near> <http://sws.geonames.org/1036973/> .     ?x1 <http://purl.org/dc/terms/title> ?x4   } ",
+	"filename": "q33.json",
+	"card": 1,
+	"results": [
+		{
+			"?x4": "\"The Interpreter\"",
+			"?x1": "http://data.linkedmdb.org/film/35434"
+		}
+	]
+}

@@ -4,17 +4,23 @@ const lmerge = require('lodash.merge')
 const EventEmitter = require('events')
 const N3 = require('n3')
 const N3Util = N3.Util
+const Writer = N3.Writer
 const uniqid = require('uniqid')
 const Store = require('./store')
 const Query = require('./queries/query')
 const QueryShared = require('./queries/query-shared')
 const UnicastHandlers = require('./handlers/unicast-handlers')
 const BroadcastHandlers = require('./handlers/broadcast-handlers')
+const Profile = require('./son/profile')
+const Son = require('./son/son')
+
 const debugError = require('debug')('error')
+
 
 const clone = (obj) => JSON.parse(JSON.stringify(obj))
 
 let DEFAULT_OPTIONS = {
+  activeSon: true,
   defaultGraph: 'http://mypersonaldata.com/',
   timeout: 5000,
   queryType: 'normal',
@@ -52,7 +58,28 @@ module.exports = class Dequenpeda extends EventEmitter {
   constructor (options) {
     super()
     this.on('error', debugError)
+    this._profile = new Profile()
     this._options = lmerge(DEFAULT_OPTIONS, options)
+    if(this._options.activeSon) {
+      // means that we have activated the overlay
+      this._options.foglet.overlays =[
+        {
+          name: 'son',
+          class: Son,
+          options: {
+            profile: this._profile,
+            delta: this._options.foglet.rps.options.delta,
+            timeoutDescriptor: 10 * 1000,
+            periodicProfileExchange: 10 * 1000,
+            protocol: 'dequenpeda-protocol-son-overlay', // foglet running on the protocol foglet-example, defined for spray-wrtc
+            signaling: {
+              address: 'https://localhost:8000/',
+              room: 'dequenpeda-room-overlay' // room to join
+            }
+          }
+        }
+      ]
+    }
     this._id = uniqid()
     this._options.foglet.id = this._id
     this._foglet = new FogletCore(this._options.foglet)
@@ -66,6 +93,18 @@ module.exports = class Dequenpeda extends EventEmitter {
       this._handleBroadcast(id, message)
       this.emit('receive-broadcast', {id, message: clone(message)})
     })
+    if(this._options.activeSon) {
+      // means that we have activated the overlay
+      this._foglet.overlay('son').communication.onUnicast((id, message) => {
+        // debug(`[${this._foglet._id}] ReceiveUnicast: ${JSON.stringify(message)}`)
+        this._handleUnicast(id, message)
+        this.emit('receive-unicast', {id, message: clone(message)})
+      })
+      this._foglet.overlay('son').communication.onBroadcast((id, message) => {
+        this._handleBroadcast(id, message)
+        this.emit('receive-broadcast', {id, message: clone(message)})
+      })
+    }
     this._parser = new Map()
     this._store = new Store()
     this._queries = new Map()
@@ -120,6 +159,9 @@ module.exports = class Dequenpeda extends EventEmitter {
       }).catch(e => {
         console.error(e)
       })
+      query.on('end', () => {
+        this._queries.delete(query._id)
+      })
       return query
     } catch (e) {
       console.error(e)
@@ -169,30 +211,30 @@ module.exports = class Dequenpeda extends EventEmitter {
    */
   loadTriples (stringFile) {
     return new Promise((resolve, reject) => {
+      // this._store.loadDataAsTurtle(stringFile, this._options.defaultGraph).then(() => {
+      //   resolve()
+      // }).catch(e => {
+      //   reject(e)
+      // })
       let parser = N3.Parser()
       let i = 0
       let triples = []
+      let writer = new Writer()
       parser.parse(stringFile, (error, data, prefixes) => {
-        if (error) console.error(error)
+        if (error) {
+          console.log(data)
+          console.error(error)
+          throw error
+        }
         if (data) {
-          const triple = {
-            subject: `<${data.subject}>`,
-            predicate: `<${data.predicate}>`,
-            object: undefined
-          }
-          if (N3Util.isLiteral(data.object)) {
-            triple.object = JSON.stringify(data.object)
-          } else {
-            triple.object = `<${data.object}>`
-          }
-          triples.push(triple)
+          const t = this._tripleParsed2Triple(Object.assign({}, data))
+          triples.push(t)
           i++
         } else {
-          debug(`[client:${this._foglet._id}]`, 'Triples red', prefixes)
-          debug(`[client:${this._foglet._id}]`, `Number of triple red: `, i)
           triples.reduce((acc, cur) => acc.then((res) => {
             return this._store.loadData(this._encapsGraphId(this._options.defaultGraph, '<', '>'), [], cur)
           }), Promise.resolve()).then(() => {
+            // send an event to the profile to update the overlay profile
             resolve()
           }).catch(e => {
             reject(e)
@@ -220,7 +262,6 @@ module.exports = class Dequenpeda extends EventEmitter {
    * @return {void}
    */
   broadcastMessage (message) {
-    debug(`[client:${this._foglet._id}]`, ` Send: ${message}`)
     this._foglet.sendBroadcast(message)
   }
 
@@ -228,7 +269,6 @@ module.exports = class Dequenpeda extends EventEmitter {
     if (message.type === 'ask-triples') {
       UnicastHandlers._handleAskTriples.call(this, id, message)
     } else if (message.type === 'answer-triples') {
-      debug(`[client:${this._foglet._id}]`, ` Someone send me data: ${message}`)
       // redirect the message to the corresponding query
       this._queries.get(message.query).emit('receive', message)
     } else if (message.type === 'ask-results') {
@@ -256,10 +296,8 @@ module.exports = class Dequenpeda extends EventEmitter {
 
   _periodicExecution () {
     this.emit('periodic-execution-begins')
-    debug(`[client:${this._foglet._id}]`, 'Number of neighbours: ', this._foglet.getNeighbours().length)
+    debug(`[client:${this._foglet._id}]`, 'Number of neighbours: ', this._foglet.getNeighbours(Infinity).length)
     if(this._shuffleCount >= this._options.shuffleCountBeforeStart) {
-      debug(`[client:${this._foglet._id}] a shuffle occured`)
-      debug(`[client:${this._foglet._id}] ${this._queries.size} pending queries...`)
       if (this._queries.size > 0) {
         let pendingQueries = []
         this._queries.forEach(q => {
@@ -277,6 +315,25 @@ module.exports = class Dequenpeda extends EventEmitter {
       }
     }
     this._shuffleCount++
+  }
+
+  _tripleParsed2Triple (triple) {
+    if (!triple.subject.startsWith('?')) {
+      if(N3.Util.isIRI(triple.subject)) triple.subject = `<${triple.subject}>`
+      if(N3.Util.isLiteral(triple.subject)) triple.subject = `"${triple.subject}"`
+    }
+    if (!triple.predicate.startsWith('?') ) {
+      if(N3.Util.isIRI(triple.predicate)) triple.predicate = `<${triple.predicate}>`
+      if(N3.Util.isLiteral(triple.predicate)) triple.predicate = `"${triple.predicate}"`
+    }
+    if (!triple.object.startsWith('?')) {
+      if(N3.Util.isIRI(triple.object)) triple.object = `<${triple.object}>`
+      if(triple.object.indexOf("^^") > 0) {
+        const parts = triple.object.split("^^")
+        triple.object =  parts[0] + "^^<" + parts[1] + ">"
+      }
+    }
+    return triple
   }
 
   _encapsGraphId (graph, symbolStart, symbolEnd) {

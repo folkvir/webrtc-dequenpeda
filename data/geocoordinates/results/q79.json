@@ -1,5 +1,11 @@
-[
-	{
-		"?x2": "http://www.opengis.net/gml/_Feature"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  ?x2 WHERE   { <http://dbpedia.org/resource/Yekaterinovsky_District> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Yekaterinovsky_District> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/Yekaterinovsky_District> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x4 .     <http://dbpedia.org/resource/Yekaterinovsky_District> <http://www.georss.org/georss/point> ?x5   } ",
+	"filename": "q79.json",
+	"card": 1,
+	"results": [
+		{
+			"?x2": "http://www.opengis.net/gml/_Feature"
+		}
+	]
+}

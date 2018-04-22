@@ -1,7 +1,13 @@
-[
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/genes",
-		"?x4": "http://www.w3.org/2000/01/rdf-schema#Class",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1644"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x3 ?x4 ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BS> .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3 .     ?x3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x4   } ",
+	"filename": "q37.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/genes",
+			"?x4": "http://www.w3.org/2000/01/rdf-schema#Class",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1644"
+		}
+	]
+}

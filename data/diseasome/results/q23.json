@@ -1,5 +1,11 @@
-[
-	{
-		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/353"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2245> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2245> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x3   } ",
+	"filename": "q23.json",
+	"card": 1,
+	"results": [
+		{
+			"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/353"
+		}
+	]
+}

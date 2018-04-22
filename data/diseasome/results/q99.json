@@ -1,8 +1,14 @@
-[
-	{
-		"?x3": "\"1\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x7": "\"2\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x8": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Cancer",
-		"?x9": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x3 ?x7 ?x8 ?x9 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/189> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/189> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/189> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/189> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/degree> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/189> <http://www.w3.org/2000/01/rdf-schema#label> ?x6 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/189> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/size> ?x7 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/189> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x8 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/189> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x9   } ",
+	"filename": "q99.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"1\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x7": "\"2\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x8": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Cancer",
+			"?x9": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases"
+		}
+	]
+}

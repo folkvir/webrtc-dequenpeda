@@ -1,102 +1,2020 @@
 [
-	"SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1130> .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1130> <http://www.w3.org/2002/07/owl#sameAs> ?x3   } ",
-	"SELECT DISTINCT  ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2708> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x2 .     ?x2 <http://www.w3.org/2002/07/owl#sameAs> ?x3   } ",
-	"SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SLC25A4> .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SLC25A4> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/hgncIdPage> ?x3   } ",
-	"SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/834> .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/834> <http://www.w3.org/2000/01/rdf-schema#label> ?x3   } ",
-	"SELECT DISTINCT  ?x3 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1392> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1392> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x3   } ",
-	"SELECT DISTINCT  ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3101> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3101> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x3   } ",
-	"SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?x2 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> \"Creutzfeldt-Jakob disease\"   } ",
-	"SELECT DISTINCT  ?x3 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ABCD3> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/geneId> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ABCD3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
-	"SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3055> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3055> <http://www.w3.org/2000/01/rdf-schema#label> ?x3   } ",
-	"SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> \"Ataxia, early-onset, with oculomotor apraxia and hypoalbuminemia, 208920\"   } ",
-	"SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> \"PPD\"   } ",
-	"SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/RTA1C> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x3   } ",
-	"SELECT DISTINCT  ?x3 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/EDN3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/EDN3> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/hgncId> ?x3   } ",
-	"SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01867> .     ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x3   } ",
-	"SELECT DISTINCT  * WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3232> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3232> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
-	"SELECT DISTINCT  * WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1816> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1816> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
-	"SELECT DISTINCT  ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2356> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2356> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
-	"SELECT DISTINCT  ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3844> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3844> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
-	"SELECT DISTINCT  * WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/846> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/846> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
-	"SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/834> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/834> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
-	"SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/degree> ?x2 .     ?x1 <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Tuberculosis>   } ",
-	"SELECT DISTINCT  ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3701> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3701> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x3   } ",
-	"SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www.w3.org/2000/01/rdf-schema#label> \"Fundus albipunctatus\" .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x3   } ",
-	"SELECT DISTINCT  ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2245> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2245> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x3   } ",
-	"SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/516> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/516> <http://www.w3.org/2002/07/owl#sameAs> ?x3   } ",
-	"SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1395> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1395> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x3   } ",
-	"SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2497> <http://www.w3.org/2000/01/rdf-schema#label> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2497> <http://www.w3.org/2002/07/owl#sameAs> ?x3   } ",
-	"SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> <http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=604161>   } ",
-	"SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/geneId> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/hgncId> <http://bio2rdf.org/hgnc:4220>   } ",
-	"SELECT DISTINCT  * WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3145> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3145> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x3   } ",
-	"SELECT DISTINCT  * WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/510> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/510> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/size> ?x3   } ",
-	"SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/235> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x3   } ",
-	"SELECT DISTINCT  ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4051> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4051> <http://www.w3.org/2000/01/rdf-schema#label> ?x3   } ",
-	"SELECT DISTINCT  * WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1778> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1778> <http://www.w3.org/2000/01/rdf-schema#label> ?x3   } ",
-	"SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1215> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1215> <http://www.w3.org/2000/01/rdf-schema#label> ?x3   } ",
-	"SELECT DISTINCT  * WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4089> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4089> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x3   } ",
-	"SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3600> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3600> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x3   } ",
-	"SELECT DISTINCT  ?x3 ?x4 ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BS> .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3 .     ?x3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x4   } ",
-	"SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/bio2rdfSymbol> <http://symbol.bio2rdf.org/symbol:SGSH> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/geneId> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/hgncIdPage> ?x4   } ",
-	"SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/degree> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> \"Anorexia nervosa\"   } ",
-	"SELECT DISTINCT  ?x4 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4037> <http://www.w3.org/2000/01/rdf-schema#label> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4037> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4037> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x4   } ",
-	"SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00761>   } ",
-	"SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2782> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2782> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2782> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x4   } ",
-	"SELECT DISTINCT  ?x3 ?x4 ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3064> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3064> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3064> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x4   } ",
-	"SELECT DISTINCT  ?x4 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2576> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2576> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2576> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x4   } ",
-	"SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/geneId> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/hgncIdPage> <http://www.genenames.org/data/hgnc_data.php?hgnc_id=8533> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/hgncId> ?x4   } ",
-	"SELECT DISTINCT  ?x3 ?x4 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2456> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2456> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2456> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x4   } ",
-	"SELECT DISTINCT  ?x4 ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1212> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1212> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1212> <http://www.w3.org/2000/01/rdf-schema#label> ?x4   } ",
-	"SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> <http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=190000> .     ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x5   } ",
-	"SELECT DISTINCT  ?x3 ?x4 ?x2 ?x5 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1969> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1969> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1969> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1969> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x5   } ",
-	"SELECT DISTINCT  ?x4 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3846> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3846> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3846> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3846> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x5   } ",
-	"SELECT DISTINCT  ?x3 ?x2 ?x5 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3035> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3035> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3035> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3035> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x5   } ",
-	"SELECT DISTINCT  ?x4 ?x1 ?x2 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x2 .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x4 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> \"Retinitis pigmentosa-17, 600852\"   } ",
-	"SELECT DISTINCT  ?x3 ?x4 ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/538> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x5   } ",
-	"SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/degree> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/size> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> \"Histidinemia\"   } ",
-	"SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01184> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x4 .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x5   } ",
-	"SELECT DISTINCT  ?x4 ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3034> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3034> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3034> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3034> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x5   } ",
-	"SELECT DISTINCT  ?x3 ?x4 ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DYLX2> .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x5   } ",
-	"SELECT DISTINCT  ?x4 ?x1 ?x2 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/bio2rdfSymbol> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/geneId> <http://bio2rdf.org/geneid:340024> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/hgncId> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/hgncIdPage> ?x5   } ",
-	"SELECT DISTINCT  ?x3 ?x1 ?x5 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/378> .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x5   } ",
-	"SELECT DISTINCT  ?x1 ?x5 WHERE   { ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/degree> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> \"Ventricular fibrillation, idiopathic\" .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x6   } ",
-	"SELECT DISTINCT  ?x3 ?x1 ?x6 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/2894> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x6   } ",
-	"SELECT DISTINCT  ?x3 ?x6 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3882> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3882> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3882> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3882> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3882> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x6   } ",
-	"SELECT DISTINCT  ?x3 ?x4 ?x2 ?x5 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2804> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2804> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2804> <http://www.w3.org/2000/01/rdf-schema#label> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2804> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2804> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x6   } ",
-	"SELECT DISTINCT  ?x4 ?x2 ?x5 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1825> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1825> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1825> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1825> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1825> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x6   } ",
-	"SELECT DISTINCT  ?x4 ?x1 ?x5 ?x6 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> <http://bio2rdf.org/omim:134797> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x6   } ",
-	"SELECT DISTINCT  ?x1 ?x6 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/geneId> ?x2 .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> \"RETN\" .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/hgncIdPage> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/hgncId> ?x6   } ",
-	"SELECT DISTINCT  ?x3 ?x4 ?x1 ?x2 ?x5 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/size> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/1198>   } ",
-	"SELECT DISTINCT  ?x1 ?x5 ?x6 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> \"Huntington disease-like 1, 603218\" .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x6   } ",
-	"SELECT DISTINCT  ?x4 ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/705> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/705> <http://www.w3.org/2002/07/owl#sameAs> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/705> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/size> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/705> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/705> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x6   } ",
-	"SELECT DISTINCT  ?x3 ?x4 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1593> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1593> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1593> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1593> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1593> <http://www.w3.org/2000/01/rdf-schema#label> ?x6   } ",
-	"SELECT DISTINCT  ?x2 ?x5 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3780> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3780> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3780> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3780> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3780> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x6   } ",
-	"SELECT DISTINCT  ?x3 ?x2 ?x5 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4051> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4051> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4051> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4051> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4051> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x6   } ",
-	"SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x2 .     ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/835> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/degree> ?x6 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/size> ?x7   } ",
-	"SELECT DISTINCT  ?x3 ?x4 ?x1 ?x5 ?x6 WHERE   { ?x1 <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0018802> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x6 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x7   } ",
-	"SELECT DISTINCT  ?x3 ?x4 ?x1 ?x7 WHERE   { ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/degree> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SLC7A9> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x7   } ",
-	"SELECT DISTINCT  ?x3 ?x2 ?x7 ?x5 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3250> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3250> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3250> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3250> <http://www.w3.org/2000/01/rdf-schema#label> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3250> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x6 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3250> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x7   } ",
-	"SELECT DISTINCT  ?x4 ?x1 ?x5 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x2 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> \"Obesity, hyperphagia, and developmental delay\" .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x7   } ",
-	"SELECT DISTINCT  ?x4 ?x7 ?x6 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1817> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1817> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1817> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1817> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1817> <http://www.w3.org/2000/01/rdf-schema#label> ?x6 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1817> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x7   } ",
-	"SELECT DISTINCT  ?x4 ?x2 ?x7 ?x6 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2541> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2541> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2541> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2541> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2541> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x6 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2541> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x7   } ",
-	"SELECT DISTINCT  ?x3 ?x4 ?x7 ?x5 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/562> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/size> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/562> <http://www.w3.org/2000/01/rdf-schema#label> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/562> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/degree> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/562> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/562> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x6 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/562> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x7   } ",
-	"SELECT DISTINCT  ?x3 ?x2 ?x5 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/837> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/size> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/837> <http://www.w3.org/2000/01/rdf-schema#label> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/837> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/degree> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/837> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/837> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x6 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/837> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x7   } ",
-	"SELECT DISTINCT  ?x4 ?x1 ?x7 ?x5 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB02987> .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3 .     ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/degree> ?x6 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x7   } ",
-	"SELECT DISTINCT  ?x3 ?x4 ?x1 ?x2 ?x6 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x4 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> \"Rabson-Mendenhall syndrome, 262190\" .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x6 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x7   } ",
-	"SELECT DISTINCT  ?x3 ?x4 ?x1 ?x6 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> \"Slowed nerve conduction velocity, AD, 608236\" .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x4 .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x6 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x7   } ",
-	"SELECT DISTINCT  ?x1 ?x7 ?x5 ?x6 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x5 .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x6 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x7 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> \"Hyperlipoproteinemia, type III\"   } ",
-	"SELECT DISTINCT  ?x4 ?x2 ?x8 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1735> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1735> <http://www.w3.org/2000/01/rdf-schema#label> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1735> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1735> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1735> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x6 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1735> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x7 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1735> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x8   } ",
-	"SELECT DISTINCT  ?x3 ?x4 ?x2 ?x7 ?x8 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2470> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2470> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2470> <http://www.w3.org/2000/01/rdf-schema#label> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2470> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2470> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x6 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2470> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x7 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2470> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x8   } ",
-	"SELECT DISTINCT  ?x4 ?x1 ?x7 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> <http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=609018> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x6 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x7 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x8   } ",
-	"SELECT DISTINCT  ?x3 ?x4 ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2887> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2887> <http://www.w3.org/2000/01/rdf-schema#label> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2887> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2887> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2887> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x6 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2887> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x7 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2887> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x8   } ",
-	"SELECT DISTINCT  ?x4 ?x5 ?x6 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1983> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1983> <http://www.w3.org/2000/01/rdf-schema#label> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1983> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1983> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1983> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x6 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1983> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x7 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1983> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x8   } ",
-	"SELECT DISTINCT  ?x4 ?x1 ?x7 ?x6 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/4167> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x6 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/size> ?x7 .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x8   } ",
-	"SELECT DISTINCT  ?x3 ?x4 ?x1 ?x2 ?x8 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/size> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB02784> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x7 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/degree> ?x8   } ",
-	"SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> \"Myoglobinuria/hemolysis due to PGK deficiency\" .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x6 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x7 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x8   } ",
-	"SELECT DISTINCT  ?x6 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3198> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3198> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3198> <http://www.w3.org/2000/01/rdf-schema#label> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3198> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3198> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x6 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3198> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x7 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3198> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x8   } ",
-	"SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2286> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2286> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2286> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2286> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2286> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x6 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2286> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x7 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2286> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x8   } ",
-	"SELECT DISTINCT  ?x1 ?x2 ?x5 ?x9 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x2 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x6 .     ?x1 <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/8342> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x8 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x9   } ",
-	"SELECT DISTINCT  ?x3 ?x4 ?x7 ?x8 ?x6 ?x9 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2126> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2126> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2126> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2126> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2126> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x6 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2126> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x7 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2126> <http://www.w3.org/2000/01/rdf-schema#label> ?x8 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2126> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x9   } ",
-	"SELECT DISTINCT  ?x3 ?x2 ?x8 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2701> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2701> <http://www.w3.org/2000/01/rdf-schema#label> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2701> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2701> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2701> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x6 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2701> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x7 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2701> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x8 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2701> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x9   } ",
-	"SELECT DISTINCT  ?x3 ?x7 ?x8 ?x9 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/189> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/189> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/189> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/189> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/degree> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/189> <http://www.w3.org/2000/01/rdf-schema#label> ?x6 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/189> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/size> ?x7 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/189> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x8 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/189> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x9   } "
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1130> .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1130> <http://www.w3.org/2002/07/owl#sameAs> ?x3   } ",
+		"filename": "q0.json",
+		"card": 9,
+		"results": [
+			{
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4041"
+			},
+			{
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4042"
+			},
+			{
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4043"
+			},
+			{
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4044"
+			},
+			{
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4045"
+			},
+			{
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4046"
+			},
+			{
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4047"
+			},
+			{
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4048"
+			},
+			{
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4049"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2708> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x2 .     ?x2 <http://www.w3.org/2002/07/owl#sameAs> ?x3   } ",
+		"filename": "q1.json",
+		"card": 1,
+		"results": [
+			{
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/NOS3"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SLC25A4> .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SLC25A4> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/hgncIdPage> ?x3   } ",
+		"filename": "q2.json",
+		"card": 2,
+		"results": [
+			{
+				"?x3": "http://www.genenames.org/data/hgnc_data.php?hgnc_id=10990",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/954"
+			},
+			{
+				"?x3": "http://www.genenames.org/data/hgnc_data.php?hgnc_id=10990",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3648"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/834> .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/834> <http://www.w3.org/2000/01/rdf-schema#label> ?x3   } ",
+		"filename": "q3.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"Neutrophil immunodeficiency syndrome\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3369"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1392> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1392> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x3   } ",
+		"filename": "q4.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://bio2rdf.org/omim:607809"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3101> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3101> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x3   } ",
+		"filename": "q5.json",
+		"card": 1,
+		"results": [
+			{
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/10q11.2-q21"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?x2 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> \"Creutzfeldt-Jakob disease\"   } ",
+		"filename": "q6.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/287"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ABCD3> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/geneId> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ABCD3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
+		"filename": "q7.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/genes"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3055> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3055> <http://www.w3.org/2000/01/rdf-schema#label> ?x3   } ",
+		"filename": "q8.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"Maple syrup urine disease, type Ia, 248600\"",
+				"?x2": "http://bio2rdf.org/omim:608348"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> \"Ataxia, early-onset, with oculomotor apraxia and hypoalbuminemia, 208920\"   } ",
+		"filename": "q9.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1510"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> \"PPD\"   } ",
+		"filename": "q10.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/PPD"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/RTA1C> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x3   } ",
+		"filename": "q11.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3724"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/EDN3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/EDN3> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/hgncId> ?x3   } ",
+		"filename": "q12.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://bio2rdf.org/hgnc:3178"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01867> .     ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x3   } ",
+		"filename": "q13.json",
+		"card": 9,
+		"results": [
+			{
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1080"
+			},
+			{
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/431"
+			},
+			{
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561"
+			},
+			{
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74"
+			},
+			{
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/79"
+			},
+			{
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/932"
+			},
+			{
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2359"
+			},
+			{
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2706"
+			},
+			{
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3600"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  * WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3232> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3232> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
+		"filename": "q14.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/785"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  * WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1816> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1816> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
+		"filename": "q15.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/213"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2356> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2356> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
+		"filename": "q16.json",
+		"card": 1,
+		"results": [
+			{
+				"?x2": "\"Exudative vitreoretinopathy, X-linked, 305390\""
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3844> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3844> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
+		"filename": "q17.json",
+		"card": 1,
+		"results": [
+			{
+				"?x2": "\"Schizophrenia, susceptibility to, 181510\""
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  * WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/846> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/846> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
+		"filename": "q18.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+				"?x2": "\"1\"^^http://www.w3.org/2001/XMLSchema#int"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/834> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/834> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
+		"filename": "q19.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+				"?x2": "\"0\"^^http://www.w3.org/2001/XMLSchema#int"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/degree> ?x2 .     ?x1 <http://www.w3.org/2002/07/owl#sameAs> <http://www.dbpedia.org/resource/Tuberculosis>   } ",
+		"filename": "q20.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1154",
+				"?x2": "\"6\"^^http://www.w3.org/2001/XMLSchema#int"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3701> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3701> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x3   } ",
+		"filename": "q21.json",
+		"card": 1,
+		"results": [
+			{
+				"?x2": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00157"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www.w3.org/2000/01/rdf-schema#label> \"Fundus albipunctatus\" .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x3   } ",
+		"filename": "q22.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/427"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2245> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2245> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x3   } ",
+		"filename": "q23.json",
+		"card": 1,
+		"results": [
+			{
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/353"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/516> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/516> <http://www.w3.org/2002/07/owl#sameAs> ?x3   } ",
+		"filename": "q24.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://data.linkedct.org/resource/condition/5478",
+				"?x2": "\"HIV\""
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1395> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1395> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x3   } ",
+		"filename": "q25.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/Xq13",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00144"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2497> <http://www.w3.org/2000/01/rdf-schema#label> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2497> <http://www.w3.org/2002/07/owl#sameAs> ?x3   } ",
+		"filename": "q26.json",
+		"card": 2,
+		"results": [
+			{
+				"?x3": "http://data.linkedct.org/resource/condition/5344",
+				"?x2": "\"Glycogen storage disease I\""
+			},
+			{
+				"?x3": "http://www.dbpedia.org/resource/Glycogen_storage_disease_type_IV",
+				"?x2": "\"Glycogen storage disease I\""
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> <http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=604161>   } ",
+		"filename": "q27.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2735"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/geneId> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/hgncId> <http://bio2rdf.org/hgnc:4220>   } ",
+		"filename": "q28.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/GDF5",
+				"?x2": "http://bio2rdf.org/geneid:8200"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  * WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3145> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3145> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x3   } ",
+		"filename": "q29.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Metabolic",
+				"?x2": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=250850"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  * WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/510> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/510> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/size> ?x3   } ",
+		"filename": "q30.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"1\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/FLNA"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/235> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x3   } ",
+		"filename": "q31.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=606230",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1876"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4051> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4051> <http://www.w3.org/2000/01/rdf-schema#label> ?x3   } ",
+		"filename": "q32.json",
+		"card": 1,
+		"results": [
+			{
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1131"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  * WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1778> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1778> <http://www.w3.org/2000/01/rdf-schema#label> ?x3   } ",
+		"filename": "q33.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"Cataract, polymorphic and lamellar, 604219\"",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB02451"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1215> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1215> <http://www.w3.org/2000/01/rdf-schema#label> ?x3   } ",
+		"filename": "q34.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"Adrenocortical insufficiency\"",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB04752"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  * WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4089> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4089> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x3   } ",
+		"filename": "q35.json",
+		"card": 3,
+		"results": [
+			{
+				"?x3": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=609188",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ABHS"
+			},
+			{
+				"?x3": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=609188",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/C7orf11"
+			},
+			{
+				"?x3": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=609188",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/TTDN1"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3600> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3600> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x3   } ",
+		"filename": "q36.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"Placental abruption\"",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/932"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x4 ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BS> .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3 .     ?x3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x4   } ",
+		"filename": "q37.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/genes",
+				"?x4": "http://www.w3.org/2000/01/rdf-schema#Class",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1644"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/bio2rdfSymbol> <http://symbol.bio2rdf.org/symbol:SGSH> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/geneId> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/hgncIdPage> ?x4   } ",
+		"filename": "q38.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://bio2rdf.org/geneid:6448",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SGSH"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/degree> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> \"Anorexia nervosa\"   } ",
+		"filename": "q39.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/94",
+				"?x2": "\"4\"^^http://www.w3.org/2001/XMLSchema#int"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x4 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4037> <http://www.w3.org/2000/01/rdf-schema#label> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4037> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4037> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x4   } ",
+		"filename": "q40.json",
+		"card": 1,
+		"results": [
+			{
+				"?x4": "\"Thrombocytopenia, congenital amegakaryocytic, 604498\""
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00761>   } ",
+		"filename": "q41.json",
+		"card": 2,
+		"results": [
+			{
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/139"
+			},
+			{
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/49"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2782> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2782> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2782> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x4   } ",
+		"filename": "q42.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/12q13"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x4 ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3064> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3064> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3064> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x4   } ",
+		"filename": "q43.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://bio2rdf.org/omim:605102",
+				"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+				"?x2": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=605102"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x4 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2576> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2576> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2576> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x4   } ",
+		"filename": "q44.json",
+		"card": 2,
+		"results": [
+			{
+				"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AAT"
+			},
+			{
+				"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/PI"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/geneId> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/hgncIdPage> <http://www.genenames.org/data/hgnc_data.php?hgnc_id=8533> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/hgncId> ?x4   } ",
+		"filename": "q45.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/P2RX1"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x4 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2456> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2456> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2456> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x4   } ",
+		"filename": "q46.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=607759",
+				"?x4": "\"Glanzmann thrombasthenia, type A, 273800\""
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x4 ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1212> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1212> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1212> <http://www.w3.org/2000/01/rdf-schema#label> ?x4   } ",
+		"filename": "q47.json",
+		"card": 1,
+		"results": [
+			{
+				"?x4": "\"Zlotogora-Ogur syndrome\"",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/multiple"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> <http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=190000> .     ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x5   } ",
+		"filename": "q48.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/3q21",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2822"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x4 ?x2 ?x5 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1969> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1969> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1969> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1969> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x5   } ",
+		"filename": "q49.json",
+		"card": 3,
+		"results": [
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CCFDN",
+				"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/18q23",
+				"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1263"
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CTDP1",
+				"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/18q23",
+				"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1263"
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/FCP1",
+				"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/18q23",
+				"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1263"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x4 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3846> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3846> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3846> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3846> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x5   } ",
+		"filename": "q50.json",
+		"card": 1,
+		"results": [
+			{
+				"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x2 ?x5 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3035> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3035> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3035> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3035> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x5   } ",
+		"filename": "q51.json",
+		"card": 6,
+		"results": [
+			{
+				"?x3": "http://bio2rdf.org/omim:179605",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1237",
+				"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AOFMD"
+			},
+			{
+				"?x3": "http://bio2rdf.org/omim:179605",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1237",
+				"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AVMD"
+			},
+			{
+				"?x3": "http://bio2rdf.org/omim:179605",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1237",
+				"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/PRPH"
+			},
+			{
+				"?x3": "http://bio2rdf.org/omim:179605",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1237",
+				"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/PRPH2"
+			},
+			{
+				"?x3": "http://bio2rdf.org/omim:179605",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1237",
+				"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/RDS"
+			},
+			{
+				"?x3": "http://bio2rdf.org/omim:179605",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1237",
+				"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/RP7"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x4 ?x1 ?x2 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x2 .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x4 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> \"Retinitis pigmentosa-17, 600852\"   } ",
+		"filename": "q52.json",
+		"card": 1,
+		"results": [
+			{
+				"?x4": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=114760",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3746",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/992"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x4 ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/538> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x5   } ",
+		"filename": "q53.json",
+		"card": 4,
+		"results": [
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/1349",
+				"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/9q22.3",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2655"
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/2881",
+				"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/9q22.3",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2655"
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/3628",
+				"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/9q22.3",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2655"
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00145",
+				"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/9q22.3",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2655"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/degree> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/size> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> \"Histidinemia\"   } ",
+		"filename": "q54.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"0\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/514"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01184> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x4 .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x5   } ",
+		"filename": "q55.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2216",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DRD2"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x4 ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3034> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3034> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3034> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3034> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x5   } ",
+		"filename": "q56.json",
+		"card": 1,
+		"results": [
+			{
+				"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Ophthamological",
+				"?x2": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=312610"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x4 ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DYLX2> .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x5   } ",
+		"filename": "q57.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+				"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/6p22.2",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2209"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x4 ?x1 ?x2 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/bio2rdfSymbol> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/geneId> <http://bio2rdf.org/geneid:340024> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/hgncId> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/hgncIdPage> ?x5   } ",
+		"filename": "q58.json",
+		"card": 1,
+		"results": [
+			{
+				"?x4": "http://bio2rdf.org/hgnc:27960",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SLC6A19",
+				"?x2": "http://symbol.bio2rdf.org/symbol:SLC6A19"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x1 ?x5 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/378> .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x5   } ",
+		"filename": "q59.json",
+		"card": 2,
+		"results": [
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/409",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2398",
+				"?x5": "\"Fluorouracil toxicity, sensitivity to\""
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1131",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4051",
+				"?x5": "\"Thymine-uraciluria\""
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x1 ?x5 WHERE   { ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/degree> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> \"Ventricular fibrillation, idiopathic\" .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x6   } ",
+		"filename": "q60.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1257",
+				"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Cardiovascular"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x1 ?x6 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/2894> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x6   } ",
+		"filename": "q61.json",
+		"card": 8,
+		"results": [
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Hematological",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1436",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/81"
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Endocrine",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1439",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/84"
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Cancer",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1676",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/173"
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Hematological",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2198",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/338"
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Endocrine",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3559",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/910"
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Cancer",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3658",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/960"
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Cancer",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3664",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/960"
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Muscular",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3934",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1080"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x6 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3882> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3882> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3882> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3882> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3882> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x6   } ",
+		"filename": "q62.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://bio2rdf.org/omim:600946",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x4 ?x2 ?x5 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2804> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2804> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2804> <http://www.w3.org/2000/01/rdf-schema#label> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2804> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2804> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x6   } ",
+		"filename": "q63.json",
+		"card": 2,
+		"results": [
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+				"?x4": "\"Infundibular hypoplasia and hypopituitarism\"",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/MRGH",
+				"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Endocrine"
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+				"?x4": "\"Infundibular hypoplasia and hypopituitarism\"",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SOX3",
+				"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Endocrine"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x4 ?x2 ?x5 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1825> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1825> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1825> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1825> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1825> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x6   } ",
+		"filename": "q64.json",
+		"card": 1,
+		"results": [
+			{
+				"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/217",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/2q31-q32",
+				"?x5": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=142984"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x4 ?x1 ?x5 ?x6 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> <http://bio2rdf.org/omim:134797> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x6   } ",
+		"filename": "q65.json",
+		"card": 6,
+		"results": [
+			{
+				"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/99",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1468",
+				"?x5": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=134797",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/15q21.1"
+			},
+			{
+				"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/351",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2232",
+				"?x5": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=134797",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/15q21.1"
+			},
+			{
+				"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/717",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3059",
+				"?x5": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=134797",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/15q21.1"
+			},
+			{
+				"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/722",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3065",
+				"?x5": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=134797",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/15q21.1"
+			},
+			{
+				"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1051",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3886",
+				"?x5": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=134797",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/15q21.1"
+			},
+			{
+				"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1189",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4167",
+				"?x5": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=134797",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/15q21.1"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x1 ?x6 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/geneId> ?x2 .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> \"RETN\" .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/hgncIdPage> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/hgncId> ?x6   } ",
+		"filename": "q66.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/RETN",
+				"?x6": "http://bio2rdf.org/hgnc:20389"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x4 ?x1 ?x2 ?x5 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/size> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/1198>   } ",
+		"filename": "q67.json",
+		"card": 2,
+		"results": [
+			{
+				"?x3": "http://www.dbpedia.org/resource/Gonadal_dysgenesis",
+				"?x4": "\"3\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1243",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+				"?x5": "\"2\"^^http://www.w3.org/2001/XMLSchema#int"
+			},
+			{
+				"?x3": "http://www.dbpedia.org/resource/Ovarian_hyperstimulation_syndrome",
+				"?x4": "\"3\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1268",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+				"?x5": "\"1\"^^http://www.w3.org/2001/XMLSchema#int"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x1 ?x5 ?x6 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> \"Huntington disease-like 1, 603218\" .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x6   } ",
+		"filename": "q68.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2642",
+				"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/20pter-p12",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/529"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x4 ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/705> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/705> <http://www.w3.org/2002/07/owl#sameAs> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/705> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/size> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/705> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/705> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x6   } ",
+		"filename": "q69.json",
+		"card": 1,
+		"results": [
+			{
+				"?x4": "\"1\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x2": "\"Macrocytic anemia\""
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x4 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1593> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1593> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1593> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1593> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1593> <http://www.w3.org/2000/01/rdf-schema#label> ?x6   } ",
+		"filename": "q70.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/16q22.1",
+				"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Unclassified"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x2 ?x5 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3780> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3780> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3780> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3780> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3780> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x6   } ",
+		"filename": "q71.json",
+		"card": 1,
+		"results": [
+			{
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Neurological",
+				"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/Xq28"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x2 ?x5 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4051> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4051> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4051> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4051> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4051> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x6   } ",
+		"filename": "q72.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://bio2rdf.org/omim:274270",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Metabolic",
+				"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/1p22"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x2 .     ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/835> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/degree> ?x6 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/size> ?x7   } ",
+		"filename": "q73.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://www.dbpedia.org/resource/Bartter_syndrome",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/139"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x4 ?x1 ?x5 ?x6 WHERE   { ?x1 <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0018802> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x6 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x7   } ",
+		"filename": "q74.json",
+		"card": 2,
+		"results": [
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Cardiovascular",
+				"?x4": "\"1\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/261",
+				"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ADRA2C",
+				"?x6": "\"Congestive heart failure\""
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Cardiovascular",
+				"?x4": "\"1\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/261",
+				"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ADRB1",
+				"?x6": "\"Congestive heart failure\""
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x4 ?x1 ?x7 WHERE   { ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/degree> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SLC7A9> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x7   } ",
+		"filename": "q75.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"Cystinuria\"",
+				"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Renal",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/299",
+				"?x7": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00138"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x2 ?x7 ?x5 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3250> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3250> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3250> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3250> <http://www.w3.org/2000/01/rdf-schema#label> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3250> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x6 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3250> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x7   } ",
+		"filename": "q76.json",
+		"card": 12,
+		"results": [
+			{
+				"?x3": "\"Myasthenic syndrome\"",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/HYPP",
+				"?x7": "http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/1254",
+				"?x5": "\"Myasthenic syndrome\""
+			},
+			{
+				"?x3": "\"Myasthenic syndrome\"",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/NAC1A",
+				"?x7": "http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/1254",
+				"?x5": "\"Myasthenic syndrome\""
+			},
+			{
+				"?x3": "\"Myasthenic syndrome\"",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SCN4A",
+				"?x7": "http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/1254",
+				"?x5": "\"Myasthenic syndrome\""
+			},
+			{
+				"?x3": "\"Myasthenic syndrome\"",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/HYPP",
+				"?x7": "http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/298",
+				"?x5": "\"Myasthenic syndrome\""
+			},
+			{
+				"?x3": "\"Myasthenic syndrome\"",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/NAC1A",
+				"?x7": "http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/298",
+				"?x5": "\"Myasthenic syndrome\""
+			},
+			{
+				"?x3": "\"Myasthenic syndrome\"",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SCN4A",
+				"?x7": "http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/298",
+				"?x5": "\"Myasthenic syndrome\""
+			},
+			{
+				"?x3": "\"Myasthenic syndrome\"",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/HYPP",
+				"?x7": "http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/3684",
+				"?x5": "\"Myasthenic syndrome\""
+			},
+			{
+				"?x3": "\"Myasthenic syndrome\"",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/NAC1A",
+				"?x7": "http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/3684",
+				"?x5": "\"Myasthenic syndrome\""
+			},
+			{
+				"?x3": "\"Myasthenic syndrome\"",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SCN4A",
+				"?x7": "http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/3684",
+				"?x5": "\"Myasthenic syndrome\""
+			},
+			{
+				"?x3": "\"Myasthenic syndrome\"",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/HYPP",
+				"?x7": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00555",
+				"?x5": "\"Myasthenic syndrome\""
+			},
+			{
+				"?x3": "\"Myasthenic syndrome\"",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/NAC1A",
+				"?x7": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00555",
+				"?x5": "\"Myasthenic syndrome\""
+			},
+			{
+				"?x3": "\"Myasthenic syndrome\"",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SCN4A",
+				"?x7": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00555",
+				"?x5": "\"Myasthenic syndrome\""
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x4 ?x1 ?x5 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x2 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> \"Obesity, hyperphagia, and developmental delay\" .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x7   } ",
+		"filename": "q77.json",
+		"card": 2,
+		"results": [
+			{
+				"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/10p15-p14",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3400",
+				"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/851"
+			},
+			{
+				"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/9q22.1",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3401",
+				"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/851"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x4 ?x7 ?x6 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1817> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1817> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1817> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1817> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1817> <http://www.w3.org/2000/01/rdf-schema#label> ?x6 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1817> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x7   } ",
+		"filename": "q78.json",
+		"card": 1,
+		"results": [
+			{
+				"?x4": "http://bio2rdf.org/omim:607837",
+				"?x7": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Neurological",
+				"?x6": "\"Ceroid lipofuscinosis, neuronal 8, 600143\""
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x4 ?x2 ?x7 ?x6 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2541> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2541> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2541> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2541> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2541> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x6 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2541> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x7   } ",
+		"filename": "q79.json",
+		"card": 5,
+		"results": [
+			{
+				"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/488",
+				"?x2": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=600163",
+				"?x7": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/HB1"
+			},
+			{
+				"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/488",
+				"?x2": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=600163",
+				"?x7": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/IVF"
+			},
+			{
+				"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/488",
+				"?x2": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=600163",
+				"?x7": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/LQT3"
+			},
+			{
+				"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/488",
+				"?x2": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=600163",
+				"?x7": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SCN5A"
+			},
+			{
+				"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/488",
+				"?x2": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=600163",
+				"?x7": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SSS1"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x4 ?x7 ?x5 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/562> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/size> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/562> <http://www.w3.org/2000/01/rdf-schema#label> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/562> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/degree> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/562> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/562> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x6 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/562> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x7   } ",
+		"filename": "q80.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"Hyperthroidism\"",
+				"?x4": "\"2\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x7": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+				"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/TSHR"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x2 ?x5 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/837> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/size> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/837> <http://www.w3.org/2000/01/rdf-schema#label> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/837> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/degree> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/837> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/837> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x6 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/837> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x7   } ",
+		"filename": "q81.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"Newfoundland rod-cone dystrophy\"",
+				"?x2": "\"1\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/RLBP1"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x4 ?x1 ?x7 ?x5 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB02987> .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3 .     ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/degree> ?x6 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x7   } ",
+		"filename": "q82.json",
+		"card": 2,
+		"results": [
+			{
+				"?x4": "http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0042769",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1173",
+				"?x7": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/FCGR3A",
+				"?x5": "\"1\"^^http://www.w3.org/2001/XMLSchema#int"
+			},
+			{
+				"?x4": "http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0042769",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1173",
+				"?x7": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/OAS1",
+				"?x5": "\"1\"^^http://www.w3.org/2001/XMLSchema#int"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x4 ?x1 ?x2 ?x6 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x4 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> \"Rabson-Mendenhall syndrome, 262190\" .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x6 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x7   } ",
+		"filename": "q83.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/multiple",
+				"?x4": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=147670",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3703",
+				"?x2": "http://bio2rdf.org/omim:147670",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/19p13.2"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x4 ?x1 ?x6 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> \"Slowed nerve conduction velocity, AD, 608236\" .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x4 .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x6 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x7   } ",
+		"filename": "q84.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://bio2rdf.org/omim:608136",
+				"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/8p23",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3903",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1064"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x1 ?x7 ?x5 ?x6 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x5 .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x6 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x7 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> \"Hyperlipoproteinemia, type III\"   } ",
+		"filename": "q85.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2677",
+				"?x7": "http://bio2rdf.org/omim:107741",
+				"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Metabolic",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x4 ?x2 ?x8 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1735> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1735> <http://www.w3.org/2000/01/rdf-schema#label> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1735> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1735> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1735> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x6 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1735> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x7 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1735> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x8   } ",
+		"filename": "q86.json",
+		"card": 1,
+		"results": [
+			{
+				"?x4": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=603550",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/196",
+				"?x8": "http://bio2rdf.org/omim:603550"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x4 ?x2 ?x7 ?x8 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2470> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2470> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2470> <http://www.w3.org/2000/01/rdf-schema#label> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2470> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2470> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x6 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2470> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x7 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2470> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x8   } ",
+		"filename": "q87.json",
+		"card": 4,
+		"results": [
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/17q21.1",
+				"?x4": "\"Glioblastoma, somatic, 137800\"",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+				"?x7": "\"Glioblastoma, somatic, 137800\"",
+				"?x8": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ERBB2"
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/17q21.1",
+				"?x4": "\"Glioblastoma, somatic, 137800\"",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+				"?x7": "\"Glioblastoma, somatic, 137800\"",
+				"?x8": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/HER2"
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/17q21.1",
+				"?x4": "\"Glioblastoma, somatic, 137800\"",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+				"?x7": "\"Glioblastoma, somatic, 137800\"",
+				"?x8": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/NEU"
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/17q21.1",
+				"?x4": "\"Glioblastoma, somatic, 137800\"",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+				"?x7": "\"Glioblastoma, somatic, 137800\"",
+				"?x8": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/NGL"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x4 ?x1 ?x7 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> <http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=609018> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x6 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x7 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x8   } ",
+		"filename": "q88.json",
+		"card": 1,
+		"results": [
+			{
+				"?x4": "\"Holocarboxylase synthetase deficiency, 253270\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2623",
+				"?x7": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/21q22.1"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x4 ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2887> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2887> <http://www.w3.org/2000/01/rdf-schema#label> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2887> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2887> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2887> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x6 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2887> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x7 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2887> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x8   } ",
+		"filename": "q89.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"Leigh syndrome, 256000\"",
+				"?x4": "\"Leigh syndrome, 256000\"",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/7q31-q32"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x4 ?x5 ?x6 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1983> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1983> <http://www.w3.org/2000/01/rdf-schema#label> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1983> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1983> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1983> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x6 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1983> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x7 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1983> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x8   } ",
+		"filename": "q90.json",
+		"card": 1,
+		"results": [
+			{
+				"?x4": "\"Congestive heart failure, susceptibility to\"",
+				"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/261",
+				"?x6": "http://bio2rdf.org/omim:104250"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x4 ?x1 ?x7 ?x6 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/4167> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x6 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/size> ?x7 .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x8   } ",
+		"filename": "q91.json",
+		"card": 70,
+		"results": [
+			{
+				"?x4": "\"SARS, progression of\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1021",
+				"?x7": "\"1\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ACE"
+			},
+			{
+				"?x4": "\"Renal tubular dysgenesis\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1283",
+				"?x7": "\"4\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ACE"
+			},
+			{
+				"?x4": "\"Renal tubular dysgenesis\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1283",
+				"?x7": "\"4\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AGT"
+			},
+			{
+				"?x4": "\"Renal tubular dysgenesis\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1283",
+				"?x7": "\"4\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AGTR1"
+			},
+			{
+				"?x4": "\"Renal tubular dysgenesis\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1283",
+				"?x7": "\"4\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/REN"
+			},
+			{
+				"?x4": "\"Diabetes mellitus\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+				"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ABCC8"
+			},
+			{
+				"?x4": "\"Diabetes mellitus\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+				"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ACE"
+			},
+			{
+				"?x4": "\"Diabetes mellitus\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+				"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AKT2"
+			},
+			{
+				"?x4": "\"Diabetes mellitus\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+				"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CAPN10"
+			},
+			{
+				"?x4": "\"Diabetes mellitus\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+				"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ENPP1"
+			},
+			{
+				"?x4": "\"Diabetes mellitus\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+				"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/FOXP3"
+			},
+			{
+				"?x4": "\"Diabetes mellitus\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+				"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/GCGR"
+			},
+			{
+				"?x4": "\"Diabetes mellitus\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+				"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/GCK"
+			},
+			{
+				"?x4": "\"Diabetes mellitus\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+				"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/GPD2"
+			},
+			{
+				"?x4": "\"Diabetes mellitus\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+				"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/HNF4A"
+			},
+			{
+				"?x4": "\"Diabetes mellitus\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+				"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/INSR"
+			},
+			{
+				"?x4": "\"Diabetes mellitus\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+				"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/IPF1"
+			},
+			{
+				"?x4": "\"Diabetes mellitus\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+				"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/IRS1"
+			},
+			{
+				"?x4": "\"Diabetes mellitus\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+				"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/IRS2"
+			},
+			{
+				"?x4": "\"Diabetes mellitus\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+				"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/KCNJ11"
+			},
+			{
+				"?x4": "\"Diabetes mellitus\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+				"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/MAPK8IP1"
+			},
+			{
+				"?x4": "\"Diabetes mellitus\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+				"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/NEUROD1"
+			},
+			{
+				"?x4": "\"Diabetes mellitus\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+				"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/PPARG"
+			},
+			{
+				"?x4": "\"Diabetes mellitus\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+				"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/PTF1A"
+			},
+			{
+				"?x4": "\"Diabetes mellitus\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+				"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/PTPN22"
+			},
+			{
+				"?x4": "\"Diabetes mellitus\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+				"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/RETN"
+			},
+			{
+				"?x4": "\"Diabetes mellitus\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+				"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SLC2A2"
+			},
+			{
+				"?x4": "\"Diabetes mellitus\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+				"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SLC2A4"
+			},
+			{
+				"?x4": "\"Diabetes mellitus\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+				"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SUMO4"
+			},
+			{
+				"?x4": "\"Diabetes mellitus\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+				"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/TCF1"
+			},
+			{
+				"?x4": "\"Diabetes mellitus\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+				"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/TCF2"
+			},
+			{
+				"?x4": "\"Diabetes mellitus\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+				"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/VEGF"
+			},
+			{
+				"?x4": "\"Hypertension\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561",
+				"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ADD1"
+			},
+			{
+				"?x4": "\"Hypertension\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561",
+				"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AGT"
+			},
+			{
+				"?x4": "\"Hypertension\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561",
+				"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AGTR1"
+			},
+			{
+				"?x4": "\"Hypertension\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561",
+				"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CYP3A5"
+			},
+			{
+				"?x4": "\"Hypertension\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561",
+				"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ECE1"
+			},
+			{
+				"?x4": "\"Hypertension\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561",
+				"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/GNB3"
+			},
+			{
+				"?x4": "\"Hypertension\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561",
+				"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/HSD11B2"
+			},
+			{
+				"?x4": "\"Hypertension\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561",
+				"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/KCNMB1"
+			},
+			{
+				"?x4": "\"Hypertension\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561",
+				"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/NOS3"
+			},
+			{
+				"?x4": "\"Hypertension\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561",
+				"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/NR3C2"
+			},
+			{
+				"?x4": "\"Hypertension\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561",
+				"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/PTGIS"
+			},
+			{
+				"?x4": "\"Hypertension\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561",
+				"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/RETN"
+			},
+			{
+				"?x4": "\"Alzheimer disease\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74",
+				"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/A2M"
+			},
+			{
+				"?x4": "\"Alzheimer disease\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74",
+				"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ACE"
+			},
+			{
+				"?x4": "\"Alzheimer disease\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74",
+				"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/APBB2"
+			},
+			{
+				"?x4": "\"Alzheimer disease\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74",
+				"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/APOE"
+			},
+			{
+				"?x4": "\"Alzheimer disease\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74",
+				"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/APP"
+			},
+			{
+				"?x4": "\"Alzheimer disease\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74",
+				"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BLMH"
+			},
+			{
+				"?x4": "\"Alzheimer disease\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74",
+				"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/MPO"
+			},
+			{
+				"?x4": "\"Alzheimer disease\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74",
+				"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/NOS3"
+			},
+			{
+				"?x4": "\"Alzheimer disease\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74",
+				"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/PAXIP1"
+			},
+			{
+				"?x4": "\"Alzheimer disease\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74",
+				"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/PLAU"
+			},
+			{
+				"?x4": "\"Alzheimer disease\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74",
+				"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/PSEN1"
+			},
+			{
+				"?x4": "\"Alzheimer disease\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74",
+				"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/PSEN2"
+			},
+			{
+				"?x4": "\"Myocardial infarction\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/797",
+				"?x7": "\"10\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ACE"
+			},
+			{
+				"?x4": "\"Myocardial infarction\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/797",
+				"?x7": "\"10\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ALOX5AP"
+			},
+			{
+				"?x4": "\"Myocardial infarction\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/797",
+				"?x7": "\"10\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/APOE"
+			},
+			{
+				"?x4": "\"Myocardial infarction\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/797",
+				"?x7": "\"10\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/F7"
+			},
+			{
+				"?x4": "\"Myocardial infarction\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/797",
+				"?x7": "\"10\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/GCLM"
+			},
+			{
+				"?x4": "\"Myocardial infarction\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/797",
+				"?x7": "\"10\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/LGALS2"
+			},
+			{
+				"?x4": "\"Myocardial infarction\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/797",
+				"?x7": "\"10\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/LTA"
+			},
+			{
+				"?x4": "\"Myocardial infarction\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/797",
+				"?x7": "\"10\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/OLR1"
+			},
+			{
+				"?x4": "\"Myocardial infarction\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/797",
+				"?x7": "\"10\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/THBD"
+			},
+			{
+				"?x4": "\"Myocardial infarction\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/797",
+				"?x7": "\"10\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/TNFSF4"
+			},
+			{
+				"?x4": "\"Angiotensin I-converting enzyme\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/89",
+				"?x7": "\"1\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ACE"
+			},
+			{
+				"?x4": "\"Preeclampsia\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/949",
+				"?x7": "\"3\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AGT"
+			},
+			{
+				"?x4": "\"Preeclampsia\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/949",
+				"?x7": "\"3\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/EPHX1"
+			},
+			{
+				"?x4": "\"Preeclampsia\"",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/949",
+				"?x7": "\"3\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/STOX1"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x4 ?x1 ?x2 ?x8 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/size> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB02784> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x7 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/degree> ?x8   } ",
+		"filename": "q92.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"3\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Metabolic",
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/614",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+				"?x8": "\"4\"^^http://www.w3.org/2001/XMLSchema#int"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> \"Myoglobinuria/hemolysis due to PGK deficiency\" .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x6 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x7 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x8   } ",
+		"filename": "q93.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3294",
+				"?x2": "http://bio2rdf.org/omim:311800"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x6 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3198> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3198> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3198> <http://www.w3.org/2000/01/rdf-schema#label> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3198> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3198> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x6 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3198> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x7 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3198> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x8   } ",
+		"filename": "q94.json",
+		"card": 1,
+		"results": [
+			{
+				"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2286> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2286> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2286> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2286> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2286> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x6 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2286> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x7 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2286> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x8   } ",
+		"filename": "q95.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Dermatological",
+				"?x2": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=147557"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x1 ?x2 ?x5 ?x9 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x2 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x6 .     ?x1 <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/8342> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x8 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x9   } ",
+		"filename": "q96.json",
+		"card": 1,
+		"results": [
+			{
+				"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3217",
+				"?x2": "\"Multiple endocrine neoplasia I\"",
+				"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/MEN1",
+				"?x9": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Cancer"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x4 ?x7 ?x8 ?x6 ?x9 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2126> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2126> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2126> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2126> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2126> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x6 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2126> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x7 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2126> <http://www.w3.org/2000/01/rdf-schema#label> ?x8 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2126> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x9   } ",
+		"filename": "q97.json",
+		"card": 4,
+		"results": [
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/NACP",
+				"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/4q21",
+				"?x7": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01065",
+				"?x8": "\"Dementia, Lewy body, 127750\"",
+				"?x6": "\"Dementia, Lewy body, 127750\"",
+				"?x9": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Neurological"
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/PARK1",
+				"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/4q21",
+				"?x7": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01065",
+				"?x8": "\"Dementia, Lewy body, 127750\"",
+				"?x6": "\"Dementia, Lewy body, 127750\"",
+				"?x9": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Neurological"
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/PARK4",
+				"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/4q21",
+				"?x7": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01065",
+				"?x8": "\"Dementia, Lewy body, 127750\"",
+				"?x6": "\"Dementia, Lewy body, 127750\"",
+				"?x9": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Neurological"
+			},
+			{
+				"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SNCA",
+				"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/4q21",
+				"?x7": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01065",
+				"?x8": "\"Dementia, Lewy body, 127750\"",
+				"?x6": "\"Dementia, Lewy body, 127750\"",
+				"?x9": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Neurological"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x2 ?x8 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2701> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2701> <http://www.w3.org/2000/01/rdf-schema#label> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2701> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2701> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2701> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x6 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2701> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x7 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2701> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x8 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2701> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x9   } ",
+		"filename": "q98.json",
+		"card": 2,
+		"results": [
+			{
+				"?x3": "\"Hypertension, essential, susceptibility to, 145500\"",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Cardiovascular",
+				"?x8": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AGT"
+			},
+			{
+				"?x3": "\"Hypertension, essential, susceptibility to, 145500\"",
+				"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Cardiovascular",
+				"?x8": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SERPINA8"
+			}
+		]
+	},
+	{
+		"name": "diseasome",
+		"query": "SELECT DISTINCT  ?x3 ?x7 ?x8 ?x9 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/189> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/189> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/189> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/189> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/degree> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/189> <http://www.w3.org/2000/01/rdf-schema#label> ?x6 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/189> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/size> ?x7 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/189> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x8 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/189> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x9   } ",
+		"filename": "q99.json",
+		"card": 1,
+		"results": [
+			{
+				"?x3": "\"1\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x7": "\"2\"^^http://www.w3.org/2001/XMLSchema#int",
+				"?x8": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Cancer",
+				"?x9": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases"
+			}
+		]
+	}
 ]

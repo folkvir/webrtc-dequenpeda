@@ -1,5 +1,11 @@
-[
-	{
-		"?x3": "\"39.86416666666667 31.495277777777776\"@en"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  ?x3 WHERE   { <http://dbpedia.org/resource/Mihal%C4%B1%C3%A7%C3%A7%C4%B1k> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     <http://dbpedia.org/resource/Mihal%C4%B1%C3%A7%C3%A7%C4%B1k> <http://www.georss.org/georss/point> ?x3   } ",
+	"filename": "q89.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"39.86416666666667 31.495277777777776\"@en"
+		}
+	]
+}

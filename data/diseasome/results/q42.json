@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
-		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/12q13"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2782> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2782> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2782> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x4   } ",
+	"filename": "q42.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+			"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/12q13"
+		}
+	]
+}

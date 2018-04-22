@@ -1,6 +1,12 @@
-[
-	{
-		"?x1": "http://dbpedia.org/resource/Brecher_Glacier",
-		"?x2": "http://www.opengis.net/gml/_Feature"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://www.georss.org/georss/point> \"-80.7 157.46666666666667\"@en   } ",
+	"filename": "q0.json",
+	"card": 1,
+	"results": [
+		{
+			"?x1": "http://dbpedia.org/resource/Brecher_Glacier",
+			"?x2": "http://www.opengis.net/gml/_Feature"
+		}
+	]
+}

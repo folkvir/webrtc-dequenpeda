@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "\"Placental abruption\"",
-		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/932"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3600> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3600> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x3   } ",
+	"filename": "q36.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"Placental abruption\"",
+			"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/932"
+		}
+	]
+}

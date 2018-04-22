@@ -1,10 +1,16 @@
-[
-	{
-		"?x1": "http://data.linkedmdb.org/film/29059",
-		"?x2": "http://data.linkedmdb.org/film_subject/110"
-	},
-	{
-		"?x1": "http://data.linkedmdb.org/film/29059",
-		"?x2": "http://data.linkedmdb.org/film_subject/119"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x2 .     ?x1 <http://purl.org/dc/terms/title> ?x3 .     ?x1 <http://purl.org/dc/terms/date> \"1990-09-19\" .     ?x1 <http://dbpedia.org/property/hasPhotoCollection> ?x5   } ",
+	"filename": "q77.json",
+	"card": 2,
+	"results": [
+		{
+			"?x1": "http://data.linkedmdb.org/film/29059",
+			"?x2": "http://data.linkedmdb.org/film_subject/110"
+		},
+		{
+			"?x1": "http://data.linkedmdb.org/film/29059",
+			"?x2": "http://data.linkedmdb.org/film_subject/119"
+		}
+	]
+}

@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "\"Neutrophil immunodeficiency syndrome\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3369"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/834> .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/834> <http://www.w3.org/2000/01/rdf-schema#label> ?x3   } ",
+	"filename": "q3.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"Neutrophil immunodeficiency syndrome\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3369"
+		}
+	]
+}

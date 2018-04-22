@@ -1,5 +1,11 @@
-[
-	{
-		"?x1": "http://data.linkedmdb.org/film/1011"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x2 .     ?x1 <http://purl.org/dc/terms/title> \"Sylvia\"   } ",
+	"filename": "q15.json",
+	"card": 1,
+	"results": [
+		{
+			"?x1": "http://data.linkedmdb.org/film/1011"
+		}
+	]
+}

@@ -1,6 +1,12 @@
-[
-	{
-		"?x4": "\"56.61442\"^^http://www.w3.org/2001/XMLSchema#float",
-		"?x2": "\"-3.05661\"^^http://www.w3.org/2001/XMLSchema#float"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  ?x4 ?x2 WHERE   { <http://dbpedia.org/resource/Eassie_Stone> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     <http://dbpedia.org/resource/Eassie_Stone> <http://www.georss.org/georss/point> ?x3 .     <http://dbpedia.org/resource/Eassie_Stone> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x4   } ",
+	"filename": "q63.json",
+	"card": 1,
+	"results": [
+		{
+			"?x4": "\"56.61442\"^^http://www.w3.org/2001/XMLSchema#float",
+			"?x2": "\"-3.05661\"^^http://www.w3.org/2001/XMLSchema#float"
+		}
+	]
+}

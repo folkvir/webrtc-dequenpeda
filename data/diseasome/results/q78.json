@@ -1,7 +1,13 @@
-[
-	{
-		"?x4": "http://bio2rdf.org/omim:607837",
-		"?x7": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Neurological",
-		"?x6": "\"Ceroid lipofuscinosis, neuronal 8, 600143\""
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x4 ?x7 ?x6 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1817> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1817> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1817> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1817> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1817> <http://www.w3.org/2000/01/rdf-schema#label> ?x6 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1817> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x7   } ",
+	"filename": "q78.json",
+	"card": 1,
+	"results": [
+		{
+			"?x4": "http://bio2rdf.org/omim:607837",
+			"?x7": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Neurological",
+			"?x6": "\"Ceroid lipofuscinosis, neuronal 8, 600143\""
+		}
+	]
+}

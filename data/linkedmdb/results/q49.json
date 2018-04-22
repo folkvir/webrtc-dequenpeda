@@ -1,8 +1,14 @@
-[
-	{
-		"?x4": "http://dbpedia.org/resource/Ram_Lakhan"
-	},
-	{
-		"?x4": "http://mpii.de/yago/resource/Ram_Lakhan"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x4 WHERE   { <http://data.linkedmdb.org/film/12975> <http://purl.org/dc/terms/title> ?x2 .     <http://data.linkedmdb.org/film/12975> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3 .     <http://data.linkedmdb.org/film/12975> <http://www.w3.org/2002/07/owl#sameAs> ?x4   } ",
+	"filename": "q49.json",
+	"card": 2,
+	"results": [
+		{
+			"?x4": "http://dbpedia.org/resource/Ram_Lakhan"
+		},
+		{
+			"?x4": "http://mpii.de/yago/resource/Ram_Lakhan"
+		}
+	]
+}

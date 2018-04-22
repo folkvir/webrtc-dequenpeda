@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/Xq13",
-		"?x2": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00144"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1395> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1395> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x3   } ",
+	"filename": "q25.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/Xq13",
+			"?x2": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00144"
+		}
+	]
+}

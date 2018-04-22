@@ -1,5 +1,11 @@
-[
-	{
-		"?x2": "\"Schizophrenia, susceptibility to, 181510\""
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3844> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3844> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
+	"filename": "q17.json",
+	"card": 1,
+	"results": [
+		{
+			"?x2": "\"Schizophrenia, susceptibility to, 181510\""
+		}
+	]
+}

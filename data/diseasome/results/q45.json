@@ -1,5 +1,11 @@
-[
-	{
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/P2RX1"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/geneId> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/hgncIdPage> <http://www.genenames.org/data/hgnc_data.php?hgnc_id=8533> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/hgncId> ?x4   } ",
+	"filename": "q45.json",
+	"card": 1,
+	"results": [
+		{
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/P2RX1"
+		}
+	]
+}

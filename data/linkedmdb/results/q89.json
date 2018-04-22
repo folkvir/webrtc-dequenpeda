@@ -1,5 +1,11 @@
-[
-	{
-		"?x2": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Palmy_Days"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x2 WHERE   { <http://data.linkedmdb.org/film/13091> <http://dbpedia.org/property/hasPhotoCollection> ?x2 .     <http://data.linkedmdb.org/film/13091> <http://xmlns.com/foaf/0.1/page> ?x3 .     <http://data.linkedmdb.org/film/13091> <http://xmlns.com/foaf/0.1/based_near> ?x4 .     <http://data.linkedmdb.org/film/13091> <http://purl.org/dc/terms/date> ?x5   } ",
+	"filename": "q89.json",
+	"card": 1,
+	"results": [
+		{
+			"?x2": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Palmy_Days"
+		}
+	]
+}

@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/3q21",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2822"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> <http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=190000> .     ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x5   } ",
+	"filename": "q48.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/3q21",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2822"
+		}
+	]
+}

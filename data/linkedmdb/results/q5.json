@@ -1,5 +1,11 @@
-[
-	{
-		"?x3": "http://www.freebase.com/view/topic/en/british_1st_airborne_division"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x3 WHERE   { ?x1 <http://www.w3.org/2004/02/skos/core#subject> <http://data.linkedmdb.org/film_subject/64> .     <http://data.linkedmdb.org/film_subject/64> <http://xmlns.com/foaf/0.1/page> ?x3   } ",
+	"filename": "q5.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "http://www.freebase.com/view/topic/en/british_1st_airborne_division"
+		}
+	]
+}

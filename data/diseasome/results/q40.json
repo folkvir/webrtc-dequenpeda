@@ -1,5 +1,11 @@
-[
-	{
-		"?x4": "\"Thrombocytopenia, congenital amegakaryocytic, 604498\""
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x4 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4037> <http://www.w3.org/2000/01/rdf-schema#label> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4037> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4037> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x4   } ",
+	"filename": "q40.json",
+	"card": 1,
+	"results": [
+		{
+			"?x4": "\"Thrombocytopenia, congenital amegakaryocytic, 604498\""
+		}
+	]
+}

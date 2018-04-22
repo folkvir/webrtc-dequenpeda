@@ -1,158 +1,164 @@
-[
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Lily_in_Love",
-		"?x1": "http://data.linkedmdb.org/film/17177",
-		"?x2": "http://dbpedia.org/resource/Lily_in_Love",
-		"?x6": "\"Lily in Love\""
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Lily_in_Love",
-		"?x1": "http://data.linkedmdb.org/film/17177",
-		"?x2": "http://mpii.de/yago/resource/Lily_in_Love",
-		"?x6": "\"Lily in Love\""
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/The_Merry_Widow_(film)",
-		"?x1": "http://data.linkedmdb.org/film/24848",
-		"?x2": "http://dbpedia.org/resource/The_Merry_Widow_28film29",
-		"?x6": "\"The Merry Widow\""
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/The_Merry_Widow_(film)",
-		"?x1": "http://data.linkedmdb.org/film/24848",
-		"?x2": "http://mpii.de/yago/resource/The_Merry_Widow_28film29",
-		"?x6": "\"The Merry Widow\""
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Being_Julia",
-		"?x1": "http://data.linkedmdb.org/film/26465",
-		"?x2": "http://dbpedia.org/resource/Being_Julia",
-		"?x6": "\"Being Julia\""
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Being_Julia",
-		"?x1": "http://data.linkedmdb.org/film/26465",
-		"?x2": "http://mpii.de/yago/resource/Being_Julia",
-		"?x6": "\"Being Julia\""
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/The_Man_from_London",
-		"?x1": "http://data.linkedmdb.org/film/35756",
-		"?x2": "http://dbpedia.org/resource/The_Man_from_London",
-		"?x6": "\"The Man From London\""
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/The_Man_from_London",
-		"?x1": "http://data.linkedmdb.org/film/35756",
-		"?x2": "http://mpii.de/yago/resource/The_Man_from_London",
-		"?x6": "\"The Man From London\""
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Werckmeister_Harmonies",
-		"?x1": "http://data.linkedmdb.org/film/37675",
-		"?x2": "http://dbpedia.org/resource/Werckmeister_Harmonies",
-		"?x6": "\"Werckmeister Harmonies\""
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Werckmeister_Harmonies",
-		"?x1": "http://data.linkedmdb.org/film/37675",
-		"?x2": "http://mpii.de/yago/resource/Werckmeister_Harmonies",
-		"?x6": "\"Werckmeister Harmonies\""
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Napl/u00C3/u00B3_ap/u00C3/u00A1mnak,_any/u00C3/u00A1mnak",
-		"?x1": "http://data.linkedmdb.org/film/6608",
-		"?x2": "http://dbpedia.org/resource/Napl/u00C3/u00B3_ap/u00C3/u00A1mnak2C_any/u00C3/u00A1mnak",
-		"?x6": "\"Napl/u00C3/u00B3 ap/u00C3/u00A1mnak, any/u00C3/u00A1mnak\""
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Napl/u00C3/u00B3_ap/u00C3/u00A1mnak,_any/u00C3/u00A1mnak",
-		"?x1": "http://data.linkedmdb.org/film/6608",
-		"?x2": "http://mpii.de/yago/resource/Napl/u00C3/u00B3_ap/u00C3/u00A1mnak2C_any/u00C3/u00A1mnak",
-		"?x6": "\"Napl/u00C3/u00B3 ap/u00C3/u00A1mnak, any/u00C3/u00A1mnak\""
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Mack_the_Knife_(film)",
-		"?x1": "http://data.linkedmdb.org/film/8762",
-		"?x2": "http://dbpedia.org/resource/Mack_the_Knife_28film29",
-		"?x6": "\"Mack the Knife\""
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Mack_the_Knife_(film)",
-		"?x1": "http://data.linkedmdb.org/film/8762",
-		"?x2": "http://mpii.de/yago/resource/Mack_the_Knife_28film29",
-		"?x6": "\"Mack the Knife\""
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos//u00C3/u0081rv/u00C3/u00A1cska",
-		"?x1": "http://data.linkedmdb.org/film/20428",
-		"?x2": "http://dbpedia.org/resource//u00C3/u0081rv/u00C3/u00A1cska",
-		"?x6": "\"/u00C3/u0081rv/u00C3/u00A1cska\""
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos//u00C3/u0081rv/u00C3/u00A1cska",
-		"?x1": "http://data.linkedmdb.org/film/20428",
-		"?x2": "http://mpii.de/yago/resource//u00C3/u0081rv/u00C3/u00A1cska",
-		"?x6": "\"/u00C3/u0081rv/u00C3/u00A1cska\""
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Confidence_(film)",
-		"?x1": "http://data.linkedmdb.org/film/23344",
-		"?x2": "http://dbpedia.org/resource/Confidence_28film29",
-		"?x6": "\"Confidence\""
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Confidence_(film)",
-		"?x1": "http://data.linkedmdb.org/film/23344",
-		"?x2": "http://mpii.de/yago/resource/Confidence_28film29",
-		"?x6": "\"Confidence\""
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Casanova_(film)",
-		"?x1": "http://data.linkedmdb.org/film/24925",
-		"?x2": "http://dbpedia.org/resource/Casanova_28film29",
-		"?x6": "\"Casanova\""
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Casanova_(film)",
-		"?x1": "http://data.linkedmdb.org/film/24925",
-		"?x2": "http://mpii.de/yago/resource/Casanova_28film29",
-		"?x6": "\"Casanova\""
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/The_Leopard_(film)",
-		"?x1": "http://data.linkedmdb.org/film/24928",
-		"?x2": "http://dbpedia.org/resource/The_Leopard_28film29",
-		"?x6": "\"The Leopard\""
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/The_Leopard_(film)",
-		"?x1": "http://data.linkedmdb.org/film/24928",
-		"?x2": "http://mpii.de/yago/resource/The_Leopard_28film29",
-		"?x6": "\"The Leopard\""
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Lili",
-		"?x1": "http://data.linkedmdb.org/film/24929",
-		"?x2": "http://dbpedia.org/resource/Lili",
-		"?x6": "\"Lili\""
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Lili",
-		"?x1": "http://data.linkedmdb.org/film/24929",
-		"?x2": "http://mpii.de/yago/resource/Lili",
-		"?x6": "\"Lili\""
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/An_American_Rhapsody",
-		"?x1": "http://data.linkedmdb.org/film/25777",
-		"?x2": "http://dbpedia.org/resource/An_American_Rhapsody",
-		"?x6": "\"An American Rhapsody\""
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/An_American_Rhapsody",
-		"?x1": "http://data.linkedmdb.org/film/25777",
-		"?x2": "http://mpii.de/yago/resource/An_American_Rhapsody",
-		"?x6": "\"An American Rhapsody\""
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x3 ?x1 ?x2 ?x6 WHERE   { ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     ?x1 <http://dbpedia.org/property/hasPhotoCollection> ?x3 .     ?x1 <http://xmlns.com/foaf/0.1/page> ?x4 .     ?x1 <http://xmlns.com/foaf/0.1/based_near> <http://sws.geonames.org/719819/> .     ?x1 <http://purl.org/dc/terms/title> ?x6   } ",
+	"filename": "q94.json",
+	"card": 26,
+	"results": [
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Lily_in_Love",
+			"?x1": "http://data.linkedmdb.org/film/17177",
+			"?x2": "http://dbpedia.org/resource/Lily_in_Love",
+			"?x6": "\"Lily in Love\""
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Lily_in_Love",
+			"?x1": "http://data.linkedmdb.org/film/17177",
+			"?x2": "http://mpii.de/yago/resource/Lily_in_Love",
+			"?x6": "\"Lily in Love\""
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/The_Merry_Widow_(film)",
+			"?x1": "http://data.linkedmdb.org/film/24848",
+			"?x2": "http://dbpedia.org/resource/The_Merry_Widow_28film29",
+			"?x6": "\"The Merry Widow\""
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/The_Merry_Widow_(film)",
+			"?x1": "http://data.linkedmdb.org/film/24848",
+			"?x2": "http://mpii.de/yago/resource/The_Merry_Widow_28film29",
+			"?x6": "\"The Merry Widow\""
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Being_Julia",
+			"?x1": "http://data.linkedmdb.org/film/26465",
+			"?x2": "http://dbpedia.org/resource/Being_Julia",
+			"?x6": "\"Being Julia\""
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Being_Julia",
+			"?x1": "http://data.linkedmdb.org/film/26465",
+			"?x2": "http://mpii.de/yago/resource/Being_Julia",
+			"?x6": "\"Being Julia\""
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/The_Man_from_London",
+			"?x1": "http://data.linkedmdb.org/film/35756",
+			"?x2": "http://dbpedia.org/resource/The_Man_from_London",
+			"?x6": "\"The Man From London\""
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/The_Man_from_London",
+			"?x1": "http://data.linkedmdb.org/film/35756",
+			"?x2": "http://mpii.de/yago/resource/The_Man_from_London",
+			"?x6": "\"The Man From London\""
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Werckmeister_Harmonies",
+			"?x1": "http://data.linkedmdb.org/film/37675",
+			"?x2": "http://dbpedia.org/resource/Werckmeister_Harmonies",
+			"?x6": "\"Werckmeister Harmonies\""
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Werckmeister_Harmonies",
+			"?x1": "http://data.linkedmdb.org/film/37675",
+			"?x2": "http://mpii.de/yago/resource/Werckmeister_Harmonies",
+			"?x6": "\"Werckmeister Harmonies\""
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Napl/u00C3/u00B3_ap/u00C3/u00A1mnak,_any/u00C3/u00A1mnak",
+			"?x1": "http://data.linkedmdb.org/film/6608",
+			"?x2": "http://dbpedia.org/resource/Napl/u00C3/u00B3_ap/u00C3/u00A1mnak2C_any/u00C3/u00A1mnak",
+			"?x6": "\"Napl/u00C3/u00B3 ap/u00C3/u00A1mnak, any/u00C3/u00A1mnak\""
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Napl/u00C3/u00B3_ap/u00C3/u00A1mnak,_any/u00C3/u00A1mnak",
+			"?x1": "http://data.linkedmdb.org/film/6608",
+			"?x2": "http://mpii.de/yago/resource/Napl/u00C3/u00B3_ap/u00C3/u00A1mnak2C_any/u00C3/u00A1mnak",
+			"?x6": "\"Napl/u00C3/u00B3 ap/u00C3/u00A1mnak, any/u00C3/u00A1mnak\""
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Mack_the_Knife_(film)",
+			"?x1": "http://data.linkedmdb.org/film/8762",
+			"?x2": "http://dbpedia.org/resource/Mack_the_Knife_28film29",
+			"?x6": "\"Mack the Knife\""
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Mack_the_Knife_(film)",
+			"?x1": "http://data.linkedmdb.org/film/8762",
+			"?x2": "http://mpii.de/yago/resource/Mack_the_Knife_28film29",
+			"?x6": "\"Mack the Knife\""
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos//u00C3/u0081rv/u00C3/u00A1cska",
+			"?x1": "http://data.linkedmdb.org/film/20428",
+			"?x2": "http://dbpedia.org/resource//u00C3/u0081rv/u00C3/u00A1cska",
+			"?x6": "\"/u00C3/u0081rv/u00C3/u00A1cska\""
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos//u00C3/u0081rv/u00C3/u00A1cska",
+			"?x1": "http://data.linkedmdb.org/film/20428",
+			"?x2": "http://mpii.de/yago/resource//u00C3/u0081rv/u00C3/u00A1cska",
+			"?x6": "\"/u00C3/u0081rv/u00C3/u00A1cska\""
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Confidence_(film)",
+			"?x1": "http://data.linkedmdb.org/film/23344",
+			"?x2": "http://dbpedia.org/resource/Confidence_28film29",
+			"?x6": "\"Confidence\""
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Confidence_(film)",
+			"?x1": "http://data.linkedmdb.org/film/23344",
+			"?x2": "http://mpii.de/yago/resource/Confidence_28film29",
+			"?x6": "\"Confidence\""
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Casanova_(film)",
+			"?x1": "http://data.linkedmdb.org/film/24925",
+			"?x2": "http://dbpedia.org/resource/Casanova_28film29",
+			"?x6": "\"Casanova\""
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Casanova_(film)",
+			"?x1": "http://data.linkedmdb.org/film/24925",
+			"?x2": "http://mpii.de/yago/resource/Casanova_28film29",
+			"?x6": "\"Casanova\""
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/The_Leopard_(film)",
+			"?x1": "http://data.linkedmdb.org/film/24928",
+			"?x2": "http://dbpedia.org/resource/The_Leopard_28film29",
+			"?x6": "\"The Leopard\""
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/The_Leopard_(film)",
+			"?x1": "http://data.linkedmdb.org/film/24928",
+			"?x2": "http://mpii.de/yago/resource/The_Leopard_28film29",
+			"?x6": "\"The Leopard\""
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Lili",
+			"?x1": "http://data.linkedmdb.org/film/24929",
+			"?x2": "http://dbpedia.org/resource/Lili",
+			"?x6": "\"Lili\""
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Lili",
+			"?x1": "http://data.linkedmdb.org/film/24929",
+			"?x2": "http://mpii.de/yago/resource/Lili",
+			"?x6": "\"Lili\""
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/An_American_Rhapsody",
+			"?x1": "http://data.linkedmdb.org/film/25777",
+			"?x2": "http://dbpedia.org/resource/An_American_Rhapsody",
+			"?x6": "\"An American Rhapsody\""
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/An_American_Rhapsody",
+			"?x1": "http://data.linkedmdb.org/film/25777",
+			"?x2": "http://mpii.de/yago/resource/An_American_Rhapsody",
+			"?x6": "\"An American Rhapsody\""
+		}
+	]
+}

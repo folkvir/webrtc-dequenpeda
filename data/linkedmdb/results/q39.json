@@ -1,7 +1,13 @@
-[
-	{
-		"?x4": "\"2004-09-14,2005-04-08\"",
-		"?x1": "http://data.linkedmdb.org/film/31269",
-		"?x2": "http://data.linkedmdb.org/film_subject/85"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x4 ?x1 ?x2 WHERE   { ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x2 .     ?x1 <http://dbpedia.org/property/hasPhotoCollection> <http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Millions> .     ?x1 <http://purl.org/dc/terms/date> ?x4   } ",
+	"filename": "q39.json",
+	"card": 1,
+	"results": [
+		{
+			"?x4": "\"2004-09-14,2005-04-08\"",
+			"?x1": "http://data.linkedmdb.org/film/31269",
+			"?x2": "http://data.linkedmdb.org/film_subject/85"
+		}
+	]
+}

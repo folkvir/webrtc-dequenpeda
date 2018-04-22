@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/16q22.1",
-		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Unclassified"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x3 ?x4 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1593> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1593> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1593> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1593> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1593> <http://www.w3.org/2000/01/rdf-schema#label> ?x6   } ",
+	"filename": "q70.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/16q22.1",
+			"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Unclassified"
+		}
+	]
+}

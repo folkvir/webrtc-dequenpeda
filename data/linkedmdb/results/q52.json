@@ -1,7 +1,13 @@
-[
-	{
-		"?x4": "http://data.linkedmdb.org/movie/film",
-		"?x3": "http://data.linkedmdb.org/film_subject/130",
-		"?x2": "\"Wilde\""
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  * WHERE   { <http://data.linkedmdb.org/film/2024> <http://purl.org/dc/terms/title> ?x2 .     <http://data.linkedmdb.org/film/2024> <http://www.w3.org/2004/02/skos/core#subject> ?x3 .     <http://data.linkedmdb.org/film/2024> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x4   } ",
+	"filename": "q52.json",
+	"card": 1,
+	"results": [
+		{
+			"?x4": "http://data.linkedmdb.org/movie/film",
+			"?x3": "http://data.linkedmdb.org/film_subject/130",
+			"?x2": "\"Wilde\""
+		}
+	]
+}

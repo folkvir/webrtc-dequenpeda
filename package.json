@@ -32,6 +32,7 @@
   "dependencies": {
     "asynciterator": "^1.1.1",
     "commander": "^2.15.1",
+    "compute-cosine-similarity": "^1.0.0",
     "debug": "^3.1.0",
     "express": "^4.16.3",
     "foglet-core": "^4.0.4",
@@ -44,9 +45,11 @@
     "lodash.merge": "^4.6.1",
     "lodash.shuffle": "^4.2.0",
     "n3": "^0.11.3",
-    "rdfstore": "^0.9.17",
+    "rdfstore": "file:./src/rdfstore-js",
+    "serialize-javascript": "^1.5.0",
     "shelljs": "^0.8.1",
     "sparqljs": "^2.0.3",
+    "tman-wrtc": "^0.1.0",
     "uniqid": "^4.1.1",
     "wrtc": "0.1.1"
   },

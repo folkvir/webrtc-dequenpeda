@@ -1,6 +1,12 @@
-[
-	{
-		"?x1": "http://data.linkedmdb.org/film/199",
-		"?x2": "http://sws.geonames.org/6252001/"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x2 .     ?x1 <http://purl.org/dc/terms/date> ?x3 .     ?x1 <http://purl.org/dc/terms/title> \"Rope\" .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x5   } ",
+	"filename": "q60.json",
+	"card": 1,
+	"results": [
+		{
+			"?x1": "http://data.linkedmdb.org/film/199",
+			"?x2": "http://sws.geonames.org/6252001/"
+		}
+	]
+}

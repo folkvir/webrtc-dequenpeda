@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "http://www.dbpedia.org/resource/Bartter_syndrome",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/139"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x2 .     ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/835> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/degree> ?x6 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/size> ?x7   } ",
+	"filename": "q73.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "http://www.dbpedia.org/resource/Bartter_syndrome",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/139"
+		}
+	]
+}

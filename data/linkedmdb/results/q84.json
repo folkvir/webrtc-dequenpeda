@@ -1,8 +1,14 @@
-[
-	{
-		"?x4": "http://data.linkedmdb.org/film_subject/170",
-		"?x1": "http://data.linkedmdb.org/film/35025",
-		"?x2": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/The_First_Great_Train_Robbery",
-		"?x5": "http://sws.geonames.org/2635167/"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x4 ?x1 ?x2 ?x5 WHERE   { ?x1 <http://dbpedia.org/property/hasPhotoCollection> ?x2 .     ?x1 <http://purl.org/dc/terms/title> \"The First Great Train Robbery\" .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x4 .     ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x5   } ",
+	"filename": "q84.json",
+	"card": 1,
+	"results": [
+		{
+			"?x4": "http://data.linkedmdb.org/film_subject/170",
+			"?x1": "http://data.linkedmdb.org/film/35025",
+			"?x2": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/The_First_Great_Train_Robbery",
+			"?x5": "http://sws.geonames.org/2635167/"
+		}
+	]
+}

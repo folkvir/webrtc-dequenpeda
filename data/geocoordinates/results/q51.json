@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "\"34.02 -79.71\"@en",
-		"?x2": "\"-79.71\"^^http://www.w3.org/2001/XMLSchema#float"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Florence_County,_South_Carolina> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     <http://dbpedia.org/resource/Florence_County,_South_Carolina> <http://www.georss.org/georss/point> ?x3   } ",
+	"filename": "q51.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"34.02 -79.71\"@en",
+			"?x2": "\"-79.71\"^^http://www.w3.org/2001/XMLSchema#float"
+		}
+	]
+}

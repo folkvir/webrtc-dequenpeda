@@ -1,5 +1,11 @@
-[
-	{
-		"?x2": "\"-85.34166666666667\"^^http://www.w3.org/2001/XMLSchema#float"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  ?x2 WHERE   { <http://dbpedia.org/resource/Black_River_(Mackinac_County)> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     <http://dbpedia.org/resource/Black_River_(Mackinac_County)> <http://www.georss.org/georss/point> ?x3   } ",
+	"filename": "q49.json",
+	"card": 1,
+	"results": [
+		{
+			"?x2": "\"-85.34166666666667\"^^http://www.w3.org/2001/XMLSchema#float"
+		}
+	]
+}

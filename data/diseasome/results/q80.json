@@ -1,8 +1,14 @@
-[
-	{
-		"?x3": "\"Hyperthroidism\"",
-		"?x4": "\"2\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x7": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
-		"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/TSHR"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x3 ?x4 ?x7 ?x5 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/562> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/size> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/562> <http://www.w3.org/2000/01/rdf-schema#label> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/562> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/degree> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/562> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/562> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x6 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/562> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x7   } ",
+	"filename": "q80.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"Hyperthroidism\"",
+			"?x4": "\"2\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x7": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+			"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/TSHR"
+		}
+	]
+}

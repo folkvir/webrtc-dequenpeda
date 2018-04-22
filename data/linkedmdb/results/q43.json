@@ -1,370 +1,376 @@
-[
-	{
-		"?x4": "\"Dark Horse\"",
-		"?x1": "http://data.linkedmdb.org/film/10205"
-	},
-	{
-		"?x4": "\"Flickering Lights\"",
-		"?x1": "http://data.linkedmdb.org/film/11886"
-	},
-	{
-		"?x4": "\"The Kingdom\"",
-		"?x1": "http://data.linkedmdb.org/film/1210"
-	},
-	{
-		"?x4": "\"A Sunday in Hell\"",
-		"?x1": "http://data.linkedmdb.org/film/12119"
-	},
-	{
-		"?x4": "\"Open Hearts\"",
-		"?x1": "http://data.linkedmdb.org/film/12696"
-	},
-	{
-		"?x4": "\"The Boss of it All\"",
-		"?x1": "http://data.linkedmdb.org/film/12872"
-	},
-	{
-		"?x4": "\"The Mahabharata\"",
-		"?x1": "http://data.linkedmdb.org/film/15030"
-	},
-	{
-		"?x4": "\"Saga Borgar/u00C3/u00A6ttarinnar\"",
-		"?x1": "http://data.linkedmdb.org/film/15394"
-	},
-	{
-		"?x4": "\"Together\"",
-		"?x1": "http://data.linkedmdb.org/film/1607"
-	},
-	{
-		"?x4": "\"Babette's Feast\"",
-		"?x1": "http://data.linkedmdb.org/film/1694"
-	},
-	{
-		"?x4": "\"Pr/u00C3/u00A6sten i Vejlby\"",
-		"?x1": "http://data.linkedmdb.org/film/17283"
-	},
-	{
-		"?x4": "\"Du skal /u00C3/u00A6re din hustru\"",
-		"?x1": "http://data.linkedmdb.org/film/17289"
-	},
-	{
-		"?x4": "\"Ett h/u00C3/u00A5l i mitt hj/u00C3/u00A4rta\"",
-		"?x1": "http://data.linkedmdb.org/film/1730"
-	},
-	{
-		"?x4": "\"Jeg har elsket og levet\"",
-		"?x1": "http://data.linkedmdb.org/film/17640"
-	},
-	{
-		"?x4": "\"Odds 777\"",
-		"?x1": "http://data.linkedmdb.org/film/17643"
-	},
-	{
-		"?x4": "\"Hotel Paradis\"",
-		"?x1": "http://data.linkedmdb.org/film/17644"
-	},
-	{
-		"?x4": "\"Skal vi v/u00C3/u00A6dde en million?\"",
-		"?x1": "http://data.linkedmdb.org/film/17658"
-	},
-	{
-		"?x4": "\"De blaa drenge\"",
-		"?x1": "http://data.linkedmdb.org/film/17659"
-	},
-	{
-		"?x4": "\"The House of the Spirits\"",
-		"?x1": "http://data.linkedmdb.org/film/1766"
-	},
-	{
-		"?x4": "\"N/u00C3/u00B8ddebo Pr/u00C3/u00A6steg/u00C3/u00A5rd\"",
-		"?x1": "http://data.linkedmdb.org/film/17738"
-	},
-	{
-		"?x4": "\"/u00C3/u0084nglag/u00C3/u00A5rd\"",
-		"?x1": "http://data.linkedmdb.org/film/20345"
-	},
-	{
-		"?x4": "\"101 Reykjav/u00C3/u00ADk\"",
-		"?x1": "http://data.linkedmdb.org/film/25238"
-	},
-	{
-		"?x4": "\"Atlantic Rhapsody\"",
-		"?x1": "http://data.linkedmdb.org/film/25880"
-	},
-	{
-		"?x4": "\"Bang Bang Orangutang\"",
-		"?x1": "http://data.linkedmdb.org/film/26348"
-	},
-	{
-		"?x4": "\"Breaking the Waves\"",
-		"?x1": "http://data.linkedmdb.org/film/26834"
-	},
-	{
-		"?x4": "\"Dancer in the Dark\"",
-		"?x1": "http://data.linkedmdb.org/film/27597"
-	},
-	{
-		"?x4": "\"Day of Wrath\"",
-		"?x1": "http://data.linkedmdb.org/film/27683"
-	},
-	{
-		"?x4": "\"Dogville\"",
-		"?x1": "http://data.linkedmdb.org/film/27996"
-	},
-	{
-		"?x4": "\"Fear X\"",
-		"?x1": "http://data.linkedmdb.org/film/28484"
-	},
-	{
-		"?x4": "\"Gayniggers From Outer Space\"",
-		"?x1": "http://data.linkedmdb.org/film/28878"
-	},
-	{
-		"?x4": "\"H/u00C3/u00A4xan\"",
-		"?x1": "http://data.linkedmdb.org/film/29274"
-	},
-	{
-		"?x4": "\"I Am Dina\"",
-		"?x1": "http://data.linkedmdb.org/film/29860"
-	},
-	{
-		"?x4": "\"Pusher\"",
-		"?x1": "http://data.linkedmdb.org/film/3005"
-	},
-	{
-		"?x4": "\"Kinamand\"",
-		"?x1": "http://data.linkedmdb.org/film/30271"
-	},
-	{
-		"?x4": "\"Epidemic\"",
-		"?x1": "http://data.linkedmdb.org/film/3072"
-	},
-	{
-		"?x4": "\"Lilja 4-ever\"",
-		"?x1": "http://data.linkedmdb.org/film/30730"
-	},
-	{
-		"?x4": "\"Manderlay\"",
-		"?x1": "http://data.linkedmdb.org/film/31031"
-	},
-	{
-		"?x4": "\"Nattevagten\"",
-		"?x1": "http://data.linkedmdb.org/film/31680"
-	},
-	{
-		"?x4": "\"Ordet\"",
-		"?x1": "http://data.linkedmdb.org/film/32055"
-	},
-	{
-		"?x4": "\"Pelle the Conqueror\"",
-		"?x1": "http://data.linkedmdb.org/film/32248"
-	},
-	{
-		"?x4": "\"Reptilicus\"",
-		"?x1": "http://data.linkedmdb.org/film/32764"
-	},
-	{
-		"?x4": "\"Songs from the Second Floor\"",
-		"?x1": "http://data.linkedmdb.org/film/33591"
-	},
-	{
-		"?x4": "\"The Celebration\"",
-		"?x1": "http://data.linkedmdb.org/film/34637"
-	},
-	{
-		"?x4": "\"The Element of Crime\"",
-		"?x1": "http://data.linkedmdb.org/film/34929"
-	},
-	{
-		"?x4": "\"The Five Obstructions\"",
-		"?x1": "http://data.linkedmdb.org/film/35035"
-	},
-	{
-		"?x4": "\"The Green Butchers\"",
-		"?x1": "http://data.linkedmdb.org/film/35231"
-	},
-	{
-		"?x4": "\"The Idiots\"",
-		"?x1": "http://data.linkedmdb.org/film/35400"
-	},
-	{
-		"?x4": "\"The Journals of Knud Rasmussen\"",
-		"?x1": "http://data.linkedmdb.org/film/35466"
-	},
-	{
-		"?x4": "\"The King is Alive\"",
-		"?x1": "http://data.linkedmdb.org/film/35503"
-	},
-	{
-		"?x4": "\"The Passion of Joan of Arc\"",
-		"?x1": "http://data.linkedmdb.org/film/36060"
-	},
-	{
-		"?x4": "\"Vampyr\"",
-		"?x1": "http://data.linkedmdb.org/film/37463"
-	},
-	{
-		"?x4": "\"Zentropa\"",
-		"?x1": "http://data.linkedmdb.org/film/38030"
-	},
-	{
-		"?x4": "\"Nemesis\"",
-		"?x1": "http://data.linkedmdb.org/film/4690"
-	},
-	{
-		"?x4": "\"Gertrud\"",
-		"?x1": "http://data.linkedmdb.org/film/5446"
-	},
-	{
-		"?x4": "\"Klatret/u00C3/u00B8sen\"",
-		"?x1": "http://data.linkedmdb.org/film/6870"
-	},
-	{
-		"?x4": "\"It's All About Love\"",
-		"?x1": "http://data.linkedmdb.org/film/846"
-	},
-	{
-		"?x4": "\"Brothers\"",
-		"?x1": "http://data.linkedmdb.org/film/8853"
-	},
-	{
-		"?x4": "\"Adam's Apples\"",
-		"?x1": "http://data.linkedmdb.org/film/9494"
-	},
-	{
-		"?x4": "\"Terkel in Trouble\"",
-		"?x1": "http://data.linkedmdb.org/film/11388"
-	},
-	{
-		"?x4": "\"In China They Eat Dogs\"",
-		"?x1": "http://data.linkedmdb.org/film/12069"
-	},
-	{
-		"?x4": "\"Old Men in New Cars\"",
-		"?x1": "http://data.linkedmdb.org/film/12070"
-	},
-	{
-		"?x4": "\"Shake It All About\"",
-		"?x1": "http://data.linkedmdb.org/film/12591"
-	},
-	{
-		"?x4": "\"J/u00C3/u00B6nssonligan dyker upp igen\"",
-		"?x1": "http://data.linkedmdb.org/film/1478"
-	},
-	{
-		"?x4": "\"Buddhas barn\"",
-		"?x1": "http://data.linkedmdb.org/film/14858"
-	},
-	{
-		"?x4": "\"Brudepigen - F/u00C3/u00A6rgeturen - Jagten p/u00C3/u00A5 k/u00C3/u00A6ledyret\"",
-		"?x1": "http://data.linkedmdb.org/film/16093"
-	},
-	{
-		"?x4": "\"Str/u00C3/u00B8mer\"",
-		"?x1": "http://data.linkedmdb.org/film/17278"
-	},
-	{
-		"?x4": "\"Sp/u00C3/u00B8gelsestoget\"",
-		"?x1": "http://data.linkedmdb.org/film/17279"
-	},
-	{
-		"?x4": "\"Styrmand Karlsen\"",
-		"?x1": "http://data.linkedmdb.org/film/17281"
-	},
-	{
-		"?x4": "\"Stjerneskud\"",
-		"?x1": "http://data.linkedmdb.org/film/17284"
-	},
-	{
-		"?x4": "\"Don Olsen kommer til byen\"",
-		"?x1": "http://data.linkedmdb.org/film/17333"
-	},
-	{
-		"?x4": "\"Bl/u00C3/u00A6ndv/u00C3/u00A6rk\"",
-		"?x1": "http://data.linkedmdb.org/film/17335"
-	},
-	{
-		"?x4": "\"J/u00C3/u00B6nssonligan f/u00C3/u00A5r guldfeber\"",
-		"?x1": "http://data.linkedmdb.org/film/1755"
-	},
-	{
-		"?x4": "\"Der var engang en vicev/u00C3/u00A6rt\"",
-		"?x1": "http://data.linkedmdb.org/film/18071"
-	},
-	{
-		"?x4": "\"Frk. M/u00C3/u00B8llers jubil/u00C3/u00A6um\"",
-		"?x1": "http://data.linkedmdb.org/film/18072"
-	},
-	{
-		"?x4": "\"Bag K/u00C3/u00B8benhavns kulisser\"",
-		"?x1": "http://data.linkedmdb.org/film/18290"
-	},
-	{
-		"?x4": "\"Atlantis\"",
-		"?x1": "http://data.linkedmdb.org/film/1876"
-	},
-	{
-		"?x4": "\"K/u00C3/u00B8benhavnere\"",
-		"?x1": "http://data.linkedmdb.org/film/18835"
-	},
-	{
-		"?x4": "\"Mifune's Last Song\"",
-		"?x1": "http://data.linkedmdb.org/film/1994"
-	},
-	{
-		"?x4": "\"All About Anna\"",
-		"?x1": "http://data.linkedmdb.org/film/25547"
-	},
-	{
-		"?x4": "\"Help I'm a Fish\"",
-		"?x1": "http://data.linkedmdb.org/film/2715"
-	},
-	{
-		"?x4": "\"Du er ikke alene\"",
-		"?x1": "http://data.linkedmdb.org/film/28143"
-	},
-	{
-		"?x4": "\"Italian for Beginners\"",
-		"?x1": "http://data.linkedmdb.org/film/29833"
-	},
-	{
-		"?x4": "\"Minor Mishaps\"",
-		"?x1": "http://data.linkedmdb.org/film/31284"
-	},
-	{
-		"?x4": "\"The Perfect Human\"",
-		"?x1": "http://data.linkedmdb.org/film/36078"
-	},
-	{
-		"?x4": "\"Torremolinos 73\"",
-		"?x1": "http://data.linkedmdb.org/film/37144"
-	},
-	{
-		"?x4": "\"Verdens Undergang\"",
-		"?x1": "http://data.linkedmdb.org/film/37504"
-	},
-	{
-		"?x4": "\"Wilbur Wants to Kill Himself\"",
-		"?x1": "http://data.linkedmdb.org/film/37792"
-	},
-	{
-		"?x4": "\"Himmelskibet\"",
-		"?x1": "http://data.linkedmdb.org/film/4027"
-	},
-	{
-		"?x4": "\"Fr/u00C3/u00A6kke Frida og de frygtl/u00C3/u00B8se spioner\"",
-		"?x1": "http://data.linkedmdb.org/film/5300"
-	},
-	{
-		"?x4": "\"Arven\"",
-		"?x1": "http://data.linkedmdb.org/film/5664"
-	},
-	{
-		"?x4": "\"King's game\"",
-		"?x1": "http://data.linkedmdb.org/film/9137"
-	},
-	{
-		"?x4": "\"Stolen Spring\"",
-		"?x1": "http://data.linkedmdb.org/film/9458"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x4 ?x1 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/based_near> <http://sws.geonames.org/2623032/> .     ?x1 <http://purl.org/dc/terms/date> ?x3 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x4   } ",
+	"filename": "q43.json",
+	"card": 92,
+	"results": [
+		{
+			"?x4": "\"Dark Horse\"",
+			"?x1": "http://data.linkedmdb.org/film/10205"
+		},
+		{
+			"?x4": "\"Flickering Lights\"",
+			"?x1": "http://data.linkedmdb.org/film/11886"
+		},
+		{
+			"?x4": "\"The Kingdom\"",
+			"?x1": "http://data.linkedmdb.org/film/1210"
+		},
+		{
+			"?x4": "\"A Sunday in Hell\"",
+			"?x1": "http://data.linkedmdb.org/film/12119"
+		},
+		{
+			"?x4": "\"Open Hearts\"",
+			"?x1": "http://data.linkedmdb.org/film/12696"
+		},
+		{
+			"?x4": "\"The Boss of it All\"",
+			"?x1": "http://data.linkedmdb.org/film/12872"
+		},
+		{
+			"?x4": "\"The Mahabharata\"",
+			"?x1": "http://data.linkedmdb.org/film/15030"
+		},
+		{
+			"?x4": "\"Saga Borgar/u00C3/u00A6ttarinnar\"",
+			"?x1": "http://data.linkedmdb.org/film/15394"
+		},
+		{
+			"?x4": "\"Together\"",
+			"?x1": "http://data.linkedmdb.org/film/1607"
+		},
+		{
+			"?x4": "\"Babette's Feast\"",
+			"?x1": "http://data.linkedmdb.org/film/1694"
+		},
+		{
+			"?x4": "\"Pr/u00C3/u00A6sten i Vejlby\"",
+			"?x1": "http://data.linkedmdb.org/film/17283"
+		},
+		{
+			"?x4": "\"Du skal /u00C3/u00A6re din hustru\"",
+			"?x1": "http://data.linkedmdb.org/film/17289"
+		},
+		{
+			"?x4": "\"Ett h/u00C3/u00A5l i mitt hj/u00C3/u00A4rta\"",
+			"?x1": "http://data.linkedmdb.org/film/1730"
+		},
+		{
+			"?x4": "\"Jeg har elsket og levet\"",
+			"?x1": "http://data.linkedmdb.org/film/17640"
+		},
+		{
+			"?x4": "\"Odds 777\"",
+			"?x1": "http://data.linkedmdb.org/film/17643"
+		},
+		{
+			"?x4": "\"Hotel Paradis\"",
+			"?x1": "http://data.linkedmdb.org/film/17644"
+		},
+		{
+			"?x4": "\"Skal vi v/u00C3/u00A6dde en million?\"",
+			"?x1": "http://data.linkedmdb.org/film/17658"
+		},
+		{
+			"?x4": "\"De blaa drenge\"",
+			"?x1": "http://data.linkedmdb.org/film/17659"
+		},
+		{
+			"?x4": "\"The House of the Spirits\"",
+			"?x1": "http://data.linkedmdb.org/film/1766"
+		},
+		{
+			"?x4": "\"N/u00C3/u00B8ddebo Pr/u00C3/u00A6steg/u00C3/u00A5rd\"",
+			"?x1": "http://data.linkedmdb.org/film/17738"
+		},
+		{
+			"?x4": "\"/u00C3/u0084nglag/u00C3/u00A5rd\"",
+			"?x1": "http://data.linkedmdb.org/film/20345"
+		},
+		{
+			"?x4": "\"101 Reykjav/u00C3/u00ADk\"",
+			"?x1": "http://data.linkedmdb.org/film/25238"
+		},
+		{
+			"?x4": "\"Atlantic Rhapsody\"",
+			"?x1": "http://data.linkedmdb.org/film/25880"
+		},
+		{
+			"?x4": "\"Bang Bang Orangutang\"",
+			"?x1": "http://data.linkedmdb.org/film/26348"
+		},
+		{
+			"?x4": "\"Breaking the Waves\"",
+			"?x1": "http://data.linkedmdb.org/film/26834"
+		},
+		{
+			"?x4": "\"Dancer in the Dark\"",
+			"?x1": "http://data.linkedmdb.org/film/27597"
+		},
+		{
+			"?x4": "\"Day of Wrath\"",
+			"?x1": "http://data.linkedmdb.org/film/27683"
+		},
+		{
+			"?x4": "\"Dogville\"",
+			"?x1": "http://data.linkedmdb.org/film/27996"
+		},
+		{
+			"?x4": "\"Fear X\"",
+			"?x1": "http://data.linkedmdb.org/film/28484"
+		},
+		{
+			"?x4": "\"Gayniggers From Outer Space\"",
+			"?x1": "http://data.linkedmdb.org/film/28878"
+		},
+		{
+			"?x4": "\"H/u00C3/u00A4xan\"",
+			"?x1": "http://data.linkedmdb.org/film/29274"
+		},
+		{
+			"?x4": "\"I Am Dina\"",
+			"?x1": "http://data.linkedmdb.org/film/29860"
+		},
+		{
+			"?x4": "\"Pusher\"",
+			"?x1": "http://data.linkedmdb.org/film/3005"
+		},
+		{
+			"?x4": "\"Kinamand\"",
+			"?x1": "http://data.linkedmdb.org/film/30271"
+		},
+		{
+			"?x4": "\"Epidemic\"",
+			"?x1": "http://data.linkedmdb.org/film/3072"
+		},
+		{
+			"?x4": "\"Lilja 4-ever\"",
+			"?x1": "http://data.linkedmdb.org/film/30730"
+		},
+		{
+			"?x4": "\"Manderlay\"",
+			"?x1": "http://data.linkedmdb.org/film/31031"
+		},
+		{
+			"?x4": "\"Nattevagten\"",
+			"?x1": "http://data.linkedmdb.org/film/31680"
+		},
+		{
+			"?x4": "\"Ordet\"",
+			"?x1": "http://data.linkedmdb.org/film/32055"
+		},
+		{
+			"?x4": "\"Pelle the Conqueror\"",
+			"?x1": "http://data.linkedmdb.org/film/32248"
+		},
+		{
+			"?x4": "\"Reptilicus\"",
+			"?x1": "http://data.linkedmdb.org/film/32764"
+		},
+		{
+			"?x4": "\"Songs from the Second Floor\"",
+			"?x1": "http://data.linkedmdb.org/film/33591"
+		},
+		{
+			"?x4": "\"The Celebration\"",
+			"?x1": "http://data.linkedmdb.org/film/34637"
+		},
+		{
+			"?x4": "\"The Element of Crime\"",
+			"?x1": "http://data.linkedmdb.org/film/34929"
+		},
+		{
+			"?x4": "\"The Five Obstructions\"",
+			"?x1": "http://data.linkedmdb.org/film/35035"
+		},
+		{
+			"?x4": "\"The Green Butchers\"",
+			"?x1": "http://data.linkedmdb.org/film/35231"
+		},
+		{
+			"?x4": "\"The Idiots\"",
+			"?x1": "http://data.linkedmdb.org/film/35400"
+		},
+		{
+			"?x4": "\"The Journals of Knud Rasmussen\"",
+			"?x1": "http://data.linkedmdb.org/film/35466"
+		},
+		{
+			"?x4": "\"The King is Alive\"",
+			"?x1": "http://data.linkedmdb.org/film/35503"
+		},
+		{
+			"?x4": "\"The Passion of Joan of Arc\"",
+			"?x1": "http://data.linkedmdb.org/film/36060"
+		},
+		{
+			"?x4": "\"Vampyr\"",
+			"?x1": "http://data.linkedmdb.org/film/37463"
+		},
+		{
+			"?x4": "\"Zentropa\"",
+			"?x1": "http://data.linkedmdb.org/film/38030"
+		},
+		{
+			"?x4": "\"Nemesis\"",
+			"?x1": "http://data.linkedmdb.org/film/4690"
+		},
+		{
+			"?x4": "\"Gertrud\"",
+			"?x1": "http://data.linkedmdb.org/film/5446"
+		},
+		{
+			"?x4": "\"Klatret/u00C3/u00B8sen\"",
+			"?x1": "http://data.linkedmdb.org/film/6870"
+		},
+		{
+			"?x4": "\"It's All About Love\"",
+			"?x1": "http://data.linkedmdb.org/film/846"
+		},
+		{
+			"?x4": "\"Brothers\"",
+			"?x1": "http://data.linkedmdb.org/film/8853"
+		},
+		{
+			"?x4": "\"Adam's Apples\"",
+			"?x1": "http://data.linkedmdb.org/film/9494"
+		},
+		{
+			"?x4": "\"Terkel in Trouble\"",
+			"?x1": "http://data.linkedmdb.org/film/11388"
+		},
+		{
+			"?x4": "\"In China They Eat Dogs\"",
+			"?x1": "http://data.linkedmdb.org/film/12069"
+		},
+		{
+			"?x4": "\"Old Men in New Cars\"",
+			"?x1": "http://data.linkedmdb.org/film/12070"
+		},
+		{
+			"?x4": "\"Shake It All About\"",
+			"?x1": "http://data.linkedmdb.org/film/12591"
+		},
+		{
+			"?x4": "\"J/u00C3/u00B6nssonligan dyker upp igen\"",
+			"?x1": "http://data.linkedmdb.org/film/1478"
+		},
+		{
+			"?x4": "\"Buddhas barn\"",
+			"?x1": "http://data.linkedmdb.org/film/14858"
+		},
+		{
+			"?x4": "\"Brudepigen - F/u00C3/u00A6rgeturen - Jagten p/u00C3/u00A5 k/u00C3/u00A6ledyret\"",
+			"?x1": "http://data.linkedmdb.org/film/16093"
+		},
+		{
+			"?x4": "\"Str/u00C3/u00B8mer\"",
+			"?x1": "http://data.linkedmdb.org/film/17278"
+		},
+		{
+			"?x4": "\"Sp/u00C3/u00B8gelsestoget\"",
+			"?x1": "http://data.linkedmdb.org/film/17279"
+		},
+		{
+			"?x4": "\"Styrmand Karlsen\"",
+			"?x1": "http://data.linkedmdb.org/film/17281"
+		},
+		{
+			"?x4": "\"Stjerneskud\"",
+			"?x1": "http://data.linkedmdb.org/film/17284"
+		},
+		{
+			"?x4": "\"Don Olsen kommer til byen\"",
+			"?x1": "http://data.linkedmdb.org/film/17333"
+		},
+		{
+			"?x4": "\"Bl/u00C3/u00A6ndv/u00C3/u00A6rk\"",
+			"?x1": "http://data.linkedmdb.org/film/17335"
+		},
+		{
+			"?x4": "\"J/u00C3/u00B6nssonligan f/u00C3/u00A5r guldfeber\"",
+			"?x1": "http://data.linkedmdb.org/film/1755"
+		},
+		{
+			"?x4": "\"Der var engang en vicev/u00C3/u00A6rt\"",
+			"?x1": "http://data.linkedmdb.org/film/18071"
+		},
+		{
+			"?x4": "\"Frk. M/u00C3/u00B8llers jubil/u00C3/u00A6um\"",
+			"?x1": "http://data.linkedmdb.org/film/18072"
+		},
+		{
+			"?x4": "\"Bag K/u00C3/u00B8benhavns kulisser\"",
+			"?x1": "http://data.linkedmdb.org/film/18290"
+		},
+		{
+			"?x4": "\"Atlantis\"",
+			"?x1": "http://data.linkedmdb.org/film/1876"
+		},
+		{
+			"?x4": "\"K/u00C3/u00B8benhavnere\"",
+			"?x1": "http://data.linkedmdb.org/film/18835"
+		},
+		{
+			"?x4": "\"Mifune's Last Song\"",
+			"?x1": "http://data.linkedmdb.org/film/1994"
+		},
+		{
+			"?x4": "\"All About Anna\"",
+			"?x1": "http://data.linkedmdb.org/film/25547"
+		},
+		{
+			"?x4": "\"Help I'm a Fish\"",
+			"?x1": "http://data.linkedmdb.org/film/2715"
+		},
+		{
+			"?x4": "\"Du er ikke alene\"",
+			"?x1": "http://data.linkedmdb.org/film/28143"
+		},
+		{
+			"?x4": "\"Italian for Beginners\"",
+			"?x1": "http://data.linkedmdb.org/film/29833"
+		},
+		{
+			"?x4": "\"Minor Mishaps\"",
+			"?x1": "http://data.linkedmdb.org/film/31284"
+		},
+		{
+			"?x4": "\"The Perfect Human\"",
+			"?x1": "http://data.linkedmdb.org/film/36078"
+		},
+		{
+			"?x4": "\"Torremolinos 73\"",
+			"?x1": "http://data.linkedmdb.org/film/37144"
+		},
+		{
+			"?x4": "\"Verdens Undergang\"",
+			"?x1": "http://data.linkedmdb.org/film/37504"
+		},
+		{
+			"?x4": "\"Wilbur Wants to Kill Himself\"",
+			"?x1": "http://data.linkedmdb.org/film/37792"
+		},
+		{
+			"?x4": "\"Himmelskibet\"",
+			"?x1": "http://data.linkedmdb.org/film/4027"
+		},
+		{
+			"?x4": "\"Fr/u00C3/u00A6kke Frida og de frygtl/u00C3/u00B8se spioner\"",
+			"?x1": "http://data.linkedmdb.org/film/5300"
+		},
+		{
+			"?x4": "\"Arven\"",
+			"?x1": "http://data.linkedmdb.org/film/5664"
+		},
+		{
+			"?x4": "\"King's game\"",
+			"?x1": "http://data.linkedmdb.org/film/9137"
+		},
+		{
+			"?x4": "\"Stolen Spring\"",
+			"?x1": "http://data.linkedmdb.org/film/9458"
+		}
+	]
+}

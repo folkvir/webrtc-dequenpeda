@@ -1,16 +1,22 @@
-[
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Cardiovascular",
-		"?x4": "\"1\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/261",
-		"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ADRA2C",
-		"?x6": "\"Congestive heart failure\""
-	},
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Cardiovascular",
-		"?x4": "\"1\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/261",
-		"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ADRB1",
-		"?x6": "\"Congestive heart failure\""
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x3 ?x4 ?x1 ?x5 ?x6 WHERE   { ?x1 <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/sider/resource/side_effects/C0018802> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x6 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x7   } ",
+	"filename": "q74.json",
+	"card": 2,
+	"results": [
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Cardiovascular",
+			"?x4": "\"1\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/261",
+			"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ADRA2C",
+			"?x6": "\"Congestive heart failure\""
+		},
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Cardiovascular",
+			"?x4": "\"1\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/261",
+			"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ADRB1",
+			"?x6": "\"Congestive heart failure\""
+		}
+	]
+}

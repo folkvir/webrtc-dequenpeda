@@ -1,422 +1,428 @@
-[
-	{
-		"?x4": "\"SARS, progression of\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1021",
-		"?x7": "\"1\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ACE"
-	},
-	{
-		"?x4": "\"Renal tubular dysgenesis\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1283",
-		"?x7": "\"4\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ACE"
-	},
-	{
-		"?x4": "\"Renal tubular dysgenesis\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1283",
-		"?x7": "\"4\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AGT"
-	},
-	{
-		"?x4": "\"Renal tubular dysgenesis\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1283",
-		"?x7": "\"4\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AGTR1"
-	},
-	{
-		"?x4": "\"Renal tubular dysgenesis\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1283",
-		"?x7": "\"4\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/REN"
-	},
-	{
-		"?x4": "\"Diabetes mellitus\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
-		"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ABCC8"
-	},
-	{
-		"?x4": "\"Diabetes mellitus\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
-		"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ACE"
-	},
-	{
-		"?x4": "\"Diabetes mellitus\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
-		"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AKT2"
-	},
-	{
-		"?x4": "\"Diabetes mellitus\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
-		"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CAPN10"
-	},
-	{
-		"?x4": "\"Diabetes mellitus\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
-		"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ENPP1"
-	},
-	{
-		"?x4": "\"Diabetes mellitus\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
-		"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/FOXP3"
-	},
-	{
-		"?x4": "\"Diabetes mellitus\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
-		"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/GCGR"
-	},
-	{
-		"?x4": "\"Diabetes mellitus\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
-		"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/GCK"
-	},
-	{
-		"?x4": "\"Diabetes mellitus\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
-		"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/GPD2"
-	},
-	{
-		"?x4": "\"Diabetes mellitus\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
-		"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/HNF4A"
-	},
-	{
-		"?x4": "\"Diabetes mellitus\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
-		"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/INSR"
-	},
-	{
-		"?x4": "\"Diabetes mellitus\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
-		"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/IPF1"
-	},
-	{
-		"?x4": "\"Diabetes mellitus\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
-		"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/IRS1"
-	},
-	{
-		"?x4": "\"Diabetes mellitus\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
-		"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/IRS2"
-	},
-	{
-		"?x4": "\"Diabetes mellitus\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
-		"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/KCNJ11"
-	},
-	{
-		"?x4": "\"Diabetes mellitus\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
-		"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/MAPK8IP1"
-	},
-	{
-		"?x4": "\"Diabetes mellitus\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
-		"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/NEUROD1"
-	},
-	{
-		"?x4": "\"Diabetes mellitus\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
-		"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/PPARG"
-	},
-	{
-		"?x4": "\"Diabetes mellitus\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
-		"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/PTF1A"
-	},
-	{
-		"?x4": "\"Diabetes mellitus\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
-		"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/PTPN22"
-	},
-	{
-		"?x4": "\"Diabetes mellitus\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
-		"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/RETN"
-	},
-	{
-		"?x4": "\"Diabetes mellitus\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
-		"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SLC2A2"
-	},
-	{
-		"?x4": "\"Diabetes mellitus\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
-		"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SLC2A4"
-	},
-	{
-		"?x4": "\"Diabetes mellitus\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
-		"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SUMO4"
-	},
-	{
-		"?x4": "\"Diabetes mellitus\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
-		"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/TCF1"
-	},
-	{
-		"?x4": "\"Diabetes mellitus\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
-		"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/TCF2"
-	},
-	{
-		"?x4": "\"Diabetes mellitus\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
-		"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/VEGF"
-	},
-	{
-		"?x4": "\"Hypertension\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561",
-		"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ADD1"
-	},
-	{
-		"?x4": "\"Hypertension\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561",
-		"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AGT"
-	},
-	{
-		"?x4": "\"Hypertension\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561",
-		"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AGTR1"
-	},
-	{
-		"?x4": "\"Hypertension\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561",
-		"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CYP3A5"
-	},
-	{
-		"?x4": "\"Hypertension\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561",
-		"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ECE1"
-	},
-	{
-		"?x4": "\"Hypertension\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561",
-		"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/GNB3"
-	},
-	{
-		"?x4": "\"Hypertension\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561",
-		"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/HSD11B2"
-	},
-	{
-		"?x4": "\"Hypertension\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561",
-		"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/KCNMB1"
-	},
-	{
-		"?x4": "\"Hypertension\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561",
-		"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/NOS3"
-	},
-	{
-		"?x4": "\"Hypertension\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561",
-		"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/NR3C2"
-	},
-	{
-		"?x4": "\"Hypertension\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561",
-		"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/PTGIS"
-	},
-	{
-		"?x4": "\"Hypertension\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561",
-		"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/RETN"
-	},
-	{
-		"?x4": "\"Alzheimer disease\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74",
-		"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/A2M"
-	},
-	{
-		"?x4": "\"Alzheimer disease\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74",
-		"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ACE"
-	},
-	{
-		"?x4": "\"Alzheimer disease\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74",
-		"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/APBB2"
-	},
-	{
-		"?x4": "\"Alzheimer disease\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74",
-		"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/APOE"
-	},
-	{
-		"?x4": "\"Alzheimer disease\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74",
-		"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/APP"
-	},
-	{
-		"?x4": "\"Alzheimer disease\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74",
-		"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BLMH"
-	},
-	{
-		"?x4": "\"Alzheimer disease\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74",
-		"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/MPO"
-	},
-	{
-		"?x4": "\"Alzheimer disease\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74",
-		"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/NOS3"
-	},
-	{
-		"?x4": "\"Alzheimer disease\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74",
-		"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/PAXIP1"
-	},
-	{
-		"?x4": "\"Alzheimer disease\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74",
-		"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/PLAU"
-	},
-	{
-		"?x4": "\"Alzheimer disease\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74",
-		"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/PSEN1"
-	},
-	{
-		"?x4": "\"Alzheimer disease\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74",
-		"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/PSEN2"
-	},
-	{
-		"?x4": "\"Myocardial infarction\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/797",
-		"?x7": "\"10\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ACE"
-	},
-	{
-		"?x4": "\"Myocardial infarction\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/797",
-		"?x7": "\"10\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ALOX5AP"
-	},
-	{
-		"?x4": "\"Myocardial infarction\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/797",
-		"?x7": "\"10\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/APOE"
-	},
-	{
-		"?x4": "\"Myocardial infarction\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/797",
-		"?x7": "\"10\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/F7"
-	},
-	{
-		"?x4": "\"Myocardial infarction\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/797",
-		"?x7": "\"10\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/GCLM"
-	},
-	{
-		"?x4": "\"Myocardial infarction\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/797",
-		"?x7": "\"10\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/LGALS2"
-	},
-	{
-		"?x4": "\"Myocardial infarction\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/797",
-		"?x7": "\"10\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/LTA"
-	},
-	{
-		"?x4": "\"Myocardial infarction\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/797",
-		"?x7": "\"10\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/OLR1"
-	},
-	{
-		"?x4": "\"Myocardial infarction\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/797",
-		"?x7": "\"10\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/THBD"
-	},
-	{
-		"?x4": "\"Myocardial infarction\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/797",
-		"?x7": "\"10\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/TNFSF4"
-	},
-	{
-		"?x4": "\"Angiotensin I-converting enzyme\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/89",
-		"?x7": "\"1\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ACE"
-	},
-	{
-		"?x4": "\"Preeclampsia\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/949",
-		"?x7": "\"3\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AGT"
-	},
-	{
-		"?x4": "\"Preeclampsia\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/949",
-		"?x7": "\"3\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/EPHX1"
-	},
-	{
-		"?x4": "\"Preeclampsia\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/949",
-		"?x7": "\"3\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/STOX1"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x4 ?x1 ?x7 ?x6 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> <http://www4.wiwiss.fu-berlin.de/dailymed/resource/drugs/4167> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x6 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/size> ?x7 .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x8   } ",
+	"filename": "q91.json",
+	"card": 70,
+	"results": [
+		{
+			"?x4": "\"SARS, progression of\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1021",
+			"?x7": "\"1\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ACE"
+		},
+		{
+			"?x4": "\"Renal tubular dysgenesis\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1283",
+			"?x7": "\"4\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ACE"
+		},
+		{
+			"?x4": "\"Renal tubular dysgenesis\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1283",
+			"?x7": "\"4\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AGT"
+		},
+		{
+			"?x4": "\"Renal tubular dysgenesis\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1283",
+			"?x7": "\"4\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AGTR1"
+		},
+		{
+			"?x4": "\"Renal tubular dysgenesis\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1283",
+			"?x7": "\"4\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/REN"
+		},
+		{
+			"?x4": "\"Diabetes mellitus\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+			"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ABCC8"
+		},
+		{
+			"?x4": "\"Diabetes mellitus\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+			"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ACE"
+		},
+		{
+			"?x4": "\"Diabetes mellitus\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+			"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AKT2"
+		},
+		{
+			"?x4": "\"Diabetes mellitus\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+			"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CAPN10"
+		},
+		{
+			"?x4": "\"Diabetes mellitus\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+			"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ENPP1"
+		},
+		{
+			"?x4": "\"Diabetes mellitus\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+			"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/FOXP3"
+		},
+		{
+			"?x4": "\"Diabetes mellitus\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+			"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/GCGR"
+		},
+		{
+			"?x4": "\"Diabetes mellitus\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+			"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/GCK"
+		},
+		{
+			"?x4": "\"Diabetes mellitus\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+			"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/GPD2"
+		},
+		{
+			"?x4": "\"Diabetes mellitus\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+			"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/HNF4A"
+		},
+		{
+			"?x4": "\"Diabetes mellitus\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+			"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/INSR"
+		},
+		{
+			"?x4": "\"Diabetes mellitus\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+			"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/IPF1"
+		},
+		{
+			"?x4": "\"Diabetes mellitus\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+			"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/IRS1"
+		},
+		{
+			"?x4": "\"Diabetes mellitus\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+			"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/IRS2"
+		},
+		{
+			"?x4": "\"Diabetes mellitus\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+			"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/KCNJ11"
+		},
+		{
+			"?x4": "\"Diabetes mellitus\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+			"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/MAPK8IP1"
+		},
+		{
+			"?x4": "\"Diabetes mellitus\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+			"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/NEUROD1"
+		},
+		{
+			"?x4": "\"Diabetes mellitus\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+			"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/PPARG"
+		},
+		{
+			"?x4": "\"Diabetes mellitus\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+			"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/PTF1A"
+		},
+		{
+			"?x4": "\"Diabetes mellitus\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+			"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/PTPN22"
+		},
+		{
+			"?x4": "\"Diabetes mellitus\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+			"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/RETN"
+		},
+		{
+			"?x4": "\"Diabetes mellitus\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+			"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SLC2A2"
+		},
+		{
+			"?x4": "\"Diabetes mellitus\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+			"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SLC2A4"
+		},
+		{
+			"?x4": "\"Diabetes mellitus\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+			"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SUMO4"
+		},
+		{
+			"?x4": "\"Diabetes mellitus\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+			"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/TCF1"
+		},
+		{
+			"?x4": "\"Diabetes mellitus\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+			"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/TCF2"
+		},
+		{
+			"?x4": "\"Diabetes mellitus\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/319",
+			"?x7": "\"27\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/VEGF"
+		},
+		{
+			"?x4": "\"Hypertension\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561",
+			"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ADD1"
+		},
+		{
+			"?x4": "\"Hypertension\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561",
+			"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AGT"
+		},
+		{
+			"?x4": "\"Hypertension\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561",
+			"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AGTR1"
+		},
+		{
+			"?x4": "\"Hypertension\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561",
+			"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/CYP3A5"
+		},
+		{
+			"?x4": "\"Hypertension\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561",
+			"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ECE1"
+		},
+		{
+			"?x4": "\"Hypertension\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561",
+			"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/GNB3"
+		},
+		{
+			"?x4": "\"Hypertension\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561",
+			"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/HSD11B2"
+		},
+		{
+			"?x4": "\"Hypertension\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561",
+			"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/KCNMB1"
+		},
+		{
+			"?x4": "\"Hypertension\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561",
+			"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/NOS3"
+		},
+		{
+			"?x4": "\"Hypertension\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561",
+			"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/NR3C2"
+		},
+		{
+			"?x4": "\"Hypertension\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561",
+			"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/PTGIS"
+		},
+		{
+			"?x4": "\"Hypertension\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/561",
+			"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/RETN"
+		},
+		{
+			"?x4": "\"Alzheimer disease\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74",
+			"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/A2M"
+		},
+		{
+			"?x4": "\"Alzheimer disease\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74",
+			"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ACE"
+		},
+		{
+			"?x4": "\"Alzheimer disease\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74",
+			"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/APBB2"
+		},
+		{
+			"?x4": "\"Alzheimer disease\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74",
+			"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/APOE"
+		},
+		{
+			"?x4": "\"Alzheimer disease\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74",
+			"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/APP"
+		},
+		{
+			"?x4": "\"Alzheimer disease\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74",
+			"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/BLMH"
+		},
+		{
+			"?x4": "\"Alzheimer disease\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74",
+			"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/MPO"
+		},
+		{
+			"?x4": "\"Alzheimer disease\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74",
+			"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/NOS3"
+		},
+		{
+			"?x4": "\"Alzheimer disease\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74",
+			"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/PAXIP1"
+		},
+		{
+			"?x4": "\"Alzheimer disease\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74",
+			"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/PLAU"
+		},
+		{
+			"?x4": "\"Alzheimer disease\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74",
+			"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/PSEN1"
+		},
+		{
+			"?x4": "\"Alzheimer disease\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/74",
+			"?x7": "\"12\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/PSEN2"
+		},
+		{
+			"?x4": "\"Myocardial infarction\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/797",
+			"?x7": "\"10\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ACE"
+		},
+		{
+			"?x4": "\"Myocardial infarction\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/797",
+			"?x7": "\"10\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ALOX5AP"
+		},
+		{
+			"?x4": "\"Myocardial infarction\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/797",
+			"?x7": "\"10\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/APOE"
+		},
+		{
+			"?x4": "\"Myocardial infarction\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/797",
+			"?x7": "\"10\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/F7"
+		},
+		{
+			"?x4": "\"Myocardial infarction\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/797",
+			"?x7": "\"10\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/GCLM"
+		},
+		{
+			"?x4": "\"Myocardial infarction\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/797",
+			"?x7": "\"10\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/LGALS2"
+		},
+		{
+			"?x4": "\"Myocardial infarction\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/797",
+			"?x7": "\"10\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/LTA"
+		},
+		{
+			"?x4": "\"Myocardial infarction\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/797",
+			"?x7": "\"10\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/OLR1"
+		},
+		{
+			"?x4": "\"Myocardial infarction\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/797",
+			"?x7": "\"10\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/THBD"
+		},
+		{
+			"?x4": "\"Myocardial infarction\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/797",
+			"?x7": "\"10\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/TNFSF4"
+		},
+		{
+			"?x4": "\"Angiotensin I-converting enzyme\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/89",
+			"?x7": "\"1\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ACE"
+		},
+		{
+			"?x4": "\"Preeclampsia\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/949",
+			"?x7": "\"3\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AGT"
+		},
+		{
+			"?x4": "\"Preeclampsia\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/949",
+			"?x7": "\"3\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/EPHX1"
+		},
+		{
+			"?x4": "\"Preeclampsia\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/949",
+			"?x7": "\"3\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/STOX1"
+		}
+	]
+}

@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "http://data.linkedct.org/resource/condition/5478",
-		"?x2": "\"HIV\""
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/516> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/516> <http://www.w3.org/2002/07/owl#sameAs> ?x3   } ",
+	"filename": "q24.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "http://data.linkedct.org/resource/condition/5478",
+			"?x2": "\"HIV\""
+		}
+	]
+}

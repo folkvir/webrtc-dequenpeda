@@ -1,5 +1,11 @@
-[
-	{
-		"?x3": "\"40.76 -73.955\"@en"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  ?x3 WHERE   { <http://dbpedia.org/resource/63rd_Street_Tunnel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/63rd_Street_Tunnel> <http://www.georss.org/georss/point> ?x3   } ",
+	"filename": "q13.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"40.76 -73.955\"@en"
+		}
+	]
+}

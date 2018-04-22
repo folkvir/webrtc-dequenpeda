@@ -1,5 +1,11 @@
-[
-	{
-		"?x3": "\"141.117944\"^^http://www.w3.org/2001/XMLSchema#float"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  ?x3 WHERE   { <http://dbpedia.org/resource/Aoyama_Station_(Iwate)> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Aoyama_Station_(Iwate)> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
+	"filename": "q22.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"141.117944\"^^http://www.w3.org/2001/XMLSchema#float"
+		}
+	]
+}

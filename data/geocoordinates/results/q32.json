@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "\"-54.743611111111115\"^^http://www.w3.org/2001/XMLSchema#float",
-		"?x2": "\"49.61388888888889\"^^http://www.w3.org/2001/XMLSchema#float"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Bayview,_Newfoundland_and_Labrador> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Bayview,_Newfoundland_and_Labrador> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
+	"filename": "q32.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"-54.743611111111115\"^^http://www.w3.org/2001/XMLSchema#float",
+			"?x2": "\"49.61388888888889\"^^http://www.w3.org/2001/XMLSchema#float"
+		}
+	]
+}

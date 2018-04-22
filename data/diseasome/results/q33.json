@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "\"Cataract, polymorphic and lamellar, 604219\"",
-		"?x2": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB02451"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  * WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1778> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1778> <http://www.w3.org/2000/01/rdf-schema#label> ?x3   } ",
+	"filename": "q33.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"Cataract, polymorphic and lamellar, 604219\"",
+			"?x2": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB02451"
+		}
+	]
+}

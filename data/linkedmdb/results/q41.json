@@ -1,5 +1,11 @@
-[
-	{
-		"?x4": "http://data.linkedmdb.org/movie/film"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x4 WHERE   { ?x1 <http://www.w3.org/2004/02/skos/core#subject> <http://data.linkedmdb.org/film_subject/131> .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x3 .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x4   } ",
+	"filename": "q41.json",
+	"card": 1,
+	"results": [
+		{
+			"?x4": "http://data.linkedmdb.org/movie/film"
+		}
+	]
+}

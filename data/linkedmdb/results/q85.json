@@ -1,5 +1,11 @@
-[
-	{
-		"?x1": "http://data.linkedmdb.org/film/9041"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/page> ?x2 .     ?x1 <http://purl.org/dc/terms/title> ?x3 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> \"Blades of Glory\" .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x5   } ",
+	"filename": "q85.json",
+	"card": 1,
+	"results": [
+		{
+			"?x1": "http://data.linkedmdb.org/film/9041"
+		}
+	]
+}

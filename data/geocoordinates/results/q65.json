@@ -1,6 +1,12 @@
-[
-	{
-		"?x4": "\"37.925555555555555 -121.24555555555555\"@en",
-		"?x2": "http://www.opengis.net/gml/_Feature"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  ?x4 ?x2 WHERE   { <http://dbpedia.org/resource/KSTN_(AM)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/KSTN_(AM)> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/KSTN_(AM)> <http://www.georss.org/georss/point> ?x4   } ",
+	"filename": "q65.json",
+	"card": 1,
+	"results": [
+		{
+			"?x4": "\"37.925555555555555 -121.24555555555555\"@en",
+			"?x2": "http://www.opengis.net/gml/_Feature"
+		}
+	]
+}

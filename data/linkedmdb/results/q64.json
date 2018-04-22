@@ -1,5 +1,11 @@
-[
-	{
-		"?x1": "http://data.linkedmdb.org/film/1421"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://dbpedia.org/property/hasPhotoCollection> ?x2 .     ?x1 <http://xmlns.com/foaf/0.1/page> ?x3 .     ?x1 <http://purl.org/dc/terms/date> ?x4 .     ?x1 <http://purl.org/dc/terms/title> \"Under My Skin\"   } ",
+	"filename": "q64.json",
+	"card": 1,
+	"results": [
+		{
+			"?x1": "http://data.linkedmdb.org/film/1421"
+		}
+	]
+}

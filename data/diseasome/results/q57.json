@@ -1,7 +1,13 @@
-[
-	{
-		"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
-		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/6p22.2",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2209"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x3 ?x4 ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DYLX2> .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x5   } ",
+	"filename": "q57.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseases",
+			"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/6p22.2",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2209"
+		}
+	]
+}

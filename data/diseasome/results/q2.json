@@ -1,10 +1,16 @@
-[
-	{
-		"?x3": "http://www.genenames.org/data/hgnc_data.php?hgnc_id=10990",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/954"
-	},
-	{
-		"?x3": "http://www.genenames.org/data/hgnc_data.php?hgnc_id=10990",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3648"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SLC25A4> .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SLC25A4> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/hgncIdPage> ?x3   } ",
+	"filename": "q2.json",
+	"card": 2,
+	"results": [
+		{
+			"?x3": "http://www.genenames.org/data/hgnc_data.php?hgnc_id=10990",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/954"
+		},
+		{
+			"?x3": "http://www.genenames.org/data/hgnc_data.php?hgnc_id=10990",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3648"
+		}
+	]
+}

@@ -1,37 +1,43 @@
-[
-	{
-		"?x3": "\"Why We Fight\"",
-		"?x4": "http://data.linkedmdb.org/film_subject/122",
-		"?x1": "http://data.linkedmdb.org/film/3048"
-	},
-	{
-		"?x3": "\"Seducing Doctor Lewis\"",
-		"?x4": "http://data.linkedmdb.org/film_subject/137",
-		"?x1": "http://data.linkedmdb.org/film/33211"
-	},
-	{
-		"?x3": "\"Seducing Doctor Lewis\"",
-		"?x4": "http://data.linkedmdb.org/film_subject/43",
-		"?x1": "http://data.linkedmdb.org/film/33211"
-	},
-	{
-		"?x3": "\"Seducing Doctor Lewis\"",
-		"?x4": "http://data.linkedmdb.org/film_subject/44",
-		"?x1": "http://data.linkedmdb.org/film/33211"
-	},
-	{
-		"?x3": "\"The Daytrippers\"",
-		"?x4": "http://data.linkedmdb.org/film_subject/112",
-		"?x1": "http://data.linkedmdb.org/film/34805"
-	},
-	{
-		"?x3": "\"The Daytrippers\"",
-		"?x4": "http://data.linkedmdb.org/film_subject/24",
-		"?x1": "http://data.linkedmdb.org/film/34805"
-	},
-	{
-		"?x3": "\"Joan of Arc\"",
-		"?x4": "http://data.linkedmdb.org/film_subject/116",
-		"?x1": "http://data.linkedmdb.org/film/8099"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x3 ?x4 ?x1 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/based_near> <http://sws.geonames.org/6251999/> .     ?x1 <http://purl.org/dc/terms/title> ?x3 .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x4   } ",
+	"filename": "q37.json",
+	"card": 7,
+	"results": [
+		{
+			"?x3": "\"Why We Fight\"",
+			"?x4": "http://data.linkedmdb.org/film_subject/122",
+			"?x1": "http://data.linkedmdb.org/film/3048"
+		},
+		{
+			"?x3": "\"Seducing Doctor Lewis\"",
+			"?x4": "http://data.linkedmdb.org/film_subject/137",
+			"?x1": "http://data.linkedmdb.org/film/33211"
+		},
+		{
+			"?x3": "\"Seducing Doctor Lewis\"",
+			"?x4": "http://data.linkedmdb.org/film_subject/43",
+			"?x1": "http://data.linkedmdb.org/film/33211"
+		},
+		{
+			"?x3": "\"Seducing Doctor Lewis\"",
+			"?x4": "http://data.linkedmdb.org/film_subject/44",
+			"?x1": "http://data.linkedmdb.org/film/33211"
+		},
+		{
+			"?x3": "\"The Daytrippers\"",
+			"?x4": "http://data.linkedmdb.org/film_subject/112",
+			"?x1": "http://data.linkedmdb.org/film/34805"
+		},
+		{
+			"?x3": "\"The Daytrippers\"",
+			"?x4": "http://data.linkedmdb.org/film_subject/24",
+			"?x1": "http://data.linkedmdb.org/film/34805"
+		},
+		{
+			"?x3": "\"Joan of Arc\"",
+			"?x4": "http://data.linkedmdb.org/film_subject/116",
+			"?x1": "http://data.linkedmdb.org/film/8099"
+		}
+	]
+}

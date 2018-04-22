@@ -1,6 +1,12 @@
-[
-	{
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2216",
-		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DRD2"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01184> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x4 .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x5   } ",
+	"filename": "q55.json",
+	"card": 1,
+	"results": [
+		{
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2216",
+			"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/DRD2"
+		}
+	]
+}

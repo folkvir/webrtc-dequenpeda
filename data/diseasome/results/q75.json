@@ -1,8 +1,14 @@
-[
-	{
-		"?x3": "\"Cystinuria\"",
-		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Renal",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/299",
-		"?x7": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00138"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x3 ?x4 ?x1 ?x7 WHERE   { ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/degree> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SLC7A9> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x7   } ",
+	"filename": "q75.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"Cystinuria\"",
+			"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Renal",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/299",
+			"?x7": "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00138"
+		}
+	]
+}

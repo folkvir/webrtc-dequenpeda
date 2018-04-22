@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "\"49.95 18.583333333333332\"@en",
-		"?x2": "http://www.opengis.net/gml/_Feature"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Jastrz%C4%99bie-Zdr%C3%B3j> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Jastrz%C4%99bie-Zdr%C3%B3j> <http://www.georss.org/georss/point> ?x3   } ",
+	"filename": "q9.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"49.95 18.583333333333332\"@en",
+			"?x2": "http://www.opengis.net/gml/_Feature"
+		}
+	]
+}

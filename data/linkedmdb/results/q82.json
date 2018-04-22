@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "\"Year of the Dogs\"",
-		"?x5": "http://data.linkedmdb.org/movie/film"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x3 ?x5 WHERE   { <http://data.linkedmdb.org/film/37944> <http://xmlns.com/foaf/0.1/page> ?x2 .     <http://data.linkedmdb.org/film/37944> <http://purl.org/dc/terms/title> ?x3 .     <http://data.linkedmdb.org/film/37944> <http://xmlns.com/foaf/0.1/based_near> ?x4 .     <http://data.linkedmdb.org/film/37944> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x5   } ",
+	"filename": "q82.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"Year of the Dogs\"",
+			"?x5": "http://data.linkedmdb.org/movie/film"
+		}
+	]
+}

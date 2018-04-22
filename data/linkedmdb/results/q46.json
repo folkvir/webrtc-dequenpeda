@@ -1,5 +1,11 @@
-[
-	{
-		"?x1": "http://data.linkedmdb.org/film/26281"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x2 .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x3 .     ?x1 <http://xmlns.com/foaf/0.1/page> <http://www.rottentomatoes.com/alias?type=imdbid&s=0088763>   } ",
+	"filename": "q46.json",
+	"card": 1,
+	"results": [
+		{
+			"?x1": "http://data.linkedmdb.org/film/26281"
+		}
+	]
+}

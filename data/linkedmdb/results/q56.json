@@ -1,14 +1,20 @@
-[
-	{
-		"?x3": "http://sws.geonames.org/6252001/",
-		"?x4": "http://dbpedia.org/resource/Scrooged",
-		"?x1": "http://data.linkedmdb.org/film/33177",
-		"?x2": "http://data.linkedmdb.org/movie/film"
-	},
-	{
-		"?x3": "http://sws.geonames.org/6252001/",
-		"?x4": "http://mpii.de/yago/resource/Scrooged",
-		"?x1": "http://data.linkedmdb.org/film/33177",
-		"?x2": "http://data.linkedmdb.org/movie/film"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x3 ?x4 ?x1 ?x2 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x3 .     ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x4 .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> <http://data.linkedmdb.org/film_subject/15>   } ",
+	"filename": "q56.json",
+	"card": 2,
+	"results": [
+		{
+			"?x3": "http://sws.geonames.org/6252001/",
+			"?x4": "http://dbpedia.org/resource/Scrooged",
+			"?x1": "http://data.linkedmdb.org/film/33177",
+			"?x2": "http://data.linkedmdb.org/movie/film"
+		},
+		{
+			"?x3": "http://sws.geonames.org/6252001/",
+			"?x4": "http://mpii.de/yago/resource/Scrooged",
+			"?x1": "http://data.linkedmdb.org/film/33177",
+			"?x2": "http://data.linkedmdb.org/movie/film"
+		}
+	]
+}

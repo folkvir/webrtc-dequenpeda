@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "\"-37.85944444444444 144.6911111111111\"@en",
-		"?x2": "http://www.opengis.net/gml/_Feature"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Baden_Powell_College> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Baden_Powell_College> <http://www.georss.org/georss/point> ?x3   } ",
+	"filename": "q12.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"-37.85944444444444 144.6911111111111\"@en",
+			"?x2": "http://www.opengis.net/gml/_Feature"
+		}
+	]
+}

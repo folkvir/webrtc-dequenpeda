@@ -1,8 +1,14 @@
-[
-	{
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3217",
-		"?x2": "\"Multiple endocrine neoplasia I\"",
-		"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/MEN1",
-		"?x9": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Cancer"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x1 ?x2 ?x5 ?x9 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x2 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x6 .     ?x1 <http://www.w3.org/2002/07/owl#sameAs> <http://data.linkedct.org/resource/condition/8342> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x8 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x9   } ",
+	"filename": "q96.json",
+	"card": 1,
+	"results": [
+		{
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3217",
+			"?x2": "\"Multiple endocrine neoplasia I\"",
+			"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/MEN1",
+			"?x9": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Cancer"
+		}
+	]
+}

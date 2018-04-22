@@ -1,92 +1,98 @@
-[
-	{
-		"?x1": "http://data.linkedmdb.org/film/11582",
-		"?x4": "\"The Barber of Siberia\"",
-		"?x2": "http://dbpedia.org/resource/The_Barber_of_Siberia"
-	},
-	{
-		"?x1": "http://data.linkedmdb.org/film/11582",
-		"?x4": "\"The Barber of Siberia\"",
-		"?x2": "http://mpii.de/yago/resource/The_Barber_of_Siberia"
-	},
-	{
-		"?x1": "http://data.linkedmdb.org/film/2016",
-		"?x4": "\"Ecstasy\"",
-		"?x2": "http://dbpedia.org/resource/Ecstasy_28film29"
-	},
-	{
-		"?x1": "http://data.linkedmdb.org/film/2016",
-		"?x4": "\"Ecstasy\"",
-		"?x2": "http://mpii.de/yago/resource/Ecstasy_28film29"
-	},
-	{
-		"?x1": "http://data.linkedmdb.org/film/25410",
-		"?x4": "\"Accumulator 1\"",
-		"?x2": "http://dbpedia.org/resource/Accumulator_1"
-	},
-	{
-		"?x1": "http://data.linkedmdb.org/film/25410",
-		"?x4": "\"Accumulator 1\"",
-		"?x2": "http://mpii.de/yago/resource/Accumulator_1"
-	},
-	{
-		"?x1": "http://data.linkedmdb.org/film/27635",
-		"?x4": "\"Dark Blue World\"",
-		"?x2": "http://dbpedia.org/resource/Dark_Blue_World"
-	},
-	{
-		"?x1": "http://data.linkedmdb.org/film/27635",
-		"?x4": "\"Dark Blue World\"",
-		"?x2": "http://mpii.de/yago/resource/Dark_Blue_World"
-	},
-	{
-		"?x1": "http://data.linkedmdb.org/film/30343",
-		"?x4": "\"Kolya\"",
-		"?x2": "http://dbpedia.org/resource/Kolya"
-	},
-	{
-		"?x1": "http://data.linkedmdb.org/film/30343",
-		"?x4": "\"Kolya\"",
-		"?x2": "http://mpii.de/yago/resource/Kolya"
-	},
-	{
-		"?x1": "http://data.linkedmdb.org/film/32671",
-		"?x4": "\"Ravenous\"",
-		"?x2": "http://dbpedia.org/resource/Ravenous"
-	},
-	{
-		"?x1": "http://data.linkedmdb.org/film/32671",
-		"?x4": "\"Ravenous\"",
-		"?x2": "http://mpii.de/yago/resource/Ravenous"
-	},
-	{
-		"?x1": "http://data.linkedmdb.org/film/5935",
-		"?x4": "\"Plunkett & Macleane\"",
-		"?x2": "http://dbpedia.org/resource/Plunkett_26_Macleane"
-	},
-	{
-		"?x1": "http://data.linkedmdb.org/film/5935",
-		"?x4": "\"Plunkett & Macleane\"",
-		"?x2": "http://mpii.de/yago/resource/Plunkett_26_Macleane"
-	},
-	{
-		"?x1": "http://data.linkedmdb.org/film/996",
-		"?x4": "\"Doom\"",
-		"?x2": "http://dbpedia.org/resource/Doom_28film29"
-	},
-	{
-		"?x1": "http://data.linkedmdb.org/film/996",
-		"?x4": "\"Doom\"",
-		"?x2": "http://mpii.de/yago/resource/Doom_28film29"
-	},
-	{
-		"?x1": "http://data.linkedmdb.org/film/38028",
-		"?x4": "\"/u00C5/u00BDelary\"",
-		"?x2": "http://dbpedia.org/resource//u00C5/u00BDelary"
-	},
-	{
-		"?x1": "http://data.linkedmdb.org/film/38028",
-		"?x4": "\"/u00C5/u00BDelary\"",
-		"?x2": "http://mpii.de/yago/resource//u00C5/u00BDelary"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  * WHERE   { ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     ?x1 <http://xmlns.com/foaf/0.1/based_near> <http://sws.geonames.org/3077311/> .     ?x1 <http://purl.org/dc/terms/title> ?x4   } ",
+	"filename": "q31.json",
+	"card": 18,
+	"results": [
+		{
+			"?x1": "http://data.linkedmdb.org/film/11582",
+			"?x4": "\"The Barber of Siberia\"",
+			"?x2": "http://dbpedia.org/resource/The_Barber_of_Siberia"
+		},
+		{
+			"?x1": "http://data.linkedmdb.org/film/11582",
+			"?x4": "\"The Barber of Siberia\"",
+			"?x2": "http://mpii.de/yago/resource/The_Barber_of_Siberia"
+		},
+		{
+			"?x1": "http://data.linkedmdb.org/film/2016",
+			"?x4": "\"Ecstasy\"",
+			"?x2": "http://dbpedia.org/resource/Ecstasy_28film29"
+		},
+		{
+			"?x1": "http://data.linkedmdb.org/film/2016",
+			"?x4": "\"Ecstasy\"",
+			"?x2": "http://mpii.de/yago/resource/Ecstasy_28film29"
+		},
+		{
+			"?x1": "http://data.linkedmdb.org/film/25410",
+			"?x4": "\"Accumulator 1\"",
+			"?x2": "http://dbpedia.org/resource/Accumulator_1"
+		},
+		{
+			"?x1": "http://data.linkedmdb.org/film/25410",
+			"?x4": "\"Accumulator 1\"",
+			"?x2": "http://mpii.de/yago/resource/Accumulator_1"
+		},
+		{
+			"?x1": "http://data.linkedmdb.org/film/27635",
+			"?x4": "\"Dark Blue World\"",
+			"?x2": "http://dbpedia.org/resource/Dark_Blue_World"
+		},
+		{
+			"?x1": "http://data.linkedmdb.org/film/27635",
+			"?x4": "\"Dark Blue World\"",
+			"?x2": "http://mpii.de/yago/resource/Dark_Blue_World"
+		},
+		{
+			"?x1": "http://data.linkedmdb.org/film/30343",
+			"?x4": "\"Kolya\"",
+			"?x2": "http://dbpedia.org/resource/Kolya"
+		},
+		{
+			"?x1": "http://data.linkedmdb.org/film/30343",
+			"?x4": "\"Kolya\"",
+			"?x2": "http://mpii.de/yago/resource/Kolya"
+		},
+		{
+			"?x1": "http://data.linkedmdb.org/film/32671",
+			"?x4": "\"Ravenous\"",
+			"?x2": "http://dbpedia.org/resource/Ravenous"
+		},
+		{
+			"?x1": "http://data.linkedmdb.org/film/32671",
+			"?x4": "\"Ravenous\"",
+			"?x2": "http://mpii.de/yago/resource/Ravenous"
+		},
+		{
+			"?x1": "http://data.linkedmdb.org/film/5935",
+			"?x4": "\"Plunkett & Macleane\"",
+			"?x2": "http://dbpedia.org/resource/Plunkett_26_Macleane"
+		},
+		{
+			"?x1": "http://data.linkedmdb.org/film/5935",
+			"?x4": "\"Plunkett & Macleane\"",
+			"?x2": "http://mpii.de/yago/resource/Plunkett_26_Macleane"
+		},
+		{
+			"?x1": "http://data.linkedmdb.org/film/996",
+			"?x4": "\"Doom\"",
+			"?x2": "http://dbpedia.org/resource/Doom_28film29"
+		},
+		{
+			"?x1": "http://data.linkedmdb.org/film/996",
+			"?x4": "\"Doom\"",
+			"?x2": "http://mpii.de/yago/resource/Doom_28film29"
+		},
+		{
+			"?x1": "http://data.linkedmdb.org/film/38028",
+			"?x4": "\"/u00C5/u00BDelary\"",
+			"?x2": "http://dbpedia.org/resource//u00C5/u00BDelary"
+		},
+		{
+			"?x1": "http://data.linkedmdb.org/film/38028",
+			"?x4": "\"/u00C5/u00BDelary\"",
+			"?x2": "http://mpii.de/yago/resource//u00C5/u00BDelary"
+		}
+	]
+}

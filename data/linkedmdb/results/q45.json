@@ -1,7 +1,13 @@
-[
-	{
-		"?x3": "http://data.linkedmdb.org/film_subject/84",
-		"?x4": "http://data.linkedmdb.org/movie/film",
-		"?x1": "http://data.linkedmdb.org/film/2132"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x3 ?x4 ?x1 WHERE   { ?x1 <http://purl.org/dc/terms/date> \"1992-09-09\" .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> ?x3 .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x4   } ",
+	"filename": "q45.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "http://data.linkedmdb.org/film_subject/84",
+			"?x4": "http://data.linkedmdb.org/movie/film",
+			"?x1": "http://data.linkedmdb.org/film/2132"
+		}
+	]
+}

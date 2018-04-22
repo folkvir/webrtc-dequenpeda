@@ -1,6 +1,12 @@
-[
-	{
-		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Neurological",
-		"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/Xq28"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x2 ?x5 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3780> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3780> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3780> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3780> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3780> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x6   } ",
+	"filename": "q71.json",
+	"card": 1,
+	"results": [
+		{
+			"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Neurological",
+			"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/Xq28"
+		}
+	]
+}

@@ -24,6 +24,8 @@ docker build -t ldf .
 docker run --name ldf -d -p 5678:5678 ldf /config/config.json 5678
 # generate fragments
 node generateData.js
+# genereate results and the full logs of queries in queries/queries.json and all individual files in results/
+node generateResults.
 ```
 
 # Without docker

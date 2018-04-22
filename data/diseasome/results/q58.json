@@ -1,7 +1,13 @@
-[
-	{
-		"?x4": "http://bio2rdf.org/hgnc:27960",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SLC6A19",
-		"?x2": "http://symbol.bio2rdf.org/symbol:SLC6A19"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x4 ?x1 ?x2 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/bio2rdfSymbol> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/geneId> <http://bio2rdf.org/geneid:340024> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/hgncId> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/hgncIdPage> ?x5   } ",
+	"filename": "q58.json",
+	"card": 1,
+	"results": [
+		{
+			"?x4": "http://bio2rdf.org/hgnc:27960",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/SLC6A19",
+			"?x2": "http://symbol.bio2rdf.org/symbol:SLC6A19"
+		}
+	]
+}

@@ -1,10 +1,16 @@
-[
-	{
-		"?x1": "http://data.linkedmdb.org/director/2808",
-		"?x2": "http://data.linkedmdb.org/film/36117"
-	},
-	{
-		"?x1": "http://data.linkedmdb.org/director/5261",
-		"?x2": "http://data.linkedmdb.org/film/863"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/made> ?x2 .     ?x2 <http://purl.org/dc/terms/date> \"1998-04-08\"   } ",
+	"filename": "q3.json",
+	"card": 2,
+	"results": [
+		{
+			"?x1": "http://data.linkedmdb.org/director/2808",
+			"?x2": "http://data.linkedmdb.org/film/36117"
+		},
+		{
+			"?x1": "http://data.linkedmdb.org/director/5261",
+			"?x2": "http://data.linkedmdb.org/film/863"
+		}
+	]
+}

@@ -1,7 +1,13 @@
-[
-	{
-		"?x3": "http://bio2rdf.org/omim:274270",
-		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Metabolic",
-		"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/1p22"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x3 ?x2 ?x5 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4051> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4051> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4051> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4051> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4051> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x6   } ",
+	"filename": "q72.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "http://bio2rdf.org/omim:274270",
+			"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/Metabolic",
+			"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/1p22"
+		}
+	]
+}

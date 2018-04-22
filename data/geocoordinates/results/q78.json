@@ -1,8 +1,14 @@
-[
-	{
-		"?x3": "\"38.8693\"^^http://www.w3.org/2001/XMLSchema#float",
-		"?x4": "\"-77.22736388888889\"^^http://www.w3.org/2001/XMLSchema#float",
-		"?x2": "http://www.opengis.net/gml/_Feature",
-		"?x5": "\"38.8693 -77.22736388888889\"@en"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  ?x3 ?x4 ?x2 ?x5 WHERE   { <http://dbpedia.org/resource/Luther_Jackson_Middle_School> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Luther_Jackson_Middle_School> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     <http://dbpedia.org/resource/Luther_Jackson_Middle_School> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x4 .     <http://dbpedia.org/resource/Luther_Jackson_Middle_School> <http://www.georss.org/georss/point> ?x5   } ",
+	"filename": "q78.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"38.8693\"^^http://www.w3.org/2001/XMLSchema#float",
+			"?x4": "\"-77.22736388888889\"^^http://www.w3.org/2001/XMLSchema#float",
+			"?x2": "http://www.opengis.net/gml/_Feature",
+			"?x5": "\"38.8693 -77.22736388888889\"@en"
+		}
+	]
+}

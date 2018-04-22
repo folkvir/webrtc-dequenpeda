@@ -1,5 +1,11 @@
-[
-	{
-		"?x1": "http://data.linkedmdb.org/director/221"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/made> <http://data.linkedmdb.org/film/26556> .     <http://data.linkedmdb.org/film/26556> <http://purl.org/dc/terms/date> ?x3   } ",
+	"filename": "q2.json",
+	"card": 1,
+	"results": [
+		{
+			"?x1": "http://data.linkedmdb.org/director/221"
+		}
+	]
+}

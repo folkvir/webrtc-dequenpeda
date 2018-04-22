@@ -1,8 +1,14 @@
-[
-	{
-		"?x3": "http://dbpedia.org/resource/A_Chinese_Ghost_Story"
-	},
-	{
-		"?x3": "http://mpii.de/yago/resource/A_Chinese_Ghost_Story"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x3 WHERE   { <http://data.linkedmdb.org/film/25977> <http://xmlns.com/foaf/0.1/page> ?x2 .     <http://data.linkedmdb.org/film/25977> <http://www.w3.org/2002/07/owl#sameAs> ?x3 .     <http://data.linkedmdb.org/film/25977> <http://purl.org/dc/terms/title> ?x4 .     <http://data.linkedmdb.org/film/25977> <http://purl.org/dc/terms/date> ?x5   } ",
+	"filename": "q73.json",
+	"card": 2,
+	"results": [
+		{
+			"?x3": "http://dbpedia.org/resource/A_Chinese_Ghost_Story"
+		},
+		{
+			"?x3": "http://mpii.de/yago/resource/A_Chinese_Ghost_Story"
+		}
+	]
+}

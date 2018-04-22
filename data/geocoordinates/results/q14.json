@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "\"54.69694444444445 17.969722222222224\"@en",
-		"?x2": "http://www.opengis.net/gml/_Feature"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Mierzyno> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Mierzyno> <http://www.georss.org/georss/point> ?x3   } ",
+	"filename": "q14.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"54.69694444444445 17.969722222222224\"@en",
+			"?x2": "http://www.opengis.net/gml/_Feature"
+		}
+	]
+}

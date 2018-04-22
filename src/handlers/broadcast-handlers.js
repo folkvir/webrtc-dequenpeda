@@ -2,7 +2,7 @@ const debug = require('debug')('dequenpeda:broadcast-handlers')
 const QueryShared = require('../queries/query-shared')
 
 function _handleNewSharedQuery(id, message) {
-  debug(`[client:${this._foglet._id}]`, ` Received a shared query: ${message}`)
+  // debug(`[client:${this._foglet._id}]`, ` Received a shared query: ${message}`)
   if (this._queries.has(message.id)) {
     throw new Error('This query is already instanciated, Please report.')
   } else {
@@ -18,7 +18,7 @@ function _handleNewSharedQuery(id, message) {
 }
 
 function _handleDeleteSharedQuery(id, message) {
-  debug(`[client:${this._foglet._id}]`, ` Received a delete order, shared query: ${message}`)
+  // debug(`[client:${this._foglet._id}]`, ` Received a delete order, shared query: ${message}`)
   if (this._queries.has(message.id)) {
     // delete it
     this._queries.delete(message.id)

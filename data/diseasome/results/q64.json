@@ -1,7 +1,13 @@
-[
-	{
-		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/217",
-		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/2q31-q32",
-		"?x5": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=142984"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x4 ?x2 ?x5 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1825> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1825> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1825> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1825> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1825> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x6   } ",
+	"filename": "q64.json",
+	"card": 1,
+	"results": [
+		{
+			"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/217",
+			"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/2q31-q32",
+			"?x5": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=142984"
+		}
+	]
+}

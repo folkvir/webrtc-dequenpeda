@@ -6,6 +6,7 @@ module.exports = class Store {
     this._options = options
     this._events = new EventEmitter()
     this._storeReady = false
+    Rdfstore.Store.yieldFrequency(200);
     Rdfstore.create((err, store) => {
       if (err) throw new Error(err)
       // the new store is ready
@@ -75,6 +76,26 @@ module.exports = class Store {
     })
   }
 
+  loadDataAsTurtle(file, graph) {
+    // loading local data
+    return new Promise((resolve, reject) => {
+      try {
+        this.rdfstore.load("text/turtle", file, graph, function(err) {
+          if(err) {
+            console.log(error)
+            reject(err)
+          }
+          resolve()
+        })
+      } catch (e) {
+        console.error(e)
+        reject(e)
+      }
+
+    })
+
+  }
+
   getTriples (graph, prefixes = [], pattern) {
     return new Promise((resolve, reject) => {
       if (!this._isTriple(pattern)) reject(new Error('The pattern is not a triple object: {subject: ..., predicate: ..., object: ...}'))
@@ -103,15 +124,15 @@ module.exports = class Store {
 
   _constructData (graph, pattern) {
     return new Promise((resolve, reject) => {
+      const query = `CONSTRUCT { ${pattern.subject} ${pattern.predicate} ${pattern.object} } WHERE { GRAPH ${graph} { ${pattern.subject} ${pattern.predicate} ${pattern.object} } }`
       try {
-        const query = `CONSTRUCT { ${pattern.subject} ${pattern.predicate} ${pattern.object} } WHERE { GRAPH ${graph} { ${pattern.subject} ${pattern.predicate} ${pattern.object} } }`
         this.rdfstore.execute(query, (err, results) => {
           if (err) reject(new Error(err))
           results = results.triples.map(elem => this.rdfstore.rdf.createTriple(elem.subject.toNT(), elem.predicate.toNT(), elem.object.toNT()))
-          console.log(query, results)
           resolve(results)
         })
       } catch (e) {
+        console.log(query)
         console.error(e)
         reject(e)
       }
@@ -129,6 +150,7 @@ module.exports = class Store {
             resolve()
           })
         } catch (e) {
+          console.log(query)
           console.error(e)
           reject(e)
         }

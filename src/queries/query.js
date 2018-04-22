@@ -32,12 +32,14 @@ module.exports = class Query extends EventEmitter {
     this._mappings = new Map()
     this._sources = new Map()
     this._properTriples = this._extractTriplePattern(this._parsedQuery).map(triple => Object.assign({}, triple))
-    console.log('Proper triples: ', this._properTriples)
     this._triples = this._properTriples.map(triple => this._tripleParsed2Triple(Object.assign({}, triple)))
-    console.log('Triples:', this._triples)
+    // this._triples = this._properTriples
     this._triples.forEach(t => {
+      this._parent._profile.update(t)
       this._mappings.set(this._triple2String(t), {id: uniqid(), triple: t, sources: new Map()})
     })
+
+    //console.log(this._triples, this._properTriples)
     this.on('receive', (message) => {
       debug(`[client:${this._parent._foglet._id}] Receive: data from: ${message.owner.fogletId}`)
       this.emit(message.jobId, message)
@@ -51,14 +53,12 @@ module.exports = class Query extends EventEmitter {
 
   async execute (eventName) {
     (eventName !== 'end') && this._createTimeout()
-    debug(`[client:${this._parent._foglet.id}] 1-Executing the query ${this._id}...`)
+    // debug(`[client:${this._parent._foglet.id}] 1-Executing the query ${this._id}...`)
     const neighbors = this._parent._foglet.getNeighbours(Infinity)
-    debug(`[client:${this._parent._foglet.id}] Neighbours: `, neighbors)
     if (neighbors.length > 0) {
       // execute after receiving triples from neighbors
       return this._askTriples().then(() => {
         return this._execute(eventName).then(() => {
-          debug('Query executed')
           return Promise.resolve()
         }).catch(e => {
           console.error(e)
@@ -97,11 +97,14 @@ module.exports = class Query extends EventEmitter {
     //   })
     // }
     const plan = this._parsedQuery
+
     plan.from = { default: [ defaultGraphId ], named: [] }
     // debug(`[client:${this._parent._foglet.id}] 2-Rewriting the query ${this._id}...`)
     const generator = new SparqlGenerator()
     const rewritedQuery = generator.stringify(plan)
-    debug(`[client:${this._parent._foglet.id}] Executing the query: ${rewritedQuery}`)
+    debug(`[client:${this._parent._foglet.id}] Executing the query: `, rewritedQuery)
+    //console.log(this._query, rewritedQuery)
+    this._rewritedQuery = rewritedQuery
     const res = await this._parent._store.query(rewritedQuery)
     debug(`[client:${this._parent._foglet.id}] Number remote peers seen:`, this._sources.size)
     this.emit(eventName, res)
@@ -152,6 +155,7 @@ module.exports = class Query extends EventEmitter {
               jobId
             }
             this._parent._foglet.sendUnicast(id, msg)
+            this._parent._foglet.overlay('son').communication.sendUnicast(id, msg)
           } catch (e) {
             console.error(e)
           }
@@ -184,7 +188,7 @@ module.exports = class Query extends EventEmitter {
               clearTimeout(timeout)
             }
             responses.push(message)
-            debug(`[jobId: ${jobId}] receive a responses for this jobId`)
+            //debug(`[jobId: ${jobId}] receive a responses for this jobId`)
             receivedMessage++
             if ((receivedMessage + timeoutReceived) === neighbors.length) {
               this._processResponses(responses).then(() => {
@@ -204,7 +208,7 @@ module.exports = class Query extends EventEmitter {
   }
 
   _processResponses (responses) {
-    debug('Sequential processing of received triples: beginning')
+    // debug('Sequential processing of received triples: beginning')
     return new Promise((resolve, reject) => {
       responses.reduce((respAcc, resp) => respAcc.then(() => {
         let owner = resp.owner
@@ -213,7 +217,6 @@ module.exports = class Query extends EventEmitter {
           debug(`Adding a new source: `, owner.fogletId)
         }
         let data = resp.triples
-        console.log(data)
         return data.reduce((accData, elem) => accData.then(() => {
           return new Promise((resolveData) => {
             if (elem.data.length > 0) {
@@ -237,7 +240,7 @@ module.exports = class Query extends EventEmitter {
           })
         }), Promise.resolve())
       }), Promise.resolve()).then(() => {
-        debug('Sequential processing of received triples: finished')
+        // debug('Sequential processing of received triples: finished')
         resolve()
       }).catch(e => {
         reject(e)
@@ -275,7 +278,7 @@ module.exports = class Query extends EventEmitter {
       const mappedClauses = whereClause.map(obj => extractBis(obj))
       //console.log(mappedClauses)
       if (mappedClauses.length > 0) {
-        const res = mappedClauses.reduce((acc, cur) => { console.log(cur); acc.push(...cur); return acc }, [])
+        const res = mappedClauses.reduce((acc, cur) => { acc.push(...cur); return acc }, [])
         return res
       } else {
         return []
@@ -330,7 +333,10 @@ module.exports = class Query extends EventEmitter {
     }
     if (!triple.object.startsWith('?')) {
       if(N3.Util.isIRI(triple.object)) triple.object = `<${triple.object}>`
-      if(N3.Util.isLiteral(triple.object)) triple.object = `"${triple.object}"`
+      if(triple.object.indexOf("^^") > 0) {
+        const parts = triple.object.split("^^")
+        triple.object =  parts[0] + "^^<" + parts[1] + ">"
+      }
     }
     return triple
   }

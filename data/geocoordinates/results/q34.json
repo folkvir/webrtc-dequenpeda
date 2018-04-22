@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "\"56.1\"^^http://www.w3.org/2001/XMLSchema#float",
-		"?x1": "http://dbpedia.org/resource/Beatton_River"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://www.georss.org/georss/point> \"56.1 -120.38333333333334\"@en .     ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3   } ",
+	"filename": "q34.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"56.1\"^^http://www.w3.org/2001/XMLSchema#float",
+			"?x1": "http://dbpedia.org/resource/Beatton_River"
+		}
+	]
+}

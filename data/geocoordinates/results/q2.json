@@ -1,6 +1,12 @@
-[
-	{
-		"?x1": "http://dbpedia.org/resource/Us-kab-wan-ka_River",
-		"?x2": "http://www.opengis.net/gml/_Feature"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://www.georss.org/georss/point> \"46.971944444444446 -92.3411111111111\"@en   } ",
+	"filename": "q2.json",
+	"card": 1,
+	"results": [
+		{
+			"?x1": "http://dbpedia.org/resource/Us-kab-wan-ka_River",
+			"?x2": "http://www.opengis.net/gml/_Feature"
+		}
+	]
+}

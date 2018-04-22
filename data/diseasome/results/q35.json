@@ -1,14 +1,20 @@
-[
-	{
-		"?x3": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=609188",
-		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ABHS"
-	},
-	{
-		"?x3": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=609188",
-		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/C7orf11"
-	},
-	{
-		"?x3": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=609188",
-		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/TTDN1"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  * WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4089> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/4089> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x3   } ",
+	"filename": "q35.json",
+	"card": 3,
+	"results": [
+		{
+			"?x3": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=609188",
+			"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/ABHS"
+		},
+		{
+			"?x3": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=609188",
+			"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/C7orf11"
+		},
+		{
+			"?x3": "http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=609188",
+			"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/TTDN1"
+		}
+	]
+}

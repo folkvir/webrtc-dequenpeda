@@ -2,7 +2,7 @@ const debug = require('debug')('dequenpeda:unicast-handlers')
 const QueryShared = require('../queries/query-shared')
 
 function _handleAskTriples(id, message) {
-  debug(`[client:${this._foglet._id}]`, ` Someone is asking for data...`)
+  // debug(`[client:${this._foglet._id}]`, ` Someone is asking for data...`)
   message.triples.reduce((acc, triple) => acc.then(result => {
     return new Promise((resolve, reject) => {
       const defaultGraph = this._encapsGraphId(this._options.defaultGraph, '<', '>')
@@ -40,7 +40,7 @@ function _handleAskTriples(id, message) {
 }
 
 function _handleAskResults(id, message) {
-  debug(`[client:${this._foglet._id}]`, ` Someone is asking for results...`)
+  // debug(`[client:${this._foglet._id}]`, ` Someone is asking for results...`)
   if (!this._queries.has(message.queryId)) {
     const query = new QueryShared(message.queryString, this, {shared: false})
     this._queries.set(query._id, query)

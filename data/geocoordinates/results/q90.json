@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "\"19.617 105.533\"@en",
-		"?x2": "\"105.533\"^^http://www.w3.org/2001/XMLSchema#float"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Nhu_Thanh_District> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x2 .     <http://dbpedia.org/resource/Nhu_Thanh_District> <http://www.georss.org/georss/point> ?x3   } ",
+	"filename": "q90.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"19.617 105.533\"@en",
+			"?x2": "\"105.533\"^^http://www.w3.org/2001/XMLSchema#float"
+		}
+	]
+}

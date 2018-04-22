@@ -44,7 +44,7 @@ module.exports = class Query extends EventEmitter {
 
 
     this.on('receive', (message) => {
-      this._log(`[client:${this._parent._foglet.id}][Query:${this._id}] Receive: data from: ${message.requester.fogletId}`)
+      // this._log(`[client:${this._parent._foglet.id}][Query:${this._id}] Receive: data from: ${message.requester.fogletId}`)
       this.emit(message.jobId, message)
     })
 
@@ -81,7 +81,7 @@ module.exports = class Query extends EventEmitter {
 
   async execute (eventName) {
     this._log(`[client:${this._parent._foglet._id}] 1-Executing the query ${this._id}...`)
-    const neighbors = this._parent._foglet.getNeighbours()
+    const neighbors = this._parent._foglet.getNeighbours(Infinity)
     if (neighbors.length > 0) {
       // execute after receiving results from neighbors
       return this._askResults().then((r) => {
@@ -129,7 +129,7 @@ module.exports = class Query extends EventEmitter {
 
   _askResults () {
     return new Promise((resolve, reject) => {
-      const neighbors = this._parent._foglet.getNeighbours()
+      const neighbors = this._parent._foglet.getNeighbours(Infinity)
       this._log(`Asking results to ${neighbors.length} neighbors...`, this._parent._foglet.getNeighbours(Infinity))
       let receivedMessage = 0
       let timeoutReceived = 0

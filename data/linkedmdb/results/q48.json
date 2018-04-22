@@ -1,7 +1,13 @@
-[
-	{
-		"?x4": "\"Actrius\"",
-		"?x3": "http://data.linkedmdb.org/movie/film",
-		"?x2": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Actrius"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  * WHERE   { <http://data.linkedmdb.org/film/25425> <http://dbpedia.org/property/hasPhotoCollection> ?x2 .     <http://data.linkedmdb.org/film/25425> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3 .     <http://data.linkedmdb.org/film/25425> <http://purl.org/dc/terms/title> ?x4   } ",
+	"filename": "q48.json",
+	"card": 1,
+	"results": [
+		{
+			"?x4": "\"Actrius\"",
+			"?x3": "http://data.linkedmdb.org/movie/film",
+			"?x2": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Actrius"
+		}
+	]
+}

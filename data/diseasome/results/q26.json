@@ -1,10 +1,16 @@
-[
-	{
-		"?x3": "http://data.linkedct.org/resource/condition/5344",
-		"?x2": "\"Glycogen storage disease I\""
-	},
-	{
-		"?x3": "http://www.dbpedia.org/resource/Glycogen_storage_disease_type_IV",
-		"?x2": "\"Glycogen storage disease I\""
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2497> <http://www.w3.org/2000/01/rdf-schema#label> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2497> <http://www.w3.org/2002/07/owl#sameAs> ?x3   } ",
+	"filename": "q26.json",
+	"card": 2,
+	"results": [
+		{
+			"?x3": "http://data.linkedct.org/resource/condition/5344",
+			"?x2": "\"Glycogen storage disease I\""
+		},
+		{
+			"?x3": "http://www.dbpedia.org/resource/Glycogen_storage_disease_type_IV",
+			"?x2": "\"Glycogen storage disease I\""
+		}
+	]
+}

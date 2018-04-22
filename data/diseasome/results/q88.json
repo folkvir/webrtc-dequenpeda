@@ -1,7 +1,13 @@
-[
-	{
-		"?x4": "\"Holocarboxylase synthetase deficiency, 253270\"",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2623",
-		"?x7": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/21q22.1"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x4 ?x1 ?x7 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> <http://www.ncbi.nlm.nih.gov/entrez/dispomim.cgi?id=609018> .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x6 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x7 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x8   } ",
+	"filename": "q88.json",
+	"card": 1,
+	"results": [
+		{
+			"?x4": "\"Holocarboxylase synthetase deficiency, 253270\"",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2623",
+			"?x7": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/21q22.1"
+		}
+	]
+}

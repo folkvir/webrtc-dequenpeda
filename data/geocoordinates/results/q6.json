@@ -1,5 +1,11 @@
-[
-	{
-		"?x2": "http://www.opengis.net/gml/_Feature"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  ?x2 WHERE   { <http://dbpedia.org/resource/Tether_Rock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Tether_Rock> <http://www.georss.org/georss/point> ?x3   } ",
+	"filename": "q6.json",
+	"card": 1,
+	"results": [
+		{
+			"?x2": "http://www.opengis.net/gml/_Feature"
+		}
+	]
+}

@@ -1,182 +1,188 @@
-[
-	{
-		"?x4": "\"The Devil Dared Me To\"",
-		"?x1": "http://data.linkedmdb.org/film/10444"
-	},
-	{
-		"?x4": "\"Eagle vs Shark\"",
-		"?x1": "http://data.linkedmdb.org/film/11585"
-	},
-	{
-		"?x4": "\"Crooked Earth\"",
-		"?x1": "http://data.linkedmdb.org/film/11784"
-	},
-	{
-		"?x4": "\"The Shrimp on the Barbie\"",
-		"?x1": "http://data.linkedmdb.org/film/12227"
-	},
-	{
-		"?x4": "\"The Climb\"",
-		"?x1": "http://data.linkedmdb.org/film/13774"
-	},
-	{
-		"?x4": "\"Once Were Warriors\"",
-		"?x1": "http://data.linkedmdb.org/film/17136"
-	},
-	{
-		"?x4": "\"Came a Hot Friday\"",
-		"?x1": "http://data.linkedmdb.org/film/18358"
-	},
-	{
-		"?x4": "\"In My Father's Den\"",
-		"?x1": "http://data.linkedmdb.org/film/2172"
-	},
-	{
-		"?x4": "\"Broken Barrier\"",
-		"?x1": "http://data.linkedmdb.org/film/26885"
-	},
-	{
-		"?x4": "\"Cinema of Unease\"",
-		"?x1": "http://data.linkedmdb.org/film/27306"
-	},
-	{
-		"?x4": "\"Forgotten Silver\"",
-		"?x1": "http://data.linkedmdb.org/film/28673"
-	},
-	{
-		"?x4": "\"Goodbye Pork Pie\"",
-		"?x1": "http://data.linkedmdb.org/film/29058"
-	},
-	{
-		"?x4": "\"Heavenly Creatures\"",
-		"?x1": "http://data.linkedmdb.org/film/29299"
-	},
-	{
-		"?x4": "\"Meet Me in Miami\"",
-		"?x1": "http://data.linkedmdb.org/film/31179"
-	},
-	{
-		"?x4": "\"Meet the Feebles\"",
-		"?x1": "http://data.linkedmdb.org/film/31181"
-	},
-	{
-		"?x4": "\"Nemesis Game\"",
-		"?x1": "http://data.linkedmdb.org/film/31706"
-	},
-	{
-		"?x4": "\"No. 2\"",
-		"?x1": "http://data.linkedmdb.org/film/31860"
-	},
-	{
-		"?x4": "\"Perfect Creature\"",
-		"?x1": "http://data.linkedmdb.org/film/32263"
-	},
-	{
-		"?x4": "\"River Queen\"",
-		"?x1": "http://data.linkedmdb.org/film/32866"
-	},
-	{
-		"?x4": "\"Smash Palace\"",
-		"?x1": "http://data.linkedmdb.org/film/33529"
-	},
-	{
-		"?x4": "\"Braindead\"",
-		"?x1": "http://data.linkedmdb.org/film/345"
-	},
-	{
-		"?x4": "\"The Frighteners\"",
-		"?x1": "http://data.linkedmdb.org/film/35085"
-	},
-	{
-		"?x4": "\"The Piano\"",
-		"?x1": "http://data.linkedmdb.org/film/36096"
-	},
-	{
-		"?x4": "\"The Ugly\"",
-		"?x1": "http://data.linkedmdb.org/film/36714"
-	},
-	{
-		"?x4": "\"Whale Rider\"",
-		"?x1": "http://data.linkedmdb.org/film/37698"
-	},
-	{
-		"?x4": "\"The World's Fastest Indian\"",
-		"?x1": "http://data.linkedmdb.org/film/4532"
-	},
-	{
-		"?x4": "\"The Lovely Bones\"",
-		"?x1": "http://data.linkedmdb.org/film/5263"
-	},
-	{
-		"?x4": "\"The Price of Milk\"",
-		"?x1": "http://data.linkedmdb.org/film/572"
-	},
-	{
-		"?x4": "\"Utu\"",
-		"?x1": "http://data.linkedmdb.org/film/662"
-	},
-	{
-		"?x4": "\"Sione's Wedding\"",
-		"?x1": "http://data.linkedmdb.org/film/6758"
-	},
-	{
-		"?x4": "\"The Quiet Earth\"",
-		"?x1": "http://data.linkedmdb.org/film/8019"
-	},
-	{
-		"?x4": "\"Spooked\"",
-		"?x1": "http://data.linkedmdb.org/film/9156"
-	},
-	{
-		"?x4": "\"What Becomes of the Broken Hearted?\"",
-		"?x1": "http://data.linkedmdb.org/film/9806"
-	},
-	{
-		"?x4": "\"Channelling Baby\"",
-		"?x1": "http://data.linkedmdb.org/film/10860"
-	},
-	{
-		"?x4": "\"The Ferryman\"",
-		"?x1": "http://data.linkedmdb.org/film/11590"
-	},
-	{
-		"?x4": "\"The Tattooist\"",
-		"?x1": "http://data.linkedmdb.org/film/11605"
-	},
-	{
-		"?x4": "\"Her Majesty\"",
-		"?x1": "http://data.linkedmdb.org/film/11788"
-	},
-	{
-		"?x4": "\"The Locals\"",
-		"?x1": "http://data.linkedmdb.org/film/11824"
-	},
-	{
-		"?x4": "\"Fracture\"",
-		"?x1": "http://data.linkedmdb.org/film/13433"
-	},
-	{
-		"?x4": "\"The Miraculous Adventures of Edward Tulane\"",
-		"?x1": "http://data.linkedmdb.org/film/13517"
-	},
-	{
-		"?x4": "\"Chunuk Bair\"",
-		"?x1": "http://data.linkedmdb.org/film/13824"
-	},
-	{
-		"?x4": "\"Suzie\"",
-		"?x1": "http://data.linkedmdb.org/film/22641"
-	},
-	{
-		"?x4": "\"Aberration\"",
-		"?x1": "http://data.linkedmdb.org/film/6621"
-	},
-	{
-		"?x4": "\"Jack Be Nimble\"",
-		"?x1": "http://data.linkedmdb.org/film/9730"
-	},
-	{
-		"?x4": "\"Stickmen\"",
-		"?x1": "http://data.linkedmdb.org/film/9797"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x4 ?x1 WHERE   { ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     ?x1 <http://xmlns.com/foaf/0.1/based_near> <http://sws.geonames.org/2186224/> .     ?x1 <http://purl.org/dc/terms/title> ?x4   } ",
+	"filename": "q32.json",
+	"card": 45,
+	"results": [
+		{
+			"?x4": "\"The Devil Dared Me To\"",
+			"?x1": "http://data.linkedmdb.org/film/10444"
+		},
+		{
+			"?x4": "\"Eagle vs Shark\"",
+			"?x1": "http://data.linkedmdb.org/film/11585"
+		},
+		{
+			"?x4": "\"Crooked Earth\"",
+			"?x1": "http://data.linkedmdb.org/film/11784"
+		},
+		{
+			"?x4": "\"The Shrimp on the Barbie\"",
+			"?x1": "http://data.linkedmdb.org/film/12227"
+		},
+		{
+			"?x4": "\"The Climb\"",
+			"?x1": "http://data.linkedmdb.org/film/13774"
+		},
+		{
+			"?x4": "\"Once Were Warriors\"",
+			"?x1": "http://data.linkedmdb.org/film/17136"
+		},
+		{
+			"?x4": "\"Came a Hot Friday\"",
+			"?x1": "http://data.linkedmdb.org/film/18358"
+		},
+		{
+			"?x4": "\"In My Father's Den\"",
+			"?x1": "http://data.linkedmdb.org/film/2172"
+		},
+		{
+			"?x4": "\"Broken Barrier\"",
+			"?x1": "http://data.linkedmdb.org/film/26885"
+		},
+		{
+			"?x4": "\"Cinema of Unease\"",
+			"?x1": "http://data.linkedmdb.org/film/27306"
+		},
+		{
+			"?x4": "\"Forgotten Silver\"",
+			"?x1": "http://data.linkedmdb.org/film/28673"
+		},
+		{
+			"?x4": "\"Goodbye Pork Pie\"",
+			"?x1": "http://data.linkedmdb.org/film/29058"
+		},
+		{
+			"?x4": "\"Heavenly Creatures\"",
+			"?x1": "http://data.linkedmdb.org/film/29299"
+		},
+		{
+			"?x4": "\"Meet Me in Miami\"",
+			"?x1": "http://data.linkedmdb.org/film/31179"
+		},
+		{
+			"?x4": "\"Meet the Feebles\"",
+			"?x1": "http://data.linkedmdb.org/film/31181"
+		},
+		{
+			"?x4": "\"Nemesis Game\"",
+			"?x1": "http://data.linkedmdb.org/film/31706"
+		},
+		{
+			"?x4": "\"No. 2\"",
+			"?x1": "http://data.linkedmdb.org/film/31860"
+		},
+		{
+			"?x4": "\"Perfect Creature\"",
+			"?x1": "http://data.linkedmdb.org/film/32263"
+		},
+		{
+			"?x4": "\"River Queen\"",
+			"?x1": "http://data.linkedmdb.org/film/32866"
+		},
+		{
+			"?x4": "\"Smash Palace\"",
+			"?x1": "http://data.linkedmdb.org/film/33529"
+		},
+		{
+			"?x4": "\"Braindead\"",
+			"?x1": "http://data.linkedmdb.org/film/345"
+		},
+		{
+			"?x4": "\"The Frighteners\"",
+			"?x1": "http://data.linkedmdb.org/film/35085"
+		},
+		{
+			"?x4": "\"The Piano\"",
+			"?x1": "http://data.linkedmdb.org/film/36096"
+		},
+		{
+			"?x4": "\"The Ugly\"",
+			"?x1": "http://data.linkedmdb.org/film/36714"
+		},
+		{
+			"?x4": "\"Whale Rider\"",
+			"?x1": "http://data.linkedmdb.org/film/37698"
+		},
+		{
+			"?x4": "\"The World's Fastest Indian\"",
+			"?x1": "http://data.linkedmdb.org/film/4532"
+		},
+		{
+			"?x4": "\"The Lovely Bones\"",
+			"?x1": "http://data.linkedmdb.org/film/5263"
+		},
+		{
+			"?x4": "\"The Price of Milk\"",
+			"?x1": "http://data.linkedmdb.org/film/572"
+		},
+		{
+			"?x4": "\"Utu\"",
+			"?x1": "http://data.linkedmdb.org/film/662"
+		},
+		{
+			"?x4": "\"Sione's Wedding\"",
+			"?x1": "http://data.linkedmdb.org/film/6758"
+		},
+		{
+			"?x4": "\"The Quiet Earth\"",
+			"?x1": "http://data.linkedmdb.org/film/8019"
+		},
+		{
+			"?x4": "\"Spooked\"",
+			"?x1": "http://data.linkedmdb.org/film/9156"
+		},
+		{
+			"?x4": "\"What Becomes of the Broken Hearted?\"",
+			"?x1": "http://data.linkedmdb.org/film/9806"
+		},
+		{
+			"?x4": "\"Channelling Baby\"",
+			"?x1": "http://data.linkedmdb.org/film/10860"
+		},
+		{
+			"?x4": "\"The Ferryman\"",
+			"?x1": "http://data.linkedmdb.org/film/11590"
+		},
+		{
+			"?x4": "\"The Tattooist\"",
+			"?x1": "http://data.linkedmdb.org/film/11605"
+		},
+		{
+			"?x4": "\"Her Majesty\"",
+			"?x1": "http://data.linkedmdb.org/film/11788"
+		},
+		{
+			"?x4": "\"The Locals\"",
+			"?x1": "http://data.linkedmdb.org/film/11824"
+		},
+		{
+			"?x4": "\"Fracture\"",
+			"?x1": "http://data.linkedmdb.org/film/13433"
+		},
+		{
+			"?x4": "\"The Miraculous Adventures of Edward Tulane\"",
+			"?x1": "http://data.linkedmdb.org/film/13517"
+		},
+		{
+			"?x4": "\"Chunuk Bair\"",
+			"?x1": "http://data.linkedmdb.org/film/13824"
+		},
+		{
+			"?x4": "\"Suzie\"",
+			"?x1": "http://data.linkedmdb.org/film/22641"
+		},
+		{
+			"?x4": "\"Aberration\"",
+			"?x1": "http://data.linkedmdb.org/film/6621"
+		},
+		{
+			"?x4": "\"Jack Be Nimble\"",
+			"?x1": "http://data.linkedmdb.org/film/9730"
+		},
+		{
+			"?x4": "\"Stickmen\"",
+			"?x1": "http://data.linkedmdb.org/film/9797"
+		}
+	]
+}

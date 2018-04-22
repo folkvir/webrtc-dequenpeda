@@ -1,6 +1,12 @@
-[
-	{
-		"?x1": "http://data.linkedmdb.org/film/10240",
-		"?x2": "http://www.freebase.com/view/guid/9202a8c04000641f80000000045df8cc"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://xmlns.com/foaf/0.1/page> ?x2 .     ?x1 <http://purl.org/dc/terms/title> \"Untitled Gorillaz project\" .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x4   } ",
+	"filename": "q29.json",
+	"card": 1,
+	"results": [
+		{
+			"?x1": "http://data.linkedmdb.org/film/10240",
+			"?x2": "http://www.freebase.com/view/guid/9202a8c04000641f80000000045df8cc"
+		}
+	]
+}

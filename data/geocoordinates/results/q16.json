@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "\"-73.31194444444445\"^^http://www.w3.org/2001/XMLSchema#float",
-		"?x2": "\"-14.163055555555555\"^^http://www.w3.org/2001/XMLSchema#float"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Soraya_District> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Soraya_District> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
+	"filename": "q16.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"-73.31194444444445\"^^http://www.w3.org/2001/XMLSchema#float",
+			"?x2": "\"-14.163055555555555\"^^http://www.w3.org/2001/XMLSchema#float"
+		}
+	]
+}

@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "\"-1.065\"^^http://www.w3.org/2001/XMLSchema#float",
-		"?x2": "\"54.6075\"^^http://www.w3.org/2001/XMLSchema#float"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Redcar_Racecourse> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x2 .     <http://dbpedia.org/resource/Redcar_Racecourse> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
+	"filename": "q30.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"-1.065\"^^http://www.w3.org/2001/XMLSchema#float",
+			"?x2": "\"54.6075\"^^http://www.w3.org/2001/XMLSchema#float"
+		}
+	]
+}

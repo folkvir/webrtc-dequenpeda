@@ -1,6 +1,12 @@
-[
-	{
-		"?x4": "\"Zlotogora-Ogur syndrome\"",
-		"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/multiple"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x4 ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1212> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1212> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1212> <http://www.w3.org/2000/01/rdf-schema#label> ?x4   } ",
+	"filename": "q47.json",
+	"card": 1,
+	"results": [
+		{
+			"?x4": "\"Zlotogora-Ogur syndrome\"",
+			"?x2": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseaseClass/multiple"
+		}
+	]
+}

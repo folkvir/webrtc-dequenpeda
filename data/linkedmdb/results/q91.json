@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "\"Trader Horn\"",
-		"?x4": "\"1931\""
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x3 ?x4 WHERE   { <http://data.linkedmdb.org/film/92> <http://xmlns.com/foaf/0.1/page> ?x2 .     <http://data.linkedmdb.org/film/92> <http://purl.org/dc/terms/title> ?x3 .     <http://data.linkedmdb.org/film/92> <http://purl.org/dc/terms/date> ?x4 .     <http://data.linkedmdb.org/film/92> <http://xmlns.com/foaf/0.1/based_near> ?x5 .     <http://data.linkedmdb.org/film/92> <http://www.w3.org/2000/01/rdf-schema#label> ?x6   } ",
+	"filename": "q91.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"Trader Horn\"",
+			"?x4": "\"1931\""
+		}
+	]
+}

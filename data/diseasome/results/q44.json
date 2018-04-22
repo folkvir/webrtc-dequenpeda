@@ -1,8 +1,14 @@
-[
-	{
-		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AAT"
-	},
-	{
-		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/PI"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x4 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2576> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2576> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2576> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x4   } ",
+	"filename": "q44.json",
+	"card": 2,
+	"results": [
+		{
+			"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/AAT"
+		},
+		{
+			"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/PI"
+		}
+	]
+}

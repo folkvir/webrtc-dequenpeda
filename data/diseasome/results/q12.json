@@ -1,5 +1,11 @@
-[
-	{
-		"?x3": "http://bio2rdf.org/hgnc:3178"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x3 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/EDN3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/genes/EDN3> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/hgncId> ?x3   } ",
+	"filename": "q12.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "http://bio2rdf.org/hgnc:3178"
+		}
+	]
+}

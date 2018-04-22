@@ -1,6 +1,12 @@
-[
-	{
-		"?x4": "\"1\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x2": "\"Macrocytic anemia\""
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x4 ?x2 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/705> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/705> <http://www.w3.org/2002/07/owl#sameAs> ?x3 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/705> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/size> ?x4 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/705> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/classDegree> ?x5 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/705> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x6   } ",
+	"filename": "q69.json",
+	"card": 1,
+	"results": [
+		{
+			"?x4": "\"1\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x2": "\"Macrocytic anemia\""
+		}
+	]
+}

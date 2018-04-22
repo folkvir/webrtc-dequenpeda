@@ -1,8 +1,14 @@
-[
-	{
-		"?x3": "http://bio2rdf.org/omim:608136",
-		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/8p23",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3903",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1064"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x3 ?x4 ?x1 ?x6 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> \"Slowed nerve conduction velocity, AD, 608236\" .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x4 .     ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x6 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x7   } ",
+	"filename": "q84.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "http://bio2rdf.org/omim:608136",
+			"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/8p23",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3903",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1064"
+		}
+	]
+}

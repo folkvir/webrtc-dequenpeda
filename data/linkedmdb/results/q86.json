@@ -1,14 +1,20 @@
-[
-	{
-		"?x3": "\"Blade Runner\"",
-		"?x1": "http://data.linkedmdb.org/film/26659",
-		"?x2": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Blade_Runner",
-		"?x5": "\"Blade Runner\""
-	},
-	{
-		"?x3": "\"Scrooged\"",
-		"?x1": "http://data.linkedmdb.org/film/33177",
-		"?x2": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Scrooged",
-		"?x5": "\"Scrooged\""
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x3 ?x1 ?x2 ?x5 WHERE   { ?x1 <http://dbpedia.org/property/hasPhotoCollection> ?x2 .     ?x1 <http://purl.org/dc/terms/title> ?x3 .     ?x1 <http://www.w3.org/2004/02/skos/core#subject> <http://data.linkedmdb.org/film_subject/125> .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x5   } ",
+	"filename": "q86.json",
+	"card": 2,
+	"results": [
+		{
+			"?x3": "\"Blade Runner\"",
+			"?x1": "http://data.linkedmdb.org/film/26659",
+			"?x2": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Blade_Runner",
+			"?x5": "\"Blade Runner\""
+		},
+		{
+			"?x3": "\"Scrooged\"",
+			"?x1": "http://data.linkedmdb.org/film/33177",
+			"?x2": "http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Scrooged",
+			"?x5": "\"Scrooged\""
+		}
+	]
+}

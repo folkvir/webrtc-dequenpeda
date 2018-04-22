@@ -1,5 +1,11 @@
-[
-	{
-		"?x3": "http://bio2rdf.org/omim:607809"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x3 WHERE   { <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1392> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/class> ?x2 .     <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/1392> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x3   } ",
+	"filename": "q4.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "http://bio2rdf.org/omim:607809"
+		}
+	]
+}

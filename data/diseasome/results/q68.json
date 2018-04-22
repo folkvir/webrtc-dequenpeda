@@ -1,7 +1,13 @@
-[
-	{
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2642",
-		"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/20pter-p12",
-		"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/529"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x1 ?x5 ?x6 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/possibleDrug> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omimPage> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> \"Huntington disease-like 1, 603218\" .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x6   } ",
+	"filename": "q68.json",
+	"card": 1,
+	"results": [
+		{
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/2642",
+			"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/20pter-p12",
+			"?x6": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/529"
+		}
+	]
+}

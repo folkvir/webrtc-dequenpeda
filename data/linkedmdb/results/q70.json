@@ -1,62 +1,68 @@
-[
-	{
-		"?x1": "http://data.linkedmdb.org/film/1020",
-		"?x5": "http://www.freebase.com/view/guid/9202a8c04000641f8000000000288c45"
-	},
-	{
-		"?x1": "http://data.linkedmdb.org/film/1020",
-		"?x5": "http://www.imdb.com/title/tt0085995"
-	},
-	{
-		"?x1": "http://data.linkedmdb.org/film/1020",
-		"?x5": "http://www.rottentomatoes.com/alias?type=imdbid&s=0085995"
-	},
-	{
-		"?x1": "http://data.linkedmdb.org/film/1988",
-		"?x5": "http://www.freebase.com/view/guid/9202a8c04000641f800000000045d6b0"
-	},
-	{
-		"?x1": "http://data.linkedmdb.org/film/1988",
-		"?x5": "http://www.imdb.com/title/tt0215129"
-	},
-	{
-		"?x1": "http://data.linkedmdb.org/film/1988",
-		"?x5": "http://www.rottentomatoes.com/alias?type=imdbid&s=0215129"
-	},
-	{
-		"?x1": "http://data.linkedmdb.org/film/30761",
-		"?x5": "http://www.freebase.com/view/topic/en/little_miss_sunshine"
-	},
-	{
-		"?x1": "http://data.linkedmdb.org/film/30761",
-		"?x5": "http://www.imdb.com/title/tt0449059"
-	},
-	{
-		"?x1": "http://data.linkedmdb.org/film/30761",
-		"?x5": "http://www.rottentomatoes.com/alias?type=imdbid&s=0449059"
-	},
-	{
-		"?x1": "http://data.linkedmdb.org/film/34805",
-		"?x5": "http://www.freebase.com/view/topic/en/the_daytrippers"
-	},
-	{
-		"?x1": "http://data.linkedmdb.org/film/34805",
-		"?x5": "http://www.imdb.com/title/tt0116041"
-	},
-	{
-		"?x1": "http://data.linkedmdb.org/film/34805",
-		"?x5": "http://www.rottentomatoes.com/alias?type=imdbid&s=0116041"
-	},
-	{
-		"?x1": "http://data.linkedmdb.org/film/7705",
-		"?x5": "http://www.freebase.com/view/guid/9202a8c04000641f8000000000cca396"
-	},
-	{
-		"?x1": "http://data.linkedmdb.org/film/7705",
-		"?x5": "http://www.imdb.com/title/tt0443453"
-	},
-	{
-		"?x1": "http://data.linkedmdb.org/film/7705",
-		"?x5": "http://www.rottentomatoes.com/alias?type=imdbid&s=0443453"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x1 ?x5 WHERE   { ?x1 <http://www.w3.org/2004/02/skos/core#subject> <http://data.linkedmdb.org/film_subject/24> .     ?x1 <http://purl.org/dc/terms/date> ?x3 .     ?x1 <http://purl.org/dc/terms/title> ?x4 .     ?x1 <http://xmlns.com/foaf/0.1/page> ?x5   } ",
+	"filename": "q70.json",
+	"card": 15,
+	"results": [
+		{
+			"?x1": "http://data.linkedmdb.org/film/1020",
+			"?x5": "http://www.freebase.com/view/guid/9202a8c04000641f8000000000288c45"
+		},
+		{
+			"?x1": "http://data.linkedmdb.org/film/1020",
+			"?x5": "http://www.imdb.com/title/tt0085995"
+		},
+		{
+			"?x1": "http://data.linkedmdb.org/film/1020",
+			"?x5": "http://www.rottentomatoes.com/alias?type=imdbid&s=0085995"
+		},
+		{
+			"?x1": "http://data.linkedmdb.org/film/1988",
+			"?x5": "http://www.freebase.com/view/guid/9202a8c04000641f800000000045d6b0"
+		},
+		{
+			"?x1": "http://data.linkedmdb.org/film/1988",
+			"?x5": "http://www.imdb.com/title/tt0215129"
+		},
+		{
+			"?x1": "http://data.linkedmdb.org/film/1988",
+			"?x5": "http://www.rottentomatoes.com/alias?type=imdbid&s=0215129"
+		},
+		{
+			"?x1": "http://data.linkedmdb.org/film/30761",
+			"?x5": "http://www.freebase.com/view/topic/en/little_miss_sunshine"
+		},
+		{
+			"?x1": "http://data.linkedmdb.org/film/30761",
+			"?x5": "http://www.imdb.com/title/tt0449059"
+		},
+		{
+			"?x1": "http://data.linkedmdb.org/film/30761",
+			"?x5": "http://www.rottentomatoes.com/alias?type=imdbid&s=0449059"
+		},
+		{
+			"?x1": "http://data.linkedmdb.org/film/34805",
+			"?x5": "http://www.freebase.com/view/topic/en/the_daytrippers"
+		},
+		{
+			"?x1": "http://data.linkedmdb.org/film/34805",
+			"?x5": "http://www.imdb.com/title/tt0116041"
+		},
+		{
+			"?x1": "http://data.linkedmdb.org/film/34805",
+			"?x5": "http://www.rottentomatoes.com/alias?type=imdbid&s=0116041"
+		},
+		{
+			"?x1": "http://data.linkedmdb.org/film/7705",
+			"?x5": "http://www.freebase.com/view/guid/9202a8c04000641f8000000000cca396"
+		},
+		{
+			"?x1": "http://data.linkedmdb.org/film/7705",
+			"?x5": "http://www.imdb.com/title/tt0443453"
+		},
+		{
+			"?x1": "http://data.linkedmdb.org/film/7705",
+			"?x5": "http://www.rottentomatoes.com/alias?type=imdbid&s=0443453"
+		}
+	]
+}

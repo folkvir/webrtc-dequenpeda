@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "\"-62.53333333333333\"^^http://www.w3.org/2001/XMLSchema#float",
-		"?x2": "http://www.opengis.net/gml/_Feature"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Wild_Spur> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Wild_Spur> <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?x3   } ",
+	"filename": "q58.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"-62.53333333333333\"^^http://www.w3.org/2001/XMLSchema#float",
+			"?x2": "http://www.opengis.net/gml/_Feature"
+		}
+	]
+}

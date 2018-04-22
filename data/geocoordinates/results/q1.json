@@ -1,5 +1,11 @@
-[
-	{
-		"?x1": "http://dbpedia.org/resource/Soko%C5%82%C3%B3wka,_%C5%81%C3%B3d%C5%BA_Voivodeship"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://www.georss.org/georss/point> \"51.708888888888886 20.072222222222223\"@en   } ",
+	"filename": "q1.json",
+	"card": 1,
+	"results": [
+		{
+			"?x1": "http://dbpedia.org/resource/Soko%C5%82%C3%B3wka,_%C5%81%C3%B3d%C5%BA_Voivodeship"
+		}
+	]
+}

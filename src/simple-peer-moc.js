@@ -25,6 +25,14 @@ const DEFAULT_OPTIONS = () => { return {
 
 class Manager {
   constructor () {
+    this._statistics = {
+      message: 0,
+      lastNumberOfMessage: 0,
+      interval: 1000, // every 1000ms provide stats on the number of message
+      transferredMessageOverTime: [0],
+      edgesOverTime: [0]
+    }
+    this._intervalStats = setInterval(() => { this._setStats() }, this._statistics)
     this.manager = new Map()
     this._options = {
       latency: (send) => { setTimeout(send, 10) },
@@ -32,6 +40,10 @@ class Manager {
     }
     debugManager('manager initialized')
   }
+  get stats() {
+    return this._statistics
+  }
+
   newPeer(peer) {
     debugManager('new peer added. Size:', this.manager.size)
     this.manager.set(peer.id, peer)
@@ -51,6 +63,7 @@ class Manager {
 
   send(from, to, msg, retry = 0) {
     this._options.latency(() => {
+      this._statistics.message++
       this._send(from, to, msg, retry)
     })
   }
@@ -65,6 +78,14 @@ class Manager {
     } else {
       throw new Error('cannot send the message. perhaps your destination is not reachable.')
     }
+  }
+
+  _setStats() {
+    let message = this._statistics.message
+    let last = this._statistics.lastNumberOfMessage
+    this._statistics.transferredMessageOverTime.push(message - last)
+    this._statistics.lastNumberOfMessage = message
+    this._statistics.edgesOverTime.push(this.manager.size)
   }
 }
 const manager = new Manager()

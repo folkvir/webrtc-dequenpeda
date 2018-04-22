@@ -1,5 +1,11 @@
-[
-	{
-		"?x3": "\"39.11694444444444\"^^http://www.w3.org/2001/XMLSchema#float"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  ?x3 WHERE   { <http://dbpedia.org/resource/Palace_of_the_Fans> <http://www.georss.org/georss/point> ?x2 .     <http://dbpedia.org/resource/Palace_of_the_Fans> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3   } ",
+	"filename": "q44.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"39.11694444444444\"^^http://www.w3.org/2001/XMLSchema#float"
+		}
+	]
+}

@@ -1,5 +1,11 @@
-[
-	{
-		"?x1": "http://data.linkedmdb.org/film/35340"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://dbpedia.org/property/hasPhotoCollection> ?x2 .     ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x3 .     ?x1 <http://purl.org/dc/terms/title> \"The Honey Pot\"   } ",
+	"filename": "q47.json",
+	"card": 1,
+	"results": [
+		{
+			"?x1": "http://data.linkedmdb.org/film/35340"
+		}
+	]
+}

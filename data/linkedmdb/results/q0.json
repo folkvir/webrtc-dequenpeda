@@ -1,10 +1,16 @@
-[
-	{
-		"?x3": "http://data.linkedmdb.org/movie/film_subject",
-		"?x1": "http://data.linkedmdb.org/film/26659"
-	},
-	{
-		"?x3": "http://data.linkedmdb.org/movie/film_subject",
-		"?x1": "http://data.linkedmdb.org/film/33177"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  * WHERE   { ?x1 <http://www.w3.org/2004/02/skos/core#subject> <http://data.linkedmdb.org/film_subject/125> .     <http://data.linkedmdb.org/film_subject/125> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x3   } ",
+	"filename": "q0.json",
+	"card": 2,
+	"results": [
+		{
+			"?x3": "http://data.linkedmdb.org/movie/film_subject",
+			"?x1": "http://data.linkedmdb.org/film/26659"
+		},
+		{
+			"?x3": "http://data.linkedmdb.org/movie/film_subject",
+			"?x1": "http://data.linkedmdb.org/film/33177"
+		}
+	]
+}

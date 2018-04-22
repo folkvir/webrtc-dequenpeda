@@ -1,5 +1,11 @@
-[
-	{
-		"?x1": "http://dbpedia.org/resource/Antsoha,_Belo_sur_Tsiribihina"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://www.georss.org/georss/point> \"-19.916666666666668 44.86666666666667\"@en .     ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3   } ",
+	"filename": "q35.json",
+	"card": 1,
+	"results": [
+		{
+			"?x1": "http://dbpedia.org/resource/Antsoha,_Belo_sur_Tsiribihina"
+		}
+	]
+}

@@ -1,12 +1,18 @@
-[
-	{
-		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/10p15-p14",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3400",
-		"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/851"
-	},
-	{
-		"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/9q22.1",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3401",
-		"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/851"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x4 ?x1 ?x5 WHERE   { ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/associatedGene> ?x2 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/chromosomalLocation> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/diseaseSubtypeOf> ?x5 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> \"Obesity, hyperphagia, and developmental delay\" .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/omim> ?x7   } ",
+	"filename": "q77.json",
+	"card": 2,
+	"results": [
+		{
+			"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/10p15-p14",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3400",
+			"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/851"
+		},
+		{
+			"?x4": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/chromosomalLocation/9q22.1",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/3401",
+			"?x5": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/851"
+		}
+	]
+}

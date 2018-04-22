@@ -1,6 +1,12 @@
-[
-	{
-		"?x4": "\"Road Trip\"",
-		"?x2": "http://data.linkedmdb.org/film_subject/24"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x4 ?x2 WHERE   { <http://data.linkedmdb.org/film/1988> <http://www.w3.org/2004/02/skos/core#subject> ?x2 .     <http://data.linkedmdb.org/film/1988> <http://purl.org/dc/terms/date> ?x3 .     <http://data.linkedmdb.org/film/1988> <http://www.w3.org/2000/01/rdf-schema#label> ?x4   } ",
+	"filename": "q36.json",
+	"card": 1,
+	"results": [
+		{
+			"?x4": "\"Road Trip\"",
+			"?x2": "http://data.linkedmdb.org/film_subject/24"
+		}
+	]
+}

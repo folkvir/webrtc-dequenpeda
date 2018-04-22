@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "\"-18.5 180.0\"@en",
-		"?x2": "http://www.opengis.net/gml/_Feature"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  ?x3 ?x2 WHERE   { <http://dbpedia.org/resource/Eastern_Division,_Fiji> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     <http://dbpedia.org/resource/Eastern_Division,_Fiji> <http://www.georss.org/georss/point> ?x3   } ",
+	"filename": "q7.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"-18.5 180.0\"@en",
+			"?x2": "http://www.opengis.net/gml/_Feature"
+		}
+	]
+}

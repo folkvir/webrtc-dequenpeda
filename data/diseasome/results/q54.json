@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "\"0\"^^http://www.w3.org/2001/XMLSchema#int",
-		"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/514"
-	}
-]
+{
+	"name": "diseasome",
+	"query": "SELECT DISTINCT  ?x3 ?x1 WHERE   { ?x1 <http://www.w3.org/2002/07/owl#sameAs> ?x2 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/degree> ?x3 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/size> ?x4 .     ?x1 <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/name> \"Histidinemia\"   } ",
+	"filename": "q54.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"0\"^^http://www.w3.org/2001/XMLSchema#int",
+			"?x1": "http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/514"
+		}
+	]
+}

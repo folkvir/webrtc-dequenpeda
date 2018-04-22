@@ -1,6 +1,12 @@
-[
-	{
-		"?x3": "\"-34.71239\"^^http://www.w3.org/2001/XMLSchema#float",
-		"?x2": "\"-34.71239 138.68543\"@en"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  * WHERE   { <http://dbpedia.org/resource/Elizabeth_Park,_South_Australia> <http://www.georss.org/georss/point> ?x2 .     <http://dbpedia.org/resource/Elizabeth_Park,_South_Australia> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3   } ",
+	"filename": "q45.json",
+	"card": 1,
+	"results": [
+		{
+			"?x3": "\"-34.71239\"^^http://www.w3.org/2001/XMLSchema#float",
+			"?x2": "\"-34.71239 138.68543\"@en"
+		}
+	]
+}

@@ -1,5 +1,11 @@
-[
-	{
-		"?x1": "http://data.linkedmdb.org/film/13824"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x1 WHERE   { ?x1 <http://purl.org/dc/terms/title> \"Chunuk Bair\" .     ?x1 <http://dbpedia.org/property/hasPhotoCollection> ?x3 .     ?x1 <http://xmlns.com/foaf/0.1/based_near> ?x4 .     ?x1 <http://www.w3.org/2000/01/rdf-schema#label> ?x5   } ",
+	"filename": "q88.json",
+	"card": 1,
+	"results": [
+		{
+			"?x1": "http://data.linkedmdb.org/film/13824"
+		}
+	]
+}

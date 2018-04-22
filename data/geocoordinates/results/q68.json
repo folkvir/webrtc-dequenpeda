@@ -1,6 +1,12 @@
-[
-	{
-		"?x1": "http://dbpedia.org/resource/An_Teallach",
-		"?x2": "http://www.opengis.net/gml/_Feature"
-	}
-]
+{
+	"name": "geocoordinates",
+	"query": "SELECT DISTINCT  ?x1 ?x2 WHERE   { ?x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?x2 .     ?x1 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?x3 .     ?x1 <http://www.georss.org/georss/point> \"57.80653 -5.25166\"@en   } ",
+	"filename": "q68.json",
+	"card": 1,
+	"results": [
+		{
+			"?x1": "http://dbpedia.org/resource/An_Teallach",
+			"?x2": "http://www.opengis.net/gml/_Feature"
+		}
+	]
+}

@@ -1,5 +1,11 @@
-[
-	{
-		"?x2": "http://data.linkedmdb.org/film_subject/45"
-	}
-]
+{
+	"name": "linkedmdb",
+	"query": "SELECT DISTINCT  ?x2 WHERE   { <http://data.linkedmdb.org/film/32086> <http://www.w3.org/2004/02/skos/core#subject> ?x2 .     <http://data.linkedmdb.org/film/32086> <http://xmlns.com/foaf/0.1/based_near> ?x3 .     <http://data.linkedmdb.org/film/32086> <http://purl.org/dc/terms/title> ?x4 .     <http://data.linkedmdb.org/film/32086> <http://www.w3.org/2000/01/rdf-schema#label> ?x5   } ",
+	"filename": "q57.json",
+	"card": 1,
+	"results": [
+		{
+			"?x2": "http://data.linkedmdb.org/film_subject/45"
+		}
+	]
+}
