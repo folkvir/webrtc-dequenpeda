@@ -10,7 +10,8 @@ const ConstructOperator = require('./construct-operator')
 const N3 = require('n3')
 
 const DEFAULT_QUERY_OPTIONS = {
-  timeout: 5 * 60 * 1000
+  timeout: 5 * 60 * 1000,
+  activeSon: false,
 }
 
 module.exports = class Query extends EventEmitter {
@@ -133,77 +134,103 @@ module.exports = class Query extends EventEmitter {
   _askTriples () {
     return new Promise((resolve, reject) => {
       const neighbors = this._parent._foglet.getNeighbours(Infinity)
+      let neighborsSon = []
+      let max = neighbors.length
+      if(this._options.activeSon) {
+        neighborsSon = this._parent._foglet.overlay('son').network.getNeighbours(Infinity)
+        max += neighborsSon.length
+      }
       let receivedMessage = 0
       let timeoutReceived = 0
       let responses = []
+      const done = (resp) => {
+        if(resp) {
+          responses.push(resp)
+          receivedMessage++
+        } else {
+          timeoutReceived++
+        }
+        if ((receivedMessage + timeoutReceived) === (max)) {
+          this._processResponses(responses).then(() => {
+            resolve()
+          }).catch(e => {
+            console.error(e)
+            debug('Error during processing responses.:', e)
+            resolve()
+          })
+        }
+      }
 
       try {
-        neighbors.forEach(id => {
-          const jobId = uniqid()
-          debug(id, this._parent._foglet.inViewID)
-          try {
-            const msg = {
-              requester: {
-                fogletId: this._parent._foglet.id,
-                inview: this._parent._foglet.inViewID,
-                outview: this._parent._foglet.outViewID
-              },
-              type: 'ask-triples',
-              query: this._id,
-              prefixes: [],
-              triples: this._triples,
-              jobId
-            }
-            this._parent._foglet.sendUnicast(id, msg)
-            this._parent._foglet.overlay('son').communication.sendUnicast(id, msg)
-          } catch (e) {
-            console.error(e)
-          }
-
-          // set the timeout for unexpected network error
-          let timeout = null
-          if (this._parent._options.timeout) {
-            timeout = setTimeout(() => {
-              this.emit('timeout-' + jobId)
-            }, this._parent._options.timeout)
-            this.once('timeout-' + jobId, () => {
-              this.removeAllListeners(jobId)
-              timeoutReceived++
-              if ((receivedMessage + timeoutReceived) === neighbors.length) {
-                this._processResponses(responses).then(() => {
-                  resolve()
-                }).catch(e => {
-                  console.error(e)
-                  debug('Error during processing responses.:', e)
-                  resolve()
-                })
-              }
+        if(this._options.activeSon) {
+          neighborsSon.forEach(id => {
+            this._askTriplesBis(id, true).then((resp) => {
+              done(resp)
+            }).catch(e => {
+              reject(e)
             })
-          }
-
-          // once we received a message for the specific task (jobId)
-          this.once(jobId, (message) => {
-            if (timeout !== null) {
-              this.removeAllListeners('timeout-' + jobId)
-              clearTimeout(timeout)
-            }
-            responses.push(message)
-            //debug(`[jobId: ${jobId}] receive a responses for this jobId`)
-            receivedMessage++
-            if ((receivedMessage + timeoutReceived) === neighbors.length) {
-              this._processResponses(responses).then(() => {
-                resolve()
-              }).catch(e => {
-                console.error(e)
-                debug('Error during processing responses.:', e)
-                resolve()
-              })
-            }
+          })
+        }
+        neighbors.forEach(id => {
+          this._askTriplesBis(id, false).then((resp) => {
+            done(resp)
+          }).catch(e => {
+            reject(e)
           })
         })
       } catch (e) {
         reject(new Error('Please report, unexpected bug', e))
       }
+    })
+  }
+
+  _askTriplesBis(id, overlay = false) {
+    return new Promise((resolve, reject) => {
+      const jobId = uniqid()
+      debug(id, this._parent._foglet.inViewID)
+      try {
+        const msg = {
+          requester: {
+            overlay,
+            fogletId: this._parent._foglet.id,
+            inview: this._parent._foglet.inViewID,
+            outview: this._parent._foglet.outViewID
+          },
+          type: 'ask-triples',
+          query: this._id,
+          prefixes: [],
+          triples: this._triples,
+          jobId
+        }
+        if(overlay) {
+          this._parent._foglet.overlay('son').sendUnicast(id, msg)
+        } else {
+          this._parent._foglet.sendUnicast(id, msg)
+        }
+      } catch (e) {
+        console.error(e)
+      }
+
+      // set the timeout for unexpected network error
+      let timeout = null
+      if (this._parent._options.timeout) {
+        timeout = setTimeout(() => {
+          this.emit('timeout-' + jobId)
+        }, this._parent._options.timeout)
+        this.once('timeout-' + jobId, () => {
+          this.removeAllListeners(jobId)
+          resolve()
+        })
+      }
+
+      // once we received a message for the specific task (jobId)
+      this.once(jobId, (message) => {
+        if (timeout !== null) {
+          this.removeAllListeners('timeout-' + jobId)
+          clearTimeout(timeout)
+        }
+        resolve(message)
+      })
     })
   }
 

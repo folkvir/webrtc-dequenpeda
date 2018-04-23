@@ -15,7 +15,7 @@ module.exports = class Profile extends EventEmitter {
     const insertTriple = this._wildcard(Object.assign({}, triple))
     const key = this._tripleToString(insertTriple)
     if(!this._profile.has(key)) {
-      this._profile.set(key, triple)
+      this._profile.set(key, insertTriple)
     }
   }
 

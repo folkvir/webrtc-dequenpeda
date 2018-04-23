@@ -21,17 +21,32 @@ function _handleAskTriples(id, message) {
   }), Promise.resolve([])).then(res => {
     try {
       if(this._foglet.getNeighbours(Infinity).includes(message.requester.outview)) {
-        this._foglet.sendUnicast(message.requester.outview, {
-          owner: {
-            fogletId: this._foglet.id,
-            inview: this._foglet.inViewID,
-            outview: this._foglet.outViewID
-          },
-          type: 'answer-triples',
-          query: message.query,
-          triples: res,
-          jobId: message.jobId
-        })
+        if(message.requester.overlay) {
+          this._foglet.overlay('son').communication.sendUnicast(message.requester.outview, {
+            owner: {
+              fogletId: this._foglet.id,
+              inview: this._foglet.inViewID,
+              outview: this._foglet.outViewID
+            },
+            type: 'answer-triples',
+            query: message.query,
+            triples: res,
+            jobId: message.jobId
+          })
+        } else {
+          this._foglet.sendUnicast(message.requester.outview, {
+            owner: {
+              fogletId: this._foglet.id,
+              inview: this._foglet.inViewID,
+              outview: this._foglet.outViewID
+            },
+            type: 'answer-triples',
+            query: message.query,
+            triples: res,
+            jobId: message.jobId
+          })
+        }
+
       }
     } catch (e) {
       console.error(e)

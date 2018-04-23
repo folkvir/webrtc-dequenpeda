@@ -28,11 +28,12 @@ console.log('Time: ', time)
 const config = {
   resultDir: path.resolve(path.join(__dirname, './results/'+uniqid(time))),
   datasets: [
-    { name: 'diseasome', data: "../data/diseasome/fragments/", queries: "../data/diseasome/queries/queries.json", results: "../data/diseasome/results/" },
-    // { name: 'linkedmdb', data: "../data/linkedmdb/fragments/", queries: "../data/linkedmdb/queries/queries.json", results: "../data/linkedmdb/results/" }
+    { name: 'diseasome', data: "../data/diseasome/fragments/", queries: "../data/diseasome/queries/queries.json", results: "../data/diseasome/results/", withoutQueries: ['q91.json', 'q92.json', 'q61.json', 'q57.json']},
+    // { name: 'linkedmdb', data: "../data/linkedmdb/fragments/", queries: "../data/linkedmdb/queries/queries.json", results: "../data/linkedmdb/results/", withoutQueries: []},
+    // { name: 'geocoordinates', data: "../data/geocoordinates/fragments/", queries: "../data/geocoordinates/queries/queries.json", results: "../data/geocoordinates/results/", withoutQueries: []}
   ],
   shuffleTime: 30 * 1000,
-  shuffleCountBeforeStart: 1,
+  shuffleCountBeforeStart: 5,
   timeout: commander.timeout
 }
 
@@ -44,6 +45,12 @@ if (!fs.existsSync(destination)) shell.mkdir('-p', destination)
 
 const header = ['round', 'completeness']
 const header2 = ['time', 'edges', 'messages']
+
+let globalCompleteness = 0
+let globalMessage = 0
+let globalRound = 0
+const activeQueries = new Map()
+let receiveAnswers = 0
 
 connectClients(commander.clients).then((clients) => {
   console.log('Number of clients loaded: ', clients.length)
@@ -78,9 +85,6 @@ connectClients(commander.clients).then((clients) => {
       const clientsWithFragment = results
       affectQueries(clients, allQueries, clients.length === 1).then(() => {
         console.log('All queries finished.')
-        const plot = `gnuplot -e "input='${destination}/*.csv'" -e "outputname='${destination}/completeness.png'" ${completenessSrc}  && open ${destination}/completeness.png`
-        console.log(plot)
-        const p = shell.exec(plot)
         process.exit(0)
       })
     }).catch(e => {
@@ -136,7 +140,10 @@ function loadQueries (config, limit = Infinity) {
       return new Promise((res, rej) => {
         console.log(dataset)
         const qPath = path.resolve(path.join(__dirname, dataset.queries))
-        const queries = require(qPath)
+        let queries = require(qPath)
+        queries = queries.filter(e => {
+          return !dataset.withoutQueries.includes(e.filename)
+        })
         res([...resultGlobal, queries])
       })
     }), Promise.resolve([])).then((results) => {
@@ -171,8 +178,9 @@ function affectQueries(clients, queries, allqueries) {
     }
     // only for client.length === 1
     if(allqueries) {
+
       for(let i = 0; i < queries.length; i++) {
-        affectOneQuery(queries[i], clients[0], 0).then(() => {
+        affectOneQuery(queries[i], clients[0], 0, queries.length).then(() => {
           finished++
           done()
         }).catch(e => {
@@ -182,7 +190,7 @@ function affectQueries(clients, queries, allqueries) {
     } else {
       clients.reduce((cAcc, client, ind) => cAcc.then(() => {
         const query = queries[ind]
-        affectOneQuery(query, client, ind).then(() => {
+        affectOneQuery(query, client, ind, clients.length).then(() => {
           finished++
           done()
         }).catch(e => {
@@ -199,10 +207,14 @@ function affectQueries(clients, queries, allqueries) {
   })
 }
 
-function affectOneQuery(query, client, ind) {
+function affectOneQuery(query, client, ind, numberOfQueries) {
   return new Promise((resolve, reject) => {
+    let round = 0
+    const resultName = path.resolve(destination+'/'+query.filename+'completeness.csv')
+    activeQueries.set(ind, {
+      completeness: 0
+    })
     console.log('Affecting: %s to client %f', query.filename, ind)
-    const resultName = path.resolve(destination+'/'+query.filename+'.csv')
     console.log('Output will be in: ', resultName)
     append(resultName, header.join(',')+'\n').then(() => {
       console.log('Header added to: ', resultName)
@@ -212,9 +224,10 @@ function affectOneQuery(query, client, ind) {
     const q = client.query(query.query, 'normal', {
       timeout: config.timeout
     })
-    let round = 0
+
     q.on('loaded', (result) => {
       const completeness = result.length / query.card * 100
+      activeQueries.get(ind).completeness = completeness
       console.log('[%f] Query %s loaded: %f results, \n Completeness: %f %, refResults: %f', round, query.filename, result.length,
       completeness, query.results.length)
       append(resultName, [round, completeness].join(',')+'\n').then(() => {
@@ -222,17 +235,19 @@ function affectOneQuery(query, client, ind) {
       }).catch(e => {
         console.error(e)
       })
+      computeGlobalCompleteness(numberOfQueries)
       round++
-
     })
     q.on('updated', (result) => {
       const completeness = result.length / query.card * 100
+      activeQueries.get(ind).completeness = completeness
       console.log('[%f] Query %s updated: %f results, \n Completeness: %f %, refResults: %f', round, query.filename, result.length, completeness, query.results.length)
       append(resultName, [round, completeness].join(',')+'\n').then(() => {
         console.log('Data appended to: ', resultName)
       }).catch(e => {
         console.error(e)
       })
+      computeGlobalCompleteness(numberOfQueries)
       round++
     })
     q.on('end', (result) => {
@@ -243,6 +258,18 @@ function affectOneQuery(query, client, ind) {
       reject(err)
     })
   })
+}
+
+function computeGlobalCompleteness(numberOfQueries) {
+  receiveAnswers++
+  if((receiveAnswers % numberOfQueries) === 0) {
+    globalCompleteness = [...activeQueries.values()].reduce((acc, cur) => acc+cur.completeness, 0) / numberOfQueries
+    const m = AbstractSimplePeer.manager.stats.message - globalMessage
+    globalMessage = AbstractSimplePeer.manager.stats.message
+    append(path.resolve(destination+'/globalcompleteness.csv'), [globalRound, globalCompleteness, m].join(',')+'\n')
+    console.log('Global completeness: %f %', globalCompleteness)
+    globalRound++
+  }
 }
 
 function append(file, data) {

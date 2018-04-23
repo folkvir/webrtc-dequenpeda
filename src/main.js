@@ -70,7 +70,7 @@ module.exports = class Dequenpeda extends EventEmitter {
             profile: this._profile,
             delta: this._options.foglet.rps.options.delta,
             timeoutDescriptor: 10 * 1000,
-            periodicProfileExchange: 10 * 1000,
+            periodicProfileExchange: this._options.foglet.rps.options.delta/2,
             protocol: 'dequenpeda-protocol-son-overlay', // foglet running on the protocol foglet-example, defined for spray-wrtc
             signaling: {
               address: 'https://localhost:8000/',
@@ -147,7 +147,7 @@ module.exports = class Dequenpeda extends EventEmitter {
    * @param  {[type]} queryString your query
    * @return {Object}             return an Object qith id, queryString and an event object with the specified event emitted: 'loaded', 'updated', 'end'
    */
-  query (queryString, type = this._options.queryType, options = undefined) {
+  query (queryString, type = this._options.queryType, options = {activeSon: this._options.activeSon}) {
     try {
       // choose the type of query to execute
       let QueryClass = this._chooseQueryClass(type)
@@ -296,7 +296,7 @@ module.exports = class Dequenpeda extends EventEmitter {
 
   _periodicExecution () {
     this.emit('periodic-execution-begins')
-    debug(`[client:${this._foglet._id}]`, 'Number of neighbours: ', this._foglet.getNeighbours(Infinity).length)
+    debug(`[client:${this._foglet._id}]`, 'Number of neighbours: ', this._foglet.getNeighbours().length)
     if(this._shuffleCount >= this._options.shuffleCountBeforeStart) {
       if (this._queries.size > 0) {
         let pendingQueries = []
