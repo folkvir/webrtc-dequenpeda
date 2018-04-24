@@ -7,20 +7,16 @@ const N3Util = N3.Util
 const Writer = N3.Writer
 const uniqid = require('uniqid')
 const Store = require('./store')
-const Query = require('./queries/query')
-const QueryShared = require('./queries/query-shared')
-const UnicastHandlers = require('./handlers/unicast-handlers')
-const BroadcastHandlers = require('./handlers/broadcast-handlers')
+const Query = require('./query')
+const UnicastHandlers = require('./unicast-handlers')
 const Profile = require('./son/profile')
 const Son = require('./son/son')
 
 const debugError = require('debug')('error')
-
-
 const clone = (obj) => JSON.parse(JSON.stringify(obj))
 
 let DEFAULT_OPTIONS = {
-  activeSon: true,
+  activeSon: false,
   defaultGraph: 'http://mypersonaldata.com/',
   timeout: 5000,
   queryType: 'normal',
@@ -34,7 +30,7 @@ let DEFAULT_OPTIONS = {
           trickle: true, // enable trickle (divide offers in multiple small offers sent by pieces)
           iceServers: [] // define iceServers in non local instance
         },
-        timeout: 2 * 60 * 1000, // spray-wrtc timeout before definitively close a WebRTC connection.
+        timeout: 10 * 1000, // spray-wrtc timeout before definitively close a WebRTC connection.
         delta: 5 * 1000,   // spray-wrtc shuffle interval
         signaling: {
           address: 'http://localhost:8000/',
@@ -59,6 +55,9 @@ module.exports = class Dequenpeda extends EventEmitter {
     super()
     this.on('error', debugError)
     this._profile = new Profile()
+    this._statistics = {
+      message: 0
+    }
     this._options = lmerge(DEFAULT_OPTIONS, options)
     if(this._options.activeSon) {
       // means that we have activated the overlay
@@ -67,10 +66,12 @@ module.exports = class Dequenpeda extends EventEmitter {
           name: 'son',
           class: Son,
           options: {
+            socketClass: this._options.foglet.rps.options.socketClass,
             profile: this._profile,
             delta: this._options.foglet.rps.options.delta,
             timeoutDescriptor: 10 * 1000,
-            periodicProfileExchange: this._options.foglet.rps.options.delta/2,
+            timeout: this._options.foglet.rps.options.timeout,
+            periodicProfileExchange: this._options.foglet.rps.options.delta,
             protocol: 'dequenpeda-protocol-son-overlay', // foglet running on the protocol foglet-example, defined for spray-wrtc
             signaling: {
               address: 'https://localhost:8000/',
@@ -89,10 +90,6 @@ module.exports = class Dequenpeda extends EventEmitter {
       this._handleUnicast(id, message)
       this.emit('receive-unicast', {id, message: clone(message)})
     })
-    this._foglet.onBroadcast((id, message) => {
-      this._handleBroadcast(id, message)
-      this.emit('receive-broadcast', {id, message: clone(message)})
-    })
     if(this._options.activeSon) {
       // means that we have activated the overlay
       this._foglet.overlay('son').communication.onUnicast((id, message) => {
@@ -100,18 +97,17 @@ module.exports = class Dequenpeda extends EventEmitter {
         this._handleUnicast(id, message)
         this.emit('receive-unicast', {id, message: clone(message)})
       })
-      this._foglet.overlay('son').communication.onBroadcast((id, message) => {
-        this._handleBroadcast(id, message)
-        this.emit('receive-broadcast', {id, message: clone(message)})
-      })
     }
     this._parser = new Map()
     this._store = new Store()
     this._queries = new Map()
     this._shuffleCount = 0
-    this._periodicExecutionInterval = setInterval(() => {
-      this._periodicExecution()
-    }, this._options.foglet.rps.options.delta + 1000)
+    this.on('connected', () => {
+      this._periodicExecutionInterval = setInterval(() => {
+        // wait 5 seconds for a proper establishment of RPS + SON connections
+        setTimeout(() => {this._periodicExecution()}, 5000)
+      }, this._options.foglet.rps.options.delta)
+    })
   }
 
   /**
@@ -157,14 +153,14 @@ module.exports = class Dequenpeda extends EventEmitter {
       query.execute('loaded').then(() => {
         // noop
       }).catch(e => {
-        console.error(e)
+        console.log(e)
       })
       query.on('end', () => {
         this._queries.delete(query._id)
       })
       return query
     } catch (e) {
-      console.error(e)
+      console.log(e)
     }
   }
 
@@ -174,9 +170,7 @@ module.exports = class Dequenpeda extends EventEmitter {
    * @return {Object}      Return a Query Class
    */
   _chooseQueryClass (type) {
-    if (type === 'normal') { return Query } else if (type === 'shared') {
-      return QueryShared
-    }
+    if (type === 'normal') { return Query }
   }
 
   /**
@@ -223,7 +217,7 @@ module.exports = class Dequenpeda extends EventEmitter {
       parser.parse(stringFile, (error, data, prefixes) => {
         if (error) {
           console.log(data)
-          console.error(error)
+          console.log(error)
           throw error
         }
         if (data) {
@@ -282,18 +276,6 @@ module.exports = class Dequenpeda extends EventEmitter {
     }
   }
 
-  _handleBroadcast (id, message) {
-    if (message.type === 'new-shared-query') {
-      BroadcastHandlers._handleNewSharedQuery.call(this, id, message)
-    } else if (message.type === 'delete-shared-query') {
-      BroadcastHandlers._handleDeleteSharedQuery.call(this, id, message)
-    } else {
-      debug(id, message)
-      // send all other messages to the appropriate query
-      // this.emit('error', new Error('This message is not handled by the application. Please report.'))
-    }
-  }
-
   _periodicExecution () {
     this.emit('periodic-execution-begins')
     debug(`[client:${this._foglet._id}]`, 'Number of neighbours: ', this._foglet.getNeighbours().length)
@@ -306,13 +288,15 @@ module.exports = class Dequenpeda extends EventEmitter {
           qpending.then(() => {
             // noop
           }).catch(e => {
-            console.error(e)
+            console.log(e)
           })
         })
         this.emit('periodic-execution', pendingQueries)
       } else {
         this.emit('periodic-execution', 'no-queries-yet')
       }
+    } else {
+      console.log('Waiting before starting ... [%f/%f]', this._shuffleCount, this._options.shuffleCountBeforeStart)
     }
     this._shuffleCount++
   }

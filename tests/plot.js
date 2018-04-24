@@ -33,7 +33,7 @@ function computeGlobalCompleteness(p) {
 
 function computeGlobalMessageCompleteness(p) {
   const plotScriptPath = path.resolve(path.join(__dirname, "./plots/message.gnuplot"))
-  const plot = `gnuplot -e "input='${p}/globalcompleteness.csv'" -e "outputname='${p}/globalcompleteness.png'" ${plotScriptPath}`
+  const plot = `gnuplot -e "input='${p}/globalcompleteness.csv'" -e "outputname='${p}/messages.png'" ${plotScriptPath}`
   console.log(plot)
   const plotExec = shell.exec(plot)
 }

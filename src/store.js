@@ -43,7 +43,7 @@ module.exports = class Store {
           this.rdfstore.addPrefix(prefix.name, prefix.uri)
         })
       } catch (e) {
-        console.error(e)
+        console.log(e)
         reject(e)
       }
     })
@@ -57,11 +57,11 @@ module.exports = class Store {
             // console.log('Triple inserted: ', triple)
             resolve(res)
           }).catch(e => {
-            console.error(e)
+            console.log(e)
             resolve()
           })
         }).catch(e => {
-          console.error(e)
+          console.log(e)
           reject(e)
         })
       } else {
@@ -69,7 +69,7 @@ module.exports = class Store {
           // console.log('Triple inserted: ', triple)
           resolve(res)
         }).catch(e => {
-          console.error(e)
+          console.log(e)
           resolve()
         })
       }
@@ -88,7 +88,7 @@ module.exports = class Store {
           resolve()
         })
       } catch (e) {
-        console.error(e)
+        console.log(e)
         reject(e)
       }
 
@@ -104,18 +104,18 @@ module.exports = class Store {
           this._constructData(graph, pattern).then((...args) => {
             resolve(...args)
           }).catch(e => {
-            console.error(e)
+            console.log(e)
             reject(e)
           })
         }).catch(e => {
-          console.error(e)
+          console.log(e)
           reject(e)
         })
       } else {
         this._constructData(graph, pattern).then((...args) => {
           resolve(...args)
         }).catch(e => {
-          console.error(e)
+          console.log(e)
           reject(e)
         })
       }
@@ -133,7 +133,7 @@ module.exports = class Store {
         })
       } catch (e) {
         console.log(query)
-        console.error(e)
+        console.log(e)
         reject(e)
       }
     })
@@ -151,11 +151,11 @@ module.exports = class Store {
           })
         } catch (e) {
           console.log(query)
-          console.error(e)
+          console.log(e)
           reject(e)
         }
       } catch (e) {
-        console.error(e)
+        console.log(e)
         reject(e)
       }
     })

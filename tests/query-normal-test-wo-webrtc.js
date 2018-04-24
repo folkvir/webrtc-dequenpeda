@@ -6,53 +6,44 @@ const fs = require('fs')
 const AbstractSimplePeer = require('../webrtc-dequenpeda').AbstractSimplePeer
 const shuffle = require('lodash.shuffle')
 const uniqid = require('uniqid')
+const lmerge = require('lodash.merge')
 
 commander
-  .option('-c, --clients <clients>', 'Number of clients', (e) => parseInt(e), 1)
-  .option('-t, --timeout <timeout>', 'Query Timeout', (e) => parseFloat(e), 24 * 3600 *1000)
+  .option('-c, --clients <clients>', 'Override: Number of clients', (e) => parseInt(e))
+  .option('-t, --timeout <timeout>', 'Override: Query Timeout', (e) => parseFloat(e))
+  .option('-config, --config <config>', 'Config by default', e => e, path.resolve(__dirname+'/configs/default'))
   .parse(process.argv)
 
-commander.timeout = parseFloat(commander.timeout)
-console.log('[PARAMETER] Number of clients: ', commander.clients)
-console.log('[PARAMETER] Timeout: ', commander.timeout)
-
-let date = new Date();
-let minute = date.getMinutes();
-let hour = date.getHours();
-let day = date.getDate();
-let month = date.getMonth();
-let year = date.getFullYear();
+let date = new Date()
+let minute = date.getMinutes()
+let hour = date.getHours()
+let day = date.getDate()
+let month = date.getMonth()
+let year = date.getFullYear()
 const time = [hour, minute, day, month, year].join("-")
 console.log('Time: ', time)
 
-const config = {
-  resultDir: path.resolve(path.join(__dirname, './results/'+uniqid(time))),
-  datasets: [
-    { name: 'diseasome', data: "../data/diseasome/fragments/", queries: "../data/diseasome/queries/queries.json", results: "../data/diseasome/results/", withoutQueries: ['q91.json', 'q92.json', 'q61.json', 'q57.json']},
-    // { name: 'linkedmdb', data: "../data/linkedmdb/fragments/", queries: "../data/linkedmdb/queries/queries.json", results: "../data/linkedmdb/results/", withoutQueries: []},
-    // { name: 'geocoordinates', data: "../data/geocoordinates/fragments/", queries: "../data/geocoordinates/queries/queries.json", results: "../data/geocoordinates/results/", withoutQueries: []}
-  ],
-  shuffleTime: 30 * 1000,
-  shuffleCountBeforeStart: 5,
-  timeout: commander.timeout
-}
+const config = require(path.resolve(commander.config))
+config.resultDir = path.resolve(path.join(__dirname, './results/'+uniqid(time)))
 
-const completenessSrc = path.resolve(path.join(__dirname, './plots/completeness.gnuplot'))
+if(commander.timeout) config.timeout = parseFloat(commander.timeout)
+if(commander.clients) config.clients = commander.clients
+console.log('[PARAMETER] Number of clients: ', config.clients)
+console.log('[PARAMETER] Timeout: ', config.timeout)
 
 const destination = path.resolve(config.resultDir)
 // create the destination
 if (!fs.existsSync(destination)) shell.mkdir('-p', destination)
 
 const header = ['round', 'completeness']
-const header2 = ['time', 'edges', 'messages']
 
 let globalCompleteness = 0
-let globalMessage = 0
+let globalMessage = 0, globalMessagetotal = 0
 let globalRound = 0
 const activeQueries = new Map()
 let receiveAnswers = 0
 
-connectClients(commander.clients).then((clients) => {
+createClients(config.clients).then((clients) => {
   console.log('Number of clients loaded: ', clients.length)
   // clients.forEach(c => {
   //   console.log('Neighbours: ', c._foglet.getNeighbours())
@@ -83,13 +74,17 @@ connectClients(commander.clients).then((clients) => {
     }), Promise.resolve([])).then((results) => {
       console.log('All dataset loaded on clients')
       const clientsWithFragment = results
-      affectQueries(clients, allQueries, clients.length === 1).then(() => {
-        console.log('All queries finished.')
-        process.exit(0)
+      connectClients(clients).then(() => {
+        console.log('Clients connected.')
+        affectQueries(clients, allQueries, clients.length === 1).then((res) => {
+          console.log('All queries finished.')
+          const neighs = writeNeighbours(res)
+          process.exit(0)
+        })
       })
     }).catch(e => {
-      console.error(e)
-      process.exit(1)
+      console.log(e)
+      process.exit(0)
     })
   })
 })
@@ -100,14 +95,14 @@ function loadDataset(pathFiles, clients) {
   })
 }
 
-function connectClients(number) {
-  if(number === 1) return Promise.resolve([createClient()])
+function createClients(number) {
+  if(number === 1) return Promise.resolve([createClient(1)])
   let clients = []
   let tmpFoglets = []
   const max = number
   for (let i = 0; i < max; i++) {
     if (i !== 0) tmpFoglets.push(i)
-    const c = createClient()
+    const c = createClient(i)
     c._foglet.on('connect', () => {
       console.log('client connected.')
     })
@@ -115,10 +110,14 @@ function connectClients(number) {
   }
   // shuffle clients to be fair!
   clients = shuffle(clients)
+  return Promise.resolve(clients)
+}
+
+function connectClients(clients) {
   return new Promise((resolve, reject) => {
     if(clients.length < 2) reject(new Error('need at least 2 client'))
-    tmpFoglets.reduce((accClient, index) => accClient.then(() => {
-      return clients[index].connection(clients[0])
+    clients.reduce((accClient, client) => accClient.then(() => {
+      return client.connection(clients[0])
     }), Promise.resolve()).then(() => {
       resolve(clients)
     }).catch(e => {
@@ -149,7 +148,7 @@ function loadQueries (config, limit = Infinity) {
     }), Promise.resolve([])).then((results) => {
       resolve(results)
     }).catch(e => {
-      console.error(e)
+      console.log(e)
       reject(e)
     })
   })
@@ -171,35 +170,38 @@ function affectQueries(clients, queries, allqueries) {
   return new Promise((resolve, reject) => {
     let number = 0
     let finished = 0
+    const toReturn = []
     const done = () => {
         if (finished === clients.length) {
-          resolve()
+          resolve(toReturn)
         }
     }
     // only for client.length === 1
     if(allqueries) {
 
       for(let i = 0; i < queries.length; i++) {
-        affectOneQuery(queries[i], clients[0], 0, queries.length).then(() => {
+        affectOneQuery(queries[i], clients[0], i, queries.length, clients).then(() => {
+          toReturn.push({client, query: queries[i]})
           finished++
           done()
         }).catch(e => {
-          console.error(e)
+          console.log(e)
         })
       }
     } else {
       clients.reduce((cAcc, client, ind) => cAcc.then(() => {
         const query = queries[ind]
-        affectOneQuery(query, client, ind, clients.length).then(() => {
+        affectOneQuery(query, client, ind, clients.length, clients).then(() => {
           finished++
+          toReturn.push({client, query})
           done()
         }).catch(e => {
-          console.error(e)
+          console.log(e)
         })
         number++
         return Promise.resolve()
       }), Promise.resolve()).then(() => {
-        console.log('Waiting for %f shuffles for a proper network before continuing.', config.shuffleCountBeforeStart)
+        console.log('Waiting for %f shuffles for a proper network before continuing.', config.options.shuffleCountBeforeStart)
       }).catch(e => {
         reject(e)
       })
@@ -207,7 +209,7 @@ function affectQueries(clients, queries, allqueries) {
   })
 }
 
-function affectOneQuery(query, client, ind, numberOfQueries) {
+function affectOneQuery(query, client, ind, numberOfQueries, clients) {
   return new Promise((resolve, reject) => {
     let round = 0
     const resultName = path.resolve(destination+'/'+query.filename+'completeness.csv')
@@ -219,7 +221,7 @@ function affectOneQuery(query, client, ind, numberOfQueries) {
     append(resultName, header.join(',')+'\n').then(() => {
       console.log('Header added to: ', resultName)
     }).catch(e => {
-      console.error(e)
+      console.log(e)
     })
     const q = client.query(query.query, 'normal', {
       timeout: config.timeout
@@ -230,25 +232,17 @@ function affectOneQuery(query, client, ind, numberOfQueries) {
       activeQueries.get(ind).completeness = completeness
       console.log('[%f] Query %s loaded: %f results, \n Completeness: %f %, refResults: %f', round, query.filename, result.length,
       completeness, query.results.length)
-      append(resultName, [round, completeness].join(',')+'\n').then(() => {
-        console.log('Data appended to: ', resultName)
-      }).catch(e => {
-        console.error(e)
-      })
-      computeGlobalCompleteness(numberOfQueries)
+      computeGlobalCompleteness(numberOfQueries, clients, client, round, query, completeness, resultName)
       round++
+      if(round >= config.round) q.stop()
     })
     q.on('updated', (result) => {
       const completeness = result.length / query.card * 100
       activeQueries.get(ind).completeness = completeness
       console.log('[%f] Query %s updated: %f results, \n Completeness: %f %, refResults: %f', round, query.filename, result.length, completeness, query.results.length)
-      append(resultName, [round, completeness].join(',')+'\n').then(() => {
-        console.log('Data appended to: ', resultName)
-      }).catch(e => {
-        console.error(e)
-      })
-      computeGlobalCompleteness(numberOfQueries)
+      computeGlobalCompleteness(numberOfQueries, clients, client, round, query, completeness, resultName)
       round++
+      if(round >= config.round) q.stop()
     })
     q.on('end', (result) => {
       console.log('Query %s finished', query.filename)
@@ -260,16 +254,65 @@ function affectOneQuery(query, client, ind, numberOfQueries) {
   })
 }
 
-function computeGlobalCompleteness(numberOfQueries) {
-  receiveAnswers++
-  if((receiveAnswers % numberOfQueries) === 0) {
-    globalCompleteness = [...activeQueries.values()].reduce((acc, cur) => acc+cur.completeness, 0) / numberOfQueries
-    const m = AbstractSimplePeer.manager.stats.message - globalMessage
-    globalMessage = AbstractSimplePeer.manager.stats.message
-    append(path.resolve(destination+'/globalcompleteness.csv'), [globalRound, globalCompleteness, m].join(',')+'\n')
-    console.log('Global completeness: %f %', globalCompleteness)
-    globalRound++
+function computeGlobalCompleteness(numberOfQueries, clients, client, round, query, completeness, resultName) {
+  if(round > 0) {
+    append(resultName, [round, completeness].join(',')+'\n')
+    receiveAnswers++
+    if((receiveAnswers % numberOfQueries) === 0) {
+      if(receiveAnswers === numberOfQueries) {
+        append(path.resolve(destination+'/globalcompleteness.csv'), [
+          'round',
+          'globalcompleteness',
+          'messages',
+          'egdes-RPS',
+          'edges-SON',
+          'allmessages'
+        ].join(',')+'\n')
+      }
+      globalCompleteness = [...activeQueries.values()].reduce((acc, cur) => acc+cur.completeness, 0) / numberOfQueries
+      const currentMessage = clients.reduce((acc, cur) => acc+cur._statistics.message, 0)
+      const m = currentMessage - globalMessage
+      globalMessage = currentMessage
+      const currentMessagetotal = AbstractSimplePeer.manager.stats.message
+      const mtotal = currentMessagetotal - globalMessagetotal
+      globalMessagetotal = currentMessagetotal
+      let overlayEdges = 0
+      if(config.options.activeSon) {
+        overlayEdges = clients.reduce((acc, cur) => acc+cur._foglet.overlay('son').network.getNeighbours(Infinity).length, 0)
+      }
+      const edges = clients.reduce((acc, cur) => acc+cur._foglet.getNeighbours(Infinity).length, 0)
+      append(path.resolve(destination+'/globalcompleteness.csv'), [
+        globalRound,
+        globalCompleteness,
+        m,
+        edges,
+        overlayEdges,
+        mtotal
+      ].join(',')+'\n')
+      console.log('Global completeness: %f % (%f/%f)', globalCompleteness, activeQueries.size, numberOfQueries)
+      globalRound++
+    }
   }
+}
+
+function writeNeighbours(clients) {
+  const toReturn = clients.reduce((acc, cur) => {
+
+    let res = {
+      type: cur.query.name,
+      inview: cur.client._foglet.inViewID,
+      outview: cur.client._foglet.outViewID,
+      rps: cur.client._foglet.getNeighbours(Infinity)
+    }
+    if(cur.client._options.activeSon) {
+      res.overlay = cur.client._foglet.overlay('son').network.getNeighbours(Infinity)
+    }
+    acc.push(res)
+    return acc
+  }, [])
+  let stringified = JSON.stringify(toReturn)
+  console.log(stringified)
+  fs.writeFileSync(path.resolve(destination+`/neighbors.json`), stringified, 'utf8')
 }
 
 function append(file, data) {
@@ -309,18 +352,17 @@ let extractFilename = (pathData, max) => new Promise((resolve, reject) => {
  * Create a Dequenpeda client
  * @return {[type]} [description]
  */
-function createClient () {
-  return new Dequenpeda({
+function createClient (i) {
+  return new Dequenpeda(lmerge(config.options, {
     foglet: {
+      id: i,
       rps: {
         options: {
-          delta: config.shuffleTime,
-          timeout: config.timeout,
           socketClass: AbstractSimplePeer
         }
       }
     }
-  })
+  }))
 }
 
 /**
@@ -387,12 +429,12 @@ function loadFiles(fragments, clients) {
                       inserted++
                       res2()
                     }).catch(e => {
-                      console.error(e)
+                      console.log(e)
                       rej2(e)
                     })
                   }, 10)
                 }).catch(e => {
-                  console.error(e)
+                  console.log(e)
                   rej2(e)
                 })
               } else {
@@ -433,12 +475,12 @@ function loadFiles(fragments, clients) {
                         inserted++
                         res2()
                       }).catch(e => {
-                        console.error(e)
+                        console.log(e)
                         rej2(e)
                       })
                     }, 10)
                   }).catch(e => {
-                    console.error(e)
+                    console.log(e)
                     rej2(e)
                   })
                 } else {
@@ -461,7 +503,7 @@ function loadFiles(fragments, clients) {
         reject()
       })
     }).catch(e => {
-      console.error(e)
+      console.log(e)
       reject(e)
     })
   })

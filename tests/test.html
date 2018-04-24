@@ -4,20 +4,48 @@
     Please, switch to console.
     <script src="../dist/webrtc-dequenpeda.bundle.js"></script>
     <script>
-      localStorage.debug = ""
+      localStorage.debug = "tman-wrtc"
       let foglets = []
-      const number = 50
+      const options = {
+        delta: 30 * 1000,
+        timeout: 15 * 1000,
+        timeoutPending: 10 * 1000,
+        timeoutDescriptor: 15 * 1000,
+        periodicProfileExchange: 15 * 1000,
+        socketClass: dequenpeda.AbstractSimplePeer
+      }
+      const number = 10
       for(let i = 0; i< number; i++) {
         foglets.push(new dequenpeda.Client({
+          shuffleCountBeforeStart: 1,
           foglet: {
             rps: {
               options: {
-                delta: 10000,
-                timeout: 10000,
-                timeoutPending: 10000,
-                socketClass: dequenpeda.AbstractSimplePeer
+                delta: options.delta,
+                timeout: options.timeout,
+                timeoutPending: options.timeoutPending,
+                socketClass: options.socketClass
               }
-            }
+            },
+            overlays: [
+              {
+                name: 'son',
+                class: dequenpeda.son,
+                options: {
+                  socketClass: options.socketClass,
+                  profile: new (dequenpeda.profile)(),
+                  delta: options.delta,
+                  timeoutDescriptor: options.timeoutDescriptor,
+                  timeout: options.timaout,
+                  periodicProfileExchange: options.periodicProfileExchange,
+                  protocol: 'dequenpeda-protocol-son-overlay', // foglet running on the protocol foglet-example, defined for spray-wrtc
+                  signaling: {
+                    address: 'https://localhost:8000/',
+                    room: 'dequenpeda-room-overlay' // room to join
+                  }
+                }
+              }
+            ]
           }
         }))
         foglets[i].on('receive-broadcast',(message) => {

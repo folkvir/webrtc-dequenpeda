@@ -6,7 +6,6 @@ const SparqlGenerator = require('sparqljs').Generator
 const debug = require('debug')('dequenpeda:query')
 const Base64 = require('js-base64').Base64
 const ArrayIterator = require('asynciterator').ArrayIterator
-const ConstructOperator = require('./construct-operator')
 const N3 = require('n3')
 
 const DEFAULT_QUERY_OPTIONS = {
@@ -55,18 +54,18 @@ module.exports = class Query extends EventEmitter {
   async execute (eventName) {
     (eventName !== 'end') && this._createTimeout()
     // debug(`[client:${this._parent._foglet.id}] 1-Executing the query ${this._id}...`)
-    const neighbors = this._parent._foglet.getNeighbours(Infinity)
+    const neighbors = this._parent._foglet.getNeighbours()
     if (neighbors.length > 0) {
       // execute after receiving triples from neighbors
       return this._askTriples().then(() => {
         return this._execute(eventName).then(() => {
           return Promise.resolve()
         }).catch(e => {
-          console.error(e)
+          console.log(e)
           return Promise.reject(e)
         })
       }).catch(e => {
-        console.error('error when asking triples: ', e)
+        console.log('error when asking triples: ', e)
         return Promise.reject(e)
       })
     } else {
@@ -75,7 +74,7 @@ module.exports = class Query extends EventEmitter {
         debug('Query executed')
         return Promise.resolve()
       }).catch(e => {
-        console.error(e)
+        console.log(e)
         return Promise.reject(e)
       })
     }
@@ -112,32 +111,13 @@ module.exports = class Query extends EventEmitter {
     return Promise.resolve()
   }
 
-  _injectResult (result) {
-    return new Promise((resolve, reject) => {
-      const buff = new ArrayIterator(result)
-      const construct = new ConstructOperator(buff, this._properTriples)
-      let toInject = ""
-      construct.on('data', (data) => {
-        toInject += data
-      })
-      construct.on('end', () => {
-        this._parent.loadTriples(toInject).then(() => {
-          console.log('Data reinjected to my personnal data store.', toInject)
-          resolve()
-        }).catch(e => {
-          reject(e)
-        })
-      })
-    })
-  }
-
   _askTriples () {
     return new Promise((resolve, reject) => {
-      const neighbors = this._parent._foglet.getNeighbours(Infinity)
+      const neighbors = this._parent._foglet.getNeighbours()
       let neighborsSon = []
       let max = neighbors.length
       if(this._options.activeSon) {
-        neighborsSon = this._parent._foglet.overlay('son').network.getNeighbours(Infinity)
+        neighborsSon = this._parent._foglet.overlay('son').network.getNeighbours()
         max += neighborsSon.length
       }
       let receivedMessage = 0
@@ -154,7 +134,7 @@ module.exports = class Query extends EventEmitter {
           this._processResponses(responses).then(() => {
             resolve()
           }).catch(e => {
-            console.error(e)
+            console.log(e)
             debug('Error during processing responses.:', e)
             resolve()
           })
@@ -164,19 +144,28 @@ module.exports = class Query extends EventEmitter {
       try {
         if(this._options.activeSon) {
           neighborsSon.forEach(id => {
-            this._askTriplesBis(id, true).then((resp) => {
+            if(this._parent._foglet.overlay('son').network.getNeighbours(Infinity).includes(id)) {
+              this._askTriplesBis(id, true).then((resp) => {
+                done(resp)
+              }).catch(e => {
+                reject(e)
+              })
+            } else {
+              done()
+            }
+          })
+        }
+        neighbors.forEach(id => {
+          if(this._parent._foglet.getNeighbours(Infinity).includes(id)) {
+            this._askTriplesBis(id, false).then((resp) => {
               done(resp)
             }).catch(e => {
               reject(e)
             })
-          })
-        }
-        neighbors.forEach(id => {
-          this._askTriplesBis(id, false).then((resp) => {
-            done(resp)
-          }).catch(e => {
-            reject(e)
-          })
+          } else {
+            done()
+          }
+
         })
       } catch (e) {
         reject(new Error('Please report, unexpected bug', e))
@@ -203,12 +192,21 @@ module.exports = class Query extends EventEmitter {
           jobId
         }
         if(overlay) {
-          this._parent._foglet.overlay('son').sendUnicast(id, msg)
+          this._parent._foglet.overlay('son').communication.sendUnicast(id, msg).then(() => {
+            this._parent._statistics.message++
+          }).catch(e => {
+            console.log(new Error('Eror during sending ask_triples on the overlay to:'+id, e))
+          })
+
         } else {
-          this._parent._foglet.sendUnicast(id, msg)
+          this._parent._foglet.sendUnicast(id, msg).then(() => {
+            this._parent._statistics.message++
+          }).catch(e => {
+            console.log(new Error('Eror during sending ask_triples to:'+id, e))
+          })
         }
       } catch (e) {
-        console.error(e)
+        console.log(e)
       }
 
       // set the timeout for unexpected network error
@@ -258,7 +256,7 @@ module.exports = class Query extends EventEmitter {
                 // console.log('insert into my datastore: ', graphId, triple)
                 resolveData()
               }).catch(e => {
-                console.error(e)
+                console.log(e)
                 resolveData()
               })
             } else {

@@ -21,6 +21,16 @@ module.exports = class Son extends TMan {
       decode: deserialize
     }, options)
     super(manager, options)
+    // fix error when replying if the peer does not exists
+    this._rps.unicast.removeAllListeners('requestDescriptor')
+    this._rps.unicast.on('requestDescriptor', (requester) => {
+      if(this._rps.parent.getPeers(Infinity).includes(requester)) {
+        this._rps.unicast.emit('giveDescriptor', requester, this._rps.getInviewId(), this._rps.options.descriptor).catch((e) => {
+          console.log(requester, this._rps.getInviewId(), this._rps.options.descriptor)
+          console.log(e)
+        })
+      }
+    })
     this.rps._partialViewSize = () => this.options.partialViewSize
     // internal communications
     this.communication = new Communication(this, this.options.procotol + '-internal')

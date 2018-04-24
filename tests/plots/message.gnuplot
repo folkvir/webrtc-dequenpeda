@@ -11,9 +11,12 @@ set style data linespoints
 location = input
 
 SIZE = system("ls -1 " . location . "| wc -l")
-FILES = system("ls -1 " . location)
 
-plot for [file in FILES] file using 1:3 lw 2 notitle
+plot location using 1:3 lw 2 title "#AppMessage", \
+  location using 1:4 lw 2 title "#edges-RPS", \
+  location using 1:5 lw 2 title "#edges-SON", \
+  location using 1:6 lw 2 title "#NetworkMessages"
+
 
 print 'Size:', SIZE
 

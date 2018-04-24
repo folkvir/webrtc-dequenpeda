@@ -26,13 +26,8 @@ const DEFAULT_OPTIONS = () => { return {
 class Manager {
   constructor () {
     this._statistics = {
-      message: 0,
-      lastNumberOfMessage: 0,
-      interval: 1000, // every 1000ms provide stats on the number of message
-      transferredMessageOverTime: [0],
-      edgesOverTime: [0]
+      message: 0
     }
-    this._intervalStats = setInterval(() => { this._setStats() }, this._statistics)
     this.manager = new Map()
     this._options = {
       latency: (send) => { setTimeout(send, 10) },
@@ -51,19 +46,22 @@ class Manager {
 
   connect(from, to) {
     debugManager('peer connected from/to: ', from, to)
-    this.manager.get(to)._connectWith(from)
-    this.manager.get(from)._connectWith(to)
+    setImmediate(() => {
+      this.manager.get(to)._connectWith(from)
+      this.manager.get(from)._connectWith(to)
+    })
   }
 
   destroy(from, to) {
     debugManager('peer disconnected from/to: ', from, to)
-    from && this.manager.get(from) && this.manager.get(from)._close()
-    to && this.manager.get(to) && this.manager.get(to)._close()
+    setImmediate(() => {
+      from && this.manager.get(from) && this.manager.get(from)._close()
+      to && this.manager.get(to) && this.manager.get(to)._close()
+    })
   }
 
   send(from, to, msg, retry = 0) {
     this._options.latency(() => {
-      this._statistics.message++
       this._send(from, to, msg, retry)
     })
   }
@@ -72,20 +70,13 @@ class Manager {
     if(retry < this._options.retry) {
       try {
         this.manager.get(to).emit('data', msg)
+        this._statistics.message++
       } catch (e) {
         this.send(from, to, msg, retry++)
       }
     } else {
       throw new Error('cannot send the message. perhaps your destination is not reachable.')
     }
-  }
-
-  _setStats() {
-    let message = this._statistics.message
-    let last = this._statistics.lastNumberOfMessage
-    this._statistics.transferredMessageOverTime.push(message - last)
-    this._statistics.lastNumberOfMessage = message
-    this._statistics.edgesOverTime.push(this.manager.size)
   }
 }
 const manager = new Manager()

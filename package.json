@@ -49,7 +49,7 @@
     "serialize-javascript": "^1.5.0",
     "shelljs": "^0.8.1",
     "sparqljs": "^2.0.3",
-    "tman-wrtc": "^0.1.0",
+    "tman-wrtc": "file:../tman-wrtc",
     "uniqid": "^4.1.1",
     "wrtc": "0.1.1"
   },

@@ -1,5 +1,4 @@
 const debug = require('debug')('dequenpeda:unicast-handlers')
-const QueryShared = require('../queries/query-shared')
 
 function _handleAskTriples(id, message) {
   // debug(`[client:${this._foglet._id}]`, ` Someone is asking for data...`)
@@ -20,7 +19,7 @@ function _handleAskTriples(id, message) {
     })
   }), Promise.resolve([])).then(res => {
     try {
-      if(this._foglet.getNeighbours(Infinity).includes(message.requester.outview)) {
+      if(this._foglet.getNeighbours(Infinity).includes(message.requester.outview) || (this._foglet.overlay('son') && this._foglet.overlay('son').network.getNeighbours(Infinity).includes(message.requester.outview))) {
         if(message.requester.overlay) {
           this._foglet.overlay('son').communication.sendUnicast(message.requester.outview, {
             owner: {
@@ -32,7 +31,12 @@ function _handleAskTriples(id, message) {
             query: message.query,
             triples: res,
             jobId: message.jobId
+          }).then(() => {
+            //this._statistics.message++ do not count reply
+          }).catch(e => {
+            console.log(new Error('error when responding to a ask_triples', e))
           })
+
         } else {
           this._foglet.sendUnicast(message.requester.outview, {
             owner: {
@@ -44,33 +48,20 @@ function _handleAskTriples(id, message) {
             query: message.query,
             triples: res,
             jobId: message.jobId
+          }).then(() => {
+            //this._statistics.message++ do not count reply
+          }).catch(e => {
+            console.log(new Error('error when responding to a ask_triples', e))
           })
         }
 
       }
     } catch (e) {
-      console.error(e)
+      console.log(e)
     }
   })
 }
 
-function _handleAskResults(id, message) {
-  // debug(`[client:${this._foglet._id}]`, ` Someone is asking for results...`)
-  if (!this._queries.has(message.queryId)) {
-    const query = new QueryShared(message.queryString, this, {shared: false})
-    this._queries.set(query._id, query)
-    query.execute('initiated').then(() => {
-      // noop
-    }).catch(e => {
-      console.error(e)
-    })
-  }
-  message.type = 'answer-ask-results'
-  message.results = this._queries.get(message.queryId).results
-  this._foglet.sendUnicast(message.requester.outview, message)
-}
-
 module.exports = {
-  _handleAskTriples,
-  _handleAskResults
+  _handleAskTriples
 }
