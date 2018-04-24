@@ -1,5 +1,5 @@
 module.exports = {
-  clients: 296,
+  clients: 196,
   round: 100,
   timeout: Infinity,
   datasets: [
