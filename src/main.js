@@ -41,9 +41,10 @@ let DEFAULT_OPTIONS = {
     }
   }
 }
-if (process) {
-  DEFAULT_OPTIONS.foglet.rps.options.webrtc.wrtc = require('wrtc')
-}
+
+// if (process) {
+//   DEFAULT_OPTIONS.foglet.rps.options.webrtc.wrtc = require('wrtc')
+// }
 
 
 process.on('unhandledRejection', function(reason, p){
