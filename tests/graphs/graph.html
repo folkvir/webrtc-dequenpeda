@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dequenpeda-test</title>
+    <script src="./defaultGraph.js"></script>
+    <script src="../../node_modules/p2p-graph/p2p-graph.min.js"></script>
+    <style>
+    .upload-btn-wrapper {
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+    }
+
+    .btn {
+      border: 2px solid gray;
+      color: gray;
+      background-color: white;
+      padding: 8px 20px;
+      border-radius: 8px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .upload-btn-wrapper input[type=file] {
+      font-size: 100px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+    }
+
+    svg g {
+      stroke-width: 50px;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="upload-btn-wrapper">
+      <button class="btn">Upload a file</button>
+      <input type="file" name="myfile" />
+    </div>
+    <hr/>
+    <div id="allgraphs"></div>
+    <script src="./graph.js"></script>
+  </body>
+</html>

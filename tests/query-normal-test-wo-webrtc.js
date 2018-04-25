@@ -240,15 +240,14 @@ function affectOneQuery(query, client, ind, numberOfQueries, clients) {
     q.on('loaded', (result) => {
       const completeness = result.length / query.card * 100
       activeQueries.get(ind).completeness = completeness
-      console.log('[%f/%f] Query %s loaded: %f results, \n Completeness: %f %, refResults: %f', round, config.round, query.filename, result.length,
-      completeness, query.results.length)
+      // console.log('[%f/%f] Query %s loaded: %f results, \n Completeness: %f %, refResults: %f', round, config.round, query.filename, result.length, completeness, query.results.length)
       computeGlobalCompleteness(numberOfQueries, clients, client, round, query, completeness, resultName)
       round++
     })
     q.on('updated', (result) => {
       const completeness = result.length / query.card * 100
       activeQueries.get(ind).completeness = completeness
-      console.log('[%f/%f] Query %s updated: %f results, \n Completeness: %f %, refResults: %f', round, config.round, query.filename, result.length, completeness, query.results.length)
+      // console.log('[%f/%f] Query %s updated: %f results, \n Completeness: %f %, refResults: %f', round, config.round, query.filename, result.length, completeness, query.results.length)
       computeGlobalCompleteness(numberOfQueries, clients, client, round, query, completeness, resultName)
       round++
     })
@@ -278,6 +277,7 @@ function computeGlobalCompleteness(numberOfQueries, clients, client, round, quer
           'allmessages'
         ].join(',')+'\n')
       }
+      printEdges(round)
       globalCompleteness = [...activeQueries.values()].reduce((acc, cur) => acc+cur.completeness, 0) / numberOfQueries
       const currentMessage = clients.reduce((acc, cur) => acc+cur._statistics.message, 0)
       const m = currentMessage - globalMessage
@@ -298,16 +298,24 @@ function computeGlobalCompleteness(numberOfQueries, clients, client, round, quer
         overlayEdges,
         mtotal
       ].join(',')+'\n')
-      console.log('Global completeness: %f % (%f/%f)', globalCompleteness, activeQueries.size, numberOfQueries)
+      console.log('[%f] Global completeness: %f % (%f/%f)', round, globalCompleteness, activeQueries.size, numberOfQueries)
       globalRound++
     }
-
-    if(round >= config.round) {
+    if(round > config.round) {
       clients.forEach(c => {
         c.stopAll()
       })
     }
   }
+}
+
+function printEdges (round) {
+  let overlayEdges = 0
+  if(config.options.activeSon) {
+    overlayEdges = [...activeQueries.values()].reduce((acc, cur) => acc+cur.client._foglet.overlay('son').network.getNeighbours(Infinity).length, 0)
+  }
+  const edges = [...activeQueries.values()].reduce((acc, cur) => acc+cur.client._foglet.getNeighbours(Infinity).length, 0)
+  console.log(`[${round}] |RPS-edges|: ${edges}, |SON-edges|: ${overlayEdges}`)
 }
 
 function writeNeighbours(clients, round) {

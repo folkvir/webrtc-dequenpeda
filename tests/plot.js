@@ -19,21 +19,21 @@ try {
 
 function computeCompleteness(p) {
   const plotScriptPath = path.resolve(path.join(__dirname, "./plots/completeness.gnuplot"))
-  const plot = `gnuplot -e "input='${p}/*jsoncompleteness.csv'" -e "outputname='${p}/completeness.png'" ${plotScriptPath}`
+  const plot = `gnuplot -e "input='${p}/*-completeness.csv'" -e "outputname='${p}/completeness.png'" ${plotScriptPath}`
   console.log(plot)
   const plotExec = shell.exec(plot)
 }
 
 function computeGlobalCompleteness(p) {
   const plotScriptPath = path.resolve(path.join(__dirname, "./plots/completeness.gnuplot"))
-  const plot = `gnuplot -e "input='${p}/globalcompleteness.csv'" -e "outputname='${p}/globalcompleteness.png'" ${plotScriptPath}`
+  const plot = `gnuplot -e "input='${p}/global-completeness.csv'" -e "outputname='${p}/globalcompleteness.png'" ${plotScriptPath}`
   console.log(plot)
   const plotExec = shell.exec(plot)
 }
 
 function computeGlobalMessageCompleteness(p) {
   const plotScriptPath = path.resolve(path.join(__dirname, "./plots/message.gnuplot"))
-  const plot = `gnuplot -e "input='${p}/globalcompleteness.csv'" -e "outputname='${p}/messages.png'" ${plotScriptPath}`
+  const plot = `gnuplot -e "input='${p}/global-completeness.csv'" -e "outputname='${p}/messages.png'" ${plotScriptPath}`
   console.log(plot)
   const plotExec = shell.exec(plot)
 }

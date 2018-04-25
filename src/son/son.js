@@ -16,6 +16,7 @@ module.exports = class Son extends TMan {
       timeoutDescriptor: 5 * 1000,
       periodicProfileExchange: 5 * 1000,
       partialViewSize: 5,
+      sample: 5,
       chunkSize: 512,
       encode: serialize,
       decode: deserialize
@@ -31,7 +32,10 @@ module.exports = class Son extends TMan {
         })
       }
     })
+    // set the size of the partialView
     this.rps._partialViewSize = () => this.options.partialViewSize
+    // set the sample size to size of the partial view ad minima
+    this.rps._sampleSize = (flatten) => Math.min(flatten.length, this.options.sample)
     // internal communications
     this.communication = new Communication(this, this.options.procotol + '-internal')
     this.communication.onStreamUnicast((id, stream) => {

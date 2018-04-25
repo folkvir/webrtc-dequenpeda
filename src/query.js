@@ -9,8 +9,7 @@ const ArrayIterator = require('asynciterator').ArrayIterator
 const N3 = require('n3')
 
 const DEFAULT_QUERY_OPTIONS = {
-  timeout: 5 * 60 * 1000,
-  activeSon: false,
+  timeout: 5 * 60 * 1000
 }
 
 module.exports = class Query extends EventEmitter {
@@ -122,7 +121,7 @@ module.exports = class Query extends EventEmitter {
       const neighbors = this._parent._foglet.getNeighbours()
       let neighborsSon = []
       let max = neighbors.length
-      if(this._options.activeSon) {
+      if(this._parent._options.activeSon) {
         neighborsSon = this._parent._foglet.overlay('son').network.getNeighbours()
         max += neighborsSon.length
       }
@@ -148,7 +147,7 @@ module.exports = class Query extends EventEmitter {
       }
 
       try {
-        if(this._options.activeSon) {
+        if(this._parent._options.activeSon) {
           neighborsSon.forEach(id => {
             if(this._parent._foglet.overlay('son').network.getNeighbours(Infinity).includes(id)) {
               this._askTriplesBis(id, true).then((resp) => {
