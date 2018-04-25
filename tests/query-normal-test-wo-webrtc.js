@@ -64,7 +64,7 @@ createClients(config.clients).then((clients) => {
     // load datasets into clients
     config.datasets.reduce((dAcc, dataset) => dAcc.then((result) => {
       return new Promise((resolve, reject) => {
-        loadDataset(path.resolve(__dirname, dataset.data), clients).then((clients) => {
+        loadDataset(path.resolve(__dirname, dataset.data), clients, dataset).then((clients) => {
           result.push(clients)
           resolve(result)
         }).catch(e => {
@@ -89,9 +89,9 @@ createClients(config.clients).then((clients) => {
   })
 })
 
-function loadDataset(pathFiles, clients) {
+function loadDataset(pathFiles, clients, dataset) {
   return extractFilename(pathFiles).then((files) => {
-    return loadFiles(files, clients)
+    return loadFiles(files, clients, dataset)
   })
 }
 
@@ -385,12 +385,12 @@ function readTurtleFile (location) {
  * Load fragments on clients
  * Return an array of clients which have at least one fragments
  */
-function loadFiles(fragments, clients) {
+function loadFiles(fragments, clients, dataset) {
   // shuffle fragments and clients
   fragments = shuffle(fragments)
   clients = shuffle(clients)
 
-  console.log('Loading fragments on clients...')
+  console.log(`[${dataset.name}]`, 'Loading fragments on clients...')
   return new Promise((resolve, reject) => {
     let elements = 0
     if(fragments.length >= clients.length) {
@@ -400,15 +400,14 @@ function loadFiles(fragments, clients) {
     }
     let remaining = fragments.length % clients.length
 
-    console.log('fragment.length: %f', fragments.length, 'clients.length: ', clients.length)
-    console.log('frag/client: %f', elements)
-    console.log('remaining file: ', remaining)
+    console.log(`[${dataset.name}] fragment.length: ${fragments.length} clients.length: ${clients.length}`)
+    console.log(`[${dataset.name}] frag/client: ${elements}`)
+    console.log(`[${dataset.name}] remaining file: ${elements}`)
     let fragmentIndex = 0
     let insertedGlobal = 0
     let clientsSelected = []
     let clientsSelectedIndex = []
     clients.reduce((clientsAcc, client, indClient) => clientsAcc.then(() => {
-      console.log('Beginning loading on client: ', indClient)
       let inserted = 0
       return new Promise((res, rej) => {
         fragments.reduce((fragAcc, fragment, indFrag) => fragAcc.then(() => {
@@ -423,7 +422,7 @@ function loadFiles(fragments, clients) {
                         clientsSelected.push(client)
                         clientsSelectedIndex.push(indClient)
                       }
-                      console.log('File %f loaded on client %f ', indFrag, indClient)
+                      console.log(`[${dataset.name}] File ${indFrag} loaded on client ${indClient}`)
                       fragmentIndex++
                       insertedGlobal++
                       inserted++
@@ -445,63 +444,65 @@ function loadFiles(fragments, clients) {
             }
           })
         }), Promise.resolve()).then(() => {
-          console.log('All files loaded for client: ', indClient)
+          console.log(`[${dataset.name}]`,'['+indClient+']  Files loaded.')
           res()
         }).catch(e => {
           rej(e)
         })
       })
     }), Promise.resolve()).then(() => {
-      if((insertedGlobal === fragmentIndex) && (insertedGlobal === fragments.length)) resolve(clientsSelected)
-      // now load all remaining files
-      clients.reduce((clientsAcc, client, indClient) => clientsAcc.then(() => {
-        console.log('Beginning loading remaining file on client: ', indClient)
-        return new Promise((res, rej) => {
-          let inserted = 0
-          elements = 1
-          fragments.reduce((fragAcc, fragment, indFrag) => fragAcc.then(() => {
-            return new Promise((res2, rej2) => {
-              if(inserted < elements) {
-                if(indFrag === insertedGlobal) {
-                  const file = readTurtleFile(fragment).then((file) => {
-                    setTimeout(() => {
-                      client.loadTriples(file).then(() => {
-                        if(!clientsSelectedIndex.includes(indClient)) {
-                          clientsSelected.push(client)
-                          clientsSelectedIndex.push(indClient)
-                        }
-                        console.log('File %f loaded on client %f ', indFrag, indClient)
-                        insertedGlobal++
-                        inserted++
-                        res2()
-                      }).catch(e => {
-                        console.log(e)
-                        rej2(e)
-                      })
-                    }, 10)
-                  }).catch(e => {
-                    console.log(e)
-                    rej2(e)
-                  })
-                } else {
-                  res2()
-                }
-              } else {
-                res()
-              }
-            })
-          }), Promise.resolve()).then(() => {
-            console.log('All files loaded for client: ', indClient)
-            res()
-          }).catch(e => {
-            rej(e)
-          })
-        })
-      }), Promise.resolve()).then(() => {
+      if((insertedGlobal === fragmentIndex) && (insertedGlobal === fragments.length)) {
         resolve(clientsSelected)
-      }).catch(e => {
-        reject()
-      })
+      } else {
+        console.log(`[${dataset.name}]`,'Number of fragments loaded:', insertedGlobal)
+        clients.reduce((clientsAcc, client, indClient) => clientsAcc.then(() => {
+          return new Promise((res, rej) => {
+            let inserted = 0
+            elements = 1
+            fragments.reduce((fragAcc, fragment, indFrag) => fragAcc.then(() => {
+              return new Promise((res2, rej2) => {
+                if(inserted < elements) {
+                  if(indFrag === insertedGlobal) {
+                    const file = readTurtleFile(fragment).then((file) => {
+                      setTimeout(() => {
+                        client.loadTriples(file).then(() => {
+                          if(!clientsSelectedIndex.includes(indClient)) {
+                            clientsSelected.push(client)
+                            clientsSelectedIndex.push(indClient)
+                          }
+                          console.log(`[${dataset.name}] Remaining file ${indFrag} loaded on client ${indClient} `)
+                          insertedGlobal++
+                          inserted++
+                          res2()
+                        }).catch(e => {
+                          console.log(e)
+                          rej2(e)
+                        })
+                      }, 10)
+                    }).catch(e => {
+                      console.log(e)
+                      rej2(e)
+                    })
+                  } else {
+                    res2()
+                  }
+                } else {
+                  res()
+                }
+              })
+            }), Promise.resolve()).then(() => {
+              console.log(`[${dataset.name}]`,'['+indClient+'] Remaining files loaded.')
+              res()
+            }).catch(e => {
+              rej(e)
+            })
+          })
+        }), Promise.resolve()).then(() => {
+          resolve(clientsSelected)
+        }).catch(e => {
+          reject()
+        })
+      }
     }).catch(e => {
       console.log(e)
       reject(e)
