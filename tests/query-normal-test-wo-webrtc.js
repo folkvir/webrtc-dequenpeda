@@ -7,6 +7,7 @@ const AbstractSimplePeer = require('../webrtc-dequenpeda').AbstractSimplePeer
 const shuffle = require('lodash.shuffle')
 const uniqid = require('uniqid')
 const lmerge = require('lodash.merge')
+const lrandom = require('lodash.random')
 
 commander
   .option('-c, --clients <clients>', 'Override: Number of clients', (e) => parseInt(e))
@@ -114,10 +115,17 @@ function createClients(number) {
 }
 
 function connectClients(clients) {
+  console.log('Connecting clients...', clients.length)
   return new Promise((resolve, reject) => {
+    const connectedClients = [clients[0]]
     if(clients.length < 2) reject(new Error('need at least 2 client'))
     clients.reduce((accClient, client) => accClient.then(() => {
-      return client.connection(clients[0])
+      console.log('Connecting client: %s', client._foglet.id)
+      return client.connection(connectedClients[lrandom(connectedClients.length-1)]).then(() => {
+        connectedClients.push(client)
+      }).catch(e => {
+        return Promise.reject(e)
+      })
     }), Promise.resolve()).then(() => {
       resolve(clients)
     }).catch(e => {
@@ -228,7 +236,9 @@ function affectOneQuery(query, client, ind, numberOfQueries, clients) {
     const q = client.query(query.query, 'normal', {
       timeout: config.timeout
     })
-
+    client.on('periodic-shuffle', () => {
+      console.log('[%f] Query %s, edges: ',round, query.filename, clients.reduce((acc, cur) => acc+cur._foglet.getNeighbours(Infinity).length, 0))
+    })
     q.on('loaded', (result) => {
       const completeness = result.length / query.card * 100
       activeQueries.get(ind).completeness = completeness
@@ -313,8 +323,10 @@ function writeNeighbours(clients, round) {
     return acc
   }, [])
   let stringified = JSON.stringify(toReturn)
-  console.log(stringified)
-  fs.writeFileSync(path.resolve(destination+`/${round}-neighbors.json`), stringified, 'utf8')
+  fs.writeFile(path.resolve(destination+`/${round}-neighbors.json`), stringified, 'utf8', (err) => {
+    if (err) console.log(err)
+    console.log('Table of the neighbours has been saved.')
+  })
 }
 
 function append(file, data) {

@@ -105,8 +105,8 @@ module.exports = class Dequenpeda extends EventEmitter {
     this._shuffleCount = 0
     this.on('connected', () => {
       this._periodicExecutionInterval = setInterval(() => {
-        // wait 5 seconds for a proper establishment of RPS + SON connections
-        setTimeout(() => {this._periodicExecution()}, 5000)
+        // wait 1 second for a proper establishment of RPS + SON connections
+        setTimeout(() => {this._periodicExecution()}, 1000)
       }, this._options.foglet.rps.options.delta)
     })
   }

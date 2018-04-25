@@ -13,7 +13,7 @@ module.exports = {
     foglet: {
       rps:{
         options: {
-          timeout: 120 * 1000,
+          timeout: 5 * 1000,
           delta: 60 * 1000,
         }
       }

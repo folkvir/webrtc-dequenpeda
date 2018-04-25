@@ -45,6 +45,7 @@ module.exports = class Query extends EventEmitter {
       this.emit(message.jobId, message)
     })
     this._timeout = undefined
+    this._lastResults = undefined
   }
 
   stop () {
@@ -52,7 +53,10 @@ module.exports = class Query extends EventEmitter {
   }
 
   async execute (eventName) {
-    (eventName !== 'end') && this._createTimeout()
+    if(eventName === 'end') {
+      return Promise.resolve(this._lastResults)
+    }
+    this._createTimeout()
     // debug(`[client:${this._parent._foglet.id}] 1-Executing the query ${this._id}...`)
     const neighbors = this._parent._foglet.getNeighbours()
     if (neighbors.length > 0) {
@@ -107,6 +111,7 @@ module.exports = class Query extends EventEmitter {
     this._rewritedQuery = rewritedQuery
     const res = await this._parent._store.query(rewritedQuery)
     debug(`[client:${this._parent._foglet.id}] Number remote peers seen:`, this._sources.size)
+    this._lastResults = res
     this.emit(eventName, res)
     return Promise.resolve()
   }
@@ -148,7 +153,8 @@ module.exports = class Query extends EventEmitter {
               this._askTriplesBis(id, true).then((resp) => {
                 done(resp)
               }).catch(e => {
-                reject(e)
+                console.log(e)
+                done()
               })
             } else {
               done()
@@ -160,7 +166,8 @@ module.exports = class Query extends EventEmitter {
             this._askTriplesBis(id, false).then((resp) => {
               done(resp)
             }).catch(e => {
-              reject(e)
+              console.log(e)
+              done()
             })
           } else {
             done()
@@ -192,15 +199,16 @@ module.exports = class Query extends EventEmitter {
           jobId
         }
         if(overlay) {
+          this._parent._statistics.message++
           this._parent._foglet.overlay('son').communication.sendUnicast(id, msg).then(() => {
-            this._parent._statistics.message++
+            //
           }).catch(e => {
             console.log(new Error('Eror during sending ask_triples on the overlay to:'+id, e))
           })
-
         } else {
+          this._parent._statistics.message++
           this._parent._foglet.sendUnicast(id, msg).then(() => {
-            this._parent._statistics.message++
+            //
           }).catch(e => {
             console.log(new Error('Eror during sending ask_triples to:'+id, e))
           })
