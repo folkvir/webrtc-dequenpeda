@@ -206,11 +206,13 @@ module.exports = class Dequenpeda extends EventEmitter {
    */
   loadTriples (stringFile) {
     return new Promise((resolve, reject) => {
+      // bulk loading
       this._store.loadDataAsTurtle(stringFile, this._options.defaultGraph).then(() => {
         resolve()
       }).catch(e => {
         reject(e)
       })
+      // triple by triple loading
       // let parser = N3.Parser()
       // let i = 0
       // let triples = []

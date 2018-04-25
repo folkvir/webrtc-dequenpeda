@@ -54,6 +54,7 @@ module.exports = class Query extends EventEmitter {
 
   async execute (eventName) {
     if(eventName === 'end') {
+      this.emit(eventName, this._lastResults)
       return Promise.resolve(this._lastResults)
     }
     this._createTimeout()

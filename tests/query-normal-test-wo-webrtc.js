@@ -236,25 +236,20 @@ function affectOneQuery(query, client, ind, numberOfQueries, clients) {
     const q = client.query(query.query, 'normal', {
       timeout: config.timeout
     })
-    client.on('periodic-shuffle', () => {
-      console.log('[%f] Query %s, edges: ',round, query.filename, clients.reduce((acc, cur) => acc+cur._foglet.getNeighbours(Infinity).length, 0))
-    })
     q.on('loaded', (result) => {
       const completeness = result.length / query.card * 100
       activeQueries.get(ind).completeness = completeness
-      console.log('[%f] Query %s loaded: %f results, \n Completeness: %f %, refResults: %f', round, query.filename, result.length,
+      console.log('[%f/%f] Query %s loaded: %f results, \n Completeness: %f %, refResults: %f', round, config.round, query.filename, result.length,
       completeness, query.results.length)
       computeGlobalCompleteness(numberOfQueries, clients, client, round, query, completeness, resultName)
       round++
-      if(round >= config.round) q.stop()
     })
     q.on('updated', (result) => {
       const completeness = result.length / query.card * 100
       activeQueries.get(ind).completeness = completeness
-      console.log('[%f] Query %s updated: %f results, \n Completeness: %f %, refResults: %f', round, query.filename, result.length, completeness, query.results.length)
+      console.log('[%f/%f] Query %s updated: %f results, \n Completeness: %f %, refResults: %f', round, config.round, query.filename, result.length, completeness, query.results.length)
       computeGlobalCompleteness(numberOfQueries, clients, client, round, query, completeness, resultName)
       round++
-      if(round >= config.round) q.stop()
     })
     q.on('end', (result) => {
       console.log('Query %s finished', query.filename)
@@ -304,6 +299,12 @@ function computeGlobalCompleteness(numberOfQueries, clients, client, round, quer
       ].join(',')+'\n')
       console.log('Global completeness: %f % (%f/%f)', globalCompleteness, activeQueries.size, numberOfQueries)
       globalRound++
+    }
+
+    if(round >= config.round) {
+      clients.forEach(c => {
+        c.stopAll()
+      })
     }
   }
 }
