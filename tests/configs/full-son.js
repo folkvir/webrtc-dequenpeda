@@ -1,6 +1,6 @@
 module.exports = {
   clients: 196,
-  round: 100,
+  round: 800,
   timeout: 5 * 60 * 60 * 1000,
   datasets: [
     { name: 'diseasome', data: "../data/diseasome/fragments/", queries: "../data/diseasome/queries/queries.json", results: "../data/diseasome/results/", withoutQueries: ['q91.json', 'q92.json', 'q61.json', 'q53.json']},
