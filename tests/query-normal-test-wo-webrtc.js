@@ -214,7 +214,9 @@ function affectOneQuery(query, client, ind, numberOfQueries, clients) {
     let round = 0
     const resultName = path.resolve(`${destination}/client-${client._foglet.id}-${query.filename}-completeness.csv`)
     activeQueries.set(ind, {
-      completeness: 0
+      completeness: 0,
+      client,
+      query
     })
     console.log('Affecting: %s to client %f', query.filename, ind)
     console.log('Output will be in: ', resultName)
@@ -297,8 +299,7 @@ function computeGlobalCompleteness(numberOfQueries, clients, client, round, quer
 }
 
 function writeNeighbours(clients, round) {
-  const toReturn = clients.reduce((acc, cur) => {
-
+  const toReturn = [...activeQueries.values()].reduce((acc, cur) => {
     let res = {
       type: cur.query.name,
       inview: cur.client._foglet.inViewID,
