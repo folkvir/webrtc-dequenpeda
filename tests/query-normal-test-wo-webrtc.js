@@ -78,7 +78,7 @@ createClients(config.clients).then((clients) => {
         console.log('Clients connected.')
         affectQueries(clients, allQueries, clients.length === 1).then((res) => {
           console.log('All queries finished.')
-          const neighs = writeNeighbours(res)
+          const neighs = writeNeighbours(res, 'last')
           process.exit(0)
         })
       })
@@ -212,7 +212,7 @@ function affectQueries(clients, queries, allqueries) {
 function affectOneQuery(query, client, ind, numberOfQueries, clients) {
   return new Promise((resolve, reject) => {
     let round = 0
-    const resultName = path.resolve(destination+'/'+query.filename+'completeness.csv')
+    const resultName = path.resolve(`${destination}/client-${client._foglet.id}-${query.filename}-completeness.csv`)
     activeQueries.set(ind, {
       completeness: 0
     })
@@ -259,8 +259,9 @@ function computeGlobalCompleteness(numberOfQueries, clients, client, round, quer
     append(resultName, [round, completeness].join(',')+'\n')
     receiveAnswers++
     if((receiveAnswers % numberOfQueries) === 0) {
+      writeNeighbours(clients, round)
       if(receiveAnswers === numberOfQueries) {
-        append(path.resolve(destination+'/globalcompleteness.csv'), [
+        append(path.resolve(destination+'/global-completeness.csv'), [
           'round',
           'globalcompleteness',
           'messages',
@@ -281,7 +282,7 @@ function computeGlobalCompleteness(numberOfQueries, clients, client, round, quer
         overlayEdges = clients.reduce((acc, cur) => acc+cur._foglet.overlay('son').network.getNeighbours(Infinity).length, 0)
       }
       const edges = clients.reduce((acc, cur) => acc+cur._foglet.getNeighbours(Infinity).length, 0)
-      append(path.resolve(destination+'/globalcompleteness.csv'), [
+      append(path.resolve(destination+'/global-completeness.csv'), [
         globalRound,
         globalCompleteness,
         m,
@@ -295,7 +296,7 @@ function computeGlobalCompleteness(numberOfQueries, clients, client, round, quer
   }
 }
 
-function writeNeighbours(clients) {
+function writeNeighbours(clients, round) {
   const toReturn = clients.reduce((acc, cur) => {
 
     let res = {
@@ -312,7 +313,7 @@ function writeNeighbours(clients) {
   }, [])
   let stringified = JSON.stringify(toReturn)
   console.log(stringified)
-  fs.writeFileSync(path.resolve(destination+`/neighbors.json`), stringified, 'utf8')
+  fs.writeFileSync(path.resolve(destination+`/${round}-neighbors.json`), stringified, 'utf8')
 }
 
 function append(file, data) {
