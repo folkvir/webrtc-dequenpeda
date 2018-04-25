@@ -4,6 +4,8 @@
   "description": "Decentralized Query Engine for Personal Data",
   "main": "webrtc-dequenpeda.js",
   "scripts": {
+    "clean": "rm -rf ./tests/results/",
+    "start": "pm2 start ./tests/xp-pm2.js --no-autorestart",
     "build": "foglet-scripts build",
     "min": "webpack --config ./foglet-webpack-config-min.js --mode production",
     "dev": "webpack --config ./foglet-webpack-config.js --mode development --watch"
@@ -51,6 +53,7 @@
     "shelljs": "^0.8.1",
     "sparqljs": "^2.0.3",
     "uniqid": "^4.1.1",
+    "uuid": "^3.2.1",
     "wrtc": "0.1.1"
   },
   "devDependencies": {

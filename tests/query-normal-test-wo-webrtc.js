@@ -6,6 +6,7 @@ const fs = require('fs')
 const AbstractSimplePeer = require('../webrtc-dequenpeda').AbstractSimplePeer
 const shuffle = require('lodash.shuffle')
 const uniqid = require('uniqid')
+const uuid = require('uuid/v4')
 const lmerge = require('lodash.merge')
 const lrandom = require('lodash.random')
 
@@ -25,7 +26,7 @@ const time = [hour, minute, day, month, year].join("-")
 console.log('Time: ', time)
 
 const config = require(path.resolve(commander.config))
-config.resultDir = path.resolve(path.join(__dirname, './results/'+uniqid(time)))
+config.resultDir = path.resolve(path.join(__dirname, './results/'+time+uuid()))
 
 if(commander.timeout) config.timeout = parseFloat(commander.timeout)
 if(commander.clients) config.clients = commander.clients
