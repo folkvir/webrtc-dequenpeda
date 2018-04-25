@@ -21,7 +21,7 @@ const done = () => {
 
 function exec(command) {
   return new Promise((resolve, reject) => {
-    const child = shell.exec(command)
+    const child = shell.exec(command, {async: true})
     child.stdout.on('data', (data) => {
       console.log(data)
     });
