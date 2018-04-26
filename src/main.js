@@ -280,9 +280,10 @@ module.exports = class Dequenpeda extends EventEmitter {
   }
 
   _periodicExecution () {
+    this._shuffleCount++
     this.emit('periodic-execution-begins')
     debug(`[client:${this._foglet._id}]`, 'Number of neighbours: ', this._foglet.getNeighbours().length)
-    if(this._shuffleCount >= this._options.shuffleCountBeforeStart) {
+    if(this._shuffleCount > this._options.shuffleCountBeforeStart) {
       if (this._queries.size > 0) {
         let pendingQueries = []
         this._queries.forEach(q => {
@@ -301,7 +302,6 @@ module.exports = class Dequenpeda extends EventEmitter {
     } else {
       console.log('Waiting before starting ... [%f/%f]', this._shuffleCount, this._options.shuffleCountBeforeStart)
     }
-    this._shuffleCount++
   }
 
   _tripleParsed2Triple (triple) {

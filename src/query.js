@@ -201,6 +201,7 @@ module.exports = class Query extends EventEmitter {
         }
         if(overlay) {
           this._parent._statistics.message++
+          // console.log('Send ask triples to the overlay...')
           this._parent._foglet.overlay('son').communication.sendUnicast(id, msg).then(() => {
             //
           }).catch(e => {
@@ -208,6 +209,7 @@ module.exports = class Query extends EventEmitter {
           })
         } else {
           this._parent._statistics.message++
+          // console.log('Send ask triples to the rps...')
           this._parent._foglet.sendUnicast(id, msg).then(() => {
             //
           }).catch(e => {
@@ -264,7 +266,7 @@ module.exports = class Query extends EventEmitter {
                 string += elem.data[i].subject + " " + elem.data[i].predicate + " " + elem.data[i].object + " . \n"
               }
               this._parent._store.loadDataAsTurtle(string, graphId).then(() => {
-                if(responses[0].shuffleBegin < this._parent._shuffleCount) throw Error('another shuffle arrive before we terminate the previous execution....')
+                if(resp.shuffleBegin < this._parent._shuffleCount) throw Error('another shuffle arrive before we terminate the previous execution....'+resp.shuffleBegin+'/'+this._parent._shuffleCount)
                 resolveData()
               }).catch(e => {
                 console.log(e)
