@@ -50,6 +50,9 @@ module.exports = class Son extends TMan {
     })
 
     if (this.rps.parent) {
+      this.rps.parent.on('open', () => {
+        this.rps._start()
+      })
       this.communicationParent = new Communication(this.options.manager._rps.network, this.options.procotol + '-parent-internal')
       this.communicationParent.onStreamUnicast((id, stream) => {
         let message = ''
