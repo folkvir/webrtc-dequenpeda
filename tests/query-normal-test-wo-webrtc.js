@@ -35,7 +35,12 @@ console.log('[PARAMETER] Timeout: ', config.timeout)
 
 const destination = path.resolve(config.resultDir)
 // create the destination
-if (!fs.existsSync(destination)) shell.mkdir('-p', destination)
+try {
+  if (!fs.existsSync(destination)) shell.mkdir('-p', destination)
+} catch (e) {
+  console.log(e)
+}
+
 
 const header = ['round', 'completeness']
 
