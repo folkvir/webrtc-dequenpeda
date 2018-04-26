@@ -164,7 +164,7 @@ module.exports = class Son extends TMan {
     const ownProfile = neighbours.descriptor.profile
     const simA = similarity(ownProfile, descriptorA.profile)
     const simB = similarity(ownProfile, descriptorB.profile)
-    const res = simA - simB
+    const res = simB - simA
     if(res === 0) {
       // random choice between A and B
       if(lrandom(1) === 0) {

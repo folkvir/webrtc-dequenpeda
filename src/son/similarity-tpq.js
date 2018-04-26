@@ -1,35 +1,56 @@
+const debug = require('debug')('dequenpeda:similarity')
+
+// DEBUG=dequenpeda:similarity node tests/test-similarity.js
+
 const SCORES = {
-  equal: 3,
+  spo: Infinity,
+  equal: Infinity,
   containment: 2,
-  overlap: 1,
+  subset: 1,
   empty: 0
+}
+const spo = {
+  subject: '_',
+  predicate: '_',
+  object: '_'
 }
 
 function compare(profileA, profileB) {
-  // console.log(profileA, profileB)
   let score = 0
   profileA.forEach(tpa => {
     profileB.forEach(tpb => {
       score += getScore(tpa, tpb)
     })
   })
-  // console.log('score: ', score, `LA: ${profileA.length}, LB: ${profileB.length}`)
   return score
 }
 
 function getScore(tpa, tpb) {
-  if(equal(tpa, tpb)) return SCORES.equal
-  if(containment(tpa, tpb)) return SCORES.containment
-  if(overlap(tpa, tpb)) return SCORES.overlap
-  return SCORES.empty
+  if(equal(tpa, tpb)) {
+    debug('equality')
+    return SCORES.equal
+  } else if(containment(tpa, tpb)) {
+    debug('containment')
+    return SCORES.containment
+  } else if(subset(tpa, tpb)) {
+    debug('subset')
+    return SCORES.subset
+  } else {
+    debug('nothing')
+    return SCORES.empty
+  }
 }
 
 function containment(tpa, tpb) {
   return contain(tpa.subject, tpb.subject) && contain(tpa.predicate, tpb.predicate) && contain(tpa.object, tpb.object)
 }
 
-function overlap(tpa, tpb) {
-  return over(tpa.subject, tpb.subject) && over(tpa.predicate, tpb.predicate) && over(tpa.object, tpb.object)
+function subset(tpa, tpb) {
+  return sub(tpa.subject, tpb.subject) && sub(tpa.predicate, tpb.predicate) && sub(tpa.object, tpb.object)
+}
+
+function isSPO(tp) {
+  return equal(tp, spo)
 }
 
 function equal(tpa, tpb) {
@@ -40,7 +61,7 @@ function contain(v1, v2) {
   return eq(v1, v2) || ( !eq(v1, '_') && eq(v2, '_'))
 }
 
-function over(v1, v2) {
+function sub(v1, v2) {
   return eq(v1, v2) || ( eq(v1, '_') && !eq(v2, '_'))
 }
 
@@ -49,11 +70,12 @@ function eq(v1, v2) {
 }
 
 module.exports = {
+  isSPO,
   compare,
   containment,
-  overlap,
+  subset,
   equal,
   eq,
   contain,
-  over
+  sub
 }
