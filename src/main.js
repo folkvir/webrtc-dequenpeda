@@ -69,10 +69,10 @@ module.exports = class Dequenpeda extends EventEmitter {
           options: {
             socketClass: this._options.foglet.rps.options.socketClass,
             profile: this._profile,
-            delta: this._options.foglet.rps.options.delta,
+            delta: this._options.foglet.rps.options.delta/2,
             timeoutDescriptor: 10 * 1000,
             timeout: this._options.foglet.rps.options.timeout,
-            periodicProfileExchange: this._options.foglet.rps.options.delta,
+            periodicProfileExchange: this._options.foglet.rps.options.delta/2,
             protocol: 'dequenpeda-protocol-son-overlay', // foglet running on the protocol foglet-example, defined for spray-wrtc
             signaling: {
               address: 'https://localhost:8000/',
@@ -117,9 +117,9 @@ module.exports = class Dequenpeda extends EventEmitter {
    * Usefull in production mode, in test mode connect them manually using wrtc package (see npm or github, node-wrtc)
    * @return {[type]} [description]
    */
-  connection (app = undefined) {
+  connection (app = undefined, ...args) {
     if(app) {
-      return this._foglet.connection(app._foglet).then(() => {
+      return this._foglet.connection(app._foglet, ...args).then(() => {
         this.emit('connected')
         return Promise.resolve()
       }).catch(e => {
@@ -128,7 +128,7 @@ module.exports = class Dequenpeda extends EventEmitter {
       })
     } else {
       this._foglet.share()
-      return this._foglet.connection().then(() => {
+      return this._foglet.connection(app, ...args).then(() => {
         this.emit('connected')
         return Promise.resolve()
       }).catch(e => {

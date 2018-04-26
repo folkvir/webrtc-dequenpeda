@@ -1,5 +1,5 @@
 /* eslint no-eval: 0 */
-const TMan = require('foglet-core').abstract.tman
+const TMan = require('./fc-abstract-son')
 const Communication = require('foglet-core').communication
 const lmerge = require('lodash.merge')
 const serialize = require('serialize-javascript')
@@ -50,9 +50,9 @@ module.exports = class Son extends TMan {
     })
 
     if (this.rps.parent) {
-      this.rps.parent.on('open', () => {
-        this.rps._start()
-      })
+      // this.rps.parent.on('open', () => {
+      //   this.rps._start()
+      // })
       this.communicationParent = new Communication(this.options.manager._rps.network, this.options.procotol + '-parent-internal')
       this.communicationParent.onStreamUnicast((id, stream) => {
         let message = ''

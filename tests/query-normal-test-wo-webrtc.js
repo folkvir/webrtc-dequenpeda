@@ -126,9 +126,25 @@ function connectClients(clients) {
     const connectedClients = [clients[0]]
     if(clients.length < 2) reject(new Error('need at least 2 client'))
     clients.reduce((accClient, client) => accClient.then(() => {
-      console.log('Connecting client: %s', client._foglet.id)
-      return client.connection(connectedClients[lrandom(connectedClients.length-1)]).then(() => {
-        connectedClients.push(client)
+      return wait(500).then(() => {
+          console.log('Connecting client: %s', client._foglet.id)
+          if(config.options.activeSon) {
+            console.log('Connection on the SON...')
+            return client.connection(connectedClients[lrandom(connectedClients.length-1)], 'son').then(() => {
+              connectedClients.push(client)
+              return Promise.resolve()
+            }).catch(e => {
+              return Promise.reject(e)
+            })
+          } else {
+            // rps
+            return client.connection(connectedClients[lrandom(connectedClients.length-1)]).then(() => {
+              connectedClients.push(client)
+              return Promise.resolve()
+            }).catch(e => {
+              return Promise.reject(e)
+            })
+          }
       }).catch(e => {
         return Promise.reject(e)
       })
@@ -137,6 +153,15 @@ function connectClients(clients) {
     }).catch(e => {
       reject(e)
     })
+  })
+}
+
+function wait(time) {
+  console.log('Waiting...', time)
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve()
+    }, time)
   })
 }
 
@@ -308,9 +333,9 @@ function computeGlobalCompleteness(numberOfQueries, clients, client, round, quer
       // calcul of the number of SON edges and RPS edges in the network
       let overlayEdges = 0
       if(config.options.activeSon) {
-        overlayEdges = clients.reduce((acc, cur) => acc+cur._foglet.overlay('son').network.getNeighbours(Infinity).length, 0)
+        overlayEdges = clients.reduce((acc, cur) => acc+cur._foglet.overlay('son').network.getNeighbours().length, 0)
       }
-      const edges = clients.reduce((acc, cur) => acc+cur._foglet.getNeighbours(Infinity).length, 0)
+      const edges = clients.reduce((acc, cur) => acc+cur._foglet.getNeighbours().length, 0)
 
       // calcule of the number of complete queries
       const completeQueries = [...activeQueries.values()].reduce((acc, cur) => {
@@ -343,9 +368,9 @@ function computeGlobalCompleteness(numberOfQueries, clients, client, round, quer
 function printEdges (round) {
   let overlayEdges = 0
   if(config.options.activeSon) {
-    overlayEdges = [...activeQueries.values()].reduce((acc, cur) => acc+cur.client._foglet.overlay('son').network.getNeighbours(Infinity).length, 0)
+    overlayEdges = [...activeQueries.values()].reduce((acc, cur) => acc+cur.client._foglet.overlay('son').network.getNeighbours().length, 0)
   }
-  const edges = [...activeQueries.values()].reduce((acc, cur) => acc+cur.client._foglet.getNeighbours(Infinity).length, 0)
+  const edges = [...activeQueries.values()].reduce((acc, cur) => acc+cur.client._foglet.getNeighbours().length, 0)
   console.log(`[${round}] |RPS-edges|: ${edges}, |SON-edges|: ${overlayEdges}`)
 }
 
@@ -355,10 +380,10 @@ function writeNeighbours(clients, round) {
       type: cur.query.name,
       inview: cur.client._foglet.inViewID,
       outview: cur.client._foglet.outViewID,
-      rps: cur.client._foglet.getNeighbours(Infinity)
+      rps: cur.client._foglet.getNeighbours()
     }
     if(cur.client._options.activeSon) {
-      res.overlay = cur.client._foglet.overlay('son').network.getNeighbours(Infinity)
+      res.overlay = cur.client._foglet.overlay('son').network.getNeighbours()
     }
     acc.push(res)
     return acc

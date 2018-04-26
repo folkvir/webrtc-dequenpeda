@@ -13,7 +13,7 @@ function compare(profileA, profileB) {
       score += getScore(tpa, tpb)
     })
   })
-  //console.log('score: ', score, `LA: ${profileA.length}, LB: ${profileB.length}`)
+  // console.log('score: ', score, `LA: ${profileA.length}, LB: ${profileB.length}`)
   return score
 }
 
