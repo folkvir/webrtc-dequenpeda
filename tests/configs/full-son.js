@@ -20,5 +20,5 @@ const config = {
   }
 }
 
-config.timeout = (config.round + 1) * config.options.foglet.rps.delta
+config.timeout = (config.round + 1) * config.options.foglet.rps.options.delta
 module.exports = config

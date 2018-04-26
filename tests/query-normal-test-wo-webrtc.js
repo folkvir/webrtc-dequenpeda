@@ -274,31 +274,57 @@ function computeGlobalCompleteness(numberOfQueries, clients, client, round, quer
           'messages',
           'egdes-RPS',
           'edges-SON',
-          'allmessages'
+          'allmessages',
+          'completeQueries',
+          'queriesNumber'
         ].join(',')+'\n')
       }
       printEdges(round)
       globalCompleteness = [...activeQueries.values()].reduce((acc, cur) => acc+cur.completeness, 0) / numberOfQueries
+
+      // application's messages
       const currentMessage = clients.reduce((acc, cur) => acc+cur._statistics.message, 0)
-      const m = currentMessage - globalMessage
+      let m = 0
+      if(globalMessage === 0) {
+        globalMessage = currentMessage
+      }
+      m = currentMessage - globalMessage
       globalMessage = currentMessage
+
+      // network's messages
       const currentMessagetotal = AbstractSimplePeer.manager.stats.message
-      const mtotal = currentMessagetotal - globalMessagetotal
+      let mtotal = 0
+      if(globalMessagetotal === 0) {
+        globalMessagetotal = currentMessagetotal
+      }
+      mtotal = currentMessagetotal - globalMessagetotal
       globalMessagetotal = currentMessagetotal
+
+      // calcul of the number of SON edges and RPS edges in the network
       let overlayEdges = 0
       if(config.options.activeSon) {
         overlayEdges = clients.reduce((acc, cur) => acc+cur._foglet.overlay('son').network.getNeighbours(Infinity).length, 0)
       }
       const edges = clients.reduce((acc, cur) => acc+cur._foglet.getNeighbours(Infinity).length, 0)
+
+      // calcule of the number of complete queries
+      const completeQueries = [...activeQueries.values()].reduce((acc, cur) => {
+        if(cur.completeness === 100) return acc+1
+        return acc
+      }, 0)
+
+      // save results
       append(path.resolve(destination+'/global-completeness.csv'), [
         globalRound,
         globalCompleteness,
         m,
         edges,
         overlayEdges,
-        mtotal
+        mtotal,
+        completeQueries,
+        activeQueries.size
       ].join(',')+'\n')
-      console.log('[%f] Global completeness: %f % (%f/%f)', round, globalCompleteness, activeQueries.size, numberOfQueries)
+      console.log('[%f] Global completeness: %f % (%f/%f)', round, globalCompleteness, completeQueries, numberOfQueries)
       globalRound++
     }
     if(round > config.round) {

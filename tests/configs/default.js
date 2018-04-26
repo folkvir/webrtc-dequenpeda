@@ -1,6 +1,5 @@
-module.exports = {
+const config = {
   clients: 96,
-  timeout: 5 * 60 * 60 * 1000,
   round: 10,
   datasets: [
     { name: 'diseasome', data: "../data/diseasome/fragments/", queries: "../data/diseasome/queries/queries.json", results: "../data/diseasome/results/", withoutQueries: ['q91.json', 'q92.json', 'q61.json', 'q53.json']},
@@ -20,3 +19,6 @@ module.exports = {
     }
   }
 }
+
+config.timeout = (config.round + 1) * config.options.foglet.rps.options.delta
+module.exports = config

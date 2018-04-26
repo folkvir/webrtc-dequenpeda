@@ -4,6 +4,7 @@
   "description": "Decentralized Query Engine for Personal Data",
   "main": "webrtc-dequenpeda.js",
   "scripts": {
+    "test": "pm2 start ./tests/test-pm2.js --no-autorestart",
     "clean": "rm -rf ./tests/results/",
     "start": "pm2 start ./tests/xp-pm2.js --no-autorestart",
     "build": "foglet-scripts build",

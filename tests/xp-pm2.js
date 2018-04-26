@@ -8,7 +8,7 @@ const commands = [
   "node --max_old_space_size=100000 ./tests/query-normal-test-wo-webrtc --config ./tests/configs/full-son.js",
 ]
 let finished = 0
-for(let i = 0; i < round; i++) {
+for(let i = 0; i < round; ++i) {
   commands.forEach(command => {
     exec(command).then(() => {
       finished++
