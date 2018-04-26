@@ -1,7 +1,7 @@
 const shell = require('shelljs')
 
 // need to use pm2 start tests/xp-pm2.js --no-autorestart
-const round = 3
+const round = 1
 const commands = [
   // "node --max_old_space_size=4092 ./tests/query-normal-test-wo-webrtc --config ./tests/configs/default.js",
   "node --max_old_space_size=100000 ./tests/query-normal-test-wo-webrtc --config ./tests/configs/full.js",
@@ -16,6 +16,8 @@ for(let i = 0; i < round; ++i) {
     })
   })
 }
+
+
 
 function exec(command) {
   return new Promise((resolve, reject) => {

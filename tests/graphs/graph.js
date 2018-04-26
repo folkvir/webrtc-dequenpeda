@@ -56,12 +56,12 @@ function datad3(data) {
   let group = new Map()
   let revertedGroup = new Map()
   data.forEach(node => {
-    if(!revertedGroup.has(node.name)) {
-      revertedGroup.set(node.name, group.size+1)
-      group.set(group.size+1, node.name)
+    if(!revertedGroup.has(node.type)) {
+      revertedGroup.set(node.type, group.size+1)
+      group.set(group.size+1, node.type)
     }
     dataParsed.nodes.push({
-      group: revertedGroup.get(node.name),
+      group: revertedGroup.get(node.type),
       id: name(node),
       name: node.inview.slice(0, -2),
     })
@@ -78,13 +78,11 @@ function datad3(data) {
       done.push(link)
     })
   })
+  console.log(group)
   return dataParsed
 }
 
 function graph(data, id) {
-
-
-
   let svg = d3.select("#d3").append("svg:svg").style("width", 800).style("height", 600)
   width = 800
   height = 600
@@ -94,7 +92,7 @@ function graph(data, id) {
   console.log(color, d3.schemePaired)
 
   let simulation = d3.forceSimulation(data.nodes)
-      .force("link", d3.forceLink(data.links).id(function (d) {return d.id;}).distance(100).strength(1))
+      .force("link", d3.forceLink(data.links).id(function (d) {return d.id;}).distance(200).strength(2))
       .force("charge", d3.forceManyBody())
       .force("center", d3.forceCenter(width/2, height/2));
 
