@@ -29,11 +29,14 @@
       top: 0;
       opacity: 0;
     }
-
-    svg g {
-      stroke-width: 50px;
+    #allgraphs {
+      height: 100%
+    }
+    circle[r] {
+      r: 5
     }
     </style>
+
   </head>
   <body>
     <div class="upload-btn-wrapper">
@@ -42,6 +45,7 @@
     </div>
     <hr/>
     <div id="allgraphs"></div>
+    <div id="d3"></div>
     <script src="./graph.js"></script>
   </body>
 </html>
