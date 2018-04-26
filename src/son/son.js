@@ -7,6 +7,7 @@ const deserialize = (msg) => eval('(' + msg + ')')
 // const similarity = require('compute-cosine-similarity')
 const similarity = require('./similarity-tpq').compare
 const debug = require('debug')('dequenpeda:son')
+const lrandom = require('lodash.random')
 
 module.exports = class Son extends TMan {
   constructor (manager, options) {
@@ -160,7 +161,16 @@ module.exports = class Son extends TMan {
     const ownProfile = neighbours.descriptor.profile
     const simA = similarity(ownProfile, descriptorA.profile)
     const simB = similarity(ownProfile, descriptorB.profile)
-    return simA - simB
+    const res = simA - simB
+    if(res === 0) {
+      // random choice between A and B
+      if(lrandom(1) === 0) {
+        return 1 // means A
+      } else {
+        return -1 // means B
+      }
+    }
+    return res
   }
 
   /**
