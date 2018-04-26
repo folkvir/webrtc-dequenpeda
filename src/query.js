@@ -242,10 +242,6 @@ module.exports = class Query extends EventEmitter {
   }
 
   _processResponses (responses) {
-    this._parent.once("periodic-execution-begins", () => {
-      console.log('Verified.')
-      if(responses[0].shuffleBegin < this._parent._shuffleCount) throw new Error('another shuffle arrive before we terminate the previous execution....')
-    })
     // debug('Sequential processing of received triples: beginning')
     return new Promise((resolve, reject) => {
       responses.reduce((respAcc, resp) => respAcc.then(() => {
@@ -268,6 +264,7 @@ module.exports = class Query extends EventEmitter {
                 string += elem.data[i].subject + " " + elem.data[i].predicate + " " + elem.data[i].object + " . \n"
               }
               this._parent._store.loadDataAsTurtle(string, graphId).then(() => {
+                if(responses[0].shuffleBegin < this._parent._shuffleCount) throw Error('another shuffle arrive before we terminate the previous execution....')
                 resolveData()
               }).catch(e => {
                 console.log(e)
