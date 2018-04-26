@@ -5,36 +5,9 @@ function onupload(){
 
 const graphs = new Map()
 let id = 0
-// createGraph(defaultGraph)
-const data = datad3(defaultGraph)
 
-console.log(data)
-graph(data, id)
-
-function createGraph(data) {
-  const parent = document.getElementById('allgraphs')
-  const elem = document.createElement('div')
-  elem.id = 'graph'+id
-  parent.appendChild(elem)
-  const graph = P2PGraph('#graph'+id)
-  id++
-  data.forEach(node => {
-    graph.add({
-      id: name(node),
-      name: node.inview.slice(0, -2)
-    })
-  })
-
-  const done = []
-
-  data.forEach(node => {
-    node.rps.forEach(n => {
-      const link = name(node)+nameFromId(n)
-      if(!done.includes(link)) graph.connect(name(node), nameFromId(n))
-      done.push(link)
-    })
-  })
-}
+graph(defaultGraph, id, 'rps')
+graph(defaultGraph, id, 'son')
 
 function name(node) {
   return node.inview+node.outview
@@ -47,7 +20,7 @@ function nameFromId(id) {
 
 
 
-function datad3(data) {
+function datad3(data, id, type) {
   // data2graph
   const dataParsed = {
     links: [],
@@ -68,21 +41,37 @@ function datad3(data) {
   })
   const done = []
   data.forEach(node => {
-    node.rps.forEach(n => {
-      const link = name(node)+nameFromId(n)
-      if(!done.includes(link)) dataParsed.links.push({
-        source: name(node),
-        target: nameFromId(n),
-        value: 1
+    if(type === 'rps' ) {
+      console.log('RPS size: ', node.rps.length)
+      node.rps.forEach(n => {
+        const link = name(node)+nameFromId(n)
+        if(!done.includes(link)) dataParsed.links.push({
+          source: name(node),
+          target: nameFromId(n),
+          value: 1
+        })
+        done.push(link)
       })
-      done.push(link)
-    })
+    } else if(type === 'son') {
+      console.log('SON size: ', node.overlay.length)
+      node.overlay.forEach(n => {
+        const link = name(node)+nameFromId(n)
+        if(!done.includes(link)) dataParsed.links.push({
+          source: name(node),
+          target: nameFromId(n),
+          value: 1
+        })
+        done.push(link)
+      })
+    }
+
   })
-  console.log(group)
   return dataParsed
 }
 
-function graph(data, id) {
+function graph(data, id, type) {
+  id++
+  const datas = datad3(data, id, type)
   let svg = d3.select("#d3").append("svg:svg").style("width", 800).style("height", 600)
   width = 800
   height = 600
@@ -91,17 +80,26 @@ function graph(data, id) {
   let color = d3.scaleOrdinal(d3.schemePaired);
   console.log(color, d3.schemePaired)
 
-  let simulation = d3.forceSimulation(data.nodes)
-      .force("link", d3.forceLink(data.links).id(function (d) {return d.id;}).distance(200).strength(2))
-      .force("charge", d3.forceManyBody())
-      .force("center", d3.forceCenter(width/2, height/2));
+  let simulation = d3.forceSimulation(datas.nodes)
+      .force("link", d3.forceLink(datas.links).id(function (d) {return d.id;}).distance(10).strength(0.1))
+      .force("charge", d3.forceManyBody(10000))
+      .force("center", d3.forceCenter(width/2, height/2))
+      .force("gravity", d3.forceManyBody(200))
+      .force("cluster", forceCluster)
 
-
+  function forceCluster(alpha) {
+    for (var i = 0, n = nodes.length, node, cluster, k = alpha * 1; i < n; ++i) {
+      node = nodes[i];
+      cluster = clusters[node.cluster];
+      node.vx -= (node.x - cluster.x) * k;
+      node.vy -= (node.y - cluster.y) * k;
+    }
+  }
 
   let links = svg.append("g")
       .attr("class", "links")
       .selectAll("line")
-      .data(data.links)
+      .data(datas.links)
       .enter().append("line")
       .attr("stroke-width", function(d) { return d.value })
       .attr("fill", (d) => color(d.group))
@@ -110,7 +108,7 @@ function graph(data, id) {
   let nodes = svg.append("g")
       .attr("class", "nodes")
       .selectAll("circle")
-      .data(data.nodes)
+      .data(datas.nodes)
       .enter().append("circle")
       .attr("r", 5)
       .attr("fill", function(d) { return color(d.group); })
@@ -122,7 +120,7 @@ function graph(data, id) {
       .text(function(d) { return d.name; });
 
   simulation
-      .nodes(data.nodes)
+      .nodes(datas.nodes)
       .on("tick", ticked);
 
   function ticked() {

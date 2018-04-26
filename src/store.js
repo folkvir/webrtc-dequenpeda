@@ -82,7 +82,7 @@ module.exports = class Store {
       try {
         this.rdfstore.load("text/turtle", file, graph, function(err) {
           if(err) {
-            console.log(error)
+            console.log(err)
             reject(err)
           }
           resolve()

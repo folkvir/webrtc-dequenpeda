@@ -126,7 +126,7 @@ function connectClients(clients) {
     const connectedClients = [clients[0]]
     if(clients.length < 2) reject(new Error('need at least 2 client'))
     clients.reduce((accClient, client) => accClient.then(() => {
-      return wait(500).then(() => {
+      return wait(100).then(() => {
           console.log('Connecting client: %s', client._foglet.id)
           if(config.options.activeSon) {
             console.log('Connection on the SON...')
@@ -380,7 +380,8 @@ function writeNeighbours(clients, round) {
       type: cur.query.name,
       inview: cur.client._foglet.inViewID,
       outview: cur.client._foglet.outViewID,
-      rps: cur.client._foglet.getNeighbours()
+      rps: cur.client._foglet.getNeighbours(),
+      profile: cur.client._profile.export()
     }
     if(cur.client._options.activeSon) {
       res.overlay = cur.client._foglet.overlay('son').network.getNeighbours()

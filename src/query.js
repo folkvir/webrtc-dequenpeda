@@ -186,6 +186,7 @@ module.exports = class Query extends EventEmitter {
       debug(id, this._parent._foglet.inViewID)
       try {
         const msg = {
+          shuffleBegin: this._parent._shuffleCount,
           requester: {
             overlay,
             fogletId: this._parent._foglet.id,
@@ -241,6 +242,10 @@ module.exports = class Query extends EventEmitter {
   }
 
   _processResponses (responses) {
+    this._parent.once("periodic-execution-begins", () => {
+      console.log('Verified.')
+      if(responses[0].shuffleBegin < this._parent._shuffleCount) throw new Error('another shuffle arrive before we terminate the previous execution....')
+    })
     // debug('Sequential processing of received triples: beginning')
     return new Promise((resolve, reject) => {
       responses.reduce((respAcc, resp) => respAcc.then(() => {
@@ -258,10 +263,11 @@ module.exports = class Query extends EventEmitter {
               const originalTriple = this._mappings.get(key)
               originalTriple.sources.set(owner.fogletId, owner)
               let graphId = this._encapsGraphId(this._parent._options.defaultGraph, '<', '>')
-              elem.data.reduce((acc, triple) => acc.then(res => {
-                return this._parent._store.loadData(graphId, [], triple)
-              }), Promise.resolve()).then(() => {
-                // console.log('insert into my datastore: ', graphId, triple)
+              let string = ""
+              for(let i = 0; i<elem.data; ++i) {
+                string += elem.data[i].subject + " " + elem.data[i].predicate + " " + elem.data[i].object + " . \n"
+              }
+              this._parent._store.loadDataAsTurtle(string, graphId).then(() => {
                 resolveData()
               }).catch(e => {
                 console.log(e)

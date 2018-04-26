@@ -22,6 +22,7 @@ function _handleAskTriples(id, message) {
       if(this._foglet.getNeighbours(Infinity).includes(message.requester.outview) || (this._foglet.overlay('son') && this._foglet.overlay('son').network.getNeighbours(Infinity).includes(message.requester.outview))) {
         if(message.requester.overlay) {
           this._foglet.overlay('son').communication.sendUnicast(message.requester.outview, {
+            shuffleBegin: message.shuffleBegin,
             owner: {
               fogletId: this._foglet.id,
               inview: this._foglet.inViewID,
@@ -39,6 +40,7 @@ function _handleAskTriples(id, message) {
 
         } else {
           this._foglet.sendUnicast(message.requester.outview, {
+            shuffleBegin: message.shuffleBegin,
             owner: {
               fogletId: this._foglet.id,
               inview: this._foglet.inViewID,
