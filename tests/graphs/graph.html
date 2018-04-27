@@ -46,7 +46,7 @@
   <body>
     <div class="upload-btn-wrapper">
       <button class="btn">Upload a file</button>
-      <input type="file" name="myfile" />
+      <input type="file" name="myfile" onchange='onupload(this.files)' multiple/>
     </div>
     <hr/>
     <div id="allgraphs"></div>

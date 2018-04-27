@@ -1,13 +1,36 @@
 
-function onupload(){
-  console.log(document.getElementById('mygraph').files)
+function onupload(files){
+  console.log(files)
+  for(let i=0; i<files.length; i++) {
+    readFile(files[i]).then((res) => {
+      const data = JSON.parse(res)
+      console.log(data)
+      graph(data, id, 'rps')
+      graph(data, id, 'son')
+    }).catch(e => {
+      console.error(e)
+    })
+  }
+}
+
+function readFile(file) {
+  return new Promise((resolve, reject) => {
+    var reader = new FileReader();
+    reader.readAsText(file, "UTF-8");
+    reader.onload = function (evt) {
+        resolve(evt.target.result)
+    }
+    reader.onerror = function (evt) {
+        reject(new Error('error when reading the file...'))
+    }
+  })
 }
 
 const graphs = new Map()
 let id = 0
 
-graph(defaultGraph, id, 'rps')
-graph(defaultGraph, id, 'son')
+// graph(defaultGraph, id, 'rps')
+// graph(defaultGraph, id, 'son')
 
 function name(node) {
   return node.inview+node.outview
@@ -37,6 +60,7 @@ function datad3(data, id, type) {
       group: revertedGroup.get(node.type),
       id: name(node),
       name: node.inview.slice(0, -2),
+      radius: node.rps.length
     })
   })
   const done = []
@@ -81,11 +105,16 @@ function graph(data, id, type) {
   console.log(color, d3.schemePaired)
 
   let simulation = d3.forceSimulation(datas.nodes)
-      .force("link", d3.forceLink(datas.links).id(function (d) {return d.id;}).distance(10).strength(0.1))
-      .force("charge", d3.forceManyBody(10000))
+      .force("link", d3.forceLink(datas.links).id(function (d) {return d.id;}).distance(10).strength(1))
+      .force("charge", d3.forceManyBody(200))
       .force("center", d3.forceCenter(width/2, height/2))
       .force("gravity", d3.forceManyBody(200))
       .force("cluster", forceCluster)
+      .force("collide", forceCollide)
+
+  var forceCollide = d3.forceCollide()
+    .radius(function(d) { return d.radius + 1.5; })
+    .iterations(1);
 
   function forceCluster(alpha) {
     for (var i = 0, n = nodes.length, node, cluster, k = alpha * 1; i < n; ++i) {
