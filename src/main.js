@@ -299,7 +299,7 @@ module.exports = class Dequenpeda extends EventEmitter {
     if(this._shuffleCount > this._options.shuffleCountBeforeStart) {
       // just assert to be sure that there is at least 1 peers in each overlay !!remove those 2 lines for a proper use!!
       assert.notStrictEqual(this._foglet.getNeighbours().length, 0)
-      if(this._options.activeSon) assert.notStrictEqual(this._foglet.overlay('son').getNeighbours().length, 0)
+      if(this._options.activeSon) assert.notStrictEqual(this._foglet.overlay('son').network.getNeighbours().length, 0)
 
       if (this._queries.size > 0) {
         let pendingQueries = []
