@@ -28,6 +28,8 @@ let DEFAULT_OPTIONS = {
     rps: {
       type: 'spray-wrtc',
       options: {
+        a: 1,
+        b: 0,
         protocol: 'dequenpeda-protocol', // foglet running on the protocol foglet-example, defined for spray-wrtc
         webrtc: { // add WebRTC options
           trickle: true, // enable trickle (divide offers in multiple small offers sent by pieces)

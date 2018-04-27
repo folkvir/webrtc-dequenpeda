@@ -359,6 +359,7 @@ function computeGlobalCompleteness(numberOfQueries, clients, client, round, quer
     }
     if(round > config.round) {
       clients.forEach(c => {
+        c._store.close() // store worker need to be closed
         c.stopAll()
       })
     }
