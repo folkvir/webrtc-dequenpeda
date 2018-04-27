@@ -6,7 +6,7 @@
   "scripts": {
     "test": "pm2 start ./tests/test-pm2.js --no-autorestart",
     "clean": "rm -rf ./tests/results/",
-    "start": "pm2 start ./tests/xp-pm2.js --no-autorestart",
+    "start": "pm2 start ./tests/rps-pm2.js --no-autorestart && pm2 start ./tests/son-pm2.js --no-autorestart",
     "build": "foglet-scripts build",
     "min": "webpack --config ./foglet-webpack-config-min.js --mode production",
     "dev": "webpack --config ./foglet-webpack-config.js --mode development --watch"
@@ -54,6 +54,7 @@
     "serialize-javascript": "^1.5.0",
     "shelljs": "^0.8.1",
     "sparqljs": "^2.0.3",
+    "tiny-worker": "^2.1.2",
     "tman-wrtc": "^0.1.0",
     "uniqid": "^4.1.1",
     "uuid": "^3.2.1",

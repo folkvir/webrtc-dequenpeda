@@ -7,15 +7,18 @@ const N3Util = N3.Util
 const Writer = N3.Writer
 const uniqid = require('uniqid')
 const Store = require('./store')
+const StoreWorker = require('./store-worker')
 const Query = require('./query')
 const UnicastHandlers = require('./unicast-handlers')
 const Profile = require('./son/profile')
 const Son = require('./son/son')
+const assert =require('assert')
 
 const debugError = require('debug')('error')
 const clone = (obj) => JSON.parse(JSON.stringify(obj))
 
 let DEFAULT_OPTIONS = {
+  storeWorker: true,
   activeSon: false,
   defaultGraph: 'http://mypersonaldata.com/',
   timeout: 5000,
@@ -100,13 +103,18 @@ module.exports = class Dequenpeda extends EventEmitter {
       })
     }
     this._parser = new Map()
-    this._store = new Store()
+    if(this._options.storeWorker) {
+      this._store = new StoreWorker()
+    } else {
+      this._store = new Store()
+    }
+
     this._queries = new Map()
     this._shuffleCount = 0
     this.on('connected', () => {
       this._periodicExecutionInterval = setInterval(() => {
         // wait 1 second for a proper establishment of RPS + SON connections
-        setTimeout(() => {this._periodicExecution()}, 1000)
+        setTimeout(() => {this._periodicExecution()}, 5000)
       }, this._options.foglet.rps.options.delta)
     })
   }
@@ -212,32 +220,6 @@ module.exports = class Dequenpeda extends EventEmitter {
       }).catch(e => {
         reject(e)
       })
-      // triple by triple loading
-      // let parser = N3.Parser()
-      // let i = 0
-      // let triples = []
-      // let writer = new Writer()
-      // parser.parse(stringFile, (error, data, prefixes) => {
-      //   if (error) {
-      //     console.log(data)
-      //     console.log(error)
-      //     throw error
-      //   }
-      //   if (data) {
-      //     const t = this._tripleParsed2Triple(Object.assign({}, data))
-      //     triples.push(t)
-      //     i++
-      //   } else {
-      //     triples.reduce((acc, cur) => acc.then((res) => {
-      //       return this._store.loadData(this._encapsGraphId(this._options.defaultGraph, '<', '>'), [], cur)
-      //     }), Promise.resolve()).then(() => {
-      //       // send an event to the profile to update the overlay profile
-      //       resolve()
-      //     }).catch(e => {
-      //       reject(e)
-      //     })
-      //   }
-      // })
     })
   }
 
@@ -313,8 +295,12 @@ module.exports = class Dequenpeda extends EventEmitter {
   _periodicExecution () {
     this._shuffleCount++
     this.emit('periodic-execution-begins')
-    debug(`[client:${this._foglet._id}]`, 'Number of neighbours: ', this._foglet.getNeighbours().length)
+    console.log(`[client:${this._foglet._id}]`, 'Number of neighbours: ', this._foglet.getNeighbours().length)
     if(this._shuffleCount > this._options.shuffleCountBeforeStart) {
+      // just assert to be sure that there is at least 1 peers in each overlay !!remove those 2 lines for a proper use!!
+      assert.notStrictEqual(this._foglet.getNeighbours().length, 0)
+      if(this._options.activeSon) assert.notStrictEqual(this._foglet.overlay('son').getNeighbours().length, 0)
+
       if (this._queries.size > 0) {
         let pendingQueries = []
         this._queries.forEach(q => {

@@ -1,4 +1,3 @@
-
 function onupload(files){
   console.log(files)
   for(let i=0; i<files.length; i++) {
@@ -108,9 +107,9 @@ function graph(data, id, type) {
       .force("link", d3.forceLink(datas.links).id(function (d) {return d.id;}).distance(10).strength(1))
       .force("charge", d3.forceManyBody(200))
       .force("center", d3.forceCenter(width/2, height/2))
-      .force("gravity", d3.forceManyBody(200))
-      .force("cluster", forceCluster)
-      .force("collide", forceCollide)
+      .force("gravity", d3.forceManyBody(0.5))
+      //.force("cluster", forceCluster)
+      //.force("collide", forceCollide)
 
   var forceCollide = d3.forceCollide()
     .radius(function(d) { return d.radius + 1.5; })

@@ -12,7 +12,6 @@ module.exports = class Store {
       // the new store is ready
       this._rdfstore = store
       this._storeReady = true
-      // console.log('The store is ready')
       this._events.emit('ready')
     })
   }

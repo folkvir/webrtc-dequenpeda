@@ -1,6 +1,6 @@
 const config = {
   clients: 196,
-  round: 50,
+  round: 200,
   datasets: [
     { name: 'diseasome', data: "../data/diseasome/fragments/", queries: "../data/diseasome/queries/queries.json", results: "../data/diseasome/results/", withoutQueries: ['q91.json', 'q92.json', 'q61.json', 'q53.json']},
     { name: 'linkedmdb', data: "../data/linkedmdb/fragments/", queries: "../data/linkedmdb/queries/queries.json", results: "../data/linkedmdb/results/", withoutQueries: []},
@@ -8,12 +8,12 @@ const config = {
   ],
   options: {
     activeSon: true,
-    shuffleCountBeforeStart: 0,
+    shuffleCountBeforeStart: 1,
     foglet: {
       rps:{
         options: {
           timeout: 5 * 1000,
-          delta: 5 * 60 * 1000,
+          delta: 1 * 60 * 1000,
         }
       }
     }
