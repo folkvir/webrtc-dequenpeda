@@ -62,6 +62,7 @@ module.exports = class Query extends EventEmitter {
     if (neighbors.length > 0) {
       // execute after receiving triples from neighbors
       return this._askTriples().then(() => {
+        // console.log('Asking tripels finished, execute the query...')
         return this._execute(eventName).then(() => {
           return Promise.resolve()
         }).catch(e => {
@@ -118,7 +119,7 @@ module.exports = class Query extends EventEmitter {
 
   _askTriples () {
     return new Promise((resolve, reject) => {
-      const neighbors = this._parent._foglet.getNeighbours()
+      const neighbors = this._parent._foglet.getNeighbours(Infinity)
       let neighborsSon = []
       let max = neighbors.length
       if(this._parent._options.activeSon) {
@@ -255,6 +256,7 @@ module.exports = class Query extends EventEmitter {
         let data = resp.triples
         return data.reduce((accData, elem) => accData.then(() => {
           return new Promise((resolveData) => {
+            // console.log(elem.data)
             if (elem.data.length > 0) {
               // save the mapping between the triple and the owner
               const key = this._triple2String(elem.triple)
@@ -262,11 +264,12 @@ module.exports = class Query extends EventEmitter {
               originalTriple.sources.set(owner.fogletId, owner)
               let graphId = this._encapsGraphId(this._parent._options.defaultGraph, '<', '>')
               let string = ""
-              for(let i = 0; i<elem.data; ++i) {
+              for(let i = 0; i<elem.data.length; ++i) {
                 string += elem.data[i].subject + " " + elem.data[i].predicate + " " + elem.data[i].object + " . \n"
               }
-              this._parent._store.loadDataAsTurtle(string, graphId).then(() => {
+              this._parent._store.loadDataAsTurtle(string, this._parent._options.defaultGraph).then(() => {
                 if(resp.shuffleBegin < this._parent._shuffleCount) throw Error('another shuffle arrive before we terminate the previous execution....'+resp.shuffleBegin+'/'+this._parent._shuffleCount)
+                // console.log('Response computed for: ', elem.triple)
                 resolveData()
               }).catch(e => {
                 console.log(e)

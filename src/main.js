@@ -241,6 +241,37 @@ module.exports = class Dequenpeda extends EventEmitter {
     })
   }
 
+  loadTriplesOneByOne (stringFile) {
+    return new Promise((resolve, reject) => {
+      // triple by triple loading
+      let parser = N3.Parser()
+      let i = 0
+      let triples = []
+      let writer = new Writer()
+      parser.parse(stringFile, (error, data, prefixes) => {
+        if (error) {
+          console.log(data)
+          console.log(error)
+          throw error
+        }
+        if (data) {
+          const t = this._tripleParsed2Triple(Object.assign({}, data))
+          triples.push(t)
+          i++
+        } else {
+          triples.reduce((acc, cur) => acc.then((res) => {
+            return this._store.loadData(this._encapsGraphId(this._options.defaultGraph, '<', '>'), [], cur)
+          }), Promise.resolve()).then(() => {
+            // send an event to the profile to update the overlay profile
+            resolve()
+          }).catch(e => {
+            reject(e)
+          })
+        }
+      })
+    })
+  }
+
   /**
    * Get triples from the datastore matching the given riples pattern
    * @param  {string} [graph=this._options.defaultGraph] the uri graph

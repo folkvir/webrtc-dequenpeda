@@ -13,7 +13,7 @@ const config = {
       rps:{
         options: {
           timeout: 5 * 1000,
-          delta: 60 * 1000,
+          delta: 30 * 1000,
         }
       }
     }
