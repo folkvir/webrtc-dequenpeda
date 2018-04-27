@@ -15,7 +15,7 @@ rounds.reduce((acc, r) => acc.then(() => {
   return exec(commands[0])
 }), Promise.resolve()).then(() => {
   console.log('RPS finished all rounds.')
-}
+})
 
 function exec(command) {
   return new Promise((resolve, reject) => {
