@@ -86,7 +86,6 @@ createClients(config.clients).then((clients) => {
         affectQueries(clients, allQueries, clients.length === 1).then((res) => {
           console.log('All queries finished.')
           const neighs = writeNeighbours(res, 'last')
-          process.exit(0)
         })
       })
     }).catch(e => {
