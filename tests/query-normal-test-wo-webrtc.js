@@ -65,9 +65,13 @@ createClients(config.clients).then((clients) => {
 
     const allQueries = []
     const max = config.queries
+    let maxi = 0
     queries.forEach(cur => {
       for(let  i = 0; i< cur.length; i++) {
-        if(i<max) allQueries.push(cur[i])
+        if(maxi<max) {
+          allQueries.push(cur[maxi])
+          maxi++
+        }
       }
     })
     console.log('Number of queries kept for the exp: ', allQueries.length)
@@ -116,7 +120,7 @@ function createClients(number) {
     if (i !== 0) tmpFoglets.push(i)
     const c = createClient(i)
     c._foglet.on('connect', () => {
-      console.log('client connected.')
+      console.log('['+i+'] client connected')
     })
     clients.push(c)
   }

@@ -34,6 +34,7 @@ def createGraph(data, type, filename):
 
     g.shrink_to_fit()
 
+    # add colors to vertex
     cmap = plt.get_cmap('Set3')
     print(cmap)
     colors = cmap(np.linspace(0, 1, len(typeColor)))
@@ -42,9 +43,9 @@ def createGraph(data, type, filename):
     g.vertex_properties["color"] = prop
     for v in g.vertices():
         g.vertex_properties["color"][v] = colors[typeColor.index(g.vertex_properties["type"][v])]
-        #print(g.vertex_properties["color"][v])
 
-    graph_draw(g, vertex_text=g.vertex_index, groups=g.vertex_properties["type"], vertex_fill_color=g.vp.color, vertex_font_size=10, output_size=(1000, 1000), output=filename+'-'+type+"-graph.png")
+    g.shrink_to_fit()
+    graph_draw(g, vertex_text=g.vertex_index, text="yahoo", groups=g.vertex_properties["type"], vertex_fill_color=g.vp.color, vertex_font_size=13, output_size=(1000, 1000), output=filename+'-'+type+"-graph.png")
 
 
 def main():
