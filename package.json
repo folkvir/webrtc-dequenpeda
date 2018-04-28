@@ -7,6 +7,7 @@
     "test": "pm2 start ./tests/test-pm2.js --no-autorestart",
     "clean": "rm -rf ./tests/results/",
     "start": "pm2 start ./tests/rps-pm2.js --no-autorestart && pm2 start ./tests/son-pm2.js --no-autorestart",
+    "start-half": "pm2 start ./tests/rps-pm2-half.js --no-autorestart && pm2 start ./tests/son-pm2-half.js --no-autorestart",
     "build": "foglet-scripts build",
     "min": "webpack --config ./foglet-webpack-config-min.js --mode production",
     "dev": "webpack --config ./foglet-webpack-config.js --mode development --watch"

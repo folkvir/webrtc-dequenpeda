@@ -1,4 +1,5 @@
 const config = {
+  queries: 48,
   clients: 96,
   round: 10,
   datasets: [

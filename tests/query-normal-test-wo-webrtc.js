@@ -63,10 +63,16 @@ createClients(config.clients).then((clients) => {
       console.log('Number of queries for dataset %s: %f', d[0].name, d.length)
     })
 
-    const allQueries = queries.reduce((acc, cur, ind) => { acc.push(...cur); return acc }, [])
-    console.log('All queries: ', allQueries.length)
+    const allQueries = []
+    const max = config.queries
+    queries.forEach(cur => {
+      for(let  i = 0; i< cur.length; i++) {
+        if(i<max) allQueries.push(cur[i])
+      }
+    })
+    console.log('Number of queries kept for the exp: ', allQueries.length)
 
-    if(allQueries.length < clients.length) throw new Error('not enough queries for clients')
+    // if(allQueries.length < clients.length) throw new Error('not enough queries for clients')
 
     // load datasets into clients
     config.datasets.reduce((dAcc, dataset) => dAcc.then((result) => {
@@ -125,7 +131,7 @@ function connectClients(clients) {
     const connectedClients = [clients[0]]
     if(clients.length < 2) reject(new Error('need at least 2 client'))
     clients.reduce((accClient, client) => accClient.then(() => {
-      return wait(100).then(() => {
+      return wait(200).then(() => {
           console.log('Connecting client: %s', client._foglet.id)
           if(config.options.activeSon) {
             console.log('Connection on the SON...')
@@ -202,47 +208,57 @@ function affectQueries(clients, queries, allqueries) {
   // shuffle clients to be fair!
   clients = shuffle(clients)
   console.log('Number of clients: ', clients.length)
-  // shuffle queries
-  // queries = shuffle(queries)
+  console.log('Number of queries: ', queries.length)
+  queries = shuffle(queries)
 
   return new Promise((resolve, reject) => {
     let number = 0
     let finished = 0
     const toReturn = []
-    const done = () => {
-        if (finished === clients.length) {
-          resolve(toReturn)
-        }
-    }
     // only for client.length === 1
     if(allqueries) {
-
       for(let i = 0; i < queries.length; i++) {
         affectOneQuery(queries[i], clients[0], i, queries.length, clients).then(() => {
-          toReturn.push({client, query: queries[i]})
+          toReturn.push({client: clients[0], query: queries[i]})
           finished++
-          done()
+          if (finished === queries.length) {
+            resolve(toReturn)
+          }
         }).catch(e => {
           console.log(e)
         })
       }
     } else {
-      clients.reduce((cAcc, client, ind) => cAcc.then(() => {
-        const query = queries[ind]
-        affectOneQuery(query, client, ind, clients.length, clients).then(() => {
-          finished++
-          toReturn.push({client, query})
-          done()
-        }).catch(e => {
-          console.log(e)
-        })
-        number++
-        return Promise.resolve()
-      }), Promise.resolve()).then(() => {
+      if(queries.length >= clients.length) {
+        for(let i = 0; i<clients.length; i++) {
+          const query = queries[i]
+          affectOneQuery(query, clients[i], i, clients.length, clients).then(() => {
+            finished++
+            toReturn.push({client: clients[i], query: queries[i]})
+            if (finished === clients.length) {
+              resolve(toReturn)
+            }
+          }).catch(e => {
+            console.log(e)
+          })
+          number++
+        }
         console.log('Waiting for %f shuffles for a proper network before continuing.', config.options.shuffleCountBeforeStart)
-      }).catch(e => {
-        reject(e)
-      })
+      } else {
+        for(let i = 0; i<queries.length; i++) {
+          affectOneQuery(queries[i], clients[i], i, queries.length, clients).then(() => {
+            finished++
+            toReturn.push({client: clients[i], query: queries[i]})
+            if (finished === queries.length) {
+              resolve(toReturn)
+            }
+          }).catch(e => {
+            console.log(e)
+          })
+          number++
+        }
+        console.log('Waiting for %f shuffles for a proper network before continuing.', config.options.shuffleCountBeforeStart)
+      }
     }
   })
 }
@@ -253,6 +269,8 @@ function affectOneQuery(query, client, ind, numberOfQueries, clients) {
     const resultName = path.resolve(`${destination}/client-${client._foglet.id}-${query.filename}-completeness.csv`)
     activeQueries.set(ind, {
       completeness: 0,
+      resultsObtained: 0,
+      maxresults: query.card,
       client,
       query
     })
@@ -269,6 +287,7 @@ function affectOneQuery(query, client, ind, numberOfQueries, clients) {
     q.on('loaded', (result) => {
       const completeness = result.length / query.card * 100
       activeQueries.get(ind).completeness = completeness
+      activeQueries.get(ind).resultsObtained = result.length
       // console.log('[%f/%f] Query %s loaded: %f results, \n Completeness: %f %, refResults: %f', round, config.round, query.filename, result.length, completeness, query.results.length)
       computeGlobalCompleteness(numberOfQueries, clients, client, round, query, completeness, resultName)
       round++
@@ -276,6 +295,7 @@ function affectOneQuery(query, client, ind, numberOfQueries, clients) {
     q.on('updated', (result) => {
       const completeness = result.length / query.card * 100
       activeQueries.get(ind).completeness = completeness
+      activeQueries.get(ind).resultsObtained = result.length
       // console.log('[%f/%f] Query %s updated: %f results, \n Completeness: %f %, refResults: %f', round, config.round, query.filename, result.length, completeness, query.results.length)
       computeGlobalCompleteness(numberOfQueries, clients, client, round, query, completeness, resultName)
       round++
@@ -305,7 +325,9 @@ function computeGlobalCompleteness(numberOfQueries, clients, client, round, quer
           'edges-SON',
           'allmessages',
           'completeQueries',
-          'queriesNumber'
+          'queriesNumber',
+          'obtainedresults',
+          'wantedresults'
         ].join(',')+'\n')
       }
       printEdges(round)
@@ -342,6 +364,9 @@ function computeGlobalCompleteness(numberOfQueries, clients, client, round, quer
         return acc
       }, 0)
 
+      const maxResults = [...activeQueries.values()].reduce((acc, cur) => acc+cur.maxresults)
+      const obtained = [...activeQueries.values()].reduce((acc, cur) => acc+cur.resultsObtained)
+
       // save results
       append(path.resolve(destination+'/global-completeness.csv'), [
         globalRound,
@@ -351,7 +376,9 @@ function computeGlobalCompleteness(numberOfQueries, clients, client, round, quer
         overlayEdges,
         mtotal,
         completeQueries,
-        activeQueries.size
+        activeQueries.size,
+        obtained,
+        maxResults
       ].join(',')+'\n')
       console.log('[%f] Global completeness: %f % (%f/%f)', round, globalCompleteness, completeQueries, numberOfQueries)
       globalRound++

@@ -115,8 +115,11 @@ module.exports = class Dequenpeda extends EventEmitter {
     this._shuffleCount = 0
     this.on('connected', () => {
       this._periodicExecutionInterval = setInterval(() => {
-        // wait 1 second for a proper establishment of RPS + SON connections
-        setTimeout(() => {this._periodicExecution()}, 5000)
+        // waiting for the first connection to open and then execute
+        this._foglet.overlay().network.rps.once('open', () => {
+          this._periodicExecution()
+        })
+        //setTimeout(() => {this._periodicExecution()}, 5000)
       }, this._options.foglet.rps.options.delta)
     })
   }
@@ -297,7 +300,7 @@ module.exports = class Dequenpeda extends EventEmitter {
   _periodicExecution () {
     this._shuffleCount++
     this.emit('periodic-execution-begins')
-    console.log(`[client:${this._foglet._id}]`, 'Number of neighbours: ', this._foglet.getNeighbours().length)
+    // console.log(`[client:${this._foglet._id}]`, 'Number of neighbours: ', this._foglet.getNeighbours().length)
     if(this._shuffleCount > this._options.shuffleCountBeforeStart) {
       // just assert to be sure that there is at least 1 peers in each overlay !!remove those 2 lines for a proper use!!
       assert.notStrictEqual(this._foglet.getNeighbours().length, 0)
