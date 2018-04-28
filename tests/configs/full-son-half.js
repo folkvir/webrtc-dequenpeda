@@ -16,7 +16,7 @@ const config = {
           a:1,
           b:0,
           timeout: 30 * 1000,
-          delta: 2 * 60 * 1000,
+          delta: 10 * 60 * 1000,
         }
       }
     }

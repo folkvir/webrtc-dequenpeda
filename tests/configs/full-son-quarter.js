@@ -1,5 +1,5 @@
 const config = {
-  queries: 196,
+  queries: 49,
   clients: 196,
   round: 200,
   datasets: [
@@ -8,13 +8,13 @@ const config = {
     // { name: 'geocoordinates', data: "../data/geocoordinates/fragments/", queries: "../data/geocoordinates/queries/queries.json", results: "../data/geocoordinates/results/", withoutQueries: []}
   ],
   options: {
-    activeSon: false,
+    activeSon: true,
     shuffleCountBeforeStart: 5,
     foglet: {
       rps:{
         options: {
-          a: 1,
-          b: 5,
+          a:1,
+          b:0,
           timeout: 30 * 1000,
           delta: 10 * 60 * 1000,
         }
