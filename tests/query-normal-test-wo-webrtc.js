@@ -364,8 +364,8 @@ function computeGlobalCompleteness(numberOfQueries, clients, client, round, quer
         return acc
       }, 0)
 
-      const maxResults = [...activeQueries.values()].reduce((acc, cur) => acc+cur.maxresults)
-      const obtained = [...activeQueries.values()].reduce((acc, cur) => acc+cur.resultsObtained)
+      const maxResults = [...activeQueries.values()].reduce((acc, cur) => acc+cur.maxresults, 0)
+      const obtained = [...activeQueries.values()].reduce((acc, cur) => acc+cur.resultsObtained, 0)
 
       // save results
       append(path.resolve(destination+'/global-completeness.csv'), [
