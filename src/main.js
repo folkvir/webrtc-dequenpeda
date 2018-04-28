@@ -74,8 +74,8 @@ module.exports = class Dequenpeda extends EventEmitter {
           options: {
             socketClass: this._options.foglet.rps.options.socketClass,
             profile: this._profile,
-            delta: this._options.foglet.rps.options.delta*2,
-            timeoutDescriptor: 10 * 1000,
+            delta: this._options.foglet.rps.options.delta,
+            timeoutDescriptor: 30 * 1000,
             timeout: this._options.foglet.rps.options.timeout,
             periodicProfileExchange: this._options.foglet.rps.options.delta/2,
             protocol: 'dequenpeda-protocol-son-overlay', // foglet running on the protocol foglet-example, defined for spray-wrtc

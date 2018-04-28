@@ -28,8 +28,8 @@ function readFile(file) {
 const graphs = new Map()
 let id = 0
 
-// graph(defaultGraph, id, 'rps')
-// graph(defaultGraph, id, 'son')
+graph(defaultGraph, id, 'rps')
+graph(defaultGraph, id, 'son')
 
 function name(node) {
   return node.inview+node.outview
@@ -104,12 +104,12 @@ function graph(data, id, type) {
   console.log(color, d3.schemePaired)
 
   let simulation = d3.forceSimulation(datas.nodes)
-      .force("link", d3.forceLink(datas.links).id(function (d) {return d.id;}).distance(10).strength(1))
+      .force("link", d3.forceLink(datas.links).id(function (d) {return d.id;}).distance(10).strength(0.3))
       .force("charge", d3.forceManyBody(200))
       .force("center", d3.forceCenter(width/2, height/2))
       .force("gravity", d3.forceManyBody(0.5))
-      //.force("cluster", forceCluster)
-      //.force("collide", forceCollide)
+      .force("cluster", forceCluster)
+      .force("collide", forceCollide)
 
   var forceCollide = d3.forceCollide()
     .radius(function(d) { return d.radius + 1.5; })
