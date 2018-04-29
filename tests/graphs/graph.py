@@ -6,6 +6,9 @@ import json
 import sys
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
+
+plt.switch_backend('cairo')
 
 def readFile(file):
     return json.load(open(file))
@@ -45,7 +48,22 @@ def createGraph(data, type, filename):
         g.vertex_properties["color"][v] = colors[typeColor.index(g.vertex_properties["type"][v])]
 
     g.shrink_to_fit()
-    graph_draw(g, vertex_text=g.vertex_index, text="yahoo", groups=g.vertex_properties["type"], vertex_fill_color=g.vp.color, vertex_font_size=13, output_size=(1000, 1000), output=filename+'-'+type+"-graph.png")
+    dpi = 300
+    fig, ax = plt.subplots()
+    width = 1000
+    height = 1000
+
+    ax.set_title('A title')
+
+    graph_draw(g,
+        vertex_text=g.vertex_index,
+        #groups=g.vertex_properties["type"],
+        vertex_fill_color=g.vp.color,
+        vertex_font_size=13,
+        output_size=[width, height],
+        mplfig=ax,
+        output=filename+'-'+type+"-graph.png")
+    plt.savefig(filename+'-'+type+"-graph.png")
 
 
 def main():

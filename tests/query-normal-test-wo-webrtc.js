@@ -63,18 +63,25 @@ createClients(config.clients).then((clients) => {
       console.log('Number of queries for dataset %s: %f', d[0].name, d.length)
     })
 
+    // get all queries of all dataset
+    console.log('Get an array of all queries...')
+    const all = queries.reduce((acc, cur) => {
+      console.log('Current: ', cur.length)
+      acc.push(...cur)
+      return acc
+    }, [])
+    // shuffle queries for a random selection
     const allQueries = []
     const max = config.queries
-    let maxi = 0
-    queries.forEach(cur => {
-      for(let  i = 0; i< cur.length; i++) {
-        if(maxi<max) {
-          allQueries.push(cur[maxi])
-          maxi++
-        }
+    // get queries to max config.queries
+    let kept = 0
+    for(let  i = 0; i<all.length; i++) {
+      if(kept<max) {
+        allQueries.push(all[lrandom(0, all.length-1)])
+        kept++
       }
-    })
-    console.log('Number of queries kept for the exp: ', allQueries.length)
+    }
+    console.log('Number of random queries kept for the exp: ', allQueries.length)
 
     // if(allQueries.length < clients.length) throw new Error('not enough queries for clients')
 
