@@ -1,4 +1,5 @@
 const config = {
+  name: "full-son",
   queries: require('./full-queries.json'), // 196
   clients: 196,
   round: 200,

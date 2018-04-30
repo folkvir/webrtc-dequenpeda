@@ -26,7 +26,7 @@ const time = [hour, minute, day, month, year].join("-")
 console.log('Time: ', time)
 
 const config = require(path.resolve(commander.config))
-config.resultDir = path.resolve(path.join(__dirname, './results/'+time+uuid()))
+config.resultDir = path.resolve(path.join(__dirname, './results/'+config.name+time+uuid()))
 
 if(commander.timeout) config.timeout = parseFloat(commander.timeout)
 if(commander.clients) config.clients = commander.clients
@@ -55,61 +55,38 @@ createClients(config.clients).then((clients) => {
   // clients.forEach(c => {
   //   console.log('Neighbours: ', c._foglet.getNeighbours())
   // })
-  loadQueries(config).then((results) => {
-    const queries = results
-    console.log('Queries loaded.')
-    console.log('Number of datasets: ', queries.length)
-    queries.forEach(d => {
-      console.log('Number of queries for dataset %s: %f', d[0].name, d.length)
-    })
+  let queries = config.queries
+  queries = shuffle(queries)
+  console.log('Number of queries kept for the exp: ', queries.length)
 
-    // get all queries of all dataset
-    console.log('Get an array of all queries...')
-    const all = queries.reduce((acc, cur) => {
-      console.log('Current: ', cur.length)
-      acc.push(...cur)
-      return acc
-    }, [])
-    // shuffle queries for a random selection
-    const allQueries = []
-    const max = config.queries
-    // get queries to max config.queries
-    let kept = 0
-    for(let  i = 0; i<all.length; i++) {
-      if(kept<max) {
-        allQueries.push(all[lrandom(0, all.length-1)])
-        kept++
-      }
-    }
-    console.log('Number of random queries kept for the exp: ', allQueries.length)
+  // if(allQueries.length < clients.length) throw new Error('not enough queries for clients')
 
-    // if(allQueries.length < clients.length) throw new Error('not enough queries for clients')
-
-    // load datasets into clients
-    config.datasets.reduce((dAcc, dataset) => dAcc.then((result) => {
-      return new Promise((resolve, reject) => {
-        loadDataset(path.resolve(__dirname, dataset.data), clients, dataset).then((clients) => {
-          result.push(clients)
-          resolve(result)
-        }).catch(e => {
-          reject(e)
-        })
+  // load datasets into clients
+  config.datasets.reduce((dAcc, dataset) => dAcc.then((result) => {
+    return new Promise((resolve, reject) => {
+      loadDataset(path.resolve(__dirname, dataset.data), clients, dataset).then((clients) => {
+        result.push(clients)
+        resolve(result)
+      }).catch(e => {
+        reject(e)
       })
-    }), Promise.resolve([])).then((results) => {
-      console.log('All dataset loaded on clients')
-      const clientsWithFragment = results
-      connectClients(clients).then(() => {
-        console.log('Clients connected.')
-        affectQueries(clients, allQueries, clients.length === 1).then((res) => {
-          console.log('All queries finished.')
-          const neighs = writeNeighbours(res, 'last')
-        })
-      })
-    }).catch(e => {
-      console.log(e)
-      process.exit(0)
     })
+  }), Promise.resolve([])).then((results) => {
+    console.log('All dataset loaded on clients')
+    const clientsWithFragment = results
+    connectClients(clients).then(() => {
+      console.log('Clients connected.')
+      affectQueries(clients, queries, clients.length === 1).then((res) => {
+        console.log('All queries finished.')
+        const neighs = writeNeighbours(res, 'last')
+      })
+    })
+  }).catch(e => {
+    console.log(e)
+    process.exit(0)
   })
+}).catch(e => {
+  console.error(e)
 })
 
 function loadDataset(pathFiles, clients, dataset) {
@@ -178,34 +155,6 @@ function wait(time) {
     setTimeout(() => {
       resolve()
     }, time)
-  })
-}
-
-
-/**
- * Load queries and return an array of array of queries with their results number [[{query: '...', filename: 'q1.rq', card: 2}, ...], ...]
- * @param  {[type]} config           [description]
- * @param  {Number} [limit=Infinity] [description]
- * @return {[type]}                  [description]
- */
-function loadQueries (config, limit = Infinity) {
-  return new Promise((resolve, reject) => {
-    config.datasets.reduce((datasetsAcc, dataset) => datasetsAcc.then((resultGlobal) => {
-      return new Promise((res, rej) => {
-        console.log(dataset)
-        const qPath = path.resolve(path.join(__dirname, dataset.queries))
-        let queries = require(qPath)
-        queries = queries.filter(e => {
-          return !dataset.withoutQueries.includes(e.filename)
-        })
-        res([...resultGlobal, queries])
-      })
-    }), Promise.resolve([])).then((results) => {
-      resolve(results)
-    }).catch(e => {
-      console.log(e)
-      reject(e)
-    })
   })
 }
 

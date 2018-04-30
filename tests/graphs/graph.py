@@ -1,12 +1,14 @@
 #! /usr/bin/env python3
 # coding: utf-8
 
-from graph_tool.all import *
+import graph_tool as gt
+import graph_tool.draw
 import json
 import sys
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
+import cairo
 
 plt.switch_backend('cairo')
 
@@ -14,7 +16,7 @@ def readFile(file):
     return json.load(open(file))
 
 def createGraph(data, type, filename):
-    g = Graph()
+    g = gt.Graph()
 
     prop = g.new_vertex_property("string")
     g.vertex_properties["type"] = prop
@@ -48,32 +50,38 @@ def createGraph(data, type, filename):
         g.vertex_properties["color"][v] = colors[typeColor.index(g.vertex_properties["type"][v])]
 
     g.shrink_to_fit()
-    dpi = 300
-    fig, ax = plt.subplots()
-    width = 1000
-    height = 1000
-
-    ax.set_title('A title')
-
-    graph_draw(g,
+    # fig, ax = plt.subplots()
+    output = filename+'-'+type+"-graph.png"
+    # ax.set(xlabel='some x legend', ylabel='some y legend',
+    #    title='Network')
+    # ax.grid()
+    # different layout possible
+    # pos = gt.draw.fruchterman_reingold_layout(g)
+    # pos = gt.draw.arf_layout(g)
+    # pos = gt.draw.radial_tree_layout(g)
+    # planar_layout
+    # random_layout
+    # get_hierarchy_control_points
+    gt.draw.graph_draw(g,
+        pos=gt.draw.sfdp_layout(g),
         vertex_text=g.vertex_index,
-        #groups=g.vertex_properties["type"],
         vertex_fill_color=g.vp.color,
         vertex_font_size=13,
-        output_size=[width, height],
-        mplfig=ax,
-        output=filename+'-'+type+"-graph.png")
-    plt.savefig(filename+'-'+type+"-graph.png")
+        output_size=[1000, 1000],
+        bg_color=[1,1,1,1],
+        #mplfig=fig,
+        output=output)
 
+    #fig.savefig(output)
 
 def main():
     print ('Number of arguments:', len(sys.argv), 'arguments.')
     print ('Argument List:', str(sys.argv))
     filename = sys.argv[1]
-    type = sys.argv[2]
     print('Loading: ', filename)
     data = readFile(filename)
-    createGraph(data, type, filename)
+    createGraph(data, "rps", filename)
+    createGraph(data, "overlay", filename)
 
 if __name__ == "__main__":
     main()

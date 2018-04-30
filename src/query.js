@@ -268,7 +268,7 @@ module.exports = class Query extends EventEmitter {
                 string += elem.data[i].subject + " " + elem.data[i].predicate + " " + elem.data[i].object + " . \n"
               }
               this._parent._store.loadDataAsTurtle(string, this._parent._options.defaultGraph).then(() => {
-                if(resp.shuffleBegin < this._parent._shuffleCount) throw Error('another shuffle arrive before we terminate the previous execution....'+resp.shuffleBegin+'/'+this._parent._shuffleCount)
+                if(resp.shuffleBegin < this._parent._shuffleCount) console.log('another shuffle arrive before we terminate the previous execution....'+resp.shuffleBegin+'/'+this._parent._shuffleCount)
                 // console.log('Response computed for: ', elem.triple)
                 resolveData()
               }).catch(e => {

@@ -2,6 +2,9 @@ data/dataset/
 data/dataset.tar
 dist/
 data/triple_person/*
+tests/results/
+
+*.hdt.index*
 
 # Logs
 .DS_Store

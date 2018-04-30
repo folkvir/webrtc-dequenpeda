@@ -8,12 +8,15 @@ const path = require('path')
 const fs = require('fs')
 const shell = require('shelljs')
 
-const graph = 'http://tonyparker'
-const graph2 = `<${graph}>`
-const dataset = 'diseasome'
+const datasets = [
+  { name: 'diseasome', data: "../data/diseasome/fragments/", queries: "../data/diseasome/queries/queries.json", results: "../data/diseasome/results/", withoutQueries: ['q91.json', 'q92.json', 'q61.json', 'q53.json']},
+  { name: 'linkedmdb', data: "../data/linkedmdb/fragments/", queries: "../data/linkedmdb/queries/queries.json", results: "../data/linkedmdb/results/", withoutQueries: []},
+  //{ name: 'geocoordinates', data: "../data/geocoordinates/fragments/", queries: "../data/geocoordinates/queries/queries.json", results: "../data/geocoordinates/results/", withoutQueries: []}
+]
 
-let queries = require(path.resolve(path.join(__dirname, `../data/${dataset}/queries/queries.json`)))
-console.log('Number of queries', queries.length)
+const graph = 'http://tonyparker'
+
+
 
 let extractFilename = (pathData, max) => new Promise((resolve, reject) => {
   try {
@@ -27,40 +30,53 @@ let extractFilename = (pathData, max) => new Promise((resolve, reject) => {
   }
 })
 
-extractFilename(path.resolve(path.join(__dirname, `../data/${dataset}/fragments`))).then((files) => {
-  new Store({}, function(err,store){
-    files.reduce((a, f) => a.then(() => {
-      return load(store, f)
-    }), Promise.resolve()).then(() => {
-      console.log('all loaded')
-      for(let i = 0; i<queries.length; i++) {
-        let q = queries[i]
-        const plan = parser.parse(q)
-        plan.from = { default: [graph], named: [] }
-        const q2 = generator.stringify(plan)
-        execute(store, q2).then((res) => {
-          const query = require(path.resolve(path.join(__dirname, `../data/${dataset}/results/q`+i+'.json')))
-          const completeness = res.length / query.length * 100
-          console.log('Q%f Completeness: ', i, completeness, query.length)
-          if(completeness !== 100) console.log(q, q2, res)
-          return Promise.resolve()
-        }).catch(e => {
-          console.log(q, q2)
-          return Promise.reject(e)
+const begin = new Date()
+
+datasets.reduce((acc, dataset)  => acc.then(() => {
+  return new Promise((resolve, reject) => {
+    extractFilename(path.resolve(path.join(__dirname, dataset.data))).then((files) => {
+      new Store({}, function(err,store){
+        files.reduce((a, f) => a.then(() => {
+          return load(store, f)
+        }), Promise.resolve()).then(() => {
+          console.log('all loaded')
+          let queries = require(path.resolve(path.join(__dirname, dataset.queries)))
+          console.log('Number of queries', queries.length)
+
+          queries.reduce((accQ, query, i) => accQ.then(() => {
+            return new Promise((resolve2, reject2) => {
+              let q = queries[i].query
+              const plan = parser.parse(q)
+              plan.from = { default: [graph], named: [] }
+              const q2 = generator.stringify(plan)
+              execute(store, q2).then((res) => {
+                const query = require(path.resolve(path.join(__dirname, `../data/${dataset.name}/results/q`+i+'.json')))
+                const completeness = res.length / query.card * 100
+                console.log('Q%f Completeness: ', i, completeness, query.card)
+                if(completeness !== 100) {
+                  console.log(q, q2, res)
+                  // reject2()
+                }
+                resolve2()
+              }).catch(e => {
+                console.log(q, q2)
+                reject2(e)
+              })
+            })
+          }), Promise.resolve()).then(() => {
+            resolve()
+          })
         })
-      }
-      // return queries.reduce((accQuery, q, i) => accQuery.then(() => {
-      //
-      // }), Promise.resolve()).then(() => {
-      //   console.log('all executed')
-      //   return Promise.resolve()
-      // }).catch(e => {
-      //   console.error(e)
-      //   return Promise.reject(e)
-      // })
+      });
     })
-  });
+  })
+}), Promise.resolve()).then(() => {
+  const end = new Date()
+  const time = end.getTime() - begin.getTime()
+  console.log('Executed in %f (ms)', time)
 })
+
+
 
 function execute(store, query) {
   return new Promise((resolve, reject) => {

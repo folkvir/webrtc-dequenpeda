@@ -1,4 +1,5 @@
 const config = {
+  name: 'full-half',
   queries: require('./full-98-queries.json'), // 98
   clients: 196,
   round: 200,
