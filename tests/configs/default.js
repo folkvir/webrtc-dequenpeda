@@ -1,5 +1,5 @@
 const config = {
-  queries: 48,
+  queries: require('diseasomeonly.json'),
   clients: 96,
   round: 10,
   datasets: [
