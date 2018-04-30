@@ -85,6 +85,7 @@ module.exports = class StoreWorker extends Events {
     this.worker.onmessage = (ev) => {
       this.handlemessage(ev)
     }
+    console.log('Store worker initialized.')
   }
 
   handlemessage(ev) {

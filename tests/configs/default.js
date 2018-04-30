@@ -1,7 +1,8 @@
+const MAX_SET_TIMEOUT = 2147483647
 const config = {
   name: 'default',
   queries: require('./default-queries.json'),
-  clients: 100,
+  clients: 20,
   round: 10,
   datasets: [
     { name: 'diseasome', data: "../data/diseasome/fragments/", queries: "../data/diseasome/queries/queries.json", results: "../data/diseasome/results/", withoutQueries: ['q91.json', 'q92.json', 'q61.json', 'q53.json']},
@@ -9,8 +10,14 @@ const config = {
     // { name: 'geocoordinates', data: "../data/geocoordinates/fragments/", queries: "../data/geocoordinates/queries/queries.json", results: "../data/geocoordinates/results/", withoutQueries: []}
   ],
   options: {
-    activeSon: true,
-    shuffleCountBeforeStart: 0,
+    storeWorker: true, // activate the worker for the store or not
+    manualshuffle: false, // activate the manual shuflling
+    manualshufflewaitingtime: 5 * 1000, // when the shuffle is manual, need to establish how many time we will sleep between the shuffle and the execution, to wait for a proper connection
+    defaultGraph: 'http://mypersonaldata.com/', // default graph, need to be http://<...>
+    timeout: 10 * 1000, //network timeout when sending tpq
+    queryType: 'normal', // there is one type, so normal is always choose.
+    activeSon: true, // we activate the semantic overlay network or not
+    shuffleCountBeforeStart: 2, // we wait n shuffle before updated queries.
     foglet: {
       rps:{
         options: {
@@ -22,5 +29,5 @@ const config = {
   }
 }
 
-config.timeout = (config.round + 1) * config.options.foglet.rps.options.delta
+config.timeout = MAX_SET_TIMEOUT
 module.exports = config

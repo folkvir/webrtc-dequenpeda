@@ -45,15 +45,27 @@ module.exports = class Query extends EventEmitter {
     })
     this._timeout = undefined
     this._lastResults = undefined
+    this._round = 0
+    this._status = 'init'
+  }
+
+  get round() {
+    return this._round
   }
 
   stop () {
+    this._parent.close(this._id)
+  }
+
+  _stop() {
     return this.execute('end')
   }
 
   async execute (eventName) {
+    this._status = 'pending'
     if(eventName === 'end') {
       this.emit(eventName, this._lastResults)
+      this._status = 'end'
       return Promise.resolve(this._lastResults)
     }
     this._createTimeout()
@@ -67,10 +79,12 @@ module.exports = class Query extends EventEmitter {
           return Promise.resolve()
         }).catch(e => {
           console.log(e)
+          this._status = 'executed'
           return Promise.reject(e)
         })
       }).catch(e => {
         console.log('error when asking triples: ', e)
+        this._status = 'executed'
         return Promise.reject(e)
       })
     } else {
@@ -80,13 +94,14 @@ module.exports = class Query extends EventEmitter {
         return Promise.resolve()
       }).catch(e => {
         console.log(e)
+        this._status = 'executed'
         return Promise.reject(e)
       })
     }
   }
 
   async _execute (eventName) {
-
+    this._status = 'pending'
     const pattern = {
       subject: '?s',
       predicate: '?p',
@@ -113,6 +128,10 @@ module.exports = class Query extends EventEmitter {
     const res = await this._parent._store.query(rewritedQuery)
     debug(`[client:${this._parent._foglet.id}] Number remote peers seen:`, this._sources.size)
     this._lastResults = res
+    this._round++
+    this._status = 'executed'
+    // check shuffle on parent in order to shuffle if all queries are executed.
+    if(this._parent._options.manualshuffle) this._parent.emit('check-shuffle')
     this.emit(eventName, res)
     return Promise.resolve()
   }

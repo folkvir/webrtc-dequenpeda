@@ -46,18 +46,14 @@ class Manager {
 
   connect(from, to) {
     debugManager('peer connected from/to: ', from, to)
-    setImmediate(() => {
-      this.manager.get(to)._connectWith(from)
-      this.manager.get(from)._connectWith(to)
-    })
+    this.manager.get(to)._connectWith(from)
+    this.manager.get(from)._connectWith(to)
   }
 
   destroy(from, to) {
     debugManager('peer disconnected from/to: ', from, to)
-    setImmediate(() => {
-      from && this.manager.get(from) && this.manager.get(from)._close()
-      to && this.manager.get(to) && this.manager.get(to)._close()
-    })
+    from && this.manager.get(from) && this.manager.get(from)._close()
+    to && this.manager.get(to) && this.manager.get(to)._close()
   }
 
   send(from, to, msg, retry = 0) {

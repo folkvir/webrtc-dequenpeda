@@ -17,11 +17,15 @@ const assert =require('assert')
 const debugError = require('debug')('error')
 const clone = (obj) => JSON.parse(JSON.stringify(obj))
 
+const MAX_SET_TIMEOUT = 2147483647
+
 let DEFAULT_OPTIONS = {
   storeWorker: true,
+  manualshuffle: false,
+  manualshufflewaitingtime: 5 * 1000,
   activeSon: false,
   defaultGraph: 'http://mypersonaldata.com/',
-  timeout: 5000,
+  timeout: 10 * 1000,
   queryType: 'normal',
   shuffleCountBeforeStart: 1,
   foglet: {
@@ -65,27 +69,34 @@ module.exports = class Dequenpeda extends EventEmitter {
       message: 0
     }
     this._options = lmerge(DEFAULT_OPTIONS, options)
+    if(this._options.manualshuffle) {
+      this._options.foglet.rps.options.delta = MAX_SET_TIMEOUT
+    }
     if(this._options.activeSon) {
       // means that we have activated the overlay
-      this._options.foglet.overlays =[
-        {
-          name: 'son',
-          class: Son,
-          options: {
-            socketClass: this._options.foglet.rps.options.socketClass,
-            profile: this._profile,
-            delta: this._options.foglet.rps.options.delta,
-            timeoutDescriptor: 30 * 1000,
-            timeout: this._options.foglet.rps.options.timeout,
-            periodicProfileExchange: this._options.foglet.rps.options.delta/2,
-            protocol: 'dequenpeda-protocol-son-overlay', // foglet running on the protocol foglet-example, defined for spray-wrtc
-            signaling: {
-              address: 'https://localhost:8000/',
-              room: 'dequenpeda-room-overlay' // room to join
-            }
+      const son = {
+        name: 'son',
+        class: Son,
+        options: {
+          socketClass: this._options.foglet.rps.options.socketClass,
+          profile: this._profile,
+          delta: this._options.foglet.rps.options.delta,
+          sample: 5,
+          partialViewSize: 5,
+          timeoutDescriptor: 30 * 1000,
+          timeout: this._options.foglet.rps.options.timeout,
+          periodicProfileExchange: 10 * 1000,
+          protocol: 'dequenpeda-protocol-son-overlay', // foglet running on the protocol foglet-example, defined for spray-wrtc
+          signaling: {
+            address: 'https://localhost:8000/',
+            room: 'dequenpeda-room-overlay' // room to join
           }
         }
-      ]
+      }
+      if(this._options.manualshuffle) {
+        options.foglet.rps.options.delta = MAX_SET_TIMEOUT
+      }
+      this._options.foglet.overlays =[son]
     }
     this._id = uniqid()
     this._options.foglet.id = this._id
@@ -114,14 +125,32 @@ module.exports = class Dequenpeda extends EventEmitter {
     this._queries = new Map()
     this._shuffleCount = 0
     this.on('connected', () => {
-      this._periodicExecutionInterval = setInterval(() => {
-        // waiting for the first connection to open and then execute
-        this._foglet.overlay().network.rps.once('open', () => {
-          this._periodicExecution()
-        })
-        //setTimeout(() => {this._periodicExecution()}, 5000)
-      }, this._options.foglet.rps.options.delta)
+      if(!this._options.manualshuffle) {
+        this._periodicExecutionInterval = setInterval(() => {
+          // waiting for the first connection to open and then execute
+          this._foglet.overlay().network.rps.once('open', () => {
+            console.lgo('A connection was opened, execute')
+            this._periodicExecution()
+          })
+          //setTimeout(() => {this._periodicExecution()}, 5000)
+        }, this._options.foglet.rps.options.delta)
+      }
     })
+    // set the listener for manual shuffle
+    if(this._options.manualshuffle) {
+      this.on('check-shuffle', () => {
+        if(this._queries.size > 0) {
+          const shuffle = true
+          this._queries.forEach(q => {
+            if(q._status !== 'executed') shuffle = false
+          })
+          if(shuffle) {
+            // console.log(`[${this._foglet.id}]Time to shuffle connections.`)
+            this._shuffle()
+          }
+        }
+      })
+    }
   }
 
   /**
@@ -151,6 +180,19 @@ module.exports = class Dequenpeda extends EventEmitter {
     }
   }
 
+  close () {
+    return new Promise((resolve, reject) => {
+      this._foglet.overlay().network.rps.disconnect()
+      if(this._options.activeSon) this._foglet.overlay('son').network.rps.disconnect()
+      if(this._options.storeWorker) this._store.close()
+      this.stopAll().then(() => {
+        resolve()
+      }).catch(e => {
+        reject(e)
+      })
+    })
+  }
+
   /**
    * Query the whole network with the specified query on each suffle
    * The query is executed on those events: 'loaded' 'updated' and 'end'
@@ -164,14 +206,6 @@ module.exports = class Dequenpeda extends EventEmitter {
       const query = new QueryClass(queryString, this, options)
       this._queries.set(query._id, query)
       this.emit('new-query', query._id)
-      query.execute('loaded').then(() => {
-        // noop
-      }).catch(e => {
-        console.log(e)
-      })
-      query.on('end', () => {
-        this._queries.delete(query._id)
-      })
       return query
     } catch (e) {
       console.log(e)
@@ -193,11 +227,18 @@ module.exports = class Dequenpeda extends EventEmitter {
    * @return {void}
    */
   stop (queryId) {
-    if (this._queries.has(queryId)) {
-      this._queries.get(queryId).stop().then(() => {
-        this._queries.delete(queryId)
-      })
-    }
+    return new Promise((resolve, reject) => {
+      if (this._queries.has(queryId)) {
+        this._queries.get(queryId)._stop().then(() => {
+          this._queries.delete(queryId)
+          resolve()
+        }).catch(e => {
+          reject(e)
+        })
+      } else {
+        reject(new Error('Query not found'))
+      }
+    })
   }
 
   /**
@@ -205,9 +246,23 @@ module.exports = class Dequenpeda extends EventEmitter {
    * @return {[type]} [description]
    */
   stopAll () {
-    this._queries.forEach(q => {
-      q.stop().then(() => {
-        this._queries.delete(q._id)
+    return new Promise((resolve, reject) => {
+      if (this._queries.size === 0) {
+        resolve()
+      }
+      const queries = this._queries.values()
+      const pending = [...queries].reduce((acc, q) => acc.then(() => {
+        return q._stop().then(() => {
+          this._queries.delete(q._id)
+          return Promise.resolve()
+        }).catch(e => {
+          return Promise.reject(e)
+        })
+      }), Promise.resolve())
+      pending.then(() => {
+        resolve()
+      }).catch(e => {
+        reject(e)
       })
     })
   }
@@ -280,6 +335,27 @@ module.exports = class Dequenpeda extends EventEmitter {
     this._foglet.sendBroadcast(message)
   }
 
+  _shuffle () {
+    // shuffle the rps and wait
+    // this._options.manualshufflewaitingtime
+    // console.log(`[${this._foglet.id}] rps shuffle.`)
+    this._foglet.overlay().network.rps._exchange()
+    // console.log(`[${this._foglet.id}] wait for a proper rps shuffle.`)
+    setTimeout(() => {
+      if(this._options.activeSon) {
+        // console.log(`[${this._foglet.id}] son shuffle.`)
+        this._foglet.overlay('son').network.rps._exchange()
+        // console.log(`[${this._foglet.id}] wait for a proper son shuffle.`)
+        setTimeout(() => {
+          this._periodicExecution()
+        }, this._options.manualshufflewaitingtime)
+      } else {
+        // execute after wait cause we only have the rps enabled
+        this._periodicExecution()
+      }
+    }, this._options.manualshufflewaitingtime)
+  }
+
   _handleUnicast (id, message) {
     if (message.type === 'ask-triples') {
       UnicastHandlers._handleAskTriples.call(this, id, message)
@@ -299,14 +375,14 @@ module.exports = class Dequenpeda extends EventEmitter {
 
   _periodicExecution () {
     this._shuffleCount++
-    this.emit('periodic-execution-begins')
     // console.log(`[client:${this._foglet._id}]`, 'Number of neighbours: ', this._foglet.getNeighbours().length)
     if(this._shuffleCount > this._options.shuffleCountBeforeStart) {
       // just assert to be sure that there is at least 1 peers in each overlay !!remove those 2 lines for a proper use!!
-      assert.notStrictEqual(this._foglet.getNeighbours().length, 0)
-      if(this._options.activeSon) assert.notStrictEqual(this._foglet.overlay('son').network.getNeighbours().length, 0)
-
+      // assert.notStrictEqual(this._foglet.getNeighbours().length, 0)
+      // if(this._options.activeSon) assert.notStrictEqual(this._foglet.overlay('son').network.getNeighbours().length, 0)
       if (this._queries.size > 0) {
+        console.log(`[${this._foglet.id}] periodic execution: `, this._shuffleCount, this._foglet.getNeighbours().length, this._foglet.overlay('son').network.getNeighbours().length)
+        this.emit('periodic-execution-begins')
         let pendingQueries = []
         this._queries.forEach(q => {
           const qpending = q.execute('updated')
@@ -323,6 +399,7 @@ module.exports = class Dequenpeda extends EventEmitter {
       }
     } else {
       console.log('Waiting before starting ... [%f/%f]', this._shuffleCount, this._options.shuffleCountBeforeStart)
+      this._shuffle()
     }
   }
 

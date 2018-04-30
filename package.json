@@ -6,7 +6,8 @@
   "scripts": {
     "test": "node ./tests/loaders/test.js",
     "clean": "rm -rf ./tests/results/",
-    "start": "node ./tests/loaders/all.js",
+    "start-auto": "node ./tests/loaders/all-autoshuffle.js",
+    "start-manual": "node ./tests/loaders/all-manualshuffle.js",
     "build": "foglet-scripts build",
     "min": "webpack --config ./foglet-webpack-config-min.js --mode production",
     "dev": "webpack --config ./foglet-webpack-config.js --mode development --watch"
@@ -46,6 +47,7 @@
     "lodash.chunk": "^4.2.0",
     "lodash.compact": "^3.0.1",
     "lodash.merge": "^4.6.1",
+    "lodash.min": "^4.0.1",
     "lodash.random": "^3.2.0",
     "lodash.shuffle": "^4.2.0",
     "n3": "^0.11.3",

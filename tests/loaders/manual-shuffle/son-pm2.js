@@ -1,9 +1,9 @@
 const shell = require('shelljs')
-const config = require('./config')
+const config = require('../config')
 
 const round = config.rounds
 const commands = [
-  "node --max_old_space_size=100000 ./tests/query-normal-test-wo-webrtc --config ./tests/configs/full-son-half.js",
+  "node --max_old_space_size=100000 ./tests/query-normal-test-wo-webrtc --manualshuffle --config ./tests/configs/full-son.js",
 ]
 
 let rounds = []
@@ -11,8 +11,8 @@ for(let i = 0; i< round; i++) {
   rounds.push(i)
 }
 
-rounds.reduce((acc, r) => acc.then(() => {
-  return exec(commands[0])
+rounds.reduce((acc, r, ind) => acc.then(() => {
+  return exec(commands[0] + " --name round-"+ind)
 }), Promise.resolve()).then(() => {
   console.log('RPS+SON finished all rounds.')
 })
