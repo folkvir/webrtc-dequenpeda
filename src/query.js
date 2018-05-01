@@ -53,6 +53,10 @@ module.exports = class Query extends EventEmitter {
     return this._round
   }
 
+  init () {
+    return this._execute('init')
+  }
+
   stop () {
     this._parent.close(this._id)
   }
@@ -76,6 +80,7 @@ module.exports = class Query extends EventEmitter {
       return this._askTriples().then(() => {
         // console.log('Asking tripels finished, execute the query...')
         return this._execute(eventName).then(() => {
+          this._round++
           return Promise.resolve()
         }).catch(e => {
           console.log(e)
@@ -90,6 +95,7 @@ module.exports = class Query extends EventEmitter {
     } else {
       // execute only on my data
       return this._execute(eventName).then(() => {
+        this._round++
         debug('Query executed')
         return Promise.resolve()
       }).catch(e => {
@@ -128,7 +134,6 @@ module.exports = class Query extends EventEmitter {
     const res = await this._parent._store.query(rewritedQuery)
     debug(`[client:${this._parent._foglet.id}] Number remote peers seen:`, this._sources.size)
     this._lastResults = res
-    this._round++
     this._status = 'executed'
     // check shuffle on parent in order to shuffle if all queries are executed.
     if(this._parent._options.manualshuffle) this._parent.emit('check-shuffle')

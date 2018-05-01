@@ -22,6 +22,7 @@ const MAX_SET_TIMEOUT = 2147483647
 let DEFAULT_OPTIONS = {
   storeWorker: true,
   manualshuffle: false,
+  manualshuffleperiodicdelta: 30 * 1000,
   manualshufflewaitingtime: 5 * 1000,
   activeSon: false,
   defaultGraph: 'http://mypersonaldata.com/',
@@ -138,6 +139,12 @@ module.exports = class Dequenpeda extends EventEmitter {
     })
     // set the listener for manual shuffle
     if(this._options.manualshuffle) {
+      this._periodicShuffle = setInterval(() => {
+        if(this._queries.size === 0) {
+          console.log('Periodic shuffling becasue we have no queries.')
+          this._shuffle()
+        }
+      }, this._options.manualshuffleperiodicdelta)
       this.on('check-shuffle', () => {
         if(this._queries.size > 0) {
           const shuffle = true
@@ -145,7 +152,7 @@ module.exports = class Dequenpeda extends EventEmitter {
             if(q._status !== 'executed') shuffle = false
           })
           if(shuffle) {
-            // console.log(`[${this._foglet.id}]Time to shuffle connections.`)
+            console.log(`[${this._foglet.id}]Time to shuffle connections.`)
             this._shuffle()
           }
         }
@@ -381,7 +388,7 @@ module.exports = class Dequenpeda extends EventEmitter {
       // assert.notStrictEqual(this._foglet.getNeighbours().length, 0)
       // if(this._options.activeSon) assert.notStrictEqual(this._foglet.overlay('son').network.getNeighbours().length, 0)
       if (this._queries.size > 0) {
-        console.log(`[${this._foglet.id}] periodic execution: `, this._shuffleCount, this._foglet.getNeighbours().length, this._foglet.overlay('son').network.getNeighbours().length)
+        // console.log(`[${this._foglet.id}] periodic execution: `, this._shuffleCount, this._foglet.getNeighbours().length, this._foglet.overlay('son').network.getNeighbours().length)
         this.emit('periodic-execution-begins')
         let pendingQueries = []
         this._queries.forEach(q => {
