@@ -43,7 +43,7 @@ loadQueries(config).then((queries) => {
     })
     console.log('Creating the new bucket...')
     console.log(newarray.length)
-    fs.writeFileSync(`full-${newsize}-queries.json`, JSON.stringify(allinone, null, '\t'), 'utf8')
+    fs.writeFileSync(`full-${newsize}-queries.json`, JSON.stringify(newarray, null, '\t'), 'utf8')
     before.push(newarray)
   }
 })
