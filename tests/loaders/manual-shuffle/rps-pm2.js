@@ -12,7 +12,7 @@ for(let i = 0; i< round; i++) {
 }
 
 rounds.reduce((acc, r, ind) => acc.then(() => {
-  return exec(commands[0] + " --name round-"+ind)
+  return exec(commands[0] + " --name manual-round-"+ind)
 }), Promise.resolve()).then(() => {
   console.log('RPS finished all rounds.')
 })
