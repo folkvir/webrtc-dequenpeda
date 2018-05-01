@@ -130,7 +130,6 @@ module.exports = class Dequenpeda extends EventEmitter {
         this._periodicExecutionInterval = setInterval(() => {
           // waiting for the first connection to open and then execute
           this._foglet.overlay().network.rps.once('open', () => {
-            console.lgo('A connection was opened, execute')
             this._periodicExecution()
           })
           //setTimeout(() => {this._periodicExecution()}, 5000)
