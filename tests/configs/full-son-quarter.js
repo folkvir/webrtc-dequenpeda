@@ -2,7 +2,7 @@ const config = {
   name: "full-son-quarter",
   queries: require('./full-49-queries.json'), // 49
   clients: 196,
-  round: 200,
+  round: 100,
   datasets: [
     { name: 'diseasome', data: "../data/diseasome/fragments/", queries: "../data/diseasome/queries/queries.json", results: "../data/diseasome/results/", withoutQueries: ['q91.json', 'q92.json', 'q61.json', 'q53.json']},
     { name: 'linkedmdb', data: "../data/linkedmdb/fragments/", queries: "../data/linkedmdb/queries/queries.json", results: "../data/linkedmdb/results/", withoutQueries: []}
@@ -22,7 +22,7 @@ const config = {
           a:1,
           b:0,
           timeout: 30 * 1000,
-          delta: 5 * 60 * 1000,
+          delta: 10 * 60 * 1000,
         }
       }
     }
