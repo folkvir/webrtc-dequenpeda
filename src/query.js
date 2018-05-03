@@ -40,13 +40,12 @@ module.exports = class Query extends EventEmitter {
 
     //console.log(this._triples, this._properTriples)
     this.on('receive', (message) => {
-      debug(`[client:${this._parent._foglet._id}] Receive: data from: ${message.owner.fogletId}`)
       this.emit(message.jobId, message)
     })
     this._timeout = undefined
     this._lastResults = undefined
-    this._round = 0
     this._status = 'init'
+    this._round = 0
   }
 
   get round() {
@@ -68,20 +67,25 @@ module.exports = class Query extends EventEmitter {
   async execute (eventName) {
     this._status = 'pending'
     if(eventName === 'end') {
-      this.emit(eventName, this._lastResults)
+      this.emit(eventName, this._lastResults, this._round, this._round)
       this._status = 'end'
       return Promise.resolve(this._lastResults)
     }
     this._createTimeout()
+    const round = Object.assign({}, { round: this._round, start: this._round})
     // debug(`[client:${this._parent._foglet.id}] 1-Executing the query ${this._id}...`)
     const neighbors = this._parent._foglet.getNeighbours()
     if (neighbors.length > 0) {
       // execute after receiving triples from neighbors
-      return this._askTriples().then(() => {
+      // STEP 1 and 2 and 3
+      return this._askTriples(round.round).then(() => {
         // console.log('Asking tripels finished, execute the query...')
-        return this._execute(eventName).then(() => {
+        // STEP 4 and 5
+        return this._execute(eventName, round.round).then((results) => {
+          round.end = this._round
+          this.emit(eventName, results, round.start, round.end)
           this._round++
-          return Promise.resolve()
+          return Promise.resolve(results)
         }).catch(e => {
           console.log(e)
           this._status = 'executed'
@@ -93,11 +97,12 @@ module.exports = class Query extends EventEmitter {
         return Promise.reject(e)
       })
     } else {
-      // execute only on my data
-      return this._execute(eventName).then(() => {
+      // // STEP 4 and 5 only
+      return this._execute(eventName, round.round).then((results) => {
+        round.end = this._round
+        this.emit(eventName, results, round.start, round.end)
         this._round++
-        debug('Query executed')
-        return Promise.resolve()
+        return Promise.resolve(results)
       }).catch(e => {
         console.log(e)
         this._status = 'executed'
@@ -106,44 +111,30 @@ module.exports = class Query extends EventEmitter {
     }
   }
 
-  async _execute (eventName) {
+  async _execute (eventName, round = this._round) {
+    this.emit('starting', eventName, round)
     this._status = 'pending'
     const pattern = {
       subject: '?s',
       predicate: '?p',
       object: '?o'
     }
-    // retreive all graph before rewriting the query
     const defaultGraphId = this._parent._options.defaultGraph
-    // const namedId = []
-    // for (let triple of this._mappings) {
-    //   const value = triple[1]
-    //   value.sources.forEach(source => {
-    //     namedId.push(`${this._getGraphId(value.id, source.fogletId)}`)
-    //   })
-    // }
     const plan = this._parsedQuery
-
     plan.from = { default: [ defaultGraphId ], named: [] }
-    // debug(`[client:${this._parent._foglet.id}] 2-Rewriting the query ${this._id}...`)
     const generator = new SparqlGenerator()
     const rewritedQuery = generator.stringify(plan)
-    debug(`[client:${this._parent._foglet.id}] Executing the query: `, rewritedQuery)
-    //console.log(this._query, rewritedQuery)
     this._rewritedQuery = rewritedQuery
     const res = await this._parent._store.query(rewritedQuery)
-    debug(`[client:${this._parent._foglet.id}] Number remote peers seen:`, this._sources.size)
     this._lastResults = res
     this._status = 'executed'
-    // check shuffle on parent in order to shuffle if all queries are executed.
     if(this._parent._options.manualshuffle) this._parent.emit('check-shuffle')
-    this.emit(eventName, res)
-    return Promise.resolve()
+    return Promise.resolve(res)
   }
 
-  _askTriples () {
+  _askTriples (round) {
     return new Promise((resolve, reject) => {
-      const neighbors = this._parent._foglet.getNeighbours(Infinity)
+      const neighbors = this._parent._foglet.getNeighbours()
       let neighborsSon = []
       let max = neighbors.length
       if(this._parent._options.activeSon) {
@@ -174,8 +165,8 @@ module.exports = class Query extends EventEmitter {
       try {
         if(this._parent._options.activeSon) {
           neighborsSon.forEach(id => {
-            if(this._parent._foglet.overlay('son').network.getNeighbours(Infinity).includes(id)) {
-              this._askTriplesBis(id, true).then((resp) => {
+            if(this._parent._foglet.overlay('son').network.getNeighbours().includes(id)) {
+              this._askTriplesBis(id, true, round).then((resp) => {
                 done(resp)
               }).catch(e => {
                 console.log(e)
@@ -187,8 +178,8 @@ module.exports = class Query extends EventEmitter {
           })
         }
         neighbors.forEach(id => {
-          if(this._parent._foglet.getNeighbours(Infinity).includes(id)) {
-            this._askTriplesBis(id, false).then((resp) => {
+          if(this._parent._foglet.getNeighbours().includes(id)) {
+            this._askTriplesBis(id, false, round).then((resp) => {
               done(resp)
             }).catch(e => {
               console.log(e)
@@ -205,13 +196,12 @@ module.exports = class Query extends EventEmitter {
     })
   }
 
-  _askTriplesBis(id, overlay = false) {
+  _askTriplesBis(id, overlay = false, round = this._parent._shuffleCount) {
     return new Promise((resolve, reject) => {
       const jobId = uniqid()
-      debug(id, this._parent._foglet.inViewID)
       try {
         const msg = {
-          shuffleBegin: this._parent._shuffleCount,
+          start: round,
           requester: {
             overlay,
             fogletId: this._parent._foglet.id,
@@ -275,7 +265,6 @@ module.exports = class Query extends EventEmitter {
         let owner = resp.owner
         if(!this._sources.has(owner.fogletId)) {
           this._sources.set(owner.fogletId, owner)
-          debug(`Adding a new source: `, owner.fogletId)
         }
         let data = resp.triples
         return data.reduce((accData, elem) => accData.then(() => {
@@ -292,7 +281,7 @@ module.exports = class Query extends EventEmitter {
                 string += elem.data[i].subject + " " + elem.data[i].predicate + " " + elem.data[i].object + " . \n"
               }
               this._parent._store.loadDataAsTurtle(string, this._parent._options.defaultGraph).then(() => {
-                if(resp.shuffleBegin < this._parent._shuffleCount) console.log('another shuffle arrive before we terminate the previous execution....'+resp.shuffleBegin+'/'+this._parent._shuffleCount)
+                if(resp.start < this._round) console.log('another shuffle arrive before we terminate the previous execution....'+resp.start+'/'+this._round)
                 // console.log('Response computed for: ', elem.triple)
                 resolveData()
               }).catch(e => {
@@ -305,7 +294,6 @@ module.exports = class Query extends EventEmitter {
           })
         }), Promise.resolve())
       }), Promise.resolve()).then(() => {
-        // debug('Sequential processing of received triples: finished')
         resolve()
       }).catch(e => {
         reject(e)
@@ -408,9 +396,7 @@ module.exports = class Query extends EventEmitter {
 
   _createTimeout() {
     if(!this._timeout) {
-      debug(`[client:${this._parent._foglet.id}][Query:${this._id}] Timeout creation: ${this._options.timeout}`)
       this._timeout = setTimeout(() => {
-        debug(`[client:${this._parent._foglet.id}][Query:${this._id}] Query has TIMEDOUT: ${this._options.timeout}`)
         this.stop()
       }, this._options.timeout)
     }

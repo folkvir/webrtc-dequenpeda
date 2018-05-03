@@ -2,7 +2,7 @@ const config = {
   name: 'full-half',
   queries: require('./full-98-queries.json'), // 98
   clients: 196,
-  round: 200,
+  round: 100,
   datasets: [
     { name: 'diseasome', data: "../data/diseasome/fragments/", queries: "../data/diseasome/queries/queries.json", results: "../data/diseasome/results/", withoutQueries: ['q91.json', 'q92.json', 'q61.json', 'q53.json']},
     { name: 'linkedmdb', data: "../data/linkedmdb/fragments/", queries: "../data/linkedmdb/queries/queries.json", results: "../data/linkedmdb/results/", withoutQueries: []}
@@ -21,7 +21,7 @@ const config = {
       rps:{
         options: {
           a: 1,
-          b: 5,
+          b: 4,
           timeout: 30 * 1000,
           delta: 5 * 60 * 1000,
         }

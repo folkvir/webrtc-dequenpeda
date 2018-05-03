@@ -51,6 +51,7 @@
     "lodash.random": "^3.2.0",
     "lodash.shuffle": "^4.2.0",
     "n3": "^0.11.3",
+    "object-sizeof": "^1.2.0",
     "p2p-graph": "^1.2.2",
     "rdfstore": "file:./src/rdfstore-js",
     "serialize-javascript": "^1.5.0",

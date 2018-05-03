@@ -20,7 +20,7 @@ const config = {
       rps:{
         options: {
           a: 1,
-          b: 5,
+          b: 4,
           timeout: 30 * 1000,
           delta: 5 * 60 * 1000,
         }

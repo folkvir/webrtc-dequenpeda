@@ -10,6 +10,8 @@ const uuid = require('uuid/v4')
 const lmerge = require('lodash.merge')
 const lrandom = require('lodash.random')
 const lmin = require('lodash.min')
+const sizeof = require('object-sizeof')
+const debug = require('debug')('xp')
 
 commander
   .option('-c, --clients <clients>', 'Override: Number of clients', (e) => parseInt(e))
@@ -32,7 +34,7 @@ console.log('Time: ', time)
 
 const config = require(path.resolve(commander.config))
 
-let name = config.name+'-'+time+uuid()
+let name = config.name+'-'+time+uniqid()
 if(commander.timeout) config.timeout = parseFloat(commander.timeout)
 if(commander.clients) config.clients = commander.clients
 if(commander.manualshuffle)
@@ -56,16 +58,19 @@ try {
 }
 
 
-const header = ['round', 'completeness', 'clientmessage', 'rpssize', 'sonsize', 'receiveresults', 'maxresults']
+
 
 let globalCompleteness = 0
 let globalMessage = 0, globalMessagetotal = 0
 let globalRound = 0
 const activeQueries = new Map()
 const globalResults = []
+const globalResultsQuery = []
 for(let i = 0; i<config.round; i++) {
   globalResults.push([])
+  globalResultsQuery.push([])
 }
+
 console.log('Global results: ', globalResults)
 let receiveAnswers = 0
 let clientsLoaded = undefined
@@ -99,10 +104,14 @@ createClients(config.clients).then((clients) => {
       affectQueries(clients, queries, clients.length === 1).then((res) => {
         executeQueries(clients, res).then(() => {
           console.log('All queries finished.')
-          clients.reduce((cacc, c)  => cacc.then(() => {
-            return c.close()
-          }), Promise.resolve()).then(() => {
-            process.exit(0)
+          printGlobalResults().then(() => {
+            clients.reduce((cacc, c)  => cacc.then(() => {
+              return c.close()
+            }), Promise.resolve()).then(() => {
+              process.exit(0)
+            })
+          }).catch(e => {
+            console.error(e)
           })
         }).catch(e => {
           console.error(e)
@@ -149,15 +158,31 @@ function createClients(number) {
 function connectClients(clients) {
   console.log('Connecting clients...', clients.length)
   return new Promise((resolve, reject) => {
+    let firstClient = clients[0]
     let connectedClients = [clients[0]]
     if(clients.length < 2) reject(new Error('need at least 2 client'))
     clients.reduce((accClient, client) => accClient.then(() => {
-      return wait(200).then(() => {
-          const rn = lrandom(connectedClients.length-1)
-          const rnclient = connectedClients[rn]
-          console.log('Connecting client: %s to client %f: %s', client._foglet.id, rn, rnclient._foglet._id)
+      if(clients[0]._foglet.id !== client._foglet.id) {
+        return wait(500).then(() => {
+          // choose the peer connected to the closest average pv size
+          // find the avreage
+          const average = connectedClients.reduce((acc, cur) => acc+[...cur._foglet.overlay().network.rps.partialView.values()].reduce((acc, cur) => acc+cur.length, 0), 0) / connectedClients.length
+          // find the closest
+          const rn = connectedClients.sort( (a, b) => {
+            const pva = [...a._foglet.overlay().network.rps.partialView.values()].reduce((acc, cur) => acc+cur.length, 0)
+            const pvb = [...b._foglet.overlay().network.rps.partialView.values()].reduce((acc, cur) => acc+cur.length, 0)
+            return Math.abs(average - pva) - Math.abs(average - pvb)
+          })
+          //debug(average, rn.map((e) => [...e._foglet.overlay().network.rps.partialView.values()].reduce((acc, cur) => acc+cur.length, 0)))
+          const rnclient = rn[0] // connectedClients[rn]
+          console.log('Connecting client: %s to client: %s', client._foglet.id, rnclient._foglet.id)
           if(config.options.activeSon) {
             return client.connection(rnclient, 'son').then(() => {
+              rn[rn.length-1]._foglet.overlay().network.rps._exchange()
+              const pv = pvov = clients.reduce((acc, cur) => {
+                return acc + [...cur._foglet.overlay().network.rps.partialView].reduce((a, c) => a+c.length, 0)
+              }, 0)
+              console.log('Arcs: ', pv)
               connectedClients.push(client)
               connectedClients = shuffle(connectedClients)
               return Promise.resolve()
@@ -167,6 +192,11 @@ function connectClients(clients) {
           } else {
             // rps
             return client.connection(rnclient).then(() => {
+              rn[rn.length-1]._foglet.overlay().network.rps._exchange()
+              const pv = pvov = clients.reduce((acc, cur) => {
+                return acc + [...cur._foglet.overlay().network.rps.partialView].reduce((a, c) => a+c.length, 0)
+              }, 0)
+              console.log('Arcs: ', pv)
               connectedClients.push(client)
               connectedClients = shuffle(connectedClients)
               return Promise.resolve()
@@ -174,9 +204,12 @@ function connectClients(clients) {
               return Promise.reject(e)
             })
           }
-      }).catch(e => {
-        return Promise.reject(e)
-      })
+        }).catch(e => {
+          return Promise.reject(e)
+        })
+      } else {
+        return Promise.resolve()
+      }
     }), Promise.resolve()).then(() => {
       resolve(clients)
     }).catch(e => {
@@ -214,8 +247,6 @@ function affectQueries(clients, queries, allqueries) {
     if(allqueries) {
       for(let i = 0; i < queries.length; i++) {
         activeQueries.set(i, {
-          completeness: 0,
-          resultsObtained: 0,
           maxresults: 0,
           client: clients[i],
           query: {
@@ -237,8 +268,6 @@ function affectQueries(clients, queries, allqueries) {
       if(queries.length >= clients.length) {
         for(let i = 0; i<clients.length; i++) {
           activeQueries.set(i, {
-            completeness: 0,
-            resultsObtained: 0,
             maxresults: 0,
             client: clients[i],
             query: {
@@ -262,8 +291,6 @@ function affectQueries(clients, queries, allqueries) {
       } else {
         for(let i = 0; i<clients.length; i++) {
           activeQueries.set(i, {
-            completeness: 0,
-            resultsObtained: 0,
             maxresults: 0,
             client: clients[i],
             query: {
@@ -295,16 +322,11 @@ function affectOneQuery(query, client, ind, numberOfQueries, clients) {
     const dir = path.resolve(`${destination}/client-${client._foglet.id}/`)
     const resultName = path.resolve(`${dir}/completeness.csv`)
     if (!fs.existsSync(dir)) shell.mkdir('-p', dir)
-    activeQueries.get(ind).completeness = 0
-    activeQueries.get(ind).resultsObtained = 0
     activeQueries.get(ind).maxresults = query.card
     activeQueries.get(ind).client = client
     activeQueries.get(ind).query = query
-    activeQueries.get(ind).round = 0
     console.log('Affecting: %s to client %f', query.filename, ind)
     console.log('Output will be in: ', resultName)
-    console.log('Number of actives queries: ', getActivesQueries().length)
-    append(resultName, header.join(',')+'\n')
     resolve({
       client: client,
       q: client.query(query.query, 'normal', {
@@ -320,27 +342,117 @@ function affectOneQuery(query, client, ind, numberOfQueries, clients) {
 
 function executeQueries(clients, queries) {
   return new Promise((resolve, reject) => {
+    let finished = 0
     queries.forEach(query => {
+      const client = query.client
       const q = query.q
       const ind = query.index
-      q.on('updated', (result) => {
-        const completeness = result.length / query.query.card * 100
-        activeQueries.get(ind).completeness = completeness
-        activeQueries.get(ind).resultsObtained = result.length
-        activeQueries.get(ind).round = q.round
-        if(q.round >= config.round) {
-          q.stop()
+      q.on('starting', (eventName, round) => {
+        //console.log(`[${query.query.filename}][${client._foglet.id}] starting to execute the query for round: ${round} for event: ${eventName}`)
+      })
+      q.on('updated', (result, roundStart, roundEnd) => {
+        let completeness = 0
+        let timeout = false
+        let resultsObtained = 0
+        if(roundStart === roundEnd) {
+          //console.log('roundStart===roundEnd')
+          completeness = result.length / query.query.card * 100
+          resultsObtained = result.length
         } else {
-          computeGlobalCompleteness(queries.length, clients, q._parent, q.round, query.query, completeness, query.resultName, query.dir, ind).then(() => {
-            // noop
-          }).catch(e => {
-            console.error(e)
-          })
+          timeout = true
+          // considered as query timeout cause the execution was not terminated into 1 round
+          if(roundStart <= 0) {
+            //debug('RoundStrart === 0')
+            // default value
+          } else if( roundStart > 0 ) {
+            //debug('RoundStrart > 0')
+            function findEntry(r) {
+              if(r === 0) {
+                return undefined
+              } else {
+                const entry = globalResultsQuery[r].find((e) => {
+                  return activeQueries.get(e.clientind).client._foglet.id === client._foglet.id
+                })
+                if(entry) {
+                  return entry
+                } else {
+                  return findEntry(r-1)
+                }
+              }
+            }
+            const r = roundStart - 1
+            const entry = findEntry(roundStart - 1)
+            if(!entry) {
+              //debug('entry is undefined')
+              // default vlaue
+            } else {
+              //debug('entry was found')
+              completeness = entry.completeness
+              resultsObtained = entry.resultsObtained
+            }
+          }
         }
+        const topush = {
+          dir: query.dir,
+          message: client._statistics.message,
+          name: query.query.filename,
+          roundStart,
+          completeness,
+          clientind: ind,
+          timeout,
+          card: query.query.card,
+          obtained: resultsObtained,
+          resultName: query.resultName
+        }
+        if(roundEnd < config.round - 1) {
+          if(!globalResults[roundEnd].includes(client._foglet.id)) {
+            globalResults[roundEnd].push(client._foglet.id)
+            // if all results of the round i received, print a global message and save it to global-compl.csv
+            if(timeout) {
+              globalResultsQuery[roundStart].push(topush)
+            } else {
+              globalResultsQuery[roundEnd].push(topush)
+            }
 
+            if(roundEnd === 0 || roundEnd === config.round-1 || roundEnd===Math.floor(config.round/2)) {
+              writeNeighbours(clients, roundEnd, query.dir).catch(e => {
+                console.log(e)
+              })
+            }
+
+            const gs = sizeof(globalResultsQuery)
+            console.log(`[${query.query.filename}][${client._foglet.id}] Receive results for round: (start, end) = (${roundStart},${roundEnd}), [${globalResults[roundEnd].length}/${queries.length}], Global size: ${gs}`)
+          } else {
+            console.log(`[${query.query.filename}][${client._foglet.id}] We receive a second time a result for this run. NOT POSSIBLE: round:(start, end) = (${roundStart},${roundEnd}) `)
+          }
+        } else {
+          if(!globalResults[roundEnd].includes(client._foglet.id)) {
+            globalResults[roundEnd].push(client._foglet.id)
+            // if all results of the round i received, print a global message and save it to global-compl.csv
+            // append local result
+            if(timeout) {
+              globalResultsQuery[roundStart].push(topush)
+            } else {
+              globalResultsQuery[roundEnd].push(topush)
+            }
+
+            if(roundEnd === 0 || roundEnd === config.round-1 || roundEnd===Math.floor(config.round/2)) {
+              writeNeighbours(clients, roundEnd, query.dir).catch(e => {
+                console.log(e)
+              })
+            }
+
+            const gs = sizeof(globalResultsQuery)
+            console.log(`[${query.query.filename}][${client._foglet.id}] Receive results for round: (start, end) = (${roundStart},${roundEnd}), [${globalResults[roundEnd].length}/${queries.length}], Global size: ${gs}`)
+          } else {
+            console.log(`[${query.query.filename}][${client._foglet.id}] We receive a second time a result for this run. NOT POSSIBLE: round:(start, end) = (${roundStart},${roundEnd}) `)
+          }
+          q.stop()
+        }
       })
       q.on('end', (result) => {
         console.log('Query %s finished', query.query.filename)
+        finished++
         done()
       })
       q.on('error',(err) => {
@@ -348,22 +460,28 @@ function executeQueries(clients, queries) {
       })
     })
 
-    let finished = 0
+    // let check = setInterval(() => {
+    //   globalResultsQuery.forEach(f => {
+    //     console.log(f.length, JSON.stringify(f.map(e=>e.name).sort()))
+    //   })
+    // }, 5000)
+
     function done() {
-      finished++
-      if(finished === queries.length) resolve()
+      if((finished === queries.length) ) {
+        resolve()
+      }
     }
     append(path.resolve(destination+'/global-completeness.csv'), [
       'round',
       'globalcompleteness',
+      'globalcompletenesscompleted',
+      'globalcompletenessincresults',
       'messages',
-      'egdes-RPS',
-      'edges-SON',
-      'allmessages',
       'completeQueries',
       'queriesNumber',
       'obtainedresults',
-      'wantedresults'
+      'wantedresults',
+      'timedout'
     ].join(',')+'\n').then(() => {
       queries.forEach(query => {
         // start the execution for the first time
@@ -384,115 +502,146 @@ function getActivesQueries() {
   })
 }
 
-function computeGlobalCompleteness(numberOfQueries, clients, client, round, query, completeness, resultName, dir, ind) {
+function printGlobalResults() {
   return new Promise((resolve, reject) => {
-    try {
-      // append local result
-      append(resultName, [
-        round,
-        completeness,
-        client._statistics.message,
-        client._foglet.getNeighbours().length,
-        (config.options.activeSon)?client._foglet.overlay('son').network.getNeighbours().length:0,
-        activeQueries.get(ind).resultsObtained,
-        query.card
-      ].join(',')+'\n').then(() => {
-        // write the network state for the round "round" of the client "client"
-        writeNeighbours(clients, globalRound, dir).then(() => {
-          globalResults[round].push('done')
-          receiveAnswers++
-          // if all results of the round i received, print a global message and save it to global-compl.csv
-          if(globalResults[round].length === numberOfQueries) {
-            const realactivequeries = getActivesQueries()
-            console.log('Number of actives queries: ', realactivequeries.length)
-            // write the global table when a round is finished
-            writeNeighbours(clients, globalRound).then(() => {
-              // print to the screen the state of the network (RPS + (?SON))
-              printEdges(clients, globalRound)
-              globalCompleteness = realactivequeries.reduce((acc, cur) => acc+cur.completeness, 0) / numberOfQueries
+    for(let i = 0; i<globalResultsQuery.length; i++) {
+      console.log('Round:%f :=: #r=%f', i, globalResultsQuery[i].length)
+      const header = ['round', 'completeness', 'timeout', 'receiveresults', 'maxresults', 'name']
+      fs.appendFileSync(globalResultsQuery[i][0].resultName, header.join(',')+'\n')
+      for(let j = 0; j<globalResultsQuery[i].length; j++) {
+        const val = globalResultsQuery[i][j]
+        const data = [
+          val.roundStart,
+          val.completeness,
+          val.timeout,
+          val.obtained,
+          val.card,
+          val.message,
+        ]
+        fs.appendFileSync(val.resultName, data.join(',')+'\n')
+      }
+      const globalCompleteness = globalResultsQuery[i].reduce((acc, cur) => acc+cur.completeness, 0) / globalResultsQuery[i].length
+      const completed = globalResultsQuery[i].filter((cur) => cur.completeness === 100).length
+      const globalCompletenessCompleted = completed / globalResultsQuery[i].length * 100
 
-              // application's messages
-              const currentMessage = clients.reduce((acc, cur) => acc+cur._statistics.message, 0)
-              let m = 0
-              if(globalMessage === 0) {
-                globalMessage = currentMessage
-              }
-              m = currentMessage - globalMessage
-              globalMessage = currentMessage
-
-              // network's messages
-              const currentMessagetotal = AbstractSimplePeer.manager.stats.message
-              let mtotal = 0
-              if(globalMessagetotal === 0) {
-                globalMessagetotal = currentMessagetotal
-              }
-              mtotal = currentMessagetotal - globalMessagetotal
-              globalMessagetotal = currentMessagetotal
-
-              // calcul of the number of SON edges and RPS edges in the network
-              let overlayEdges = 0
-              if(config.options.activeSon) {
-                overlayEdges = clients.reduce((acc, cur) => acc+cur._foglet.overlay('son').network.getNeighbours().length, 0)
-              }
-              const edges = clients.reduce((acc, cur) => acc+cur._foglet.getNeighbours().length, 0)
-
-              // calcule of the number of complete queries
-              const completeQueries = [...activeQueries.values()].reduce((acc, cur) => {
-                if(cur.completeness === 100) return acc+1
-                return acc
-              }, 0)
-
-              const maxResults = realactivequeries.reduce((acc, cur) => acc+cur.maxresults, 0)
-              const obtained = realactivequeries.reduce((acc, cur) => acc+cur.resultsObtained, 0)
-
-              // save results
-              const towrite =[
-                globalRound,
-                globalCompleteness,
-                m,
-                edges,
-                overlayEdges,
-                mtotal,
-                completeQueries,
-                realactivequeries.length,
-                obtained,
-                maxResults
-              ]
-              // append the result to the global results file.
-              // But this a state of the network when we receive the last result for the round i
-              // If you want a complete state when the round i is finished for peer i,
-              // see its specific completess file and network state files
-              append(path.resolve(destination+'/global-completeness.csv'), towrite.join(',')+'\n').then(() => {
-                console.log('[%f] Global completeness: %f % (%f/%f)', globalRound, globalCompleteness, completeQueries, numberOfQueries)
-                globalRound++
-                resolve()
-              }).catch(e => {
-                console.log(e)
-              })
-            }).catch(e => {
-              console.log(e)
-            })
-          } else {
-            resolve()
-          }
-        })
-      }).catch(e => {
-        console.log(e)
-      })
-    } catch (e) {
-      reject(e)
+      const completeQueries = globalResultsQuery[i].reduce((acc, cur) => {
+        if(cur.completeness === 100) return acc+1
+        return acc
+      }, 0)
+      const messages = globalResultsQuery[i].reduce((acc, cur) => acc+cur.message, 0)
+      const maxResults = globalResultsQuery[i].reduce((acc, cur) => acc+cur.card, 0)
+      const obtained = globalResultsQuery[i].reduce((acc, cur) => acc+cur.obtained, 0)
+      const completenessInresults = obtained / maxResults * 100
+      const timedout = globalResultsQuery[i].reduce((acc, cur) => acc+(cur.timeout)?1:0, 0)
+      fs.appendFileSync(path.resolve(destination+'/global-completeness.csv'), [
+        i,
+        globalCompleteness,
+        globalCompletenessCompleted,
+        completenessInresults,
+        messages,
+        completeQueries,
+        globalResultsQuery[i].length,
+        obtained,
+        maxResults,
+        timedout
+      ].join(',')+'\n')
     }
+    resolve()
+  })
+}
+
+function computeGlobalCompletenessBis(numberOfQueries, clients, client, round, query, completeness, resultName, dir, ind) {
+  return new Promise((resolve, reject) => {
+    const realactivequeries = getActivesQueries()
+    console.log('Number of actives queries: ', realactivequeries.length)
+    // print to the screen the state of the network (RPS + (?SON))
+    printEdges(clients, globalRound).then(() => {
+      // noop
+    }).catch(e => {
+      console.error(e)
+    })
+    globalCompleteness = realactivequeries.reduce((acc, cur) => acc+cur.completeness, 0) / numberOfQueries
+    const completed = realactivequeries.filter((cur) => cur.completeness === 100).length
+    globalCompletenessCompleted = completed / numberOfQueries * 100
+
+    // application's messages
+    const currentMessage = clients.reduce((acc, cur) => acc+cur._statistics.message, 0)
+    let m = 0
+    if(globalMessage === 0) {
+      globalMessage = currentMessage
+    }
+    m = currentMessage - globalMessage
+    globalMessage = currentMessage
+
+    // network's messages
+    const currentMessagetotal = AbstractSimplePeer.manager.stats.message
+    let mtotal = 0
+    if(globalMessagetotal === 0) {
+      globalMessagetotal = currentMessagetotal
+    }
+    mtotal = currentMessagetotal - globalMessagetotal
+    globalMessagetotal = currentMessagetotal
+
+    // calcul of the number of SON edges and RPS edges in the network
+    let overlayEdges = 0
+    if(config.options.activeSon) {
+      overlayEdges = clients.reduce((acc, cur) => acc+cur._foglet.overlay('son').network.getNeighbours().length, 0)
+    }
+    const edges = clients.reduce((acc, cur) => acc+cur._foglet.getNeighbours().length, 0)
+
+    // calcule of the number of complete queries
+    const completeQueries = [...activeQueries.values()].reduce((acc, cur) => {
+      if(cur.completeness === 100) return acc+1
+      return acc
+    }, 0)
+
+    const maxResults = realactivequeries.reduce((acc, cur) => acc+cur.maxresults, 0)
+    const obtained = realactivequeries.reduce((acc, cur) => acc+cur.resultsObtained, 0)
+
+    // save results
+    const towrite =[
+      globalRound,
+      globalCompleteness,
+      globalCompletenessCompleted,
+      m,
+      edges,
+      overlayEdges,
+      mtotal,
+      completeQueries,
+      realactivequeries.length,
+      obtained,
+      maxResults
+    ]
+    // append the result to the global results file.
+    // But this a state of the network when we receive the last result for the round i
+    // If you want a complete state when the round i is finished for peer i,
+    // see its specific completess file and network state files
+    append(path.resolve(destination+'/global-completeness.csv'), towrite.join(',')+'\n').then(() => {
+      console.log('[%f] Global completeness: %f % (%f/%f)', globalRound, globalCompleteness, completeQueries, numberOfQueries)
+      globalRound++
+      resolve()
+    }).catch(e => {
+      console.log(e)
+      reject(e)
+    })
   })
 }
 
 function printEdges (clients, round) {
   return new Promise((resolve, reject) => {
     let overlayEdges = 0
+    let pvov
     if(config.options.activeSon) {
-      overlayEdges = clients.reduce((acc, cur) => acc+cur._foglet.overlay('son').network.getNeighbours().length, 0)
+      overlayEdges = [...activeQueries.values()].reduce((acc, cur) => acc+cur.client._foglet.overlay('son').network.getNeighbours().length, 0)
     }
-    const edges = clients.reduce((acc, cur) => acc+cur._foglet.getNeighbours().length, 0)
-    console.log(`[${round}] |RPS-edges|: ${edges}, |SON-edges|: ${overlayEdges}`)
+
+    const pv = pvov = [...activeQueries.values()].reduce((acc, cur) => {
+      return acc + [...cur.client._foglet.overlay().network.rps.partialView.values()].reduce((a, c) => a+c.length, 0)
+    }, 0)
+    const edges = [...activeQueries.values()].reduce((acc, cur) => acc+cur.client._foglet.getNeighbours().length, 0)
+    const edgesAll = [...activeQueries.values()].reduce((acc, cur) => acc+cur.client._foglet.getNeighbours(Infinity).length, 0)
+    console.log(`[${round}] |RPS-edges|: ${edges}, |SON-edges|: ${overlayEdges}, (RPS-arcs, RPS-con) = (${pv},${edgesAll})  `)
+    resolve()
   })
 }
 
@@ -620,7 +769,7 @@ function loadFiles(fragments, clients, dataset) {
       let inserted = 0
       return new Promise((res, rej) => {
         fragments.reduce((fragAcc, fragment, indFrag) => fragAcc.then(() => {
-          //console.log(inserted, indClient, indFrag, fragmentIndex)
+          //debug(inserted, indClient, indFrag, fragmentIndex)
           return new Promise((res2, rej2) => {
             if(inserted < elements) {
               if(indFrag === fragmentIndex) {

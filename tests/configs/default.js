@@ -3,7 +3,7 @@ const config = {
   name: 'default',
   queries: require('./default-queries.json'),
   clients: 20,
-  round: 10,
+  round: 3,
   datasets: [
     { name: 'diseasome', data: "../data/diseasome/fragments/", queries: "../data/diseasome/queries/queries.json", results: "../data/diseasome/results/", withoutQueries: ['q91.json', 'q92.json', 'q61.json', 'q53.json']},
     //{ name: 'linkedmdb', data: "../data/linkedmdb/fragments/", queries: "../data/linkedmdb/queries/queries.json", results: "../data/linkedmdb/results/", withoutQueries: []},
@@ -18,10 +18,12 @@ const config = {
     timeout: 10 * 1000, //network timeout when sending tpq
     queryType: 'normal', // there is one type, so normal is always choose.
     activeSon: true, // we activate the semantic overlay network or not
-    shuffleCountBeforeStart: 2, // we wait n shuffle before updated queries.
+    shuffleCountBeforeStart: 0, // we wait n shuffle before updated queries.
     foglet: {
       rps:{
         options: {
+          a: 1,
+          b: 4,
           timeout: 5 * 1000,
           delta: 30 * 1000,
         }

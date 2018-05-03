@@ -125,22 +125,21 @@ module.exports = class Dequenpeda extends EventEmitter {
 
     this._queries = new Map()
     this._shuffleCount = 0
-    this.on('connected', () => {
-      if(!this._options.manualshuffle) {
-        this._periodicExecutionInterval = setInterval(() => {
-          // waiting for the first connection to open and then execute
-          this._foglet.overlay().network.rps.once('open', () => {
-            this._periodicExecution()
-          })
-          //setTimeout(() => {this._periodicExecution()}, 5000)
-        }, this._options.foglet.rps.options.delta)
-      }
-    })
+    if(!this._options.manualshuffle) {
+      this._periodicExecutionInterval = setInterval(() => {
+        // waiting for the first connection to open and then execute
+        // console.log(`[${this._foglet.id}] periodic execution: before calling the method `, this._shuffleCount, this._foglet.getNeighbours().length, this._foglet.overlay('son').network.getNeighbours().length, this._queries.size)
+        // wait 5 seconds to lets the shuffle to be done
+        setTimeout(() => {
+          this._periodicExecution()
+        }, 5000)
+        //setTimeout(() => {this._periodicExecution()}, 5000)
+      }, this._options.foglet.rps.options.delta)
+    }
     // set the listener for manual shuffle
     if(this._options.manualshuffle) {
       this._periodicShuffle = setInterval(() => {
         if(this._queries.size === 0) {
-          console.log('Periodic shuffling becasue we have no queries.')
           this._shuffle()
         }
       }, this._options.manualshuffleperiodicdelta)
@@ -387,16 +386,18 @@ module.exports = class Dequenpeda extends EventEmitter {
       // assert.notStrictEqual(this._foglet.getNeighbours().length, 0)
       // if(this._options.activeSon) assert.notStrictEqual(this._foglet.overlay('son').network.getNeighbours().length, 0)
       if (this._queries.size > 0) {
-        // console.log(`[${this._foglet.id}] periodic execution: `, this._shuffleCount, this._foglet.getNeighbours().length, this._foglet.overlay('son').network.getNeighbours().length)
+        //console.log(`[${this._foglet.id}] periodic execution: `, this._shuffleCount, this._foglet.getNeighbours().length, this._foglet.overlay('son').network.getNeighbours().length, this._queries.size)
         this.emit('periodic-execution-begins')
         let pendingQueries = []
         this._queries.forEach(q => {
-          const qpending = q.execute('updated')
-          pendingQueries.push(qpending)
-          qpending.then(() => {
-            // noop
-          }).catch(e => {
-            console.log(e)
+          setImmediate(() => {
+            const qpending = q.execute('updated')
+            pendingQueries.push(qpending)
+            qpending.then(() => {
+              // noop
+            }).catch(e => {
+              console.log(e)
+            })
           })
         })
         this.emit('periodic-execution', pendingQueries)
@@ -405,7 +406,7 @@ module.exports = class Dequenpeda extends EventEmitter {
       }
     } else {
       console.log('Waiting before starting ... [%f/%f]', this._shuffleCount, this._options.shuffleCountBeforeStart)
-      this._shuffle()
+      if(this._options.manualshuffle) this._shuffle()
     }
   }
 
