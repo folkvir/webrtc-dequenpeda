@@ -49,6 +49,8 @@ def createGraph(data, type, filename):
     for v in g.vertices():
         g.vertex_properties["color"][v] = colors[typeColor.index(g.vertex_properties["type"][v])]
 
+    for v in typeColor:
+        print(v, colors[typeColor.index(v)], list(map((lambda x: x*256), colors[typeColor.index(v)])))
     g.shrink_to_fit()
     # fig, ax = plt.subplots()
     output = filename+'-'+type+"-graph.png"
@@ -81,7 +83,11 @@ def main():
     print('Loading: ', filename)
     data = readFile(filename)
     createGraph(data, "rps", filename)
-    createGraph(data, "overlay", filename)
+    try:
+        createGraph(data, "overlay", filename)
+    except Exception as e:
+        pass
+
 
 if __name__ == "__main__":
     main()
