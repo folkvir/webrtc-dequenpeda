@@ -57,7 +57,7 @@ module.exports = class Query extends EventEmitter {
   }
 
   stop () {
-    this._parent.close(this._id)
+    this._parent.stop(this._id)
   }
 
   _stop() {

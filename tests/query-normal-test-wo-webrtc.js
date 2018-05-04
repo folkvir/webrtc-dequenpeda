@@ -104,10 +104,10 @@ createClients(config.clients).then((clients) => {
       affectQueries(clients, queries, clients.length === 1).then((res) => {
         executeQueries(clients, res).then(() => {
           console.log('All queries finished.')
-          printGlobalResults().then(() => {
-            clients.reduce((cacc, c)  => cacc.then(() => {
-              return c.close()
-            }), Promise.resolve()).then(() => {
+          printGlobalResults(clients).then(() => {
+            clients.reduce((cacc, cur) => {
+              return cur.close()
+            }, Promise.resolve()).then(() => {
               process.exit(0)
             })
           }).catch(e => {
@@ -124,7 +124,6 @@ createClients(config.clients).then((clients) => {
     })
   }).catch(e => {
     console.log(e)
-    process.exit(0)
   })
 }).catch(e => {
   console.error(e)
@@ -414,8 +413,9 @@ function executeQueries(clients, queries) {
               globalResultsQuery[roundEnd].push(topush)
             }
 
-            if(roundEnd === 0 || roundEnd === config.round-1 || roundEnd===Math.floor(config.round/2)) {
-              writeNeighbours(clients, roundEnd, query.dir).catch(e => {
+            let roundToPrint = [0, config.round-2, config.round-3, Math.floor(config.round/2)]
+            if(roundToPrint.includes(roundEnd)) {
+              writeNeighbours(roundEnd, query.dir).catch(e => {
                 console.log(e)
               })
             }
@@ -436,18 +436,21 @@ function executeQueries(clients, queries) {
               globalResultsQuery[roundEnd].push(topush)
             }
 
-            if(roundEnd === 0 || roundEnd === config.round-1 || roundEnd===Math.floor(config.round/2)) {
-              writeNeighbours(clients, roundEnd, query.dir).catch(e => {
-                console.log(e)
-              })
-            }
-
             const gs = sizeof(globalResultsQuery)
             console.log(`[${query.query.filename}][${client._foglet.id}] Receive results for round: (start, end) = (${roundStart},${roundEnd}), [${globalResults[roundEnd].length}/${queries.length}], Global size: ${gs}`)
           } else {
             console.log(`[${query.query.filename}][${client._foglet.id}] We receive a second time a result for this run. NOT POSSIBLE: round:(start, end) = (${roundStart},${roundEnd}) `)
           }
-          q.stop()
+          let roundToPrint = [0, config.round-2, config.round-3, Math.floor(config.round/2)]
+          if(roundToPrint.includes(roundEnd)) {
+            writeNeighbours(roundEnd, query.dir).then(() => {
+              q.stop()
+            }).catch(e => {
+              console.log(e)
+            })
+          } else {
+            q.stop()
+          }
         }
       })
       q.on('end', (result) => {
@@ -546,83 +549,11 @@ function printGlobalResults() {
         timedout
       ].join(',')+'\n')
     }
-    resolve()
-  })
-}
-
-function computeGlobalCompletenessBis(numberOfQueries, clients, client, round, query, completeness, resultName, dir, ind) {
-  return new Promise((resolve, reject) => {
-    const realactivequeries = getActivesQueries()
-    console.log('Number of actives queries: ', realactivequeries.length)
-    // print to the screen the state of the network (RPS + (?SON))
-    printEdges(clients, globalRound).then(() => {
-      // noop
-    }).catch(e => {
-      console.error(e)
-    })
-    globalCompleteness = realactivequeries.reduce((acc, cur) => acc+cur.completeness, 0) / numberOfQueries
-    const completed = realactivequeries.filter((cur) => cur.completeness === 100).length
-    globalCompletenessCompleted = completed / numberOfQueries * 100
-
-    // application's messages
-    const currentMessage = clients.reduce((acc, cur) => acc+cur._statistics.message, 0)
-    let m = 0
-    if(globalMessage === 0) {
-      globalMessage = currentMessage
-    }
-    m = currentMessage - globalMessage
-    globalMessage = currentMessage
-
-    // network's messages
-    const currentMessagetotal = AbstractSimplePeer.manager.stats.message
-    let mtotal = 0
-    if(globalMessagetotal === 0) {
-      globalMessagetotal = currentMessagetotal
-    }
-    mtotal = currentMessagetotal - globalMessagetotal
-    globalMessagetotal = currentMessagetotal
-
-    // calcul of the number of SON edges and RPS edges in the network
-    let overlayEdges = 0
-    if(config.options.activeSon) {
-      overlayEdges = clients.reduce((acc, cur) => acc+cur._foglet.overlay('son').network.getNeighbours().length, 0)
-    }
-    const edges = clients.reduce((acc, cur) => acc+cur._foglet.getNeighbours().length, 0)
-
-    // calcule of the number of complete queries
-    const completeQueries = [...activeQueries.values()].reduce((acc, cur) => {
-      if(cur.completeness === 100) return acc+1
-      return acc
-    }, 0)
-
-    const maxResults = realactivequeries.reduce((acc, cur) => acc+cur.maxresults, 0)
-    const obtained = realactivequeries.reduce((acc, cur) => acc+cur.resultsObtained, 0)
-
-    // save results
-    const towrite =[
-      globalRound,
-      globalCompleteness,
-      globalCompletenessCompleted,
-      m,
-      edges,
-      overlayEdges,
-      mtotal,
-      completeQueries,
-      realactivequeries.length,
-      obtained,
-      maxResults
-    ]
-    // append the result to the global results file.
-    // But this a state of the network when we receive the last result for the round i
-    // If you want a complete state when the round i is finished for peer i,
-    // see its specific completess file and network state files
-    append(path.resolve(destination+'/global-completeness.csv'), towrite.join(',')+'\n').then(() => {
-      console.log('[%f] Global completeness: %f % (%f/%f)', globalRound, globalCompleteness, completeQueries, numberOfQueries)
-      globalRound++
+    globalResultsQuery[globalResultsQuery.length - 1].reduce((acc, cur) => acc.then(() => {
+      return writeNeighbours('last', cur.dir)
+    }), Promise.resolve()).then(() => {
+      // once all is done resolve
       resolve()
-    }).catch(e => {
-      console.log(e)
-      reject(e)
     })
   })
 }
@@ -645,7 +576,7 @@ function printEdges (clients, round) {
   })
 }
 
-function writeNeighbours(clients, round, dir) {
+function writeNeighbours(round, dir) {
   return new Promise((resolve, reject) => {
     const toReturn = [...activeQueries.values()].reduce((acc, cur) => {
       let res = {
@@ -655,8 +586,10 @@ function writeNeighbours(clients, round, dir) {
         rps: cur.client._foglet.getNeighbours(),
         profile: cur.client._profile.export()
       }
+      // console.log(`[${round}] RPS length: `, res.rps.length)
       if(cur.client._options.activeSon) {
         res.overlay = cur.client._foglet.overlay('son').network.getNeighbours()
+        // console.log(`[${round}] SON length: `, res.overlay.length)
       }
       acc.push(res)
       return acc
