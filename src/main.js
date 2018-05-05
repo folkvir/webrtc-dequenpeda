@@ -380,7 +380,7 @@ module.exports = class Dequenpeda extends EventEmitter {
 
   _periodicExecution () {
     this._shuffleCount++
-    // console.log(`[client:${this._foglet._id}]`, 'Number of neighbours: ', this._foglet.getNeighbours().length)
+    console.log(`[client:${this._foglet._id}]`, 'Number of neighbours: ', this._foglet.getNeighbours().length)
     if(this._shuffleCount > this._options.shuffleCountBeforeStart) {
       // just assert to be sure that there is at least 1 peers in each overlay !!remove those 2 lines for a proper use!!
       // assert.notStrictEqual(this._foglet.getNeighbours().length, 0)

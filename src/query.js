@@ -43,7 +43,7 @@ module.exports = class Query extends EventEmitter {
       this.emit(message.jobId, message)
     })
     this._timeout = undefined
-    this._lastResults = undefined
+    this._lastResults = []
     this._status = 'init'
     this._round = 0
   }
@@ -65,6 +65,7 @@ module.exports = class Query extends EventEmitter {
   }
 
   async execute (eventName) {
+    if(this._status === 'pending') return Promise.resolve(this._lastResults)
     this._status = 'pending'
     if(eventName === 'end') {
       this.emit(eventName, this._lastResults, this._round, this._round)

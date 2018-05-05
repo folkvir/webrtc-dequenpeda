@@ -366,7 +366,7 @@ function executeQueries(clients, queries) {
           } else if( roundStart > 0 ) {
             //debug('RoundStrart > 0')
             function findEntry(r) {
-              if(r === 0) {
+              if(r <= 0) {
                 return undefined
               } else {
                 const entry = globalResultsQuery[r].find((e) => {
@@ -379,8 +379,9 @@ function executeQueries(clients, queries) {
                 }
               }
             }
-            const r = roundStart - 1
-            const entry = findEntry(roundStart - 1)
+            let r = roundStart - 1
+            if(roundStart >= config.round - 1) r = config.round - 1
+            let entry = findEntry(r)
             if(!entry) {
               //debug('entry is undefined')
               // default vlaue
@@ -403,55 +404,99 @@ function executeQueries(clients, queries) {
           obtained: resultsObtained,
           resultName: query.resultName
         }
-        if(roundEnd < config.round - 1) {
-          if(!globalResults[roundEnd].includes(client._foglet.id)) {
-            globalResults[roundEnd].push(client._foglet.id)
-            // if all results of the round i received, print a global message and save it to global-compl.csv
-            if(timeout) {
-              globalResultsQuery[roundStart].push(topush)
-            } else {
-              globalResultsQuery[roundEnd].push(topush)
-            }
 
+        if(roundStart < config.round - 1) {
+          if(!globalResults[roundStart].includes(client._foglet.id)) {
+
+            globalResults[roundStart].push(client._foglet.id)
             let roundToPrint = [0, config.round-2, config.round-3, Math.floor(config.round/2)]
-            if(roundToPrint.includes(roundEnd)) {
-              writeNeighbours(roundEnd, query.dir).catch(e => {
+            if(roundToPrint.includes(roundStart)) {
+              writeNeighbours(roundStart, query.dir).catch(e => {
                 console.log(e)
               })
             }
+            globalResultsQuery[roundStart].push(topush)
+
 
             const gs = sizeof(globalResultsQuery)
-            console.log(`[${query.query.filename}][${client._foglet.id}] Receive results for round: (start, end) = (${roundStart},${roundEnd}), [${globalResults[roundEnd].length}/${queries.length}], Global size: ${gs}`)
+            console.log(`1[${query.query.filename}][${client._foglet.id}] Receive results for round: (start, end) = (${roundStart},${roundEnd}), [${globalResults[roundStart].length}/${queries.length}], Global size: ${gs}`)
           } else {
-            console.log(`[${query.query.filename}][${client._foglet.id}] We receive a second time a result for this run. NOT POSSIBLE: round:(start, end) = (${roundStart},${roundEnd}) `)
+            console.log(`1[${query.query.filename}][${client._foglet.id}] We receive a second time a result for this run. NOT POSSIBLE: round:(start, end) = (${roundStart},${roundEnd}) `)
           }
-        } else {
-          if(!globalResults[roundEnd].includes(client._foglet.id)) {
-            globalResults[roundEnd].push(client._foglet.id)
-            // if all results of the round i received, print a global message and save it to global-compl.csv
-            // append local result
-            if(timeout) {
-              globalResultsQuery[roundStart].push(topush)
-            } else {
-              globalResultsQuery[roundEnd].push(topush)
+        } else if(roundStart === config.round-1) {
+          if(!globalResults[roundStart].includes(client._foglet.id)) {
+
+            globalResults[roundStart].push(client._foglet.id)
+            let roundToPrint = [0, config.round-2, config.round-3, Math.floor(config.round/2)]
+            if(roundToPrint.includes(roundStart)) {
+              writeNeighbours(roundStart, query.dir).catch(e => {
+                console.log(e)
+              })
             }
-
+            globalResultsQuery[roundStart].push(topush)
             const gs = sizeof(globalResultsQuery)
-            console.log(`[${query.query.filename}][${client._foglet.id}] Receive results for round: (start, end) = (${roundStart},${roundEnd}), [${globalResults[roundEnd].length}/${queries.length}], Global size: ${gs}`)
-          } else {
-            console.log(`[${query.query.filename}][${client._foglet.id}] We receive a second time a result for this run. NOT POSSIBLE: round:(start, end) = (${roundStart},${roundEnd}) `)
-          }
-          let roundToPrint = [0, config.round-2, config.round-3, Math.floor(config.round/2)]
-          if(roundToPrint.includes(roundEnd)) {
-            writeNeighbours(roundEnd, query.dir).then(() => {
-              q.stop()
-            }).catch(e => {
-              console.log(e)
-            })
-          } else {
+            console.log(`2[${query.query.filename}][${client._foglet.id}] Receive results for round: (start, end) = (${roundStart},${roundEnd}), [${globalResults[roundStart].length}/${queries.length}], Global size: ${gs}`)
             q.stop()
+          } else {
+            console.log(`2[${query.query.filename}][${client._foglet.id}] We receive a second time a result for this run. NOT POSSIBLE: round:(start, end) = (${roundStart},${roundEnd}) `)
           }
         }
+
+
+        // if(roundEnd < config.round - 1) {
+        //   if(timeout) {
+        //
+        //   } else {
+        //     if(!globalResults[roundEnd].includes(client._foglet.id)) {
+        //       globalResultsQuery[roundEnd].push(topush)
+        //       globalResults[roundEnd].push(client._foglet.id)
+        //       let roundToPrint = [0, config.round-2, config.round-3, Math.floor(config.round/2)]
+        //       if(roundToPrint.includes(roundEnd)) {
+        //         writeNeighbours(roundEnd, query.dir).catch(e => {
+        //           console.log(e)
+        //         })
+        //       }
+        //       const gs = sizeof(globalResultsQuery)
+        //       console.log(`2[${query.query.filename}][${client._foglet.id}] Receive results for round: (start, end) = (${roundStart},${roundEnd}), [${globalResults[roundEnd].length}/${queries.length}], Global size: ${gs}`)
+        //     } else {
+        //       console.log(`2[${query.query.filename}][${client._foglet.id}] We receive a second time a result for this run. NOT POSSIBLE: round:(start, end) = (${roundStart},${roundEnd}) `)
+        //     }
+        //   }
+        //
+        // } else {
+        //   if(timeout) {
+        //     if(!globalResults[roundStart].includes(client._foglet.id)) {
+        //       globalResultsQuery[roundStart].push(topush)
+        //       globalResults[roundStart].push(client._foglet.id)
+        //       const gs = sizeof(globalResultsQuery)
+        //       console.log(`3[${query.query.filename}][${client._foglet.id}] Receive results for round: (start, end) = (${roundStart},${roundEnd}), [${globalResults[roundEnd].length}/${queries.length}], Global size: ${gs}`)
+        //     } else {
+        //       console.log(`3[${query.query.filename}][${client._foglet.id}] We receive a second time a result for this run. NOT POSSIBLE: round:(start, end) = (${roundStart},${roundEnd}) `)
+        //     }
+        //   } else {
+        //     if(!globalResults[roundStart].includes(client._foglet.id)) {
+        //       globalResultsQuery[roundStart].push(topush)
+        //       globalResults[roundStart].push(client._foglet.id)
+        //       const gs = sizeof(globalResultsQuery)
+        //       console.log(`4[${query.query.filename}][${client._foglet.id}] Receive results for round: (start, end) = (${roundStart},${roundEnd}), [${globalResults[roundEnd].length}/${queries.length}], Global size: ${gs}`)
+        //     } else {
+        //       console.log(`4[${query.query.filename}][${client._foglet.id}] We receive a second time a result for this run. NOT POSSIBLE: round:(start, end) = (${roundStart},${roundEnd}) `)
+        //     }
+        //   }
+        //
+        //
+        //
+        //   let roundToPrint = [0, config.round-2, config.round-3, Math.floor(config.round/2)]
+        //   if(roundToPrint.includes(roundEnd)) {
+        //     writeNeighbours(roundEnd, query.dir).then(() => {
+        //       q.stop()
+        //     }).catch(e => {
+        //       console.log(e)
+        //     })
+        //   } else {
+        //     q.stop()
+        //   }
+        // }
       })
       q.on('end', (result) => {
         console.log('Query %s finished', query.query.filename)

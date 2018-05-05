@@ -10,7 +10,8 @@
     "start-manual": "node ./tests/loaders/all-manualshuffle.js",
     "build": "foglet-scripts build",
     "min": "webpack --config ./foglet-webpack-config-min.js --mode production",
-    "dev": "webpack --config ./foglet-webpack-config.js --mode development --watch"
+    "dev": "webpack --config ./foglet-webpack-config.js --mode development --watch",
+    "graph": "python3 ./tests/graphs/graph.py"
   },
   "repository": {
     "type": "git",

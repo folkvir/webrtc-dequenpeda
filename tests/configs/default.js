@@ -25,7 +25,7 @@ const config = {
           a: 1,
           b: 4,
           timeout: 5 * 1000,
-          delta: 30 * 1000,
+          delta: 5 * 1000,
         }
       }
     }
