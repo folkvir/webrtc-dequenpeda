@@ -11,6 +11,11 @@ module.exports = {
     'libraryTarget': 'umd',
     'umdNamedDefine': true
   },
+  resolve: {
+    alias: {
+      "./store-worker": path.resolve(__dirname, './src/store'), // no nodejs worker for the browser.
+    }
+  },
   module: {
     rules: [
       {
