@@ -722,7 +722,6 @@ function printEdges (round) {
     }
 
     const pv = pvov = [...activeQueries.values()].reduce((acc, cur) => {
-      debug(cur.client._foglet.overlay().network.rps.partialView.size, cur.client._foglet.overlay('son').network.rps.partialView.size)
       return acc + cur.client._foglet.overlay().network.rps.partialView.size
     }, 0)
     const edges = [...activeQueries.values()].reduce((acc, cur) => acc+cur.client._foglet.getNeighbours().length, 0)
