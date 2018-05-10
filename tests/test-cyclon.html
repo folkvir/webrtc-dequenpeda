@@ -1,0 +1,168 @@
+<html>
+  <head> <meta charset="utf-8">
+    <title>Dequenpeda-test</title>
+    <script src="../dist/webrtc-dequenpeda.bundle.js"></script>
+    <script src="../node_modules/p2p-graph/p2p-graph.min.js"></script>
+  </head>
+  <body>
+    Please, switch to console.
+
+    <p>
+      Number of average shuffle: ~<span id="shuffle"></span> <br/>
+      Theoretical number of arcs: ~<span id="theoretical"></span> <br/>
+      Average clustering coefficient: <span id="clustering"></span><br/>
+      Actual number of arcs without duplicates: <span id="actualwodup"></span><br/>
+      Average PV size: <span id="pv"></span><br/>
+      Actual number of pending entries: <span id="pending"></span></p>
+    <div class="graph" width=800 height=600></div>
+
+    <script>
+      let graph = new window.P2PGraph('.graph');
+      localStorage.debug = "cyclon"
+      let foglets = []
+      let revertedIndex = new Map();
+      const options = {
+        class: dequenpeda.CyclonAdapter,
+        delta: 60 * 1000,
+        maxPeers: 5,
+        timeout: 15 * 1000,
+        timeoutPending: 15 * 1000,
+        timeoutDescriptor: 15 * 1000,
+        periodicProfileExchange: 15 * 1000,
+        socketClass: dequenpeda.AbstractSimplePeer
+      }
+      const number = 30
+      for(let i = 0; i< number; i++) {
+        foglets.push(new dequenpeda.Client({
+          shuffleCountBeforeStart: 0,
+          foglet: {
+            id: 'client-'+i,
+            rps: {
+              type: 'custom',
+              options
+            },
+            // overlays: [
+            //   {
+            //     name: 'son',
+            //     class: dequenpeda.son,
+            //     options: {
+            //       socketClass: options.socketClass,
+            //       profile: new (dequenpeda.profile)(),
+            //       delta: options.delta,
+            //       timeoutDescriptor: options.timeoutDescriptor,
+            //       timeout: options.timaout,
+            //       periodicProfileExchange: options.periodicProfileExchange,
+            //       protocol: 'dequenpeda-protocol-son-overlay', // foglet running on the protocol foglet-example, defined for spray-wrtc
+            //       signaling: {
+            //         address: 'https://localhost:8000/',
+            //         room: 'dequenpeda-room-overlay' // room to join
+            //       }
+            //     }
+            //   }
+            // ]
+          }
+        }))
+        foglets[i]._foglet.overlay().network.rps.on('end-shuffle', () => {
+          shufflecount++
+        })
+        foglets[i].on('receive-broadcast',(message) => {
+          console.log(message)
+        })
+        console.log('%f inview: %s, id: %s', 0, foglets[i]._foglet.inViewID, foglets[i]._foglet.id)
+        revertedIndex.set(foglets[i]._foglet.inViewID, foglets[i]._foglet.id);
+      }
+      console.log(foglets)
+      const loaded = []
+      foglets.reduce((acc, fog, i) => acc.then(() => {
+        return new Promise((resolve, reject) => {
+          let rn = 0
+          setTimeout(() => {
+            if(i === 0) {
+              rn = Math.floor(Math.random() * foglets.length)
+              fog.connection(foglets[rn]).then(() => {
+                loaded.push(fog)
+                resolve()
+              }).catch(e => {
+                console.error(e)
+                resolve()
+              })
+            } else {
+              fog.connection(findclosest(loaded)).then(() => {
+                loaded.push(fog)
+                resolve()
+              }).catch(e => {
+                console.error(e)
+                resolve()
+              })
+            }
+          }, 500)
+        })
+      }), Promise.resolve()).then(() => {
+        console.log('all loaded.', foglets)
+        setTimeout(() => {
+          shuffle()
+        }, 5000)
+      })
+
+      for (let i = 0; i < number; ++i ){
+          graph.add({
+              id: foglets[i]._foglet.id,
+              me: false,
+              name: i
+          });
+
+          foglets[i]._foglet.overlay().network.rps.on('open', (peerId) => {
+              !graph.hasLink(foglets[i]._foglet.id, revertedIndex.get(peerId)) &&
+                  graph.connect(foglets[i]._foglet.id, revertedIndex.get(peerId));
+          });
+          foglets[i]._foglet.overlay().network.rps.on('close', (peerId) => {
+              (!foglets[i]._foglet.overlay().network.rps.o.has(peerId)) &&
+                  graph.disconnect(foglets[i]._foglet.id, revertedIndex.get(peerId));
+          });
+      };
+      let shufflecount = 0
+      function shuffle() {
+        shufflecount++
+        foglets.reduce((acc, cur) => acc.then(() => {
+          return new Promise((resolve, reject) => {
+            cur._foglet.overlay().network.rps.exchange()
+            setTimeout(() => {
+              resolve()
+            }, 500)
+          })
+        }), Promise.resolve()).then(() => {
+          console.log('All shuffled')
+        })
+      }
+
+      setInterval(() => {
+        const withoutduplicates = foglets.reduce((acc, cur) => acc+cur._foglet.overlay().network.rps._partialView.size, 0)
+        const numberofduplicates = foglets.reduce((acc, cur) => {
+          return acc+[...cur._foglet.overlay().network.rps._partialView].reduce((a, c) => {
+            return (c[1].length>1)?1:0
+          }, 0)
+        }, 0)
+        const pv = foglets.reduce((acc, cur) => acc+cur._foglet.overlay().network.rps._partialView.size, 0)/foglets.length
+        document.getElementById('shuffle').innerHTML = "" + (shufflecount / foglets.length).toFixed(2)
+        document.getElementById("clustering").innerHTML = ""+ withoutduplicates / (number * (number-1)) / 2;
+        document.getElementById("theoretical").innerHTML = "" + number * options.maxPeers
+        document.getElementById("actualwodup").innerHTML = ""+ withoutduplicates;
+        document.getElementById("pv").innerHTML = ""+ pv + " / "+ options.maxPeers;
+        document.getElementById("pending").innerHTML = ""+ foglets.reduce((acc, cur) => acc+cur._foglet.overlay().network.rps.NI.pending.size+cur._foglet.overlay().network.rps.NO.pending.size, 0);
+      }, 2000)
+
+      function findclosest(loaded) {
+        let average = loaded.reduce((acc, cur) => acc+[...cur._foglet.overlay().network.rps._partialView.values()].reduce((acc, cur) => acc+cur.length, 0), 0) / loaded.length
+        // find the closest
+        average = options.maxPeers
+        const rn = loaded.sort( (a, b) => {
+          const pva = [...a._foglet.overlay().network.rps._partialView.values()].reduce((acc, cur) => acc+cur.length, 0)
+          const pvb = [...b._foglet.overlay().network.rps._partialView.values()].reduce((acc, cur) => acc+cur.length, 0)
+          return Math.abs(average - pva) - Math.abs(average - pvb)
+        })
+        const rand = Math.floor(Math.random() * loaded.length)
+        return loaded[rand]
+      }
+    </script>
+  </body>
+</html>

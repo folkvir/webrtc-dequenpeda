@@ -12,6 +12,7 @@ const Query = require('./query')
 const UnicastHandlers = require('./unicast-handlers')
 const Profile = require('./son/profile')
 const Son = require('./son/son')
+const CyclonAdapter = require('./cyclon/cyclon-adapter')
 const assert =require('assert')
 
 const debugError = require('debug')('error')
@@ -31,17 +32,17 @@ let DEFAULT_OPTIONS = {
   shuffleCountBeforeStart: 1,
   foglet: {
     rps: {
-      type: 'spray-wrtc',
+      type: 'custom',
       options: {
-        a: 1,
-        b: 0,
+        maxPeers: 5,
+        class: CyclonAdapter,
         protocol: 'dequenpeda-protocol', // foglet running on the protocol foglet-example, defined for spray-wrtc
         webrtc: { // add WebRTC options
           trickle: true, // enable trickle (divide offers in multiple small offers sent by pieces)
           iceServers: [] // define iceServers in non local instance
         },
-        timeout: 10 * 1000, // spray-wrtc timeout before definitively close a WebRTC connection.
-        delta: 5 * 1000,   // spray-wrtc shuffle interval
+        timeout: 30 * 1000, // spray-wrtc timeout before definitively close a WebRTC connection.
+        delta: 30 * 1000,   // spray-wrtc shuffle interval
         signaling: {
           address: 'http://localhost:8000/',
           // signalingAdress: 'https://signaling.herokuapp.com/', // address of the signaling server
@@ -99,9 +100,8 @@ module.exports = class Dequenpeda extends EventEmitter {
       }
       this._options.foglet.overlays =[son]
     }
-    this._id = uniqid()
-    this._options.foglet.id = this._id
     this._foglet = new FogletCore(this._options.foglet)
+    this._id = this._foglet.id
     // this._foglet.share()
     this._foglet.onUnicast((id, message) => {
       // debug(`[${this._foglet._id}] ReceiveUnicast: ${JSON.stringify(message)}`)
@@ -380,7 +380,7 @@ module.exports = class Dequenpeda extends EventEmitter {
 
   _periodicExecution () {
     this._shuffleCount++
-    console.log(`[client:${this._foglet._id}]`, 'Number of neighbours: ', this._foglet.getNeighbours().length)
+    // console.log(`[client:${this._foglet._id}]`, 'Number of neighbours: ', this._foglet.getNeighbours().length)
     if(this._shuffleCount > this._options.shuffleCountBeforeStart) {
       // just assert to be sure that there is at least 1 peers in each overlay !!remove those 2 lines for a proper use!!
       // assert.notStrictEqual(this._foglet.getNeighbours().length, 0)

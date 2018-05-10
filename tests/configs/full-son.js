@@ -1,5 +1,5 @@
 const config = {
-  name: "full-son",
+  name: "full-son-only",
   queries: require('./full-queries.json'), // 196
   clients: 196,
   round: 100,
@@ -19,8 +19,7 @@ const config = {
     foglet: {
       rps:{
         options: {
-          a:1,
-          b:0,
+          maxPeers: 5,
           timeout: 30 * 1000,
           delta: 10 * 60 * 1000,
         }

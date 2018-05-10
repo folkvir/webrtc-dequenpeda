@@ -65,13 +65,13 @@ module.exports = class Query extends EventEmitter {
   }
 
   async execute (eventName) {
-    if(this._status === 'pending') return Promise.resolve(this._lastResults)
-    this._status = 'pending'
     if(eventName === 'end') {
       this.emit(eventName, this._lastResults, this._round, this._round)
       this._status = 'end'
       return Promise.resolve(this._lastResults)
     }
+    if(this._status === 'pending') return Promise.resolve(this._lastResults)
+    this._status = 'pending'
     this._createTimeout()
     const round = Object.assign({}, { round: this._round, start: this._round})
     // debug(`[client:${this._parent._foglet.id}] 1-Executing the query ${this._id}...`)

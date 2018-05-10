@@ -2,8 +2,8 @@ const MAX_SET_TIMEOUT = 2147483647
 const config = {
   name: 'default',
   queries: require('./default-queries.json'),
-  clients: 20,
-  round: 3,
+  clients: 50,
+  round: 50,
   datasets: [
     { name: 'diseasome', data: "../data/diseasome/fragments/", queries: "../data/diseasome/queries/queries.json", results: "../data/diseasome/results/", withoutQueries: ['q91.json', 'q92.json', 'q61.json', 'q53.json']},
     //{ name: 'linkedmdb', data: "../data/linkedmdb/fragments/", queries: "../data/linkedmdb/queries/queries.json", results: "../data/linkedmdb/results/", withoutQueries: []},
@@ -22,10 +22,10 @@ const config = {
     foglet: {
       rps:{
         options: {
-          a: 1,
-          b: 4,
-          timeout: 5 * 1000,
-          delta: 5 * 1000,
+          maxPeers: 7,
+          timeout: 30 * 1000,
+          timeoutPending: 30 * 1000,
+          delta: 60 * 1000,
         }
       }
     }

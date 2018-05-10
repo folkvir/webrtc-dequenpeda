@@ -168,6 +168,7 @@ module.exports = class SimplePeerAbstract extends EventEmitter {
   }
 
   _reviewMessageBuffer() {
+    console.log('review buffer...')
     while(this.connectedWith && this.messageBuffer.length !== 0) {
       this._send(this.messageBuffer.pop())
     }

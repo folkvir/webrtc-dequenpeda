@@ -1,4 +1,5 @@
 const Dequenpeda = require('../webrtc-dequenpeda').Client
+const CyclonAdapter = require('../webrtc-dequenpeda').CyclonAdapter
 const shell = require('shelljs')
 const commander = require('commander')
 const path = require('path')
@@ -12,11 +13,12 @@ const lrandom = require('lodash.random')
 const lmin = require('lodash.min')
 const sizeof = require('object-sizeof')
 const debug = require('debug')('xp')
+const ldiff = require('lodash.difference')
 
 commander
   .option('-c, --clients <clients>', 'Override: Number of clients', (e) => parseInt(e))
   .option('-t, --timeout <timeout>', 'Override: Query Timeout', (e) => parseFloat(e))
-  .option('-n, --name <name>', 'Name of the experiement to add')
+  .option('-n, --name <name>', 'Name of the experiement to add', 'test')
   .option('-m, --manualshuffle')
   .option('-config, --config <config>', 'Config by default', e => e, path.resolve(__dirname+'/configs/default'))
   .parse(process.argv)
@@ -34,7 +36,7 @@ console.log('Time: ', time)
 
 const config = require(path.resolve(commander.config))
 
-let name = config.name+'-'+time+uniqid()
+let name = ((config.name)?config.name:'test')+'-'+time+uniqid()
 if(commander.timeout) config.timeout = parseFloat(commander.timeout)
 if(commander.clients) config.clients = commander.clients
 if(commander.manualshuffle)
@@ -112,6 +114,12 @@ createClients(config.clients).then((clients) => {
             })
           }).catch(e => {
             console.error(e)
+            clients.reduce((cacc, cur) => {
+              return cur.close()
+            }, Promise.resolve()).then(() => {
+              process.exit(0)
+            })
+            process.exit(1)
           })
         }).catch(e => {
           console.error(e)
@@ -158,58 +166,64 @@ function connectClients(clients) {
   console.log('Connecting clients...', clients.length)
   return new Promise((resolve, reject) => {
     let firstClient = clients[0]
-    let connectedClients = [clients[0]]
+    let connectedClients = []
     if(clients.length < 2) reject(new Error('need at least 2 client'))
-    clients.reduce((accClient, client) => accClient.then(() => {
-      if(clients[0]._foglet.id !== client._foglet.id) {
-        return wait(500).then(() => {
-          // choose the peer connected to the closest average pv size
-          // find the avreage
-          const average = connectedClients.reduce((acc, cur) => acc+[...cur._foglet.overlay().network.rps.partialView.values()].reduce((acc, cur) => acc+cur.length, 0), 0) / connectedClients.length
-          // find the closest
-          const rn = connectedClients.sort( (a, b) => {
-            const pva = [...a._foglet.overlay().network.rps.partialView.values()].reduce((acc, cur) => acc+cur.length, 0)
-            const pvb = [...b._foglet.overlay().network.rps.partialView.values()].reduce((acc, cur) => acc+cur.length, 0)
-            return Math.abs(average - pva) - Math.abs(average - pvb)
-          })
-          //debug(average, rn.map((e) => [...e._foglet.overlay().network.rps.partialView.values()].reduce((acc, cur) => acc+cur.length, 0)))
-          const rnclient = rn[0] // connectedClients[rn]
+    clients.reduce((accClient, client, i) => accClient.then(() => {
+      return wait(1000).then(() => {
+        return new Promise((res, rej) => {
+          // pick a random connected peer
+          const rand = Math.floor(Math.random() * connectedClients.length)
+          debug(rand, connectedClients.map((e) => e._foglet.overlay().network.rps.partialView.size))
+          let rnclient = connectedClients[rand] // connectedClients[rn]
+          if(i===0) rnclient = clients[Math.floor(Math.random() * clients.length)]
+
           console.log('Connecting client: %s to client: %s', client._foglet.id, rnclient._foglet.id)
+          // connect the SON, it will connect the rps as well
           if(config.options.activeSon) {
-            return client.connection(rnclient, 'son').then(() => {
-              rn[rn.length-1]._foglet.overlay().network.rps._exchange()
-              const pv = pvov = clients.reduce((acc, cur) => {
-                return acc + [...cur._foglet.overlay().network.rps.partialView].reduce((a, c) => a+c.length, 0)
-              }, 0)
-              console.log('Arcs: ', pv)
+            client.connection(rnclient, 'son').then(() => {
+              // client._foglet.overlay().network.rps._exchange()
               connectedClients.push(client)
-              connectedClients = shuffle(connectedClients)
-              return Promise.resolve()
+              setTimeout(() => {
+                client._foglet.overlay().network.rps._exchange()
+                client._foglet.overlay().network.rps.once('end-shuffle', () => {
+                  const pv = pvov = clients.reduce((acc, cur) => {
+                    return acc + [...cur._foglet.overlay().network.rps.partialView].reduce((a, c) => a+c.length, 0)
+                  }, 0)
+                  console.log('Arcs: ', pv)
+                  res()
+                })
+              }, 500)
             }).catch(e => {
-              return Promise.reject(e)
+              res()
             })
           } else {
             // rps
-            return client.connection(rnclient).then(() => {
-              rn[rn.length-1]._foglet.overlay().network.rps._exchange()
-              const pv = pvov = clients.reduce((acc, cur) => {
-                return acc + [...cur._foglet.overlay().network.rps.partialView].reduce((a, c) => a+c.length, 0)
-              }, 0)
-              console.log('Arcs: ', pv)
+            client.connection(rnclient).then(() => {
+              // rn[rn.length-1]._foglet.overlay().network.rps._exchange()
               connectedClients.push(client)
-              connectedClients = shuffle(connectedClients)
-              return Promise.resolve()
+              setTimeout(() => {
+                client._foglet.overlay().network.rps._exchange()
+                client._foglet.overlay().network.rps.once('end-shuffle', () => {
+                  const pv = pvov = clients.reduce((acc, cur) => {
+                    return acc + [...cur._foglet.overlay().network.rps.partialView].reduce((a, c) => a+c.length, 0)
+                  }, 0)
+                  console.log('Arcs: ', pv)
+                  res()
+                })
+              }, 500)
             }).catch(e => {
-              return Promise.reject(e)
+              res()
             })
           }
-        }).catch(e => {
-          return Promise.reject(e)
         })
-      } else {
-        return Promise.resolve()
-      }
+      }).catch(e => {
+        return Promise.reject(e)
+      })
     }), Promise.resolve()).then(() => {
+
+      const toprint = clients.map(c => c._foglet.getNeighbours().length)
+      console.log(JSON.stringify(toprint))
+
       resolve(clients)
     }).catch(e => {
       reject(e)
@@ -245,8 +259,9 @@ function affectQueries(clients, queries, allqueries) {
     // only for client.length === 1
     if(allqueries) {
       for(let i = 0; i < queries.length; i++) {
-        activeQueries.set(i, {
+        activeQueries.set(clients[i]._id, {
           maxresults: 0,
+          id: clients[i]._id,
           client: clients[i],
           query: {
             name: "none"
@@ -266,8 +281,9 @@ function affectQueries(clients, queries, allqueries) {
     } else {
       if(queries.length >= clients.length) {
         for(let i = 0; i<clients.length; i++) {
-          activeQueries.set(i, {
+          activeQueries.set(clients[i]._id, {
             maxresults: 0,
+            id: clients[i]._id,
             client: clients[i],
             query: {
               name: "none"
@@ -289,8 +305,9 @@ function affectQueries(clients, queries, allqueries) {
         console.log('Waiting for %f shuffles for a proper network before continuing.', config.options.shuffleCountBeforeStart)
       } else {
         for(let i = 0; i<clients.length; i++) {
-          activeQueries.set(i, {
+          activeQueries.set(clients[i]._id, {
             maxresults: 0,
+            id: clients[i]._id,
             client: clients[i],
             query: {
               name: "none"
@@ -321,16 +338,20 @@ function affectOneQuery(query, client, ind, numberOfQueries, clients) {
     const dir = path.resolve(`${destination}/client-${client._foglet.id}/`)
     const resultName = path.resolve(`${dir}/completeness.csv`)
     if (!fs.existsSync(dir)) shell.mkdir('-p', dir)
-    activeQueries.get(ind).maxresults = query.card
-    activeQueries.get(ind).client = client
-    activeQueries.get(ind).query = query
-    console.log('Affecting: %s to client %f', query.filename, ind)
+    activeQueries.get(client._id).maxresults = query.card
+    activeQueries.get(client._id).client = client
+    activeQueries.get(client._id).query = query
+    activeQueries.get(client._id).resultName = resultName
+    activeQueries.get(client._id).dir = dir
+    activeQueries.get(client._id).round = 0
+    console.log('Affecting: %s to client %s', query.filename, client._id)
     console.log('Output will be in: ', resultName)
     resolve({
       client: client,
       q: client.query(query.query, 'normal', {
         timeout: config.timeout
       }),
+      id: client._id,
       query: query,
       index: ind,
       resultName: resultName,
@@ -346,10 +367,18 @@ function executeQueries(clients, queries) {
       const client = query.client
       const q = query.q
       const ind = query.index
-      q.on('starting', (eventName, round) => {
-        //console.log(`[${query.query.filename}][${client._foglet.id}] starting to execute the query for round: ${round} for event: ${eventName}`)
+      let shuffle = 0
+      client.on('periodic-execution', (eventName) => {
+        if(eventName !== 'no-queries-yet') {
+          // now check before increasing the shuffle number cause, if we are at shuffle +1 we need to stop the experiment
+          if(shuffle > config.round - 1) {
+            console.log('[%s] stop the query anyway', query.query.filename)
+            q.stop()
+          }
+          shuffle++
+        }
       })
-      q.on('updated', (result, roundStart, roundEnd) => {
+      const callbackUpdated = (result, roundStart, roundEnd) => {
         let completeness = 0
         let timeout = false
         let resultsObtained = 0
@@ -364,24 +393,10 @@ function executeQueries(clients, queries) {
             //debug('RoundStrart === 0')
             // default value
           } else if( roundStart > 0 ) {
-            //debug('RoundStrart > 0')
-            function findEntry(r) {
-              if(r <= 0) {
-                return undefined
-              } else {
-                const entry = globalResultsQuery[r].find((e) => {
-                  return activeQueries.get(e.clientind).client._foglet.id === client._foglet.id
-                })
-                if(entry) {
-                  return entry
-                } else {
-                  return findEntry(r-1)
-                }
-              }
-            }
+            // debug('RoundStrart > 0')
             let r = roundStart - 1
             if(roundStart >= config.round - 1) r = config.round - 1
-            let entry = findEntry(r)
+            let entry = findEntry(r, client._foglet.id)
             if(!entry) {
               //debug('entry is undefined')
               // default vlaue
@@ -398,6 +413,7 @@ function executeQueries(clients, queries) {
           name: query.query.filename,
           roundStart,
           completeness,
+          clientid: client._foglet._id,
           clientind: ind,
           timeout,
           card: query.query.card,
@@ -419,7 +435,9 @@ function executeQueries(clients, queries) {
 
 
             const gs = sizeof(globalResultsQuery)
+
             console.log(`1[${query.query.filename}][${client._foglet.id}] Receive results for round: (start, end) = (${roundStart},${roundEnd}), [${globalResults[roundStart].length}/${queries.length}], Global size: ${gs}`)
+            checkRound(roundStart, globalResults[roundStart].length, queries.length)
           } else {
             console.log(`1[${query.query.filename}][${client._foglet.id}] We receive a second time a result for this run. NOT POSSIBLE: round:(start, end) = (${roundStart},${roundEnd}) `)
           }
@@ -436,86 +454,31 @@ function executeQueries(clients, queries) {
             globalResultsQuery[roundStart].push(topush)
             const gs = sizeof(globalResultsQuery)
             console.log(`2[${query.query.filename}][${client._foglet.id}] Receive results for round: (start, end) = (${roundStart},${roundEnd}), [${globalResults[roundStart].length}/${queries.length}], Global size: ${gs}`)
-            q.stop()
+            checkRound(roundStart, globalResults[roundStart].length, queries.length)
           } else {
             console.log(`2[${query.query.filename}][${client._foglet.id}] We receive a second time a result for this run. NOT POSSIBLE: round:(start, end) = (${roundStart},${roundEnd}) `)
           }
         }
-
-
-        // if(roundEnd < config.round - 1) {
-        //   if(timeout) {
-        //
-        //   } else {
-        //     if(!globalResults[roundEnd].includes(client._foglet.id)) {
-        //       globalResultsQuery[roundEnd].push(topush)
-        //       globalResults[roundEnd].push(client._foglet.id)
-        //       let roundToPrint = [0, config.round-2, config.round-3, Math.floor(config.round/2)]
-        //       if(roundToPrint.includes(roundEnd)) {
-        //         writeNeighbours(roundEnd, query.dir).catch(e => {
-        //           console.log(e)
-        //         })
-        //       }
-        //       const gs = sizeof(globalResultsQuery)
-        //       console.log(`2[${query.query.filename}][${client._foglet.id}] Receive results for round: (start, end) = (${roundStart},${roundEnd}), [${globalResults[roundEnd].length}/${queries.length}], Global size: ${gs}`)
-        //     } else {
-        //       console.log(`2[${query.query.filename}][${client._foglet.id}] We receive a second time a result for this run. NOT POSSIBLE: round:(start, end) = (${roundStart},${roundEnd}) `)
-        //     }
-        //   }
-        //
-        // } else {
-        //   if(timeout) {
-        //     if(!globalResults[roundStart].includes(client._foglet.id)) {
-        //       globalResultsQuery[roundStart].push(topush)
-        //       globalResults[roundStart].push(client._foglet.id)
-        //       const gs = sizeof(globalResultsQuery)
-        //       console.log(`3[${query.query.filename}][${client._foglet.id}] Receive results for round: (start, end) = (${roundStart},${roundEnd}), [${globalResults[roundEnd].length}/${queries.length}], Global size: ${gs}`)
-        //     } else {
-        //       console.log(`3[${query.query.filename}][${client._foglet.id}] We receive a second time a result for this run. NOT POSSIBLE: round:(start, end) = (${roundStart},${roundEnd}) `)
-        //     }
-        //   } else {
-        //     if(!globalResults[roundStart].includes(client._foglet.id)) {
-        //       globalResultsQuery[roundStart].push(topush)
-        //       globalResults[roundStart].push(client._foglet.id)
-        //       const gs = sizeof(globalResultsQuery)
-        //       console.log(`4[${query.query.filename}][${client._foglet.id}] Receive results for round: (start, end) = (${roundStart},${roundEnd}), [${globalResults[roundEnd].length}/${queries.length}], Global size: ${gs}`)
-        //     } else {
-        //       console.log(`4[${query.query.filename}][${client._foglet.id}] We receive a second time a result for this run. NOT POSSIBLE: round:(start, end) = (${roundStart},${roundEnd}) `)
-        //     }
-        //   }
-        //
-        //
-        //
-        //   let roundToPrint = [0, config.round-2, config.round-3, Math.floor(config.round/2)]
-        //   if(roundToPrint.includes(roundEnd)) {
-        //     writeNeighbours(roundEnd, query.dir).then(() => {
-        //       q.stop()
-        //     }).catch(e => {
-        //       console.log(e)
-        //     })
-        //   } else {
-        //     q.stop()
-        //   }
-        // }
-      })
-      q.on('end', (result) => {
+      }
+      const callbackEnd = (result) => {
         console.log('Query %s finished', query.query.filename)
         finished++
-        done()
-      })
-      q.on('error',(err) => {
+        done(query.query.filename)
+      }
+      const callbackError = (err) => {
         reject(err)
-      })
+      }
+      q.on('updated', callbackUpdated)
+      q.on('end', callbackEnd)
+      q.on('error', callbackError)
     })
 
-    // let check = setInterval(() => {
-    //   globalResultsQuery.forEach(f => {
-    //     console.log(f.length, JSON.stringify(f.map(e=>e.name).sort()))
-    //   })
-    // }, 5000)
-
-    function done() {
+    function done(q) {
+      console.log('[%s] done, [%f/%f]',q, finished, queries.length)
       if((finished === queries.length) ) {
+        queries.forEach(query => {
+          query.q.removeAllListeners()
+        })
         resolve()
       }
     }
@@ -540,6 +503,72 @@ function executeQueries(clients, queries) {
   })
 }
 
+function checkRound(round, received, max) {
+  return new Promise((resolve, reject) => {
+    if(received === max) {
+      // print
+      printEdges(round).then(() => {
+        // now write to disk the result for round "round"
+        // just compute the average on the chosen round
+        const chosenRound = globalResultsQuery[round]
+        console.log('Round:%f :=: #r=%f', round, chosenRound.length)
+        chosenRound.reduce((acc, val) => acc.then(() => {
+          const data = [
+            val.roundStart,
+            val.completeness,
+            val.timeout,
+            val.obtained,
+            val.card,
+            val.message,
+          ]
+          return append(val.resultName+'-tmp.csv', data.join(',')+'\n')
+        }), Promise.resolve()).then(() => {
+          const globalCompleteness = chosenRound.reduce((acc, cur) => acc+cur.completeness, 0) / chosenRound.length
+          const completed = chosenRound.filter((cur) => cur.completeness === 100).length
+          const globalCompletenessCompleted = completed / chosenRound.length * 100
+
+          const completeQueries = chosenRound.reduce((acc, cur) => {
+            if(cur.completeness === 100) return acc+1
+            return acc
+          }, 0)
+          const messages = chosenRound.reduce((acc, cur) => acc+cur.message, 0)
+          const maxResults = chosenRound.reduce((acc, cur) => acc+cur.card, 0)
+          const obtained = chosenRound.reduce((acc, cur) => acc+cur.obtained, 0)
+          const completenessInresults = obtained / maxResults * 100
+          const timedout = chosenRound.reduce((acc, cur) => acc+(cur.timeout)?1:0, 0)
+          append(path.resolve(destination+'/tmp-global-completeness.csv'), [
+            round,
+            globalCompleteness,
+            globalCompletenessCompleted,
+            completenessInresults,
+            messages,
+            completeQueries,
+            chosenRound.length,
+            obtained,
+            maxResults,
+            timedout
+          ].join(',')+'\n').then(() => {
+            writeNeighbours(round, path.resolve(destination)).then(() => {
+              // once all is done resolve
+              resolve()
+            }).catch(e => {
+              console.error(e)
+            })
+          }).catch(e => {
+            console.error(e)
+          })
+        }).catch(e => {
+          console.error(e)
+        })
+      }).catch(e => {
+        console.error(e)
+      })
+    } else {
+      resolve()
+    }
+  })
+}
+
 function getActivesQueries() {
   return [...activeQueries.values()].filter(aq => {
     if(aq.round !== undefined && aq.round >= 0) {
@@ -550,60 +579,133 @@ function getActivesQueries() {
   })
 }
 
+
+function findEntry(r, id) {
+  // console.log('Find entry:', r, id)
+  if(r <= 0) {
+    return undefined
+  } else {
+    const entry = globalResultsQuery[r].find((e) => {
+      return activeQueries.get(e.clientid).client._foglet.id === id
+    })
+    if(entry) {
+      return entry
+    } else {
+      return findEntry(r-1)
+    }
+  }
+}
+
 function printGlobalResults() {
   return new Promise((resolve, reject) => {
-    for(let i = 0; i<globalResultsQuery.length; i++) {
-      console.log('Round:%f :=: #r=%f', i, globalResultsQuery[i].length)
-      const header = ['round', 'completeness', 'timeout', 'receiveresults', 'maxresults', 'name']
-      fs.appendFileSync(globalResultsQuery[i][0].resultName, header.join(',')+'\n')
-      for(let j = 0; j<globalResultsQuery[i].length; j++) {
-        const val = globalResultsQuery[i][j]
-        const data = [
-          val.roundStart,
-          val.completeness,
-          val.timeout,
-          val.obtained,
-          val.card,
-          val.message,
-        ]
-        fs.appendFileSync(val.resultName, data.join(',')+'\n')
+    try {
+      const clients = getActivesQueries().map(e => e.client._foglet._id)
+      // before all we need to check if we have all results, in case of late results
+      for(let i = 0; i<globalResultsQuery.length; i++) {
+        console.log(globalResultsQuery[i].length, clients.length)
+        if(globalResultsQuery[i].length < clients.length) {
+          // late results
+          // fill the gap with last results of missing entries
+          const local = globalResultsQuery[i].map(e => e.clientid)
+          let diff = ldiff(clients, local)
+          if(diff.length > 0) diff.forEach(c => {
+            // fill with last entry
+            const findEntryById = (id) => {
+              return getActivesQueries().find(e => {
+                // console.log('try to find: ', id, e.client._foglet.id)
+                if(e.client._foglet.id === id) return true
+                return false
+              })
+            }
+            const client = findEntryById(c)
+            if(client) {
+              const entry = findEntry(i-1, client.client._id)
+              const def = {
+                dir: client.dir,
+                message: client.client._statistics.message,
+                name: client.query.filename,
+                roundStart: i,
+                completeness: 0,
+                clientid: client.client._foglet._id,
+                timeout: true,
+                card: client.query.card,
+                obtained: 0,
+                resultName: client.resultName
+              }
+              if(!entry) {
+                globalResultsQuery[i].push(def)
+              } else {
+                def.message = entry.message
+                def.completeness = entry.completeness
+                def.obtained = entry.obtained
+                entry.timedout = true
+                globalResultsQuery[i].push(entry)
+              }
+            } else {
+              throw new Error('no client found! IMPOSSIBLE')
+            }
+          })
+        } else {
+          console.log('All results for round: ', i)
+        }
       }
-      const globalCompleteness = globalResultsQuery[i].reduce((acc, cur) => acc+cur.completeness, 0) / globalResultsQuery[i].length
-      const completed = globalResultsQuery[i].filter((cur) => cur.completeness === 100).length
-      const globalCompletenessCompleted = completed / globalResultsQuery[i].length * 100
 
-      const completeQueries = globalResultsQuery[i].reduce((acc, cur) => {
-        if(cur.completeness === 100) return acc+1
-        return acc
-      }, 0)
-      const messages = globalResultsQuery[i].reduce((acc, cur) => acc+cur.message, 0)
-      const maxResults = globalResultsQuery[i].reduce((acc, cur) => acc+cur.card, 0)
-      const obtained = globalResultsQuery[i].reduce((acc, cur) => acc+cur.obtained, 0)
-      const completenessInresults = obtained / maxResults * 100
-      const timedout = globalResultsQuery[i].reduce((acc, cur) => acc+(cur.timeout)?1:0, 0)
-      fs.appendFileSync(path.resolve(destination+'/global-completeness.csv'), [
-        i,
-        globalCompleteness,
-        globalCompletenessCompleted,
-        completenessInresults,
-        messages,
-        completeQueries,
-        globalResultsQuery[i].length,
-        obtained,
-        maxResults,
-        timedout
-      ].join(',')+'\n')
+
+      for(let i = 0; i<globalResultsQuery.length; i++) {
+        console.log('Round:%f :=: #r=%f', i, globalResultsQuery[i].length)
+        const header = ['round', 'completeness', 'timeout', 'receiveresults', 'maxresults', 'name']
+        for(let j = 0; j<globalResultsQuery[i].length; j++) fs.appendFileSync(globalResultsQuery[i][j].resultName, header.join(',')+'\n')
+        for(let j = 0; j<globalResultsQuery[i].length; j++) {
+          const val = globalResultsQuery[i][j]
+          const data = [
+            val.roundStart,
+            val.completeness,
+            val.timeout,
+            val.obtained,
+            val.card,
+            val.message,
+          ]
+          fs.appendFileSync(val.resultName, data.join(',')+'\n')
+        }
+        const globalCompleteness = globalResultsQuery[i].reduce((acc, cur) => acc+cur.completeness, 0) / globalResultsQuery[i].length
+        const completed = globalResultsQuery[i].filter((cur) => cur.completeness === 100).length
+        const globalCompletenessCompleted = completed / globalResultsQuery[i].length * 100
+
+        const completeQueries = globalResultsQuery[i].reduce((acc, cur) => {
+          if(cur.completeness === 100) return acc+1
+          return acc
+        }, 0)
+        const messages = globalResultsQuery[i].reduce((acc, cur) => acc+cur.message, 0)
+        const maxResults = globalResultsQuery[i].reduce((acc, cur) => acc+cur.card, 0)
+        const obtained = globalResultsQuery[i].reduce((acc, cur) => acc+cur.obtained, 0)
+        const completenessInresults = obtained / maxResults * 100
+        const timedout = globalResultsQuery[i].reduce((acc, cur) => acc+(cur.timeout)?1:0, 0)
+        fs.appendFileSync(path.resolve(destination+'/global-completeness.csv'), [
+          i,
+          globalCompleteness,
+          globalCompletenessCompleted,
+          completenessInresults,
+          messages,
+          completeQueries,
+          globalResultsQuery[i].length,
+          obtained,
+          maxResults,
+          timedout
+        ].join(',')+'\n')
+      }
+      globalResultsQuery[globalResultsQuery.length - 1].reduce((acc, cur) => acc.then(() => {
+        return writeNeighbours('last', cur.dir)
+      }), Promise.resolve()).then(() => {
+        // once all is done resolve
+        resolve()
+      })
+    } catch (e) {
+      reject(e)
     }
-    globalResultsQuery[globalResultsQuery.length - 1].reduce((acc, cur) => acc.then(() => {
-      return writeNeighbours('last', cur.dir)
-    }), Promise.resolve()).then(() => {
-      // once all is done resolve
-      resolve()
-    })
   })
 }
 
-function printEdges (clients, round) {
+function printEdges (round) {
   return new Promise((resolve, reject) => {
     let overlayEdges = 0
     let pvov
@@ -612,11 +714,12 @@ function printEdges (clients, round) {
     }
 
     const pv = pvov = [...activeQueries.values()].reduce((acc, cur) => {
-      return acc + [...cur.client._foglet.overlay().network.rps.partialView.values()].reduce((a, c) => a+c.length, 0)
+      console.log(cur.client._foglet.overlay().network.rps.partialView.size, cur.client._foglet.overlay('son').network.rps.partialView.size)
+      return acc + cur.client._foglet.overlay().network.rps.partialView.size
     }, 0)
     const edges = [...activeQueries.values()].reduce((acc, cur) => acc+cur.client._foglet.getNeighbours().length, 0)
     const edgesAll = [...activeQueries.values()].reduce((acc, cur) => acc+cur.client._foglet.getNeighbours(Infinity).length, 0)
-    console.log(`[${round}] |RPS-edges|: ${edges}, |SON-edges|: ${overlayEdges}, (RPS-arcs, RPS-con) = (${pv},${edgesAll})  `)
+    console.log(`[${round}] |RPS-edges|: ${edges}, |SON-edges|: ${overlayEdges}, (RPS-arcs, RPS-con) = (${pv},${edgesAll}) AVERAGE-PV:${pv/[...activeQueries.values()].length} `)
     resolve()
   })
 }
@@ -691,9 +794,11 @@ let extractFilename = (pathData, max) => new Promise((resolve, reject) => {
 function createClient (i) {
   return new Dequenpeda(lmerge(config.options, {
     foglet: {
-      id: i,
+      id: 'c'+i,
       rps: {
+        type: 'custom',
         options: {
+          class: CyclonAdapter,
           socketClass: AbstractSimplePeer
         }
       }

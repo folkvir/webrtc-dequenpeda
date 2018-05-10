@@ -9,6 +9,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 import cairo
+from functools import reduce
 
 plt.switch_backend('cairo')
 
@@ -32,10 +33,16 @@ def createGraph(data, type, filename):
         ids[node["inview"]] = n
         id += 1
 
+    average = []
     for node in data:
+        a = 0
         for edge in node[type]:
             # print(edge)
+            a += 1
             g.add_edge(ids[node["inview"]], ids[edge])
+        average.append(a)
+    calculatedaverage = reduce((lambda x, y: x + y), average) / len(average)
+    print('average pv for type: ', calculatedaverage ,  ' ',  type)
 
     g.shrink_to_fit()
 
