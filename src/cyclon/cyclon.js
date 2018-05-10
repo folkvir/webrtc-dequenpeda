@@ -173,7 +173,7 @@ module.exports = class Cyclon extends N2N {
           samp.age = 0
         }
       })
-      // debug('[%s] Starting to exchange with %s with a sample of size: %f', this.PEER, oldest, sample.length)
+      debug('[%s] Starting to exchange with %s with a sample of size: %f', this.PEER, oldest, sample.length)
       // 4. Send the updated subset to peer Q.
       // need to try with another peer if it fails
       const msgid = uniqid()
@@ -190,6 +190,7 @@ module.exports = class Cyclon extends N2N {
         }, this.options.timeoutnetwork)
         // 5. Receive from Q a subset of no more that i of its own entries
         this.once('MExchangeBack-'+msgid, (id, message) => {
+          clearTimeout(timeout)
           // 6. Discard entries pointing at P and entries already contained in P’s
           // cache.
           // at least put the id of the peer we just exchange samples into the list of arcs to remove
@@ -245,7 +246,7 @@ module.exports = class Cyclon extends N2N {
     const save_sample = message.sample.slice(0)
     const saved_originator = String(message.from)
     const sample = this._getSample(this.options.maxPeers)
-    // debug('[%s] Answer to a an exchange demande with %s with a sample of size: %f', this.PEER, saved_originator, sample.length)
+    debug('[%s] Answer to a an exchange demande with %s with a sample of size: %f', this.PEER, saved_originator, sample.length)
     // now reply
     message.type = 'MExchangeBack'
     message.sample = sample
@@ -253,7 +254,7 @@ module.exports = class Cyclon extends N2N {
     this.send(id, message, this.options.retry)
     // 6. Discard entries pointing at P and entries already contained in P’s
     // cache.
-    const tokeep = message.sample.filter(samp => {
+    const tokeep = save_sample.filter(samp => {
       if(this._partialView.has(samp.id)) {
         return false
       } else {

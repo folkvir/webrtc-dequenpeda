@@ -125,37 +125,6 @@ module.exports = class Dequenpeda extends EventEmitter {
 
     this._queries = new Map()
     this._shuffleCount = 0
-    if(!this._options.manualshuffle) {
-      this._periodicExecutionInterval = setInterval(() => {
-        // waiting for the first connection to open and then execute
-        // console.log(`[${this._foglet.id}] periodic execution: before calling the method `, this._shuffleCount, this._foglet.getNeighbours().length, this._foglet.overlay('son').network.getNeighbours().length, this._queries.size)
-        // wait 5 seconds to lets the shuffle to be done
-        setTimeout(() => {
-          this._periodicExecution()
-        }, 5000)
-        //setTimeout(() => {this._periodicExecution()}, 5000)
-      }, this._options.foglet.rps.options.delta)
-    }
-    // set the listener for manual shuffle
-    if(this._options.manualshuffle) {
-      this._periodicShuffle = setInterval(() => {
-        if(this._queries.size === 0) {
-          this._shuffle()
-        }
-      }, this._options.manualshuffleperiodicdelta)
-      this.on('check-shuffle', () => {
-        if(this._queries.size > 0) {
-          const shuffle = true
-          this._queries.forEach(q => {
-            if(q._status !== 'executed') shuffle = false
-          })
-          if(shuffle) {
-            console.log(`[${this._foglet.id}]Time to shuffle connections.`)
-            this._shuffle()
-          }
-        }
-      })
-    }
   }
 
   /**
@@ -165,6 +134,7 @@ module.exports = class Dequenpeda extends EventEmitter {
    * @return {[type]} [description]
    */
   connection (app = undefined, ...args) {
+    this._start()
     if(app) {
       return this._foglet.connection(app._foglet, ...args).then(() => {
         this.emit('connected')
@@ -196,6 +166,40 @@ module.exports = class Dequenpeda extends EventEmitter {
         reject(e)
       })
     })
+  }
+
+  _start () {
+    if(!this._options.manualshuffle) {
+      this._periodicExecutionInterval = setInterval(() => {
+        // waiting for the first connection to open and then execute
+        // console.log(`[${this._foglet.id}] periodic execution: before calling the method `, this._shuffleCount, this._foglet.getNeighbours().length, this._foglet.overlay('son').network.getNeighbours().length, this._queries.size)
+        // wait 5 seconds to lets the shuffle to be done
+        setTimeout(() => {
+          this._periodicExecution()
+        }, 5000)
+        //setTimeout(() => {this._periodicExecution()}, 5000)
+      }, this._options.foglet.rps.options.delta)
+    }
+    // set the listener for manual shuffle
+    if(this._options.manualshuffle) {
+      this._periodicShuffle = setInterval(() => {
+        if(this._queries.size === 0) {
+          this._shuffle()
+        }
+      }, this._options.manualshuffleperiodicdelta)
+      this.on('check-shuffle', () => {
+        if(this._queries.size > 0) {
+          const shuffle = true
+          this._queries.forEach(q => {
+            if(q._status !== 'executed') shuffle = false
+          })
+          if(shuffle) {
+            console.log(`[${this._foglet.id}]Time to shuffle connections.`)
+            this._shuffle()
+          }
+        }
+      })
+    }
   }
 
   /**

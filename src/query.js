@@ -69,22 +69,38 @@ module.exports = class Query extends EventEmitter {
       this.emit(eventName, this._lastResults, this._round, this._round)
       this._status = 'end'
       return Promise.resolve(this._lastResults)
-    }
-    if(this._status === 'pending') {
+    } else if(this._status === 'pending') {
       this.emit(eventName, this._lastResults, this._round, this._round, true)
       return Promise.resolve(this._lastResults)
-    }
-    this._status = 'pending'
-    this._createTimeout()
-    const round = Object.assign({}, { round: this._round, start: this._round})
-    // debug(`[client:${this._parent._foglet.id}] 1-Executing the query ${this._id}...`)
-    const neighbors = this._parent._foglet.getNeighbours()
-    if (neighbors.length > 0) {
-      // execute after receiving triples from neighbors
-      // STEP 1 and 2 and 3
-      return this._askTriples(round.round).then(() => {
-        // console.log('Asking tripels finished, execute the query...')
-        // STEP 4 and 5
+    } else {
+      this._status = 'pending'
+      this._createTimeout()
+      const round = Object.assign({}, { round: this._round, start: this._round})
+      // debug(`[client:${this._parent._foglet.id}] 1-Executing the query ${this._id}...`)
+      const neighbors = this._parent._foglet.getNeighbours()
+      if (neighbors.length > 0) {
+        // execute after receiving triples from neighbors
+        // STEP 1 and 2 and 3
+        return this._askTriples(round.round).then(() => {
+          // console.log('Asking tripels finished, execute the query...')
+          // STEP 4 and 5
+          return this._execute(eventName, round.round).then((results) => {
+            round.end = this._round
+            this.emit(eventName, results, round.start, round.end)
+            this._round++
+            return Promise.resolve(results)
+          }).catch(e => {
+            console.log(e)
+            this._status = 'executed'
+            return Promise.reject(e)
+          })
+        }).catch(e => {
+          console.log('error when asking triples: ', e)
+          this._status = 'executed'
+          return Promise.reject(e)
+        })
+      } else {
+        // // STEP 4 and 5 only
         return this._execute(eventName, round.round).then((results) => {
           round.end = this._round
           this.emit(eventName, results, round.start, round.end)
@@ -95,23 +111,7 @@ module.exports = class Query extends EventEmitter {
           this._status = 'executed'
           return Promise.reject(e)
         })
-      }).catch(e => {
-        console.log('error when asking triples: ', e)
-        this._status = 'executed'
-        return Promise.reject(e)
-      })
-    } else {
-      // // STEP 4 and 5 only
-      return this._execute(eventName, round.round).then((results) => {
-        round.end = this._round
-        this.emit(eventName, results, round.start, round.end)
-        this._round++
-        return Promise.resolve(results)
-      }).catch(e => {
-        console.log(e)
-        this._status = 'executed'
-        return Promise.reject(e)
-      })
+      }
     }
   }
 

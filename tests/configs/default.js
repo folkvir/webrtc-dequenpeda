@@ -2,8 +2,8 @@ const MAX_SET_TIMEOUT = 2147483647
 const config = {
   name: 'default',
   queries: require('./default-queries.json'),
-  clients: 50,
-  round: 50,
+  clients: 20,
+  round: 20,
   datasets: [
     { name: 'diseasome', data: "../data/diseasome/fragments/", queries: "../data/diseasome/queries/queries.json", results: "../data/diseasome/results/", withoutQueries: ['q91.json', 'q92.json', 'q61.json', 'q53.json']},
     //{ name: 'linkedmdb', data: "../data/linkedmdb/fragments/", queries: "../data/linkedmdb/queries/queries.json", results: "../data/linkedmdb/results/", withoutQueries: []},
@@ -18,14 +18,14 @@ const config = {
     timeout: 10 * 1000, //network timeout when sending tpq
     queryType: 'normal', // there is one type, so normal is always choose.
     activeSon: true, // we activate the semantic overlay network or not
-    shuffleCountBeforeStart: 0, // we wait n shuffle before updated queries.
+    shuffleCountBeforeStart: 2, // we wait n shuffle before updated queries.
     foglet: {
       rps:{
         options: {
-          maxPeers: 7,
+          maxPeers: 10,
           timeout: 30 * 1000,
           timeoutPending: 30 * 1000,
-          delta: 60 * 1000,
+          delta: 1 * 60 * 1000,
         }
       }
     }

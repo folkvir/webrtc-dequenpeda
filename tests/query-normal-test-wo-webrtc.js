@@ -32,7 +32,7 @@ let day = date.getDate()
 let month = date.getMonth()
 let year = date.getFullYear()
 const time = [hour, minute, day, month, year].join("-")
-console.log('Time: ', time)
+debug('Time: ', time)
 
 const config = require(path.resolve(commander.config))
 
@@ -44,10 +44,10 @@ if(commander.manualshuffle)
 else
   config.options.manualshuffle = false
 if(commander.name) config.name = commander.name+'-'+name
-console.log('[PARAMETER] Number of clients: ', config.clients)
-console.log('[PARAMETER] Timeout: ', config.timeout)
+debug('[PARAMETER] Number of clients: ', config.clients)
+debug('[PARAMETER] Timeout: ', config.timeout)
 
-console.log('[PARAMETER] Manual shuffling: ', config.options.manualshuffle)
+debug('[PARAMETER] Manual shuffling: ', config.options.manualshuffle)
 
 config.resultDir = path.resolve(path.join(__dirname, './results/'+config.name))
 
@@ -56,7 +56,7 @@ const destination = path.resolve(config.resultDir)
 try {
   if (!fs.existsSync(destination)) shell.mkdir('-p', destination)
 } catch (e) {
-  console.log(e)
+  debug(e)
 }
 
 
@@ -73,19 +73,19 @@ for(let i = 0; i<config.round; i++) {
   globalResultsQuery.push([])
 }
 
-console.log('Global results: ', globalResults)
+debug('Global results: ', globalResults)
 let receiveAnswers = 0
 let clientsLoaded = undefined
 
 createClients(config.clients).then((clients) => {
   clientsLoaded = clients
-  console.log('Number of clients loaded: ', clients.length)
+  debug('Number of clients loaded: ', clients.length)
   // clients.forEach(c => {
-  //   console.log('Neighbours: ', c._foglet.getNeighbours())
+  //   debug('Neighbours: ', c._foglet.getNeighbours())
   // })
   let queries = config.queries
   queries = shuffle(queries)
-  console.log('Number of queries kept for the exp: ', queries.length)
+  debug('Number of queries kept for the exp: ', queries.length)
 
   // if(allQueries.length < clients.length) throw new Error('not enough queries for clients')
 
@@ -100,41 +100,38 @@ createClients(config.clients).then((clients) => {
       })
     })
   }), Promise.resolve([])).then((results) => {
-    console.log('All dataset loaded on clients')
-    connectClients(clients).then(() => {
-      console.log('Clients connected.')
-      affectQueries(clients, queries, clients.length === 1).then((res) => {
-        executeQueries(clients, res).then(() => {
-          console.log('All queries finished.')
-          printGlobalResults(clients).then(() => {
-            clients.reduce((cacc, cur) => {
-              return cur.close()
-            }, Promise.resolve()).then(() => {
-              process.exit(0)
-            })
-          }).catch(e => {
-            console.error(e)
-            clients.reduce((cacc, cur) => {
-              return cur.close()
-            }, Promise.resolve()).then(() => {
-              process.exit(0)
-            })
-            process.exit(1)
+    debug('All dataset loaded on clients')
+    affectQueries(clients, queries, clients.length === 1).then((res) => {
+      executeQueries(clients, res).then(() => {
+        debug('All queries finished.')
+        printGlobalResults(clients).then(() => {
+          clients.reduce((cacc, cur) => {
+            return cur.close()
+          }, Promise.resolve()).then(() => {
+            process.exit(0)
           })
         }).catch(e => {
           console.error(e)
+          clients.reduce((cacc, cur) => {
+            return cur.close()
+          }, Promise.resolve()).then(() => {
+            process.exit(0)
+          })
+          process.exit(1)
         })
       }).catch(e => {
-        console.log(e)
+        console.error(e)
       })
     }).catch(e => {
-      console.log(e)
+      console.error(e)
+      process.exit(1)
     })
   }).catch(e => {
-    console.log(e)
+    console.error(e)
   })
 }).catch(e => {
   console.error(e)
+  process.exit(1)
 })
 
 
@@ -153,7 +150,7 @@ function createClients(number) {
     if (i !== 0) tmpFoglets.push(i)
     const c = createClient(i)
     c._foglet.on('connect', () => {
-      console.log('['+i+'] client connected')
+      debug('['+i+'] client connected')
     })
     clients.push(c)
   }
@@ -163,13 +160,13 @@ function createClients(number) {
 }
 
 function connectClients(clients) {
-  console.log('Connecting clients...', clients.length)
+  debug('Connecting clients...', clients.length)
   return new Promise((resolve, reject) => {
     let firstClient = clients[0]
     let connectedClients = []
     if(clients.length < 2) reject(new Error('need at least 2 client'))
     clients.reduce((accClient, client, i) => accClient.then(() => {
-      return wait(1000).then(() => {
+      return wait(500).then(() => {
         return new Promise((res, rej) => {
           // pick a random connected peer
           const rand = Math.floor(Math.random() * connectedClients.length)
@@ -177,22 +174,23 @@ function connectClients(clients) {
           let rnclient = connectedClients[rand] // connectedClients[rn]
           if(i===0) rnclient = clients[Math.floor(Math.random() * clients.length)]
 
-          console.log('Connecting client: %s to client: %s', client._foglet.id, rnclient._foglet.id)
+          debug('Connecting client: %s to client: %s', client._foglet.id, rnclient._foglet.id)
           // connect the SON, it will connect the rps as well
           if(config.options.activeSon) {
             client.connection(rnclient, 'son').then(() => {
               // client._foglet.overlay().network.rps._exchange()
               connectedClients.push(client)
-              setTimeout(() => {
-                client._foglet.overlay().network.rps._exchange()
-                client._foglet.overlay().network.rps.once('end-shuffle', () => {
-                  const pv = pvov = clients.reduce((acc, cur) => {
-                    return acc + [...cur._foglet.overlay().network.rps.partialView].reduce((a, c) => a+c.length, 0)
-                  }, 0)
-                  console.log('Arcs: ', pv)
-                  res()
-                })
-              }, 500)
+              const pv = pvov = clients.reduce((acc, cur) => {
+                return acc + [...cur._foglet.overlay().network.rps.partialView].reduce((a, c) => a+c.length, 0)
+              }, 0)
+              debug('Arcs: ', pv)
+              res()
+              // setTimeout(() => {
+              //   // client._foglet.overlay().network.rps._exchange()
+              //   client._foglet.overlay().network.rps.once('end-shuffle', () => {
+              //
+              //   })
+              // }, 500)
             }).catch(e => {
               res()
             })
@@ -201,16 +199,17 @@ function connectClients(clients) {
             client.connection(rnclient).then(() => {
               // rn[rn.length-1]._foglet.overlay().network.rps._exchange()
               connectedClients.push(client)
-              setTimeout(() => {
-                client._foglet.overlay().network.rps._exchange()
-                client._foglet.overlay().network.rps.once('end-shuffle', () => {
-                  const pv = pvov = clients.reduce((acc, cur) => {
-                    return acc + [...cur._foglet.overlay().network.rps.partialView].reduce((a, c) => a+c.length, 0)
-                  }, 0)
-                  console.log('Arcs: ', pv)
-                  res()
-                })
-              }, 500)
+              const pv = pvov = clients.reduce((acc, cur) => {
+                return acc + [...cur._foglet.overlay().network.rps.partialView].reduce((a, c) => a+c.length, 0)
+              }, 0)
+              debug('Arcs: ', pv)
+              res()
+              // setTimeout(() => {
+              //   client._foglet.overlay().network.rps._exchange()
+              //   client._foglet.overlay().network.rps.once('end-shuffle', () => {
+              //
+              //   })
+              // }, 500)
             }).catch(e => {
               res()
             })
@@ -222,7 +221,7 @@ function connectClients(clients) {
     }), Promise.resolve()).then(() => {
 
       const toprint = clients.map(c => c._foglet.getNeighbours().length)
-      console.log(JSON.stringify(toprint))
+      debug(JSON.stringify(toprint))
 
       resolve(clients)
     }).catch(e => {
@@ -248,8 +247,8 @@ function wait(time) {
 function affectQueries(clients, queries, allqueries) {
   // shuffle clients to be fair!
   clients = shuffle(clients)
-  console.log('Number of clients: ', clients.length)
-  console.log('Number of queries: ', queries.length)
+  debug('Number of clients: ', clients.length)
+  debug('Number of queries: ', queries.length)
   queries = shuffle(queries)
 
   return new Promise((resolve, reject) => {
@@ -275,7 +274,7 @@ function affectQueries(clients, queries, allqueries) {
             resolve(toReturn)
           }
         }).catch(e => {
-          console.log(e)
+          debug(e)
         })
       }
     } else {
@@ -298,11 +297,11 @@ function affectQueries(clients, queries, allqueries) {
               resolve(toReturn)
             }
           }).catch(e => {
-            console.log(e)
+            debug(e)
           })
           number++
         }
-        console.log('Waiting for %f shuffles for a proper network before continuing.', config.options.shuffleCountBeforeStart)
+        debug('Waiting for %f shuffles for a proper network before continuing.', config.options.shuffleCountBeforeStart)
       } else {
         for(let i = 0; i<clients.length; i++) {
           activeQueries.set(clients[i]._id, {
@@ -322,12 +321,12 @@ function affectQueries(clients, queries, allqueries) {
                 resolve(toReturn)
               }
             }).catch(e => {
-              console.log(e)
+              debug(e)
             })
             number++
           }
         }
-        console.log('Waiting for %f shuffles for a proper network before continuing.', config.options.shuffleCountBeforeStart)
+        debug('Waiting for %f shuffles for a proper network before continuing.', config.options.shuffleCountBeforeStart)
       }
     }
   })
@@ -344,8 +343,8 @@ function affectOneQuery(query, client, ind, numberOfQueries, clients) {
     activeQueries.get(client._id).resultName = resultName
     activeQueries.get(client._id).dir = dir
     activeQueries.get(client._id).round = 0
-    console.log('Affecting: %s to client %s', query.filename, client._id)
-    console.log('Output will be in: ', resultName)
+    debug('Affecting: %s to client %s', query.filename, client._id)
+    debug('Output will be in: ', resultName)
     resolve({
       client: client,
       q: client.query(query.query, 'normal', {
@@ -372,7 +371,7 @@ function executeQueries(clients, queries) {
         if(eventName !== 'no-queries-yet') {
           // now check before increasing the shuffle number cause, if we are at shuffle +1 we need to stop the experiment
           if(shuffle > config.round - 1) {
-            console.log('[%s] stop the query anyway', query.query.filename)
+            debug('[%s] stop the query anyway', query.query.filename)
             q.stop()
           }
           shuffle++
@@ -383,7 +382,7 @@ function executeQueries(clients, queries) {
         let timeout = timedout || false
         let resultsObtained = 0
         if(roundStart === roundEnd) {
-          //console.log('roundStart===roundEnd')
+          //debug('roundStart===roundEnd')
           completeness = result.length / query.query.card * 100
           resultsObtained = result.length
         } else {
@@ -428,7 +427,7 @@ function executeQueries(clients, queries) {
             let roundToPrint = [0, config.round-2, config.round-3, Math.floor(config.round/2)]
             if(roundToPrint.includes(roundStart)) {
               writeNeighbours(roundStart, query.dir).catch(e => {
-                console.log(e)
+                debug(e)
               })
             }
             globalResultsQuery[roundStart].push(topush)
@@ -436,10 +435,10 @@ function executeQueries(clients, queries) {
 
             const gs = sizeof(globalResultsQuery)
 
-            console.log(`1[${query.query.filename}][${client._foglet.id}] Receive results for round: (start, end) = (${roundStart},${roundEnd}), [${globalResults[roundStart].length}/${queries.length}], Global size: ${gs}`)
+            debug(`1[${query.query.filename}][${client._foglet.id}] Receive results for round: (start, end) = (${roundStart},${roundEnd}), [${globalResults[roundStart].length}/${queries.length}], Global size: ${gs}`)
             checkRound(roundStart, globalResults[roundStart].length, queries.length)
           } else {
-            console.log(`1[${query.query.filename}][${client._foglet.id}] We receive a second time a result for this run. NOT POSSIBLE: round:(start, end) = (${roundStart},${roundEnd}) `)
+            debug(`1[${query.query.filename}][${client._foglet.id}] We receive a second time a result for this run. NOT POSSIBLE: round:(start, end) = (${roundStart},${roundEnd}) `)
           }
         } else if(roundStart === config.round-1) {
           if(!globalResults[roundStart].includes(client._foglet.id)) {
@@ -448,20 +447,20 @@ function executeQueries(clients, queries) {
             let roundToPrint = [0, config.round-2, config.round-3, Math.floor(config.round/2)]
             if(roundToPrint.includes(roundStart)) {
               writeNeighbours(roundStart, query.dir).catch(e => {
-                console.log(e)
+                debug(e)
               })
             }
             globalResultsQuery[roundStart].push(topush)
             const gs = sizeof(globalResultsQuery)
-            console.log(`2[${query.query.filename}][${client._foglet.id}] Receive results for round: (start, end) = (${roundStart},${roundEnd}), [${globalResults[roundStart].length}/${queries.length}], Global size: ${gs}`)
+            debug(`2[${query.query.filename}][${client._foglet.id}] Receive results for round: (start, end) = (${roundStart},${roundEnd}), [${globalResults[roundStart].length}/${queries.length}], Global size: ${gs}`)
             checkRound(roundStart, globalResults[roundStart].length, queries.length)
           } else {
-            console.log(`2[${query.query.filename}][${client._foglet.id}] We receive a second time a result for this run. NOT POSSIBLE: round:(start, end) = (${roundStart},${roundEnd}) `)
+            debug(`2[${query.query.filename}][${client._foglet.id}] We receive a second time a result for this run. NOT POSSIBLE: round:(start, end) = (${roundStart},${roundEnd}) `)
           }
         }
       }
       const callbackEnd = (result) => {
-        console.log('Query %s finished', query.query.filename)
+        debug('Query %s finished', query.query.filename)
         finished++
         done(query.query.filename)
       }
@@ -474,7 +473,7 @@ function executeQueries(clients, queries) {
     })
 
     function done(q) {
-      console.log('[%s] done, [%f/%f]',q, finished, queries.length)
+      debug('[%s] done, [%f/%f]',q, finished, queries.length)
       if((finished === queries.length) ) {
         queries.forEach(query => {
           query.q.removeAllListeners()
@@ -494,10 +493,19 @@ function executeQueries(clients, queries) {
       'wantedresults',
       'timedout'
     ].join(',')+'\n').then(() => {
-      queries.forEach(query => {
-        // start the execution for the first time
-        console.log('Starting query %f ...', query.index)
-        query.q.init()
+      debug('Initializing queries locally...')
+      queries.reduce((acc, cur) => acc.then(() => {
+        debug('Starting query %f ...', cur.index)
+        return cur.q.init()
+      }), Promise.resolve()).then(() => {
+        debug('Connecting clients...')
+        connectClients(clients).then(() => {
+          debug('Experiment running...')
+        }).catch(e => {
+          reject(e)
+        })
+      }).catch(e => {
+        reject(e)
       })
     })
   })
@@ -511,7 +519,7 @@ function checkRound(round, received, max) {
         // now write to disk the result for round "round"
         // just compute the average on the chosen round
         const chosenRound = globalResultsQuery[round]
-        console.log('Round:%f :=: #r=%f', round, chosenRound.length)
+        debug('Round:%f :=: #r=%f', round, chosenRound.length)
         chosenRound.reduce((acc, val) => acc.then(() => {
           const data = [
             val.roundStart,
@@ -581,7 +589,7 @@ function getActivesQueries() {
 
 
 function findEntry(r, id) {
-  // console.log('Find entry:', r, id)
+  // debug('Find entry:', r, id)
   if(r <= 0) {
     return undefined
   } else {
@@ -602,7 +610,7 @@ function printGlobalResults() {
       const clients = getActivesQueries().map(e => e.client._foglet._id)
       // before all we need to check if we have all results, in case of late results
       for(let i = 0; i<globalResultsQuery.length; i++) {
-        console.log(globalResultsQuery[i].length, clients.length)
+        debug(globalResultsQuery[i].length, clients.length)
         if(globalResultsQuery[i].length < clients.length) {
           // late results
           // fill the gap with last results of missing entries
@@ -612,7 +620,7 @@ function printGlobalResults() {
             // fill with last entry
             const findEntryById = (id) => {
               return getActivesQueries().find(e => {
-                // console.log('try to find: ', id, e.client._foglet.id)
+                // debug('try to find: ', id, e.client._foglet.id)
                 if(e.client._foglet.id === id) return true
                 return false
               })
@@ -646,13 +654,13 @@ function printGlobalResults() {
             }
           })
         } else {
-          console.log('All results for round: ', i)
+          debug('All results for round: ', i)
         }
       }
 
 
       for(let i = 0; i<globalResultsQuery.length; i++) {
-        console.log('Round:%f :=: #r=%f', i, globalResultsQuery[i].length)
+        debug('Round:%f :=: #r=%f', i, globalResultsQuery[i].length)
         const header = ['round', 'completeness', 'timeout', 'receiveresults', 'maxresults', 'name']
         for(let j = 0; j<globalResultsQuery[i].length; j++) fs.appendFileSync(globalResultsQuery[i][j].resultName, header.join(',')+'\n')
         for(let j = 0; j<globalResultsQuery[i].length; j++) {
@@ -714,12 +722,12 @@ function printEdges (round) {
     }
 
     const pv = pvov = [...activeQueries.values()].reduce((acc, cur) => {
-      console.log(cur.client._foglet.overlay().network.rps.partialView.size, cur.client._foglet.overlay('son').network.rps.partialView.size)
+      debug(cur.client._foglet.overlay().network.rps.partialView.size, cur.client._foglet.overlay('son').network.rps.partialView.size)
       return acc + cur.client._foglet.overlay().network.rps.partialView.size
     }, 0)
     const edges = [...activeQueries.values()].reduce((acc, cur) => acc+cur.client._foglet.getNeighbours().length, 0)
     const edgesAll = [...activeQueries.values()].reduce((acc, cur) => acc+cur.client._foglet.getNeighbours(Infinity).length, 0)
-    console.log(`[${round}] |RPS-edges|: ${edges}, |SON-edges|: ${overlayEdges}, (RPS-arcs, RPS-con) = (${pv},${edgesAll}) AVERAGE-PV:${pv/[...activeQueries.values()].length} `)
+    debug(`[${round}] |RPS-edges|: ${edges}, |SON-edges|: ${overlayEdges}, (RPS-arcs, RPS-con) = (${pv},${edgesAll}) AVERAGE-PV:${pv/[...activeQueries.values()].length} `)
     resolve()
   })
 }
@@ -734,10 +742,10 @@ function writeNeighbours(round, dir) {
         rps: cur.client._foglet.getNeighbours(),
         profile: cur.client._profile.export()
       }
-      // console.log(`[${round}] RPS length: `, res.rps.length)
+      // debug(`[${round}] RPS length: `, res.rps.length)
       if(cur.client._options.activeSon) {
         res.overlay = cur.client._foglet.overlay('son').network.getNeighbours()
-        // console.log(`[${round}] SON length: `, res.overlay.length)
+        // debug(`[${round}] SON length: `, res.overlay.length)
       }
       acc.push(res)
       return acc
@@ -747,8 +755,8 @@ function writeNeighbours(round, dir) {
     // local: dir,
     // global: destination
     fs.writeFile(path.resolve(p+`/${round}-neighbors.json`), stringified, 'utf8', (err) => {
-      if (err) console.log(err)
-      // console.log('Table of the neighbours has been saved.')
+      if (err) debug(err)
+      // debug('Table of the neighbours has been saved.')
       resolve()
     })
   })
@@ -779,7 +787,7 @@ let extractFilename = (pathData, max) => new Promise((resolve, reject) => {
   try {
     let i = 0
     let res = []
-    console.log('Searching for: ', pathData + '/*.ttl')
+    debug('Searching for: ', pathData + '/*.ttl')
     res = shell.ls(pathData + '/*.ttl')//.forEach(function (file) {
     resolve(res)
   } catch (e) {
@@ -815,7 +823,7 @@ function readTurtleFile (location) {
   return new Promise((resolve, reject) => {
     const fs = require('fs')
     fs.readFile(location, 'utf8', (err, data) => {
-      // console.log(data)
+      // debug(data)
       if (err) reject(err)
       resolve(data)
     })
@@ -831,7 +839,7 @@ function loadFiles(fragments, clients, dataset) {
   fragments = shuffle(fragments)
   clients = shuffle(clients)
 
-  console.log(`[${dataset.name}]`, 'Loading fragments on clients...')
+  debug(`[${dataset.name}]`, 'Loading fragments on clients...')
   return new Promise((resolve, reject) => {
     let elements = 0
     if(fragments.length >= clients.length) {
@@ -841,9 +849,9 @@ function loadFiles(fragments, clients, dataset) {
     }
     let remaining = fragments.length % clients.length
 
-    console.log(`[${dataset.name}] fragment.length: ${fragments.length} clients.length: ${clients.length}`)
-    console.log(`[${dataset.name}] frag/client: ${elements}`)
-    console.log(`[${dataset.name}] remaining file: ${elements}`)
+    debug(`[${dataset.name}] fragment.length: ${fragments.length} clients.length: ${clients.length}`)
+    debug(`[${dataset.name}] frag/client: ${elements}`)
+    debug(`[${dataset.name}] remaining file: ${elements}`)
     let fragmentIndex = 0
     let insertedGlobal = 0
     let clientsSelected = []
@@ -863,18 +871,18 @@ function loadFiles(fragments, clients, dataset) {
                         clientsSelected.push(client)
                         clientsSelectedIndex.push(indClient)
                       }
-                      console.log(`[${dataset.name}] File ${indFrag} loaded on client ${indClient}`)
+                      debug(`[${dataset.name}] File ${indFrag} loaded on client ${indClient}`)
                       fragmentIndex++
                       insertedGlobal++
                       inserted++
                       res2()
                     }).catch(e => {
-                      console.log(e)
+                      debug(e)
                       rej2(e)
                     })
                   }, 10)
                 }).catch(e => {
-                  console.log(e)
+                  debug(e)
                   rej2(e)
                 })
               } else {
@@ -885,7 +893,7 @@ function loadFiles(fragments, clients, dataset) {
             }
           })
         }), Promise.resolve()).then(() => {
-          console.log(`[${dataset.name}]`,'['+indClient+']  Files loaded.')
+          debug(`[${dataset.name}]`,'['+indClient+']  Files loaded.')
           res()
         }).catch(e => {
           rej(e)
@@ -895,7 +903,7 @@ function loadFiles(fragments, clients, dataset) {
       if((insertedGlobal === fragmentIndex) && (insertedGlobal === fragments.length)) {
         resolve(clientsSelected)
       } else {
-        console.log(`[${dataset.name}]`,'Number of fragments loaded:', insertedGlobal)
+        debug(`[${dataset.name}]`,'Number of fragments loaded:', insertedGlobal)
         clients.reduce((clientsAcc, client, indClient) => clientsAcc.then(() => {
           return new Promise((res, rej) => {
             let inserted = 0
@@ -911,17 +919,17 @@ function loadFiles(fragments, clients, dataset) {
                             clientsSelected.push(client)
                             clientsSelectedIndex.push(indClient)
                           }
-                          console.log(`[${dataset.name}] Remaining file ${indFrag} loaded on client ${indClient} `)
+                          debug(`[${dataset.name}] Remaining file ${indFrag} loaded on client ${indClient} `)
                           insertedGlobal++
                           inserted++
                           res2()
                         }).catch(e => {
-                          console.log(e)
+                          debug(e)
                           rej2(e)
                         })
                       }, 10)
                     }).catch(e => {
-                      console.log(e)
+                      debug(e)
                       rej2(e)
                     })
                   } else {
@@ -932,7 +940,7 @@ function loadFiles(fragments, clients, dataset) {
                 }
               })
             }), Promise.resolve()).then(() => {
-              console.log(`[${dataset.name}]`,'['+indClient+'] Remaining files loaded.')
+              debug(`[${dataset.name}]`,'['+indClient+'] Remaining files loaded.')
               res()
             }).catch(e => {
               rej(e)
@@ -945,7 +953,7 @@ function loadFiles(fragments, clients, dataset) {
         })
       }
     }).catch(e => {
-      console.log(e)
+      debug(e)
       reject(e)
     })
   })
