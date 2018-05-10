@@ -83,7 +83,10 @@ module.exports = class Cyclon extends N2N {
 
   _open (peerId) {
     debug('[%s] %s ===> %s', this.PID, this.PEER, peerId)
-    this._partialView.add(peerId)
+    if(!this._partialView.has(peerId)) this._partialView.add(peerId)
+    if(this._partialView.size > this.options.maxPeers) {
+      this.disconnect(peerId)
+    }
   }
 
   /**
@@ -92,6 +95,7 @@ module.exports = class Cyclon extends N2N {
    */
   _close (peerId) {
     debug('[%s] %s =†=> %s', this.PID, this.PEER, peerId)
+    if(this._partialView.has(peerId)) this._partialView.delete(peerId)
   }
 
   _onJoin (id) {
@@ -99,9 +103,7 @@ module.exports = class Cyclon extends N2N {
       // #1 all neighbors -> peerId
       debug('[%s] %s ===> join %s ===> %s neighbors',this.PID, id, this.PEER, this._partialView.size)
       this._partialView.forEach((ages, neighbor) => {
-        ages.forEach((age) => {
-          this.connect(id, neighbor)
-        })
+        this.connect(id, neighbor)
       })
     } else {
       // #2 Seems like a 2-peer network;  this -> peerId;
@@ -159,7 +161,7 @@ module.exports = class Cyclon extends N2N {
       this._partialView.increment()
       // 2. Select neighbor Q with the highest age among all neighbors, and l − 1
       // other random neighbors.
-      const keys = [...this._partialView.keys()]
+      // const keys = [...this._partialView.keys()]
       const oldest = this._partialView.oldest // keys[Math.floor(Math.random() * keys.length)]
       const sample = this._getSample(this.options.maxPeers)
       // 3. Replace Q’s entry with a new entry of age 0 and with P’s address.
@@ -171,7 +173,7 @@ module.exports = class Cyclon extends N2N {
           samp.age = 0
         }
       })
-      debug('[%s] Starting to exchange with %s with a sample of size: %f', this.PEER, oldest, sample.length)
+      // debug('[%s] Starting to exchange with %s with a sample of size: %f', this.PEER, oldest, sample.length)
       // 4. Send the updated subset to peer Q.
       // need to try with another peer if it fails
       const msgid = uniqid()
@@ -190,6 +192,7 @@ module.exports = class Cyclon extends N2N {
         this.once('MExchangeBack-'+msgid, (id, message) => {
           // 6. Discard entries pointing at P and entries already contained in P’s
           // cache.
+          // at least put the id of the peer we just exchange samples into the list of arcs to remove
           const tokeep = message.sample.filter(samp => {
             if(this._partialView.has(samp.id) || samp.id === oldest || samp.id === id) {
               return false
@@ -205,6 +208,7 @@ module.exports = class Cyclon extends N2N {
               const rn = Math.floor(Math.random() * sample.length)
               const id = sample[rn].id
               sample.splice(rn, 1)
+              debug('[%s] replacing entry %s by %s', this.PEER, id, keep.id)
               this.disconnect(id)
               this._partialView.removeAll(id)
             }
@@ -241,7 +245,7 @@ module.exports = class Cyclon extends N2N {
     const save_sample = message.sample.slice(0)
     const saved_originator = String(message.from)
     const sample = this._getSample(this.options.maxPeers)
-    debug('[%s] Answer to a an exchange demande with %s with a sample of size: %f', this.PEER, saved_originator, sample.length)
+    // debug('[%s] Answer to a an exchange demande with %s with a sample of size: %f', this.PEER, saved_originator, sample.length)
     // now reply
     message.type = 'MExchangeBack'
     message.sample = sample
@@ -250,7 +254,7 @@ module.exports = class Cyclon extends N2N {
     // 6. Discard entries pointing at P and entries already contained in P’s
     // cache.
     const tokeep = message.sample.filter(samp => {
-      if(this._partialView.has(samp.id) || samp.id === saved_originator || samp.id === id) {
+      if(this._partialView.has(samp.id)) {
         return false
       } else {
         return true
@@ -261,9 +265,11 @@ module.exports = class Cyclon extends N2N {
     for(let i =0; i<tokeep.length; i++) {
       const keep = tokeep[i]
       if(this._partialView.size >= this.options.maxPeers) {
+        // replacement of links into our pv...
         const rn = Math.floor(Math.random() * sample.length)
         const id = sample[rn].id
         sample.splice(rn, 1)
+        debug('[%s] replacing entry %s by %s', this.PEER, id, keep.id)
         this.disconnect(id)
         this._partialView.removeAll(id)
       }
@@ -284,9 +290,7 @@ module.exports = class Cyclon extends N2N {
     // #1 create a flatten version of the partial view
     let flatten = []
     this._partialView.forEach((ages, neighbor) => {
-      ages.forEach((age) => {
-        flatten.push({id: neighbor, age: age})
-      })
+      flatten.push({id: neighbor, age: ages[0]})
     })
     // #2 process the size of the sample, at maximum maxPeers
     const sampleSize = Math.min(flatten.length, size)

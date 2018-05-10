@@ -378,9 +378,9 @@ function executeQueries(clients, queries) {
           shuffle++
         }
       })
-      const callbackUpdated = (result, roundStart, roundEnd) => {
+      const callbackUpdated = (result, roundStart, roundEnd, timedout) => {
         let completeness = 0
-        let timeout = false
+        let timeout = timedout || false
         let resultsObtained = 0
         if(roundStart === roundEnd) {
           //console.log('roundStart===roundEnd')

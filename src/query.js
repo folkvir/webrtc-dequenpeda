@@ -70,7 +70,10 @@ module.exports = class Query extends EventEmitter {
       this._status = 'end'
       return Promise.resolve(this._lastResults)
     }
-    if(this._status === 'pending') return Promise.resolve(this._lastResults)
+    if(this._status === 'pending') {
+      this.emit(eventName, this._lastResults, this._round, this._round, true)
+      return Promise.resolve(this._lastResults)
+    }
     this._status = 'pending'
     this._createTimeout()
     const round = Object.assign({}, { round: this._round, start: this._round})
