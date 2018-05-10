@@ -15,7 +15,7 @@ const config = {
     defaultGraph: 'http://mypersonaldata.com/', // default graph, need to be http://<...>
     timeout: 10 * 1000, //network timeout when sending tpq
     activeSon: false,
-    shuffleCountBeforeStart: 5,
+    shuffleCountBeforeStart: 10,
     foglet: {
       rps:{
         options: {

@@ -16,7 +16,7 @@ const config = {
     timeout: 10 * 1000, //network timeout when sending tpq
     queryType: 'normal', // there is one type, so normal is always choose.
     activeSon: false,
-    shuffleCountBeforeStart: 5,
+    shuffleCountBeforeStart: 10,
     foglet: {
       rps:{
         options: {

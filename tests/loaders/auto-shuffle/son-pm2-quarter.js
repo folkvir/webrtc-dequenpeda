@@ -3,7 +3,7 @@ const config = require('../config')
 
 const round = config.rounds
 const commands = [
-  "node --max_old_space_size=100000 ./tests/query-normal-test-wo-webrtc --config ./tests/configs/full-son-quarter.js",
+  "DEBUG=xp node --max_old_space_size=100000 ./tests/query-normal-test-wo-webrtc --config ./tests/configs/full-son-quarter.js",
 ]
 
 let rounds = []
