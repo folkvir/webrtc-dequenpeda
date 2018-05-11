@@ -701,11 +701,18 @@ function printGlobalResults() {
           timedout
         ].join(',')+'\n')
       }
-      globalResultsQuery[globalResultsQuery.length - 1].reduce((acc, cur) => acc.then(() => {
-        return writeNeighbours('last', cur.dir)
-      }), Promise.resolve()).then(() => {
-        // once all is done resolve
-        resolve()
+      let finished = 0
+      const done = () => {
+        finished++
+        if(finished === globalResultsQuery[globalResultsQuery.length - 1].length) resolve()
+      }
+      globalResultsQuery[globalResultsQuery.length - 1].forEach(cur => {
+        writeNeighbours('last', cur.dir).then(() => {
+          done()
+        }).catch(e => {
+          debug(e)
+          done()
+        })
       })
     } catch (e) {
       reject(e)
