@@ -3,7 +3,7 @@ const config = {
   name: 'default',
   queries: require('./default-queries.json'),
   clients: 20,
-  round: 20,
+  round: 5,
   datasets: [
     { name: 'diseasome', data: "../data/diseasome/fragments/", queries: "../data/diseasome/queries/queries.json", results: "../data/diseasome/results/", withoutQueries: ['q91.json', 'q92.json', 'q61.json', 'q53.json']},
     //{ name: 'linkedmdb', data: "../data/linkedmdb/fragments/", queries: "../data/linkedmdb/queries/queries.json", results: "../data/linkedmdb/results/", withoutQueries: []},
@@ -25,7 +25,7 @@ const config = {
           maxPeers: 10,
           timeout: 30 * 1000,
           timeoutPending: 30 * 1000,
-          delta: 1 * 60 * 1000,
+          delta: 30 * 1000,
         }
       }
     }

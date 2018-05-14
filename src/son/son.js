@@ -4,7 +4,6 @@ const Communication = require('foglet-core').communication
 const lmerge = require('lodash.merge')
 const serialize = require('serialize-javascript')
 const deserialize = (msg) => eval('(' + msg + ')')
-// const similarity = require('compute-cosine-similarity')
 const similarity = require('./similarity-tpq').compare
 const debug = require('debug')('dequenpeda:son')
 const lrandom = require('lodash.random')

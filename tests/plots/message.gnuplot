@@ -3,6 +3,7 @@ set title 'Number of messages by Round'                       # plot title
 set xlabel 'Round'                              # x-axis label
 set ylabel 'Number of messages (%)'                          # y-axis label
 set terminal png size 1600,1200
+
 set style data linespoints
 
 location = input
