@@ -21,7 +21,7 @@ const config = {
         options: {
           maxPeers: 5,
           timeout: 30 * 1000,
-          delta: 10 * 60 * 1000,
+          delta: 1 * 60 * 1000,
         }
       }
     }

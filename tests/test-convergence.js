@@ -88,7 +88,7 @@ function findkclosestprofile(k, profiles) {
         score: similarity(profile.profile.export(), prof.profile.export())
       })
     })
-    sim.sort((a, b) => a.score<b.score)
+    sim.sort((a, b) => b.score - a.score)
     // sim.forEach(s => { if(s.score > 0) console.log(s) })
     const res = {
       profile,

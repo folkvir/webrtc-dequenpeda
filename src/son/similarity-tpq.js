@@ -32,9 +32,9 @@ function getScore(tpa, tpb) {
   } else if(containment(tpa, tpb)) {
     debug('containment')
     return SCORES.containment
-  } else if(subset(tpa, tpb)) {
-    debug('subset')
-    return SCORES.subset
+  // } else if(subset(tpa, tpb)) {
+  //   debug('subset')
+  //   return SCORES.subset
   } else {
     debug('nothing')
     return SCORES.empty
