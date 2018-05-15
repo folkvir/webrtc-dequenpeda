@@ -9,6 +9,7 @@
     "clean": "rm -rf ./tests/results/",
     "start-auto": "node ./tests/loaders/all-autoshuffle.js",
     "start-manual": "node ./tests/loaders/all-manualshuffle.js",
+    "start-son-only": "node ./tests/loaders/son-only.js",
     "build": "foglet-scripts build",
     "min": "webpack --config ./foglet-webpack-config-min.js --mode production",
     "dev": "webpack --config ./foglet-webpack-config.js --mode development --watch",
