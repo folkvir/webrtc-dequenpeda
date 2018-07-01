@@ -16,30 +16,64 @@ if(!commander.path) commander.help()
 console.log(commander.path, commander.round)
 
 const results = []
+const patterns = ['full-son-only', 'full-son-half', 'full-son-quarter']
 let index = 0
-shell.ls('-d', path.join(commander.path, "/auto-round-*-full-son-*/")).forEach(p => {
-  results.push({
-    id: path.join(p, 'convergence.csv'),
-    res: []
-  })
-  console.log('Writing: ', results[index].id)
-  fs.writeFileSync(results[index].id, ['round', 'convergence'].join(',')+'\n', 'utf8')
-  const subresults = results[index].res
-  for(let i = 0; i<commander.round; i++) {
-    const pattern = `${i}-neighbors.json`
-    const pathtograph = path.join(p, pattern)
-    const files = shell.ls(pathtograph)
 
-    files.forEach(f => {
-      //console.log(f)
-      const file = JSON.parse(fs.readFileSync(f))
-      const res = compute(file)
-      subresults.push(res)
-      fs.appendFileSync(results[index].id, [i, res].join(',')+'\n', 'utf8')
+const ro = 3
+for(let k=0; k<ro; k++) {
+  shell.ls('-d', path.join(commander.path, `/auto-round-${k}-full-son-*/`)).forEach(p => {
+    results.push({
+      id: path.join(p, 'convergence.csv'),
+      res: [],
+      round: k
     })
+    console.log('Writing: ', results[index].id)
+    fs.writeFileSync(results[index].id, ['round', 'convergence'].join(',')+'\n', 'utf8')
+    const subresults = results[index].res
+    for(let i = 0; i<commander.round; i++) {
+      const pattern = `${i}-neighbors.json`
+      const pathtograph = path.join(p, pattern)
+      const files = shell.ls(pathtograph)
+
+      files.forEach(f => {
+        //console.log(f)
+        const file = JSON.parse(fs.readFileSync(f))
+        const res = compute(file)
+        subresults.push(res)
+        fs.appendFileSync(results[index].id, [i, res].join(',')+'\n', 'utf8')
+      })
+    }
+    ++index
+  })
+}
+const averages = []
+for(let j = 0; j<patterns.length; j++) {
+  const r = []
+  for(let i = 0; i<results.length; i++) {
+    if (results[i].id.indexOf(patterns[j]) > -1) {
+      r.push(results[i].res)
+    }
   }
-  ++index
-})
+  const sum = r.reduce((acc, cur, l) => {
+    if(l === 0) {
+      return cur
+    } else {
+      const res = []
+      for(let k = 0; k<cur.length; k++) {
+        res.push(acc[k] + cur[k])
+      }
+      return res;
+    }
+  }, [])
+
+  fs.writeFileSync(commander.path+'/average'+patterns[j]+'.csv', ['round', 'convergence'].join(',')+'\n', 'utf8')
+  let towrite = sum.map(e => e/ro)
+  for(let i = 0; i<towrite.length;i++) {
+    fs.appendFileSync(commander.path+'/average'+patterns[j]+'.csv', [i, towrite[i]].join(',')+'\n', 'utf8')
+  }
+}
+
+
 
 function compute(file) {
   let profiles = file

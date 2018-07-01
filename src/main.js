@@ -12,7 +12,7 @@ const Query = require('./query')
 const UnicastHandlers = require('./unicast-handlers')
 const Profile = require('./son/profile')
 const Son = require('./son/son')
-const CyclonAdapter = require('./cyclon/cyclon-adapter')
+const CyclonAdapter = require('foglet-core').networks.Cyclon
 const assert =require('assert')
 
 const debugError = require('debug')('error')
@@ -22,6 +22,7 @@ const MAX_SET_TIMEOUT = 2147483647
 
 let DEFAULT_OPTIONS = {
   storeWorker: true,
+  manualExecution: true,
   manualshuffle: false,
   manualshuffleperiodicdelta: 30 * 1000,
   manualshufflewaitingtime: 5 * 1000,
@@ -155,27 +156,24 @@ module.exports = class Dequenpeda extends EventEmitter {
     }
   }
 
-  close () {
-    return new Promise((resolve, reject) => {
-      this._foglet.overlay().network.rps.disconnect()
-      if(this._options.activeSon) this._foglet.overlay('son').network.rps.disconnect()
-      if(this._options.storeWorker) this._store.close()
-      this.stopAll().then(() => {
-        resolve()
-      }).catch(e => {
-        reject(e)
-      })
-    })
+  disconnect () {
+    this._foglet.overlay().network.rps.disconnect()
+    if(this._options.activeSon) this._foglet.overlay('son').network.rps.disconnect()
+  }
+
+  storeClose () {
+    if(this._options.storeWorker) this._store.close()
   }
 
   _start () {
     if(!this._options.manualshuffle) {
       this._periodicExecutionInterval = setInterval(() => {
+        this.emit('periodic-delta')
         // waiting for the first connection to open and then execute
         // console.log(`[${this._foglet.id}] periodic execution: before calling the method `, this._shuffleCount, this._foglet.getNeighbours().length, this._foglet.overlay('son').network.getNeighbours().length, this._queries.size)
         // wait 5 seconds to lets the shuffle to be done
         setTimeout(() => {
-          this._periodicExecution()
+          if (!this._options.manualExecution) this._periodicExecution()
         }, 5000)
         //setTimeout(() => {this._periodicExecution()}, 5000)
       }, this._options.foglet.rps.options.delta)

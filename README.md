@@ -2,6 +2,16 @@
 
 Snob is a SPARQL query execution model over data hosted in a network of browsers
 
+Submitted at:
+* DeSemWeb Workshop for ISWC 2018 **accepted** for publication in CEUR-WS
+* Poster **accepted** at ISWC 2018 Posters & Demonstrations and Industry Tracks for publication in CEUR-WS
+
+The proceedings of the Posters and Demos track will be published jointly with the accepted submissions to the industry track through CEUR-WS.
+
+Paper link: [http://hal.univ-nantes.fr/hal-01805154](http://hal.univ-nantes.fr/hal-01805154)
+
+OpenReview: [https://openreview.net/forum?id=B1aJkYFRf](https://openreview.net/forum?id=B1aJkYFRf)
+
 ## Network
 
 This client relies on Cyclon [1] as random peer sampling network and T-Man [2] with our own similarity metric to cluster clients.
@@ -26,8 +36,22 @@ npm install
 ```
 # from root folder
 npm run build
-# now check in dist/ folder
+# now check in dist/ folder to include the bundle into your web-app
 ```
+
+# Tests
+
+In order to just test the model execute the following command after installing the package:
+```
+# before:
+npm install
+# execute:
+npm test
+```
+
+It will simulate a local network of 10 peers connected through Cyclon and a SON where each peers load and execute queries on
+the dataset DISEASOME.
+It will produce results into the results folder.
 
 # Experimental Results
 
@@ -58,6 +82,10 @@ Average query completeness by round for different queries number with RPS, RPS+S
 Average number of messages by round for different queries number with RPS, RPS+SON network configuration. Left to right respectively 49 (quarter), 98 (half) and 196 (all) queries.
 
 ![](tests/saved-results/messages.png)
+
+### SON Convergence (Additional experiments)
+
+![](tests/saved-results/convergence.png)
 
 ### Network visualization
 The evolution of the RPS and SON networks with 196 queries (all). LinkedMDB in Yellow and Diseasome in Blue.

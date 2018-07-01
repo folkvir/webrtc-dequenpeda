@@ -4,13 +4,13 @@
   "description": "Decentralized Query Engine for Personal Data",
   "main": "webrtc-dequenpeda.js",
   "scripts": {
-    "test": "node ./tests/loaders/test.js",
-    "default": "node ./tests/query-normal-test-wo-webrtc.js --config ./tests/configs/default.js",
+    "test-loader": "node ./tests/loaders/test.js",
+    "test": "node ./tests/query-normal-test-wo-webrtc.js --config ./tests/configs/default.js",
     "clean": "rm -rf ./tests/results/",
     "start-auto": "node ./tests/loaders/all-autoshuffle.js",
     "start-manual": "node ./tests/loaders/all-manualshuffle.js",
     "start-son-only": "node ./tests/loaders/son-only.js",
-    "build": "foglet-scripts build",
+    "build": "webpack --config ./foglet-webpack-config.js --mode development",
     "min": "webpack --config ./foglet-webpack-config-min.js --mode production",
     "dev": "webpack --config ./foglet-webpack-config.js --mode development --watch",
     "graph": "python3 ./tests/graphs/graph.py"
@@ -39,24 +39,23 @@
   "dependencies": {
     "asynciterator": "^1.1.1",
     "debug": "^3.1.0",
-    "foglet-core": "^4.0.6",
-    "js-base64": "^2.4.3",
+    "foglet-core": "^5.0.1",
+    "js-base64": "^2.4.5",
     "lodash.merge": "^4.6.1",
-    "n2n-overlay-wrtc": "^2.0.9",
+    "n2n-overlay-wrtc": "^2.0.10",
     "n3": "^0.11.3",
     "rdfstore": "file:./src/rdfstore-js",
     "serialize-javascript": "^1.5.0",
     "sparqljs": "^2.0.3",
     "tiny-worker": "^2.1.2",
-    "tman-wrtc": "^0.1.0",
-    "uniqid": "^4.1.1",
-    "uuid": "^3.2.1"
+    "tman-wrtc": "^1.0.0",
+    "uniqid": "^5.0.3",
+    "uuid": "^3.2.2"
   },
   "devDependencies": {
-    "commander": "^2.15.1",
+    "commander": "^2.16.0",
     "express": "^4.16.3",
     "fast-csv": "^2.4.1",
-    "foglet-scripts": "^0.3.3",
     "ldf-client": "^2.0.5",
     "lodash.chunk": "^4.2.0",
     "lodash.compact": "^3.0.1",
@@ -66,10 +65,11 @@
     "lodash.shuffle": "^4.2.0",
     "object-sizeof": "^1.2.0",
     "p2p-graph": "^1.2.2",
-    "pm2": "^2.10.2",
+    "pm2": "^2.10.4",
     "shelljs": "^0.8.1",
     "sql.js": "^0.5.0",
-    "webpack-cli": "^2.0.15"
+    "webpack": "^4.14.0",
+    "webpack-cli": "^3.0.8"
   },
   "engines": {
     "node": ">=8.11.1"

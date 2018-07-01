@@ -11,6 +11,7 @@ const config = {
   ],
   options: {
     storeWorker: true, // activate the worker for the store or not
+    manualExecution: true, // manually execute queries when a shuffling occures
     manualshuffle: false, // activate the manual shuflling
     manualshuffleperiodicdelta: 30 * 1000, // if no queries, shuffle every 5 minutes
     manualshufflewaitingtime: 10 * 1000, // when the shuffle is manual, need to establish how many time we will sleep between the shuffle and the execution, to wait for a proper connection
@@ -25,7 +26,7 @@ const config = {
           maxPeers: 10,
           timeout: 30 * 1000,
           timeoutPending: 30 * 1000,
-          delta: 30 * 1000,
+          delta: 10 * 1000,
         }
       }
     }

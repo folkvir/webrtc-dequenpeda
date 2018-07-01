@@ -1,10 +1,10 @@
 const Dequenpeda = require('../webrtc-dequenpeda').Client
-const CyclonAdapter = require('../webrtc-dequenpeda').CyclonAdapter
+const CyclonAdapter = require('foglet-core').networks.Cyclon
 const shell = require('shelljs')
 const commander = require('commander')
 const path = require('path')
 const fs = require('fs')
-const AbstractSimplePeer = require('../webrtc-dequenpeda').AbstractSimplePeer
+const AbstractSimplePeer = require('foglet-core').SimplePeerMoc
 const shuffle = require('lodash.shuffle')
 const uniqid = require('uniqid')
 const uuid = require('uuid/v4')
@@ -106,14 +106,14 @@ createClients(config.clients).then((clients) => {
         debug('All queries finished.')
         printGlobalResults(clients).then(() => {
           clients.reduce((cacc, cur) => {
-            return cur.close()
+            return Promise.resolve()
           }, Promise.resolve()).then(() => {
             process.exit(0)
           })
         }).catch(e => {
           console.error(e)
           clients.reduce((cacc, cur) => {
-            return cur.close()
+            return Promise.resolve()
           }, Promise.resolve()).then(() => {
             process.exit(0)
           })
@@ -185,12 +185,7 @@ function connectClients(clients) {
               }, 0)
               debug('Arcs: ', pv)
               res()
-              // setTimeout(() => {
-              //   // client._foglet.overlay().network.rps._exchange()
-              //   client._foglet.overlay().network.rps.once('end-shuffle', () => {
-              //
-              //   })
-              // }, 500)
+
             }).catch(e => {
               res()
             })
@@ -367,15 +362,15 @@ function executeQueries(clients, queries) {
       const q = query.q
       const ind = query.index
       let shuffle = 0
-      client.on('periodic-execution', (eventName) => {
-        if(eventName !== 'no-queries-yet') {
-          // now check before increasing the shuffle number cause, if we are at shuffle +1 we need to stop the experiment
-          if(shuffle > config.round - 1) {
-            debug('[%s] stop the query anyway', query.query.filename)
-            q.stop()
-          }
-          shuffle++
+      client.on('periodic-delta', () => {
+        // now check before increasing the shuffle number cause, if we are at shuffle +1 we need to stop the experiment
+        if(shuffle > config.round) {
+          debug('[%s] stop the query anyway', query.query.filename)
+          q.stop()
+        } else {
+          client._periodicExecution()
         }
+        shuffle++
       })
       const callbackUpdated = (result, roundStart, roundEnd, timedout) => {
         let completeness = 0
