@@ -37,23 +37,23 @@
   },
   "homepage": "https://github.com/folkvir/webrtc-dequenpeda#readme",
   "dependencies": {
-    "asynciterator": "^1.1.1",
-    "debug": "^3.1.0",
-    "foglet-core": "^5.0.1",
-    "js-base64": "^2.4.5",
+    "asynciterator": "^2.0.0",
+    "debug": "^3.2.5",
+    "foglet-core": "^5.1.2",
+    "js-base64": "^2.4.9",
     "lodash.merge": "^4.6.1",
     "n2n-overlay-wrtc": "^2.0.10",
     "n3": "^0.11.3",
     "rdfstore": "file:./src/rdfstore-js",
     "serialize-javascript": "^1.5.0",
-    "sparqljs": "^2.0.3",
+    "sparqljs": "^2.1.0",
     "tiny-worker": "^2.1.2",
     "tman-wrtc": "^1.0.0",
     "uniqid": "^5.0.3",
     "uuid": "^3.2.2"
   },
   "devDependencies": {
-    "commander": "^2.16.0",
+    "commander": "^2.19.0",
     "express": "^4.16.3",
     "fast-csv": "^2.4.1",
     "ldf-client": "^2.0.5",
@@ -65,11 +65,11 @@
     "lodash.shuffle": "^4.2.0",
     "object-sizeof": "^1.2.0",
     "p2p-graph": "^1.2.2",
-    "pm2": "^2.10.4",
+    "pm2": "^3.2.2",
     "shelljs": "^0.8.1",
     "sql.js": "^0.5.0",
-    "webpack": "^4.14.0",
-    "webpack-cli": "^3.0.8"
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
   },
   "engines": {
     "node": ">=8.11.1"

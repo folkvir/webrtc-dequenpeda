@@ -12,9 +12,27 @@ Paper link: [http://hal.univ-nantes.fr/hal-01805154](http://hal.univ-nantes.fr/h
 
 OpenReview: [https://openreview.net/forum?id=B1aJkYFRf](https://openreview.net/forum?id=B1aJkYFRf)
 
+## Perspectives (Implementation)
+
+Please, if you want to to use this Query Execution Model in your application, consider to move the storage to another system other than Rdfstore-js.
+
+Consider [sparql-engine](https://github.com/callidon/sparql-engine) to build the SNOB approach that is:
+- Send Triples patterns (TPs) to neighbours (by sending only message per neighbour)
+- Store (replicate) received triples matching TPs in a local datastore, (consider the N3.js example of sparql-engine, or use your own.)
+- Execute the Q,
+- Wait for a new shuffling to get new neighbours, re-execute again the model.
+
+
+## Simulation
+
+In the paper, we present an experiment using a prototype implemented in Javascript/NodeJS that can be used in a browser.
+We also provide a simulation in addition to these experiments. (https://github.com/folkvir/snob-simulation)
+The simulation uses the Peer-Sim[1] simulator and also provides similar results.
+But compared to our experiments we are able to reach the 100% of query completeness in our network.
+
 ## Network
 
-This client relies on Cyclon [1] as random peer sampling network and T-Man [2] with our own similarity metric to cluster clients.
+This client relies on Cyclon [2] as random peer sampling network and T-Man [3] with our own similarity metric to cluster clients.
 
 The client use [foglet-core](https://github.com/ran3d/foglet-core) as network manager which use easy WebRTC communication primitives.
 
@@ -38,6 +56,7 @@ npm install
 npm run build
 # now check in dist/ folder to include the bundle into your web-app
 ```
+Don't forget to run a signaling server (see [foglet-signaling-server](https://github.com/ran3d/foglet-signaling-server))
 
 # Tests
 
@@ -52,6 +71,10 @@ npm test
 It will simulate a local network of 10 peers connected through Cyclon and a SON where each peers load and execute queries on
 the dataset DISEASOME.
 It will produce results into the results folder.
+
+- Number of rounds: 20
+- Max view size: 2
+- Semantic Overlay activated: No (it shows the effectiveness of the replication)
 
 # Experimental Results
 
@@ -101,7 +124,9 @@ Following image represents the Semantic Overlay Network used in our model. It re
 
 # References
 
-**[1]** Voulgaris,S.,Gavidia,D.,VanSteen,M.:CYCLON:inexpensivemembershipman- agement for unstructured P2P overlays. Journal of Network and Systems Manage-
+**[1]** Alberto Montresor and Mark Jelasity. PeerSim: A scalable P2P simulator. In Proc. of the 9th Int. Conference on Peer-to-Peer (P2P’09), pages 99–100. Seattle, WA, September 2009.
+
+**[2]** Voulgaris,S.,Gavidia,D.,VanSteen,M.:CYCLON:inexpensivemembershipman- agement for unstructured P2P overlays. Journal of Network and Systems Manage-
 ment 13(2), 197–217 (2005)
 
-**[2]** JELASITY, Márk et BABAOGLU, Ozalp. T-Man: Gossip-based overlay topology management. In : International Workshop on Engineering Self-Organising Applications. Springer, Berlin, Heidelberg, 2005. p. 1-15.
+**[3]** JELASITY, Márk et BABAOGLU, Ozalp. T-Man: Gossip-based overlay topology management. In : International Workshop on Engineering Self-Organising Applications. Springer, Berlin, Heidelberg, 2005. p. 1-15.
