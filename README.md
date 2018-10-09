@@ -19,7 +19,7 @@ Please, if you want to to use this Query Execution Model in your application, co
 Consider [sparql-engine](https://github.com/callidon/sparql-engine) to build the SNOB approach that is:
 - Send Triples patterns (TPs) to neighbours (by sending only message per neighbour)
 - Store (replicate) received triples matching TPs in a local datastore, (consider the N3.js example of sparql-engine, or use your own.)
-- Execute the Q,
+- Execute the Query on the local datastore,
 - Wait for a new shuffling to get new neighbours, re-execute again the model.
 
 
@@ -72,8 +72,9 @@ It will simulate a local network of 10 peers connected through Cyclon and a SON 
 the dataset DISEASOME.
 It will produce results into the results folder.
 
+- Number of nodes(queries): 10
 - Number of rounds: 20
-- Max view size: 2
+- Max view size: 5
 - Semantic Overlay activated: No (it shows the effectiveness of the replication)
 
 # Experimental Results

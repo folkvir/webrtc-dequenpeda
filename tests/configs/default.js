@@ -23,7 +23,7 @@ const config = {
     foglet: {
       rps:{
         options: {
-          maxPeers: 2,
+          maxPeers: 5,
           timeout: 30 * 1000,
           timeoutPending: 30 * 1000,
           delta: 10 * 1000,
